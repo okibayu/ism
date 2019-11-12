@@ -24,77 +24,78 @@
         <!-- Header -->
         <header id="header">
           <div class="container">
-            <div class="header-row">
-              <div class="header-column justify-content-sm-start" style="flex-grow:0;"> 
-                <!-- Logo -->
-                <div class="logo"> 
-                  <a href="index.html" title="Electra Booking Engine">
-                    <img src="img/logo-AMOS.png" alt="Amos Tours" width="auto" height="50px" />
-                  </a> 
-                </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+              <div class="navbar-brand"> 
+                <!-- Logo -->                
+                <a href="index.html" title="Electra Booking Engine">
+                  <img src="img/logo-AMOS.png" alt="Amos Tours" width="auto" height="50px" />
+                </a> 
                 <!-- Logo end -->  
               </div>
-              <div class="header-column justify-content-sm-start">
-                <nav class="menu navbar navbar-expand-lg">
-                  <div id="header-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Flight</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Hotel</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Train</a>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
+              <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu"> <span></span><span></span><span></span>
+              </button>
+              <div class="collapse navbar-collapse" id="menu">               
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Flight</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Hotel</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Train</a>
+                    </li>
+                  </ul>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Booking Check</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Chart (0)</a>
+                    </li>
+                    <li class="dropdown nav-item">
+                      <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="language">
+                        <i class="fas fa-globe"></i> EN</a>
+                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labelledby="language">
+                        <button type="button" tabindex="0" class="dropdown-item active">English (EN)</button>
+                        <button type="button" tabindex="0" class="dropdown-item">Bahasa (ID)</button>
+                      </div>
+                    </li>
+                    <li class="dropdown nav-item">
+                      <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="login"><i class="fas fa-user">
+                        </i> Login/ Register</a>
+                      <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labeldby="login">
+                        <div class="login-form">
+                          <form class="pt-2 pb-1">
+                            <div class="form-group">
+                              <strong>Login to my account</strong>
+                              <label for="email">Email address</label>
+                              <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                              <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                                <label class="form-check-label" for="dropdownCheck">
+                                  Remember me
+                                </label>
+                              </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                          </form>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">New around here? Sign up</a>
+                          <a class="dropdown-item" href="#">Forgot password?</a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
               </div>
-              <div class="header-column justify-content-sm-end">
-                <nav class="menu navbar navbar-expand-lg">
-                  <div id="header-nav" class="collapse navbar-collapse">
-                    <ul class="navbar-nav d-md-block d-lg-none">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Flight</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Hotel</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="#">Train</a>
-                      </li>
-                    </ul>
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Booking Check</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Chart (0)</a>
-                      </li>
-                      <li class="dropdown nav-item">
-                        <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="language">
-                          <i class="fas fa-globe"></i> EN</a>
-                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labelledby="language">
-                          <button type="button" tabindex="0" class="dropdown-item active">English (EN)</button>
-                          <button type="button" tabindex="0" class="dropdown-item">Bahasa (ID)</button>
-                        </div>
-                      </li>
-                      <li class="dropdown nav-item">
-                        <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="login"><i class="fas fa-user">
-                          </i> Login/ Register</a>
-                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labeldby="login">
-                          <button type="button" tabindex="0" class="dropdown-item active">Login</button>
-                          <button type="button" tabindex="0" class="dropdown-item">Register</button>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </nav>
-              
-            </div>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"> <span></span><span></span><span></span></button>
-        </div>
+            </nav>
+          </div>
         </header>
         <!-- Header end -->
 
@@ -161,41 +162,44 @@
                 
                 <!-- Search Flight -->
                 <div class="tab-pane fade" id="flight" role="tabpanel" aria-labelledby="flight-tab">
-                  <!-- Search Flight -->
-                  <div class="bg-light p-2">
+                  <div class="bg-light p-3">
                     <h2 class="text-4 mb-3">Book Domestic and International Flights</h2>
                     <form id="bookingFlight" method="post">
                       <div class="mb-3">
                         <div class="custom-control custom-radio custom-control-inline">
-                          <input id="oneway" name="flight-trip" class="custom-control-input" checked="" required type="radio">
+                          <input id="oneway" name="flight-trip" class="custom-control-input" checked="" required="" type="radio">
                           <label class="custom-control-label" for="oneway">One Way</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
-                          <input id="roundtrip" name="flight-trip" class="custom-control-input" required type="radio">
+                          <input id="roundtrip" name="flight-trip" class="custom-control-input" required="" type="radio">
                           <label class="custom-control-label" for="roundtrip">Round Trip</label>
                         </div>
                       </div>
                       <div class="form-row">
-                          <div class="col-md-6 col-lg-2 form-group">
-                            <input type="text" class="form-control" id="flightFrom" required placeholder="From">
+                          <div class="col-md-6 col-lg-3 form-group">
+                            <input type="text" class="form-control" id="flightFrom" required="" placeholder="From">
                             <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg-2 form-group">
-                            <input type="text" class="form-control" id="flightTo" required placeholder="To">
+                          <div class="col-md-6 col-lg-3 form-group">
+                            <input type="text" class="form-control" id="flightTo" required="" placeholder="To">
                             <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg-2 form-group">
-                            <input id="flightDepart" type="text" class="form-control" required placeholder="Depart Date">
+                          <div class="col-md-12 col-lg-6 form-group">
+                            <input id="airlines" type="text" class="form-control" required="" placeholder="Airlines">
+                            <span class="icon-inside"><i class="fas fa-plane fa-lg"></i></span>
+                          </div>
+                          <div class="col-md-6 col-lg-3 form-group">
+                            <input id="flightDepart" type="text" class="form-control" required="" placeholder="Depart Date">
                             <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg-2 form-group">
-                            <input id="flightReturn" type="text" class="form-control" required placeholder="Return Date">
+                          <div class="col-md-6 col-lg-3 form-group">
+                            <input id="flightReturn" type="text" class="form-control" required="" placeholder="Return Date">
                             <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg-2 travellers-class form-group">
-                            <input type="text" id="flightTravellersClass" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" readonly required onkeypress="return false;">
+                          <div class="col-md-6 col-lg-6 travellers-class form-group">
+                            <input type="text" id="flightTravellersClass" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" readonly="" required="" onkeypress="return false;">
                             <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
-                            <div class="travellers-dropdown">
+                            <div class="travellers-dropdown" style="display: none;">
                               <div class="row align-items-center">
                                 <div class="col-sm-6">
                                   <p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
@@ -205,7 +209,7 @@
                                     <div class="input-group-prepend">
                                       <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner">-</button>
                                     </div>
-                                      <input type="text" data-ride="spinner" id="flightAdult-travellers" class="qty-spinner form-control" value="1" readonly>
+                                      <input type="text" data-ride="spinner" id="flightAdult-travellers" class="qty-spinner form-control" value="1" readonly="">
                                     <div class="input-group-append">
                                       <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner">+</button>
                                     </div>
@@ -222,7 +226,7 @@
                                     <div class="input-group-prepend">
                                       <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner">-</button>
                                     </div>
-                                    <input type="text" data-ride="spinner" id="flightChildren-travellers" class="qty-spinner form-control" value="0" readonly>
+                                    <input type="text" data-ride="spinner" id="flightChildren-travellers" class="qty-spinner form-control" value="0" readonly="">
                                     <div class="input-group-append">
                                       <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner">+</button>
                                     </div>
@@ -239,7 +243,7 @@
                                     <div class="input-group-prepend">
                                       <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner">-</button>
                                     </div>
-                                    <input type="text" data-ride="spinner" id="flightInfants-travellers" class="qty-spinner form-control" value="0" readonly>
+                                    <input type="text" data-ride="spinner" id="flightInfants-travellers" class="qty-spinner form-control" value="0" readonly="">
                                     <div class="input-group-append">
                                       <button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner">+</button>
                                     </div>
@@ -249,51 +253,51 @@
                               <hr class="mt-2">
                               <div class="mb-3">
                                 <div class="custom-control custom-radio">
-                                  <input id="flightClassEconomic" name="flight-class" class="flight-class custom-control-input" value="0" checked="" required type="radio">
+                                  <input id="flightClassEconomic" name="flight-class" class="flight-class custom-control-input" value="0" checked="" required="" type="radio">
                                   <label class="custom-control-label" for="flightClassEconomic">Economic</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                  <input id="flightClassPremiumEconomic" name="flight-class" class="flight-class custom-control-input" value="1" required type="radio">
+                                  <input id="flightClassPremiumEconomic" name="flight-class" class="flight-class custom-control-input" value="1" required="" type="radio">
                                   <label class="custom-control-label" for="flightClassPremiumEconomic">Premium</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                  <input id="flightClassBusiness" name="flight-class" class="flight-class custom-control-input" value="2" required type="radio">
+                                  <input id="flightClassBusiness" name="flight-class" class="flight-class custom-control-input" value="2" required="" type="radio">
                                   <label class="custom-control-label" for="flightClassBusiness">Business</label>
                                 </div>
                                 <div class="custom-control custom-radio">
-                                  <input id="flightClassFirstClass" name="flight-class" class="flight-class custom-control-input" value="3" required type="radio">
+                                  <input id="flightClassFirstClass" name="flight-class" class="flight-class custom-control-input" value="3" required="" type="radio">
                                   <label class="custom-control-label" for="flightClassFirstClass">First Class</label>
                                 </div>
                               </div>
                               <button class="btn btn-primary btn-block submit-done" type="button">Done</button>
                             </div>
                           </div>
-                          <div class="col-md-6 col-lg-2 form-group">
-                            <button class="btn btn-search btn-block" type="submit"><i class="fas fa-search"></i> Search</button>
+                          <div class="col-md-6 col-lg-6 form-group ml-auto">
+                            <button class="btn btn-search btn-block" type="submit"><i class="fas fa-search"></i> Search
+                            </button>
                           </div>
                       </div>
                     </form>            
                   </div>
-                  <!-- Search Flight end -->
                 </div>
-                <!-- Search Flight -->
-
+                <!-- Search Flight end -->         
+    
                 <!-- Search Hotel -->
                 <div class="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
-                  <div class="bg-light pt-2">
+                  <div class="bg-light p-3">
                       <h2 class="text-4 mb-3">Book Domestic and International Hotels</h2>
                       <form id="bookingHotels" method="post">
                         <div class="form-row">
-                          <div class="col-md-12 col-lg form-group">
+                          <div class="col-md-12 col-lg-6 form-group">
                             <input type="text" class="form-control" id="hotelsFrom" required="" placeholder="Enter City/Hotel">
                             <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
-                          <div class="col-md-6 col-lg form-group">
+                          <div class="col-md-6 col-lg-3 form-group">
                             <input id="hotelsCheckIn" type="text" class="form-control" required="" placeholder="Check In">
                             <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
-                          <div class="col-md-6 col-lg form-group">
+                          <div class="col-md-6 col-lg-3 form-group">
                             <input id="hotelsCheckOut" type="text" class="form-control" required="" placeholder="Check Out">
                             <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
-                          <div class="col-md-6 col-lg travellers-class form-group">
+                          <div class="col-md-6 col-lg-6 travellers-class form-group">
                             <input type="text" id="hotelsTravellersClass" class="travellers-class-input form-control" name="hotels-travellers-class" placeholder="Rooms / People" required="" onkeypress="return false;">
                             <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
                             <div class="travellers-dropdown">
@@ -350,7 +354,7 @@
                               <button class="btn btn-primary btn-block submit-done mt-3" type="button">Done</button>
                             </div>
                           </div>
-                          <div class="col-md-6 col-lg form-group">
+                          <div class="col-md-6 col-lg-6 form-group">
                             <button class="btn btn-search btn-block" type="submit"><i class="fas fa-search"></i> Search</button>
                           </div>
                         </div>
@@ -361,7 +365,7 @@
               
                 <!-- Search Train -->
                 <div class="tab-pane fade show active" id="train" role="tabpanel" aria-labelledby="train-tab">
-                  <div class="bg-light pt-2">
+                  <div class="bg-light p-3">
                     <h2 class="text-4 mb-3">Book Train Tickets</h2>
                       <form id="bookingTrain" method="post">
                         <div class="mb-3">
@@ -375,23 +379,23 @@
                           </div>
                         </div>
                         <div class="form-row">
-                          <div class="col-md-6 col-lg form-group">
+                          <div class="col-md-6 col-lg-6 form-group">
                             <input type="text" class="form-control" id="trainFrom" required="" placeholder="From">
                             <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
                            </div>
-                          <div class="col-md-6 col-lg form-group">
+                          <div class="col-md-6 col-lg-6 form-group">
                             <input type="text" class="form-control" id="trainTo" required="" placeholder="To">
                             <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg-2 form-group">
+                          <div class="col-md-6 col-lg-6 form-group">
                             <input id="trainsDepart" type="text" class="form-control" required placeholder="Depart Date">
                             <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg-2 form-group">
+                          <div class="col-md-6 col-lg-6 form-group">
                             <input id="trainsReturn" type="text" class="form-control" required placeholder="Return Date">
                             <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
                           </div>
-                          <div class="col-md-6 col-lg travellers-class form-group">
+                          <div class="col-md-6 col-lg-6 travellers-class form-group">
                             <input type="text" id="trainTravellersClass" class="travellers-class-input form-control" name="train-travellers-class" placeholder="Travellers, Class" readonly="" required="" onkeypress="return false;">
                             <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
                             <div class="travellers-dropdown">
@@ -456,7 +460,7 @@
                               <button class="btn btn-primary btn-block submit-done" type="button">Done</button>
                             </div>
                           </div>
-                          <div class="col-md-12 col-lg form-group">
+                          <div class="col-md-12 col-lg-6 form-group">
                             <button class="btn btn-search btn-block" type="submit"><i class="fas fa-search"></i> Search</button>
                           </div>
                         </div>
