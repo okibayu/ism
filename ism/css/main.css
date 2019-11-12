@@ -29,7 +29,8 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    border-bottom: 4px solid rgb(0, 101, 179);}
+    border-bottom: 4px solid rgb(0, 101, 179);
+    transition: all 0.5s cubic-bezier(0, 0, 0, 1) 0.2s;}
     .navbar-light .navbar-nav .nav-link {
 		font-size: 14px;
 	    padding: 10px 15px;
@@ -60,7 +61,7 @@
     text-transform: uppercase;
     text-align: center;
     border-bottom: 4px solid rgb(0, 101, 179);
-	transition: all 0.2s cubic-bezier(0, 0, 1, 1) 0.2s;}
+	transition: all 0.2s cubic-bezier(0, 0, 1, 1) 0.1s;}
 
 .navbar-expand-md .navbar-nav .nav-link {
     padding: 10px 15px !important;}
@@ -86,6 +87,17 @@
     width: 20px;
     height: 20px;}
 
+#header {
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 2px 60px 10px #21252996 !important;
+    position: relative;
+    z-index: 1000;}
+    #header:hover {
+        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 2px 60px 20px #21252996 !important;
+        transition: all 0.5s cubic-bezier(0, 0, 0, 1) 0.2s;}
+
 #menu .navbar-collapse .collapse .show {
     padding: .25rem .75rem;
     font-size: 1.25rem;
@@ -104,7 +116,7 @@
     box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;
     background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(250, 250, 250, 0.8) 0%, #f8f9fa 90% );}
     #menu ul > li > div.dropdown-menu.show:hover{
-        box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 20px 5px;
+        box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 20px 5px;
         transition: all 0.5s cubic-bezier(0, 0, 0, 1) 0.2s;}
 
 .dropdown-item.active, .dropdown-item:active {
@@ -182,18 +194,19 @@
 	box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;}
 	#search-form .card:hover {
 		box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 20px 5px;
-		transition: all 0.5s cubic-bezier(0, 0, 0, 1) 0.2s;}
+		transition: all 0.2s cubic-bezier(0, 0, 0, 1) 0.2s;}
 
 #search-form .card-body {
-    background-image: radial-gradient( circle 1136px at 5.2% 14%, rgba(255,255,255,1) 0%, #eee 100.2% );
+    background-image: radial-gradient( circle 1136px at 5.2% 14%, #f8f9fa 0%, #e9ecef 100.2% );
     border-radius: 0 0 10px 10px;
-    padding: 8px;}
+    padding: 8px;
+    border: 1px solid rgba(250, 250, 250, 0.8);}
 
 #search-form .nav-link {
 	min-width: 200px;
     height: 65px;
     line-height: 20px;
-    padding: 10px;
+    padding: 13px 5px;
     font-size: 15px;
     font-weight: 600;
     color: rgb(119, 119, 119);
@@ -201,8 +214,9 @@
     border-bottom: 5px solid transparent;}
     #search-form .nav-link:hover {
     	min-width: 200px;
+        color: #0071cc;
     	border-bottom: 5px solid rgb(0, 101, 179);
-    	transition: all 0.5s cubic-bezier(0, 0, 1, 1) 0.2s;}
+    	transition: all 0.2s cubic-bezier(0, 0, 1, 1) 0.2s;}
 
 #search-form .nav-link.active {
 	color: rgb(0, 101, 179) ;
