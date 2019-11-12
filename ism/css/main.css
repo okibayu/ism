@@ -101,7 +101,8 @@
     font-weight: 400;
     left: -87px;
     border: 0.3px solid #e4e4e4;
-    box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;}
+    box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(250, 250, 250, 0.8) 0%, #f8f9fa 90% );}
     #menu ul > li > div.dropdown-menu.show:hover{
         box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 20px 5px;
         transition: all 0.5s cubic-bezier(0, 0, 0, 1) 0.2s;}
@@ -147,8 +148,8 @@
   	animation-delay: 1s;}
     .owl-carousel.owl-drag .owl-item .owl-back {
     	position: absolute;
-    	background-color: #000;
-    	opacity: 0.4;
+    	background-image: radial-gradient( circle farthest-corner at -3.1% -4.3%,  rgba(57,255,186,1) 0%, rgba(21,38,82,1) 90% );
+    	opacity: 0.6;
     	top: 0;
     	bottom: 0;
         width: 100%;
@@ -158,6 +159,12 @@
         	font-weight: 600;}
 
 /*-- Search Form --*/
+
+.bg-pattern {
+    background-image: url(../img/pattern-travel.png);
+    background-size: contain;
+    background-blend-mode: luminosity;
+    background-position: center;}
 
 #search-form {
 	position: relative;
@@ -172,11 +179,15 @@
 	top: -68px;
 	margin-bottom: -70px;
 	border-radius: 10px;
-	border: 0.3px solid #e4e4e4;
 	box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;}
 	#search-form .card:hover {
 		box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 20px 5px;
 		transition: all 0.5s cubic-bezier(0, 0, 0, 1) 0.2s;}
+
+#search-form .card-body {
+    background-image: radial-gradient( circle 1136px at 5.2% 14%, rgba(255,255,255,1) 0%, #eee 100.2% );
+    border-radius: 0 0 10px 10px;
+    padding: 8px;}
 
 #search-form .nav-link {
 	min-width: 200px;
@@ -200,11 +211,19 @@
 	#search-form .card-header {
 		height: inherit;
 	    margin-bottom: 0;
-	    background-color: #ccc;
-	    border: 0.5px solid #ccc;
+	    background-image: radial-gradient( circle farthest-corner at -3.1% -4.3%, #ccc 0%, #e9ecef 90% );
 		border-radius: 10px 10px 0 0;
 		overflow-x: auto;
 		overflow-y: hidden;}
+
+#flight div.bg-light.p-3 {
+    border-radius: 0 0px 10px 10px;}
+
+#hotel div.bg-light.p-3 {
+    border-radius: 0 0 10px 10px;}
+
+#train div.bg-light.p-3 {
+    border-radius: 0 0 10px 10px;}
 		
 .btn-search {
     background-color: #ffc107 !important;
