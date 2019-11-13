@@ -100,7 +100,7 @@
         <!-- Header end -->
 
         <!-- Page Header -->
-        <section class="page-header page-header-text-light bg-primary">
+        <section class="page-header page-header-text-light bg-primary mb-0">
           <div class="container">
             <div class="row align-items-center">
               <div class="col-md-8">
@@ -108,7 +108,9 @@
                 <span><i class="fas fa-calendar-alt"></i> Rabu, 3 Juli 2019 - Sabtu, 5 Juli 2019 - <i class="fas fa-male"></i> 1 Dewasa, <i class="fas fa-baby"></i>  0 Bayi</span>
               </div>
               <div class="col-md-4">
-                <button class="btn btn-outline-primary btn-md text-light float-right" type="submit"><i class="fas fa-search"></i> Change </button>
+                <button class="btn btn-outline-primary btn-md text-light float-right" data-toggle="collapse" aria-expanded="false" aria-controls="searchForm" data-target="#searchForm">
+                  <i class="fas fa-search"></i> Change 
+                </button>
               </div>
             </div>
           </div>
@@ -117,21 +119,40 @@
 
     <!-- Content -->
     <div id="content">    
-      <div class="container">
-        <div class="row">
+      <div class="container mt-0">
+        
+        <!-- Search form -->
+        <div class="row bg-light collapse p-2 m-0 shadow-sm rounded" id="searchForm">
           <div class="col mb-2">
             <form id="bookingTrain" method="post">
+              <div class="mb-3">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="train-oneway" name="train-trip" class="custom-control-input" checked="" required type="radio">
+                  <label class="custom-control-label" for="train-oneway">One Way</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="train-roundtrip" name="train-trip" class="custom-control-input" required type="radio">
+                  <label class="custom-control-label" for="train-roundtrip">Round Trip</label>
+                </div>
+              </div>
               <div class="form-row">
-                <div class="col-md-6 col-lg form-group">
+                <div class="col-md-6 col-lg-6 form-group">
                   <input type="text" class="form-control" id="trainFrom" required="" placeholder="From">
-                  <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
-                <div class="col-md-6 col-lg form-group">
+                  <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
+                 </div>
+                <div class="col-md-6 col-lg-6 form-group">
                   <input type="text" class="form-control" id="trainTo" required="" placeholder="To">
-                  <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span> </div>
-                <div class="col-md-4 col-lg form-group">
-                  <input id="trainDepart" type="text" class="form-control" required="" placeholder="Depart Date">
-                  <span class="icon-inside"><i class="far fa-calendar-alt"></i></span> </div>
-                <div class="col-md-4 col-lg travellers-class form-group">
+                  <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
+                </div>
+                <div class="col-md-6 col-lg-3 form-group">
+                  <input id="trainsDepart" type="text" class="form-control" required placeholder="Depart Date">
+                  <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
+                </div>
+                <div class="col-md-6 col-lg-3 form-group">
+                  <input id="trainsReturn" type="text" class="form-control" required placeholder="Return Date">
+                  <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
+                </div>
+                <div class="col-md-6 col-lg-3 travellers-class form-group">
                   <input type="text" id="trainTravellersClass" class="travellers-class-input form-control" name="train-travellers-class" placeholder="Travellers, Class" readonly="" required="" onkeypress="return false;">
                   <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
                   <div class="travellers-dropdown">
@@ -190,21 +211,25 @@
                         <option value="0">All Class</option>
                         <option value="1">First Class</option>
                         <option value="2">Second Class</option>
-                        <option value="3">First Class Sleeper (SL)</option>
-                        <option value="4">Second Class Sleeper (SL)</option>
-                        <option value="5">Business</option>
+                        <option value="3">Business</option>
                       </select>
                     </div>
                     <button class="btn btn-primary btn-block submit-done" type="button">Done</button>
                   </div>
                 </div>
-                <div class="col-md-4 col-lg form-group">
-                  <button class="btn btn-primary btn-block" type="submit">Search</button>
+                <div class="col-md-6 col-lg-3 form-group">
+                  <button class="btn btn-search btn-block" type="submit"><i class="fas fa-search"></i> Search</button>
                 </div>
               </div>
             </form>
           </div>
         </div>
+        <!-- Search form end -->
+        
+
+
+
+
         <!-- Avail Train -->
 
         
