@@ -170,7 +170,7 @@
         	font-weight: 600;}
 
 /*-- Search Form --*/
-
+.progress {height: 5px !important;}
 .bg-pattern {
     background-image: url(../img/pattern-travel.png);
     background-size: contain;
@@ -278,8 +278,57 @@
     	background-color: rgb(0, 101, 179) !important;}
 
 /*-- Filter List --*/
+#filterTop div > button > i {
+    color: orange;
+    padding-left: 5px;}
 
+#filterTop div > .btn:focus, .btn.active, .button:focus, .button:active {
+    border-top: 2px solid #ccc;}
 
+#kelas div > ul > li, #kereta div > ul > li, #jam-berangkat div > ul > li, #harga-tiket div > ul > li {
+    display: inline-block;
+    margin-right: 40px;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.5s ease;
+    max-width: 90px;
+    border-bottom: 1px solid orange;}
+
+#kelas div > ul > li > label span {
+    margin-right: 50px;}
+
+#avail div > .title1, .title2, .station, .duration, .price {
+    font-size: 13px;
+    font-weight: 300;} 
+    #avail div > .title1, .time, .duration, .price {
+        font-size: 14px;
+        font-weight: 500;} 
+        #avail div.card-body:hover {
+            -webkit-transition: all 0.1s ease;
+            transition: all 0.5s ease;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15) !important;}
+            #avail div.card-body {
+                border-radius: 5px;}
+
+#myGroup {
+    font-size: 13px;
+    font-weight: 300;
+    color: #999;}
+
+#myGroup ul, #myGroup2 ul {
+    margin-bottom: -8px;
+    padding-left: 0;
+    padding-top: 12px;}
+#myGroup ul > li, #myGroup2 ul > li {
+    display: inline-flex;
+    position: relative;
+    top: 0px;
+    margin-bottom: -10px;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 0;
+    padding-right: 20px;}
+#myGroup ul > li > a:hover, #myGroup2 ul > li > a:hover  {
+    border-bottom: 2px solid orange;}
 
 /*-- Footer --*/
 
