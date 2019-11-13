@@ -226,206 +226,61 @@
         </div>
         <!-- Search form end -->
         
-
-
-
-
-        <!-- Avail Train -->
-
-        
-
-
-
-
-
-
-
-
-        <!-- <div class="col-sm-12">
-          <a href="#" class="btn btn-primary" data-toggle="modal" data-target=".filter-modal"><i class="fas fa-filter"></i> Filter
-          </a>
-        </div> -->
-        <div class="filter-modal modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" >
-          <div class="modal-header bg-white border-bottom">
-            <h5 class="modal-title"><i class="fas fa-sliders-h"></i> Filter</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true text-grey"><i class="fas fa-times text-grey"></i></span>
-            </button>
-          </div>
-
-          <ul class="list-group shadow">
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div class="maskapai-m">
-                <h6 data-toggle="collapse" data-target="#bangku">Kelas</h6>
-                <div id="bangku" class="collapse show">          
-                  <div>
-                    <input type="checkbox" id="b-ekonomi">
-                    <label for="b-ekonomi">Ekonomi</label>
-                  </div>
-                </div>
-                <div id="bangku" class="collapse show">          
-                  <div>
-                    <input type="checkbox" id="b-bisnis">
-                    <label for="b-bisnis">Bisnis</label>
-                  </div>
-                </div>
-                <div id="bangku" class="collapse show">          
-                  <div>
-                    <input type="checkbox" id="b-eksekutif">
-                    <label for="b-eksekutif">Eksekutif</label>
-                  </div>
-                </div>
-                
-              </div>
-              <span role="button" data-toggle="collapse" data-target="#bangku"><i class="fas fa-chevron-down fa-xs"></i></span>
-            </li> 
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div class="maskapai-m">
-                <h6 data-toggle="collapse" data-target="#kereta">Kereta Api</h6>
-                <div id="kereta" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="jayabaya">
-                    <label for="jayabaya">Jayabaya</label>
-                  </div>
-                </div>
-                <div id="kereta" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="fajar">
-                    <label for="fajar">Fajar Utama</label>
-                  </div>
-                </div>
-                <div id="kereta" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="argo">
-                    <label for="argo">Argo Parahyangan</label>
-                  </div>
-                </div>
-              </div>
-              <span role="button" data-toggle="collapse" data-target="#kereta"><i class="fas fa-chevron-down fa-xs"></i></span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">       
-              <div class="maskapai-m">
-                <h6 data-toggle="collapse" data-target="#waktu">Waktu</h6>
-                <div id="waktu" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="pagi-siang">
-                    <label for="pagi-siang">06:00 - 12:00</label>
-                  </div>
-                </div>
-                <div id="waktu" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="siang-sore">
-                    <label for="siang-sore">12:00 - 18:00</label>
-                  </div>
-                </div>
-                <div id="waktu" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="sore-malam">
-                    <label for="sore-malam">18:00 - 24:00</label>
-                  </div>
-                </div>
-                <div id="waktu" class="collapse show">
-                  <div>
-                    <input type="checkbox" id="malam-pagi">
-                    <label for="malam-pagi">24:00 - 06:00</label>
-                  </div>
-                </div>
-              </div>
-              <span role="button" data-toggle="collapse" data-target="#waktu"><i class="fas fa-chevron-down fa-xs"></i></span>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between lh-condensed">
-              <div class="maskapai-m">
-                <h6 data-toggle="collapse" data-target="#harga" style="font-weight: bold;">Harga</h6>
-                <div id="harga" class="collapse show">
-                    <input type="text" class="js-range-slider" name="my_range" value=""
-                    data-type="double"
-                    data-min="0"
-                    data-max="50000000"
-                    data-from="400000"
-                    data-to="30000000"
-                    data-grid="true"
-                    />
-                </div>
-              </div>
-              <span role="button" data-toggle="collapse" data-target="#harga"><i class="fas fa-chevron-down"></i></span>
-            </li>
-          </ul>
-
-          <div class="modal-footer bg-white">
-            <button type="button" class="btn btn-primary"> Submit </button>
-            <button type="button" class="btn btn-warning" data-dismiss="modal" aria-label="Close"> Close </button>
-          </div>
-        </div> 
+        <!-- Avail Train -->  
         <div class="container">
+          <!-- Filter -->
           <div class="row">
-            <div class="col-md-12">
-              <div class="mt-4 mb-4 d-none d-sm-block">
+            <div class="col-md-12 accordion" id="filterTop">
+              <div class="mt-3 mb-1">
                 <div class="btn-filter" id="1">
-                  <span class="left bold" style="padding: 5px;">Filter:</span>
-                  <button class="btn btn-light" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas <i class="fas fa-angle-down"></i></button>
-                  <button class="btn btn-light" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api <i class="fas fa-angle-down"></i></button>
-                  <button class="btn btn-light" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu <i class="fas fa-angle-down"></i></button>
-                  <button class="btn btn-light" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga <i class="fas fa-angle-down"></i></button>
+                  <span class="left text-bold" style="padding: 5px;">Filter:</span>
+                  <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas <i class="fas fa-angle-down"></i>
+                  </button>
+                  <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api <i class="fas fa-angle-down"></i></button>
+                  <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu <i class="fas fa-angle-down"></i></button>
+                  <button class="btn btn-sm btn-light" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga <i class="fas fa-angle-down"></i></button>
                 </div>
               </div>
-              <div class="row d-none d-sm-block">
-                <div class="col" id="2">
-                  <div class="collapse mb-2" id="kelas">
-                    <div class="form-group form-check filter-box d-none d-sm-block">
+              <div class="row">
+                <div class="col-12 mb-1">
+                  <div class="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+                    <div class="form-group">
                       <ul>
                         <li>
                           <input class="form-check-input" type="checkbox" id="ekonomi">
-                          <label class="form-check-label" for="ekonomi">
-                            Ekonomi
-                          </label>
+                          <label class="form-check-label" for="ekonomi">Ekonomi</label>
                         </li>
                         <li>
                           <input class="form-check-input" type="checkbox" id="bisnis">
-                          <label class="form-check-label" for="bisnis">
-                            Bisnis
-                          </label>
+                          <label class="form-check-label" for="bisnis">Bisnis</label>
                         </li>
                         <li>
                           <input class="form-check-input" type="checkbox" id="eksekutif">
-                          <label class="form-check-label" for="eksekutif">
-                            Eksekutif
-                          </label>
+                          <label class="form-check-label" for="eksekutif">Eksekutif</label>
                         </li>
                       </ul>
                     </div>
                   </div>
-
-                  <div class="collapse mb-2" id="kereta">
-                    <div class="form-group form-check filter-box">
+                  <div class="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
+                    <div class="form-group">
                       <ul>
                         <li>
                           <input class="form-check-input" type="checkbox" id="argolawu">
-                          <label class="form-check-label" for="argolawu">
-                            Argolawu
-                          </label>
+                          <label class="form-check-label" for="argolawu">Argolawu</label>
                         </li>
                         <li>
                           <input class="form-check-input" type="checkbox" id="parahyangan">
-                          <label class="form-check-label" for="parahyangan">
-                            Parahyangan
-                          </label>
+                          <label class="form-check-label" for="parahyangan">Parahyangan</label>
                         </li>
                         <li>
                           <input class="form-check-input" type="checkbox" id="fajarutama">
-                          <label class="form-check-label" for="fajarutama">
-                            Fajar Utama
-                          </label>
+                          <label class="form-check-label" for="fajarutama">Fajar Utama</label>
                         </li>
                       </ul>
                     </div>
                   </div>
-
-                  <div class="collapse mb-2" id="jam-berangkat">
-                    <div class="form-group form-check filter-box">
+                  <div class="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
+                    <div class="form-group">
                       <ul>
                         <li>
                           <input class="form-check-input" type="checkbox" id="pagi">
@@ -458,9 +313,8 @@
                       </ul>
                     </div>
                   </div>
-
-                  <div class="collapse mb-2" id="harga-tiket">
-                    <div class="form-group form-check filter-box">
+                  <div class="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                    <div class="form-group">
                       <ul>
                         <li>
                           <input class="form-check-input" type="checkbox" id="0-100">
@@ -498,7 +352,7 @@
                 </div>
               </div>
 
-              <!-- sort desktop -->
+              <!-- Sort Desktop -->
               <div id="sort-avail" class="card border-light bg-white mb-3 d-none d-sm-block">
                 <div class="card-body">
                   <div class="row align-items-center">
@@ -520,13 +374,14 @@
                     <div class="col" hidden="">&nbsp;</div>
                   </div> 
                 </div>
-              </div> 
-
-              <!-- filter mobile -->
-              <!-- sort mobile-->
+              </div>
+              <!-- Sort Desktop end --> 
                
             </div>
-          </div>  
+          </div>
+          <!-- Filter end -->
+
+          <!-- Train list -->
           <div id="avail" class="card border-light bg-white mb-3 d-none d-xs-none d-sm-block d-lg-block">
               <div class="card-body">
                 <div class="row">
@@ -654,9 +509,9 @@
                   </div>
                 </div>
               </div> 
-          </div>          
+          </div>
+          <!-- Train list -->         
         </div>
-
         <!-- Avail Train end -->
 
 
