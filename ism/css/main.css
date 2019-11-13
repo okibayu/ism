@@ -278,11 +278,6 @@
     	background-color: rgb(0, 101, 179) !important;}
 
 /*-- Filter List --*/
-#kelas, #kereta, #jam-berangkat, #harga-tiket div > ul {
-    position: relative;
-    margin-top: 10px;
-    background-color: #fff;
-    padding: 5px 0 5px 0;}
 
 
 
