@@ -125,7 +125,7 @@
         <div class="container mt-0">
           
           <!-- Search form -->
-          <div class="collapse mt-0 shadow-lg p-3 mb-1 bg-white rounded-bottom" id="searchForm">
+          <div class="collapse mt-0 p-3 mb-1 bg-white shadow rounded-bottom" id="searchForm">
             <div class="col mb-2">
               <form id="bookingTrain" method="post">
                 <div class="mb-3">
@@ -229,163 +229,154 @@
           </div>
           <!-- Search form end -->
           
-          <!-- Avail Train -->  
-          <section class="train-avail">
-            
-            <!-- Filter -->
-            <div class="row">
-              <div class="col mt-4 mb-0 accordion" id="filterTop">
-                <!-- <div class=""> -->
-                  <div class="btn-filter">
-                    <span class="left font-weight-bold p-2">Filter:</span>
-                    <button class="btn btn-sm bg-white" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas <i class="fas fa-angle-down"></i>
-                    </button>
-                    <button class="btn btn-sm bg-white" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api <i class="fas fa-angle-down"></i></button>
-                    <button class="btn btn-sm bg-white" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu <i class="fas fa-angle-down"></i></button>
-                    <button class="btn btn-sm bg-white" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga <i class="fas fa-angle-down"></i></button>
-                  <!-- </div> -->
+          <!-- Filter -->          
+          <div class="mt-3 accordion" id="filterTop">
+            <div class="btn-filter">
+              <span class="left font-weight-bold p-2">Filter:</span>
+              <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas <i class="fas fa-angle-down"></i>
+              </button>
+              <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api <i class="fas fa-angle-down"></i></button>
+              <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu <i class="fas fa-angle-down"></i></button>
+              <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga <i class="fas fa-angle-down"></i></button>
+            </div>
+            <div class="card bg-white mt-3 pb-0">
+              <div class="pb-0 collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop" style="">
+                <div class="form-group custom-control custom-checkbox">
+                  <p>Select Class</p>
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="ekonomi">
+                      <label class="custom-control-label" for="ekonomi">Ekonomi</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="bisnis">
+                      <label class="custom-control-label" for="bisnis">Bisnis</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="eksekutif">
+                      <label class="custom-control-label" for="eksekutif">Eksekutif</label>
+                    </li>
+                  </ul>
                 </div>
-
-                <div class="container">
-                  <div class="card card-body pb-0">
-                    <div class="pb-0 collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
-                      <div class="form-group custom-control custom-checkbox">
-                        <p>Select Class</p>
-                        <ul>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="ekonomi">
-                            <label class="custom-control-label" for="ekonomi">Ekonomi</label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="bisnis">
-                            <label class="custom-control-label" for="bisnis">Bisnis</label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="eksekutif">
-                            <label class="custom-control-label" for="eksekutif">Eksekutif</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="pb-0 collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
-                      <div class="form-group custom-control custom-checkbox">
-                        <p>Select Trains</p>
-                        <ul>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="argolawu">
-                            <label class="custom-control-label" for="argolawu">Argolawu</label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="parahyangan">
-                            <label class="custom-control-label" for="parahyangan">Parahyangan</label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="fajarutama">
-                            <label class="custom-control-label" for="fajarutama">Fajar Utama</label>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="pb-0 collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
-                      <div class="form-group custom-control custom-checkbox">
-                        <p>Select Times</p>
-                        <ul>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="pagi">
-                            <label class="custom-control-label" for="pagi">
-                              <span>06:00 - 12:00</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="siang">
-                            <label class="custom-control-label" for="siang">
-                              <span>12:00 - 18:00</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="sore">
-                            <label class="custom-control-label" for="sore">
-                              <span>18:00 - 24:00</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="malam">
-                            <label class="custom-control-label" for="sore">
-                              <span>24:00 - 06:00</span>
-                            </label>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="pb-0 collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
-                      <div class="form-group custom-control custom-checkbox">
-                        <p>Select Prices</p>
-                        <ul>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="0-100">
-                            <label class="custom-control-label" for="0-100">
-                              <span>Rp 0 - Rp 100.000</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="101-200">
-                            <label class="custom-control-label" for="101-200">
-                              <span>Rp 101.000 - Rp 200.000</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="201-300">
-                            <label class="custom-control-label" for="201-300">
-                              <span>Rp 201.000 - Rp 300.000</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="301-400">
-                            <label class="custom-control-label" for="301-400">
-                              <span>Rp 301.000 - Rp 400.000</span>
-                            </label>
-                          </li>
-                          <li>
-                            <input class="custom-control-input" type="checkbox" id="401-500">
-                            <label class="custom-control-label" for="401-500">
-                              <span>Rp 401.000 - Rp 500.000</span>
-                            </label>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <div class="pb-0 collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop" style="">
+                <div class="form-group custom-control custom-checkbox">
+                  <p>Select Trains</p>
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="argolawu">
+                      <label class="custom-control-label" for="argolawu">Argolawu</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="parahyangan">
+                      <label class="custom-control-label" for="parahyangan">Parahyangan</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="fajarutama">
+                      <label class="custom-control-label" for="fajarutama">Fajar Utama</label>
+                    </li>
+                  </ul>
                 </div>
-
-                <!-- Sort Desktop -->
-                <div id="sort-avail" class="border-light bg-white mb-3">
-                  <div class="card-body">
-                    <div class="row align-items-center">
-                      <div class="col-sm-2 col-md-3 col-lg-3">
-                        <a href="#">Trains <i class="fas fa-sort"></i></a>
-                      </div>
-                      <div class="col-sm-2 col-md-2 col-lg-2">
-                        <a href="#">Depart <i class="fas fa-sort"></i></a>
-                      </div>
-                      <div class="col-sm-2 col-md-2 col-lg-2">
-                        <a href="#">Arrive <i class="fas fa-sort"></i></a>
-                      </div>
-                      <div class="col-sm-2 col-md-1 col-lg-1">
-                        <a href="#">Times <i class="fas fa-sort"></i></a>
-                      </div>
-                      <div class="col-sm-2 col-md-2 col-lg-2">
-                        <a href="#">Price/ person  <i class="fas fa-sort"></i></a>
-                      </div>
-                      <div class="col-md-2" hidden="">&nbsp;</div>
-                    </div> 
-                  </div>
+              </div>
+              <div class="pb-0 collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop" style="">
+                <div class="form-group custom-control custom-checkbox">
+                  <p>Select Times</p>
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="pagi">
+                      <label class="custom-control-label" for="pagi">
+                        <span>06:00 - 12:00</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="siang">
+                      <label class="custom-control-label" for="siang">
+                        <span>12:00 - 18:00</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="sore">
+                      <label class="custom-control-label" for="sore">
+                        <span>18:00 - 24:00</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="malam">
+                      <label class="custom-control-label" for="sore">
+                        <span>24:00 - 06:00</span>
+                      </label>
+                    </li>
+                  </ul>
                 </div>
-                <!-- Sort Desktop end --> 
-                 
+              </div>
+              <div class="pb-0 collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop" style="">
+                <div class="form-group custom-control custom-checkbox">
+                  <p>Select Prices</p>
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="0-100">
+                      <label class="custom-control-label" for="0-100">
+                        <span>Rp 0 - Rp 100.000</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="101-200">
+                      <label class="custom-control-label" for="101-200">
+                        <span>Rp 101.000 - Rp 200.000</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="201-300">
+                      <label class="custom-control-label" for="201-300">
+                        <span>Rp 201.000 - Rp 300.000</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="301-400">
+                      <label class="custom-control-label" for="301-400">
+                        <span>Rp 301.000 - Rp 400.000</span>
+                      </label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="401-500">
+                      <label class="custom-control-label" for="401-500">
+                        <span>Rp 401.000 - Rp 500.000</span>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <!-- Filter end -->
-            
+
+            <!-- Sort Desktop -->
+            <div id="sort-avail" class="border-light bg-white mb-3">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <a href="#">Trains <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#">Depart <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#">Arrive <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <a href="#">Times <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#">Price/ person  <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-md-2" hidden="">&nbsp;</div>
+                </div> 
+              </div>
+            </div>
+            <!-- Sort Desktop end -->    
+          </div>          
+          <!-- Filter end -->
+
+          <!-- Avail Train -->  
+          <section class="train-avail mt-2">        
             <!-- Train list -->
             <div id="avail" class="card border-light bg-white mb-3">
               <div class="card-body shadow">
