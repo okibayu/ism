@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/ion-rangeslider/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 
@@ -241,9 +242,8 @@
                 <button class="btn btn-link p-2" type="reset" value="Reset">Reset</button>
               </div>
               <div class="card bg-white mt-1 pb-0">
-                <div class="pt-3 bg-white shadow-sm rounded collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+                <div class="pt-3 bg-white rounded collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
-                    <p>Select Class</p>
                     <ul>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="ekonomi">
@@ -260,9 +260,8 @@
                     </ul>
                   </div>
                 </div>
-                <div class="pt-3 bg-white shadow-sm rounded collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop" style="">
+                <div class="pt-3 bg-white rounded collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
-                    <p>Select Trains</p>
                     <ul>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="argolawu">
@@ -279,9 +278,8 @@
                     </ul>
                   </div>
                 </div>
-                <div class="pt-3 bg-white shadow-sm rounded collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop" style="">
+                <div class="pt-3 bg-white rounded collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
-                    <p>Select Times</p>
                     <ul>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="pagi">
@@ -310,41 +308,9 @@
                     </ul>
                   </div>
                 </div>
-                <div class="pt-3 bg-white shadow-sm rounded collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop" style="">
-                  <div class="form-group custom-control custom-checkbox">
-                    <p>Select Prices</p>
-                    <ul>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="0-100">
-                        <label class="custom-control-label" for="0-100">
-                          <span>Rp 0 - Rp 100.000</span>
-                        </label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="101-200">
-                        <label class="custom-control-label" for="101-200">
-                          <span>Rp 101.000 - Rp 200.000</span>
-                        </label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="201-300">
-                        <label class="custom-control-label" for="201-300">
-                          <span>Rp 201.000 - Rp 300.000</span>
-                        </label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="301-400">
-                        <label class="custom-control-label" for="301-400">
-                          <span>Rp 301.000 - Rp 400.000</span>
-                        </label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="401-500">
-                        <label class="custom-control-label" for="401-500">
-                          <span>Rp 401.000 - Rp 500.000</span>
-                        </label>
-                      </li>
-                    </ul>
+                <div class="pt-3 bg-white rounded collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                  <div class="form-group custom-control pr-4"> 
+                    <input type="text" class="js-range-slider" name="my_range" value="" /> 
                   </div>
                 </div>
               </div>
@@ -596,7 +562,18 @@
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
     <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
     <script src="vendor/daterangepicker/moment.min.js"></script> 
-    <script src="vendor/daterangepicker/daterangepicker.js"></script> 
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script>
+      $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 500000,
+        from: 100000,
+        to: 350000,
+        grid: true
+      });
+    </script> 
     <script>
     $(function() {
      'use strict';
