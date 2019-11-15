@@ -8,6 +8,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
@@ -229,18 +230,27 @@
           </div>
           <!-- Search form end -->
           
-          <!-- Filter -->          
+          <!-- Filter --> 
           <div class="mt-3 accordion" id="filterTop">
-            <!-- <form> -->
+            <!-- <form method="post"> -->
               <div class="btn-filter">
-                <span class="left p-2">Filter :</span>
-                <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas <i class="fas fa-angle-down"></i>
-                </button>
-                <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api <i class="fas fa-angle-down"></i></button>
-                <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu <i class="fas fa-angle-down"></i></button>
-                <button class="btn btn-sm bg-white collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga <i class="fas fa-angle-down"></i></button>
-                <button class="btn btn-link p-2" type="reset" value="Reset">Reset</button>
+                <h5 class="float-left">Filter :</h5>
+                <div class="card-header">
+                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
+                </div>
+                <div class="card-header">
+                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
+                </div>
+                <div class="card-header">
+                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
+                </div>
+                <div class="card-header">
+                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
+                </div>
+                <button class="btn btn-link p-1" type="reset" value="Reset">Reset</button>
               </div>
+              <div class="clearfix"></div>
+
               <div class="card bg-gradient-blue rounded mt-1 pb-0">
                 <div class="pt-3 collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
@@ -309,8 +319,21 @@
                   </div>
                 </div>
                 <div class="pt-3 collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
-                  <div class="form-group custom-control pr-4"> 
-                    <input type="text" class="js-range-slider" name="my_range" value="" /> 
+                  <div class="form-group custom-control">
+                    <div class="card-body pt-0 pb-1 pl-0 pr-4 w-60">
+                      <p>
+                        <input id="amount" type="text" readonly="" class="form-control border-0 bg-transparent p-0">
+                      </p>
+                      <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                        <div class="ui-slider-range ui-corner-all ui-widget-header">
+                        </div>
+                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 10.4167%;">
+                        </span>
+                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 81.6667%;">
+                        </span>
+                      </div>
+                    </div> 
+                    <!-- <input type="text" class="js-range-slider" name="my_range" value="" /> --> 
                   </div>
                 </div>
               </div>
@@ -472,6 +495,7 @@
 
     <!-- Script -->
     <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
     <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
@@ -496,7 +520,7 @@
     <script>
     $(function() {
      'use strict';
-     
+
       // Trains Depart Date
       $('#trainsDepart').daterangepicker({
       singleDatePicker: true,
@@ -513,7 +537,21 @@
       autoUpdateInput: true,
       }, function(chosen_date) {
       $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
-    });});
+      });
+
+      // Price Range
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 500000,
+        max: 5000000,
+        values: [ 800000, 4500000 ],
+        slide: function( event, ui ) {
+        $( "#amount" ).val( "Rp " + ui.values[ 0 ] + " - Rp " + ui.values[ 1 ] );
+        }
+      });
+      $( "#amount" ).val( "Rp " + $( "#slider-range" ).slider( "values", 0 ) +
+        " - Rp " + $( "#slider-range" ).slider( "values", 1 ) );
+      });
     </script>
     <script src="js/main.js"></script>
     
