@@ -127,6 +127,8 @@
     text-transform: capitalize;}
 
 section.page-header.bg-page-header {
+    font-size: 12px;
+    line-height: 10px;
     background: rgb(3,79,140);
     background: linear-gradient(153deg, rgba(3,79,140,1) 0%, rgba(0,130,235,0.8379726890756303) 26%, rgba(0,88,133,1) 100%);}
 
@@ -175,9 +177,14 @@ section.page-header.bg-page-header {
 /*-- Search Form --*/
 .progress { 
     height: 5px !important;
-    border-bottom: 1px solid rgba(250, 250, 250, 0.8);
+    background: linear-gradient(45deg, rgba(250, 250, 250, 0.8) 0%, #f8f9fa 35%, #dee2e6 100%);
+    border-bottom: 0px solid #eaeaea;
     -webkit-transition: none !important;
-    transition: none !important;}
+    transition: none !important;
+    /*box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 3px 2px;*/}
+
+.bg-progress {
+    background: linear-gradient(45deg, #fff 35%, #ffc107 100%);}
 
 .bg-pattern {
     background-image: url(../img/pattern-travel.png);
@@ -199,6 +206,11 @@ section.page-header.bg-page-header {
 	top: -68px;
 	margin-bottom: -70px;
 	border-radius: 10px;
+
+border-image: linear-gradient(to bottom right, #FFFFFF, #ffc107);
+    border-image-slice: 1;
+    border-width: 5px;
+    
 	box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;}
 	#search-form .card:hover {
 		box-shadow: rgba(0, 0, 0, 0.10) 0px 5px 20px 5px;
@@ -309,8 +321,48 @@ section.page-header.bg-page-header {
 #filterTop div > .btn:focus, .btn.active, .button:focus, .button:active {}
 
 #filterTop div.card.bg-gradient-blue.rounded.mt-1.pb-0 {
-    background: rgb(255,255,255);
-    background: linear-gradient(177deg, rgba(0,123,255,.25) 0%, #fff 50%, rgba(250, 250, 250, 0.8) 100%);}
+    background: linear-gradient(-5deg, rgba(250, 250, 250, 0.8) 0%, #fff 100%, #f8f9fa 100%);
+    box-shadow: 0 2px 5px #cccccc87;
+    margin-top: 10px !important;
+    margin-bottom: 1px;
+    border-radius: 5px 5px 0 0!important;}
+
+#harga-tiket div > span > .irs-bar {
+    height: 7px;
+    top: 24px;
+    background: linear-gradient(45deg, rgba(250, 250, 250, 0.8) 0%, rgba(255, 193, 7, 0.7) 35%, rgb(220, 53, 69) 100%);}
+    #harga-tiket div > span > span > .irs-line {
+        height: 5px;
+        background: linear-gradient(90deg, rgba(250, 250, 250, 0) 0%, #dee2e6 35%, #e4e9ec 100%);}
+        #harga-tiket div > span > span > .irs-min {
+            color: #999;
+            background: #fff;}
+        #harga-tiket div > span > span > .irs-max {
+            color: #999;
+            background: #fff;}
+        #harga-tiket div > span > span > .irs-grid-text {
+            color: #ccc;
+            background: #fff;}
+        #harga-tiket div > span > span > .irs-from {
+            background: #fff;
+            color: #000;}
+        #harga-tiket div > span > span > .irs-to {
+            background: #fff;
+            color: #000;}
+        #harga-tiket div > span > span.irs-handle {
+            height: 11px;}
+            #harga-tiket div > span > span.irs-handle.from i {
+                background: #e4e4e4;}
+        #harga-tiket div > span > span > .irs-grid-pol {
+            background: #ccc;}
+            #harga-tiket div > span > span > .irs-grid {
+                bottom: 4px;
+                left: 0;
+                width: 100%;
+                height: 20px;}
+
+
+
 
 #kelas div > ul > li, #kereta div > ul > li, #jam-berangkat div > ul > li, #harga-tiket div > ul > li {
     display: inline-block;
@@ -335,7 +387,11 @@ section.page-header.bg-page-header {
 
 #sort-avail * > div > a {
     text-align: left;
-font-size: 12px;}
+    font-size: 12px;}
+#sort-avail {
+    border-radius: 0 0 5px 5px;
+    background: linear-gradient(-45deg, #fff 100%, rgba(250, 250, 250, 0.8) 100%);
+    border-top: 0.3px solid #eaeaea;}
 
 #myGroup, #myGroup2 {
     font-size: 13px;
@@ -363,7 +419,8 @@ font-size: 12px;}
 #itinerary div > h5 {
     font-size: 15px;
     font-weight: 400;
-    color: #000;
-}
+    color: #000;}
+
+
 /*-- Footer --*/
 
