@@ -10,7 +10,7 @@ $(window).on('load', function () {
 	$('body').delay(333);
 });
 
-// Dropdown show on hover
+// Dropdown
 $('.primary-menu ul.navbar-nav li.dropdown').on("mouseover", function() {
 	if ($(window).width() > 991) {
 		$(this).find('> .dropdown-menu').stop().slideDown('fast');
@@ -20,17 +20,17 @@ $('.primary-menu ul.navbar-nav li.dropdown').on("mouseover", function() {
 	}
 });
 
-// When dropdown going off to the out of the screen.
-	$('.primary-menu .dropdown-menu').each(function() {
-		var menu = $('#header .header-row').offset();
-		var dropdown = $(this).parent().offset();
+$('.primary-menu .dropdown-menu').each(function() {
+	var menu = $('#header .header-row').offset();
+	var dropdown = $(this).parent().offset();
 
-		var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#header .header-row').outerWidth());
+	var i = (dropdown.left + $(this).outerWidth()) - (menu.left + $('#header .header-row').outerWidth());
 
-		if (i > 0) {
-			$(this).css('margin-left', '-' + (i + 5) + 'px');
-		}
-	});
+	if (i > 0) {
+		$(this).css('margin-left', '-' + (i + 5) + 'px');
+	}
+});
+
 $(function () {
     $(".dropdown li").on('mouseenter mouseleave', function (e) {
 		if ($(window).width() > 991) {
@@ -50,7 +50,7 @@ $(function () {
     });
 });
 
-// Mobile Collapse Nav
+// Mobile menu
 $('.primary-menu .dropdown-toggle[href="#"], .primary-menu .dropdown-toggle[href!="#"] .arrow').on('click', function(e) {
 	if ($(window).width() < 991) {
         e.preventDefault();
@@ -71,39 +71,39 @@ $('.navbar-toggler').on('click', function() {
 	});
 	
 
-/* Flights */
+// Flights
 $('#flightTravellersClass').on('click', function() {
-        $('.travellers-dropdown').slideToggle('fast');
-		/* Change value of Travellers and Class */
-		$('.qty-spinner, .flight-class').on('change', function() {
-        var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
-		var totalCount = ids.reduce(function (prev, id) {
-			return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-        var fc = $('input[name="flight-class"]:checked  + label').text();
-        $('#flightTravellersClass').val(totalCount + ' - ' + fc);
-    }).trigger('change');
-    });
+    $('.travellers-dropdown').slideToggle('fast');
+	/* Change value of Travellers and Class */
+	$('.qty-spinner, .flight-class').on('change', function() {
+    var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
+	var totalCount = ids.reduce(function (prev, id) {
+		return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+    var fc = $('input[name="flight-class"]:checked  + label').text();
+    $('#flightTravellersClass').val(totalCount + ' - ' + fc);
+}).trigger('change');
+});
 	
-	/* Trains */
-	$('#trainTravellersClass').on('click', function() {
-        $('.travellers-dropdown').slideToggle('fast');
+// Trains
+$('#trainTravellersClass').on('click', function() {
+	    $('.travellers-dropdown').slideToggle('fast');
 		/* Change value of Travellers and Class */
 		$('.qty-spinner, #train-class').on('change', function() {
-        var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
+	    var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
 		var totalCount = ids.reduce(function (prev, id) {
 			return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
 		var fc = $('#train-class option:selected').text();
 		
-        $('#trainTravellersClass').val(totalCount + ' - ' + fc);
-    }).trigger('change');
-    });
+	    $('#trainTravellersClass').val(totalCount + ' - ' + fc);
+	}).trigger('change');
+});
 	
-	/* Hotels */
-	$('#hotelsTravellersClass').on('click', function() {
-        $('.travellers-dropdown').slideToggle('fast');
+// Hotels
+$('#hotelsTravellersClass').on('click', function() {
+	    $('.travellers-dropdown').slideToggle('fast');
 		/* Change value of People */
 		$('.qty-spinner').on('change', function() {
-        var ids = ['adult', 'children'];
+	    var ids = ['adult', 'children'];
 		var totalCount = ids.reduce(function (prev, id) {
 			return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ ' ' +'People';
 			
@@ -111,22 +111,22 @@ $('#flightTravellersClass').on('click', function() {
 		var totalCountRoom = idsRoom.reduce(function (prev, id) {
 			return parseInt($('#hotels-rooms').val()) + prev}, 0)+ ' ' +'Room';
 		
-        $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
-    }).trigger('change');
-    });
+	    $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
+	}).trigger('change');
+});
 	
-	/* Hide dropdown when clicking outside */
-	$(document).on('click', function(event) {
-    if (!$(event.target).closest(".travellers-class").length) {
-        $(".travellers-dropdown").hide();
-    }
-	
-	/* Hide dropdown when clicking on Done Button */
+// Hide dropdown
+$(document).on('click', function(event) {
+if (!$(event.target).closest(".travellers-class").length) {
+    $(".travellers-dropdown").hide();
+}
+
+/* Hide dropdown when clicking on Done Button */
 	$('.submit-done').on('click', function() {
-        $('.travellers-dropdown').fadeOut(function() {
-            $(this).hide();
-        });
-    });
+	    $('.travellers-dropdown').fadeOut(function() {
+	        $(this).hide();
+	    });
+	});
 });
 	
 /*-- Slideshow (Owl Carousel) */
@@ -187,19 +187,19 @@ $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
 
 /*-- Scroll to top -- */
 $(function () {
-		$(window).on('scroll', function(){
-			if ($(this).scrollTop() > 150) {
-				$('#back-to-top').fadeIn();
-			} else {
-				$('#back-to-top').fadeOut();
-			}
-		});
-		});
+	$(window).on('scroll', function(){
+		if ($(this).scrollTop() > 150) {
+			$('#back-to-top').fadeIn();
+		} else {
+			$('#back-to-top').fadeOut();
+		}
+	});
+});
+
 $('#back-to-top').on("click", function() {
 	$('html, body').animate({scrollTop:0}, 'slow');
 	return false;
 });
-
 
 $('.smooth-scroll a').on("click", function() {
     var sectionTo = $(this).attr('href');
