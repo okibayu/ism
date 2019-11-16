@@ -343,7 +343,12 @@ section.page-header.bg-page-header {
     color: orange;
     padding-left: 5px;}
 
-#filterTop div > .btn:focus, .btn.active, .button:focus, .button:active {}
+#filterTop div > ul > li > .custom-control-input:checked~ .custom-control-label::before {
+    color: #fff;
+    border-color: #ffc107!important;
+    background-color: #ffc107!important;}
+    #filterTop div > ul > li > .custom-control-input:checked~ .custom-control-label::after {
+        }
 
 #filterTop div.card.bg-gradient-blue.rounded.mt-1.pb-0 {
     background: linear-gradient(-5deg, rgba(250, 250, 250, 0.8) 0%, #fff 100%, #f8f9fa 100%);
