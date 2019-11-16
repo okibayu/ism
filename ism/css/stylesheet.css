@@ -1480,7 +1480,7 @@ body {
   background-color: #f1f2f4;
   color: #535b61;
 }
-.accordion .card-header a:before {
+.accordion .card-header a:after {
   position: absolute;
   content: " ";
   left: 20px;

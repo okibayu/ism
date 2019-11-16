@@ -128,7 +128,7 @@
           <!-- Search form -->
           <div class="collapse mt-0 p-3 mb-1 bg-white shadow rounded-bottom" id="searchForm">
             <div class="col mb-0">
-              <form id="bookingTrain" method="post">
+              <form id="bookingTrain">
                 <div class="mb-3">
                   <div class="custom-control custom-radio custom-control-inline">
                     <input id="train-oneway" name="train-trip" class="custom-control-input" checked="" required type="radio">
@@ -222,7 +222,7 @@
                     </div>
                   </div>
                   <div class="col-md-6 col-lg-3 form-group">
-                    <button class="btn btn-search btn-block" type="submit"><i class="fas fa-search"></i> Search</button>
+                    <button class="btn btn-search btn-block" type="submit" href="index-train.html"><i class="fas fa-search"></i> Search</button>
                   </div>
                 </div>
               </form>
@@ -234,25 +234,25 @@
           <div class="mt-3 accordion" id="filterTop">
             <!-- <form method="post"> -->
               <div class="btn-filter">
-                <h5 class="float-left">Filter :</h5>
-                <div class="card-header">
-                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
+                <div class="filter-header" style="font-size: 12px;margin-right: -10px;width: auto;">Filter :</div>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
                 </div>
-                <div class="card-header">
-                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
                 </div>
-                <div class="card-header">
-                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
                 </div>
-                <div class="card-header">
-                  <a class="btn btn-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
                 </div>
-                <button class="btn btn-link p-1" type="reset" value="Reset">Reset</button>
+                <div class="filter-headerx" style="font-size: 12px;margin-right: -10px;width: auto;"><a href="#!">Reset</a></div>
               </div>
               <div class="clearfix"></div>
 
-              <div class="card bg-gradient-blue rounded mt-1 pb-0">
-                <div class="pt-3 collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+              <div class="card bg-gradient-blue rounded mt-1 mb-3 pb-0">
+                <div class="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
                     <ul>
                       <li>
@@ -270,7 +270,7 @@
                     </ul>
                   </div>
                 </div>
-                <div class="pt-3 collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
+                <div class="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
                     <ul>
                       <li>
@@ -288,37 +288,29 @@
                     </ul>
                   </div>
                 </div>
-                <div class="pt-3 collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
+                <div class="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
                   <div class="form-group custom-control custom-checkbox">
                     <ul>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="pagi">
-                        <label class="custom-control-label" for="pagi">
-                          <span>06:00 - 12:00</span>
-                        </label>
+                        <label class="custom-control-label" for="pagi">Pagi-Siang<br> (06:00 - 12:00)</label>
                       </li>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="siang">
-                        <label class="custom-control-label" for="siang">
-                          <span>12:00 - 18:00</span>
-                        </label>
+                        <label class="custom-control-label" for="siang">Siang-Sore<br> (12:00 - 18:00)</label>
                       </li>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="sore">
-                        <label class="custom-control-label" for="sore">
-                          <span>18:00 - 24:00</span>
-                        </label>
+                        <label class="custom-control-label" for="sore">Sore-Malam<br> (18:00 - 24:00)</label>
                       </li>
                       <li>
                         <input class="custom-control-input" type="checkbox" id="malam">
-                        <label class="custom-control-label" for="malam">
-                          <span>24:00 - 06:00</span>
-                        </label>
+                        <label class="custom-control-label" for="malam">Malam-Pagi<br> (24:00 - 06:00)</label>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div class="pt-3 collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                <div class="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
                   <div class="form-group custom-control">
                     <div class="card-body pt-0 pb-1 pl-0 pr-4 w-60">
                       <p>
@@ -339,7 +331,7 @@
               </div>
             <!-- </form> -->
             <!-- Sort Desktop -->
-            <div id="sort-avail" class="card bg-white shadow-sm pt-0 mb-3">
+            <div id="sort-avail" class="card bg-white shadow-sm rounded pt-0 mb-3">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-sm-2 col-md-3 col-lg-3 pl-0">
