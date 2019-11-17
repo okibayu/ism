@@ -232,11 +232,12 @@
           
           <!-- Filter --> 
           <div class="mt-3 accordion" id="filterTop">
-            <!-- <form method="post"> -->
+            <form method="post">
               <div class="btn-filter">
-                <div class="filter-header" style="font-size: 12px;margin-right: -10px;width: auto;">Filter :</div>
+                <div class="filter-header" style="padding-top:5px;">Filter :</div>
                 <div class="filter-header">
                   <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
+                  <div class="status"></div>
                 </div>
                 <div class="filter-header">
                   <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
@@ -247,107 +248,106 @@
                 <div class="filter-header">
                   <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
                 </div>
-                <div class="filter-headerx" style="font-size: 12px;margin-right: -10px;width: auto;"><a href="#!">Reset</a></div>
+                <input class="filter-reset btn btn-link" type="reset" value="Reset">
               </div>
               <div class="clearfix"></div>
-
-              <div class="card bg-gradient-blue rounded mt-1 mb-3 pb-0">
-                <div class="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
-                  <div class="form-group custom-control custom-checkbox">
-                    <ul>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="ekonomi">
-                        <label class="custom-control-label" for="ekonomi">Ekonomi</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="bisnis">
-                        <label class="custom-control-label" for="bisnis">Bisnis</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="eksekutif">
-                        <label class="custom-control-label" for="eksekutif">Eksekutif</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
-                  <div class="form-group custom-control custom-checkbox">
-                    <ul>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="argolawu">
-                        <label class="custom-control-label" for="argolawu">Argolawu</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="parahyangan">
-                        <label class="custom-control-label" for="parahyangan">Parahyangan</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="fajarutama">
-                        <label class="custom-control-label" for="fajarutama">Fajar Utama</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
-                  <div class="form-group custom-control custom-checkbox">
-                    <ul>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="pagi">
-                        <label class="custom-control-label" for="pagi">Pagi-Siang<br> (06:00 - 12:00)</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="siang">
-                        <label class="custom-control-label" for="siang">Siang-Sore<br> (12:00 - 18:00)</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="sore">
-                        <label class="custom-control-label" for="sore">Sore-Malam<br> (18:00 - 24:00)</label>
-                      </li>
-                      <li>
-                        <input class="custom-control-input" type="checkbox" id="malam">
-                        <label class="custom-control-label" for="malam">Malam-Pagi<br> (24:00 - 06:00)</label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
-                  <div class="form-group custom-control">
-                    <div class="card-body pt-0 pb-1 pl-0 pr-4 w-60">
-                      <p>
-                        <input id="amount" type="text" readonly="" class="form-control border-0 bg-transparent p-0">
-                      </p>
-                      <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
-                        <div class="ui-slider-range ui-corner-all ui-widget-header">
-                        </div>
-                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 10.4167%;">
-                        </span>
-                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 81.6667%;">
-                        </span>
-                      </div>
-                    </div> 
-                    <!-- <input type="text" class="js-range-slider" name="my_range" value="" /> --> 
-                  </div>
+            <div class="card bg-gradient-blue rounded mt-1 mb-3 pb-0">
+              <div class="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+                <div class="form-group custom-control custom-checkbox">
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="ekonomi">
+                      <label class="custom-control-label" for="ekonomi">Ekonomi</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="bisnis">
+                      <label class="custom-control-label" for="bisnis">Bisnis</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="eksekutif">
+                      <label class="custom-control-label" for="eksekutif">Eksekutif</label>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            <!-- </form> -->
+              <div class="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
+                <div class="form-group custom-control custom-checkbox">
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="argolawu">
+                      <label class="custom-control-label" for="argolawu">Argolawu</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="parahyangan">
+                      <label class="custom-control-label" for="parahyangan">Parahyangan</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="fajarutama">
+                      <label class="custom-control-label" for="fajarutama">Fajar Utama</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
+                <div class="form-group custom-control custom-checkbox">
+                  <ul>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="pagi">
+                      <label class="custom-control-label" for="pagi">Pagi (00:00 - 11:00)</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="siang">
+                      <label class="custom-control-label" for="siang">Siang (11:00 - 15:00)</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="sore">
+                      <label class="custom-control-label" for="sore">Sore (15:00 - 18:30)</label>
+                    </li>
+                    <li>
+                      <input class="custom-control-input" type="checkbox" id="malam">
+                      <label class="custom-control-label" for="malam">Malam (18.30:00 - 23:59)</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                <div class="form-group custom-control">
+                  <div class="card-body pt-0 pb-1 pl-0 pr-4 w-60">
+                    <p>
+                      <input id="amount" type="text" readonly="" class="form-control border-0 bg-transparent p-0">
+                    </p>
+                    <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                      <div class="ui-slider-range ui-corner-all ui-widget-header">
+                      </div>
+                      <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 10.4167%;">
+                      </span>
+                      <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 81.6667%;">
+                      </span>
+                    </div>
+                  </div> 
+                  <!-- <input type="text" class="js-range-slider" name="my_range" value="" /> --> 
+                </div>
+              </div>
+            </div>
+          </form>
             <!-- Sort Desktop -->
             <div id="sort-avail" class="card bg-white shadow-sm rounded pt-0 mb-3">
               <div class="card-body">
                 <div class="row align-items-center">
                   <div class="col-sm-2 col-md-3 col-lg-3 pl-0">
-                    <a href="#">Trains <i class="fas fa-sort"></i></a>
+                    <a href="#">Kereta Api <i class="fas fa-sort"></i></a>
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-2 pl-0">
-                    <a href="#">Depart <i class="fas fa-sort"></i></a>
+                    <a href="#">Berangkat <i class="fas fa-sort"></i></a>
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-2 pl-0">
-                    <a href="#">Arrive <i class="fas fa-sort"></i></a>
+                    <a href="#">Tiba <i class="fas fa-sort"></i></a>
                   </div>
                   <div class="col-sm-2 col-md-1 col-lg-1 pl-0">
-                    <a href="#">Times <i class="fas fa-sort"></i></a>
+                    <a href="#">Durasi <i class="fas fa-sort"></i></a>
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-2 pl-0">
-                    <a href="#">Price/ person  <i class="fas fa-sort"></i></a>
+                    <a href="#">Harga  <i class="fas fa-sort"></i></a>
                   </div>
                   <div class="col-sm-2 col-md-2 col-lg-2">
                     &nbsp;

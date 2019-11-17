@@ -1,3 +1,9 @@
+body {
+    background: #e7e9ed;
+    color: #535b61;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px!important;
+    line-height: 22px!important;}
 
 .navbar-brand {
     display: inline-block;
@@ -315,7 +321,7 @@ section.page-header.bg-page-header {
         font-weight: 400;}
     #filterTop div > .filter-header a { 
         color: orange;
-        font-weight: 500;}
+        font-weight: 400;}
 
 #filterTop div > .filter-header a::after {
     content:"\f107"; 
@@ -332,6 +338,7 @@ section.page-header.bg-page-header {
         -moz-transform: rotate(-180deg);
         transform: rotate(-180deg);}
 
+
 #filterTop div > .filter-header a { 
     font-size: 14px;
     padding: 5px 10px;
@@ -343,12 +350,42 @@ section.page-header.bg-page-header {
     color: orange;
     padding-left: 5px;}
 
-#filterTop div > ul > li > .custom-control-input:checked~ .custom-control-label::before {
+#filterTop div > ul > li > .custom-control-input:checked ~ .custom-control-label::before {
     color: #fff;
     border-color: #ffc107!important;
     background-color: #ffc107!important;}
-    #filterTop div > ul > li > .custom-control-input:checked~ .custom-control-label::after {
-        }
+
+/* indicator */
+
+#filterTop div > .filter-header .status {
+    position: relative;
+    background-color: #fd6372;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    border: solid 1px white;
+    box-shadow: 0 2px 5px #ccc;
+    display: none;
+    opacity: 0.3;
+    left: -3px;
+    top: -35px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+
+#filterTop div > .filter-header a[input:checked] ~ .status::after {
+    position: relative;
+    background-color: #fd6372;
+    width: 10px;
+    height: 10px;
+    border-radius: 25px;
+    border: solid 1px white;
+    box-shadow: 0 2px 5px #ccc;
+    display: block;
+    opacity: 1;}
+
+
+
+/* indicator */
 
 #filterTop div.card.bg-gradient-blue.rounded.mt-1.pb-0 {
     background: linear-gradient(-5deg, rgba(250, 250, 250, 0.8) 0%, #fff 100%, #f8f9fa 100%);
@@ -356,6 +393,14 @@ section.page-header.bg-page-header {
     margin-top: 10px !important;
     margin-bottom: 1px;
     border-radius: 5px 5px 0 0!important;}
+
+#filterTop div > .filter-reset {
+    padding: 5px 10px;
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: 6px;
+    font-size: 14px;}
 
 #harga-tiket div > span > .irs-bar {
     height: 7px;
@@ -391,12 +436,22 @@ section.page-header.bg-page-header {
         width: 100%;
         height: 20px;}
 
-#kelas div.form-group, #kereta div.form-group, #jam-berangkat div.form-group {
-    margin-bottom: 0;
-    padding-left: 10px;}
-    #harga-tiket div.form-group {
-        margin-top: 10px;
-        margin-bottom: 0;}
+#harga-tiket div > .ui-state-default, .ui-widget-content .ui-state-default {
+    border: 3px solid #fff;
+    background-color: #0071cc!important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15) !important;}
+
+#harga-tiket div > .ui-slider-horizontal .ui-slider-handle {
+    top: -9px;
+    margin-left: 0px;
+    border-radius: 100%;
+    background: #fff;
+    width: 20px;
+    height: 20px;}
+
+#kelas div.form-group, #kereta div.form-group, #jam-berangkat div.form-group, #harga-tiket div.form-group {
+    margin: 10px 10px;
+    padding: 5px 5px;}
 
 #kelas div > ul, #kereta div > ul, #jam-berangkat div > ul, #harga-tiket div > ul {
     font-size: 15px;
@@ -405,11 +460,11 @@ section.page-header.bg-page-header {
 #kelas div > ul > li, #kereta div > ul > li, #jam-berangkat div > ul > li, #harga-tiket div > ul > li {
     display: inline-block;
     max-width: 100%;
-    padding: 10px 0 10px 0;
+    padding: 5px 0 5px 0;
     margin-bottom: 0;
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;}
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;}
 
 /*-- Dropdown Travellers --*/
 
@@ -435,7 +490,7 @@ section.page-header.bg-page-header {
 
 #sort-avail * > div > a {
     text-align: left;
-    font-size: 12px;}
+    font-size: 13px;}
 #sort-avail {
     border-radius: 0 0 5px 5px;
     background: linear-gradient(-45deg, #fff 100%, rgba(250, 250, 250, 0.8) 100%);
