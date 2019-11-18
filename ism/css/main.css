@@ -458,16 +458,25 @@ section.page-header.bg-page-header {
     margin: 0 0;}
 
 #kelas div > ul > li, #kereta div > ul > li, #jam-berangkat div > ul > li, #harga-tiket div > ul > li {
-    display: inline-block;
+    display: inline-flex;
     max-width: 100%;
-    padding: 5px 25px 5px 0;
+    margin: 0px 100px 0px 7px;
     margin-bottom: 0;
-    -webkit-column-count: 3;
-    -moz-column-count: 3;
-    column-count: 3;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
     max-height: 100%;
     position: relative;
-    height: 30px;}
+    line-height: 24px;
+    width: 182px;}
+
+@media (min-width: 1140px) {
+    #kelas div > ul > li { margin-right: 0; width: 130px; }
+    #kereta div > ul > li { margin-right: 0; width: 140px; }
+    #jam-berangkat div > ul > li { margin-right: 165px; width: 185px;}
+    #harga-tikets div > ul > li { margin-right: 50%; }
+    #slider-range { width: 60%;}
+} 
 
 /*-- Dropdown Travellers --*/
 
