@@ -535,6 +535,19 @@ section.page-header.bg-page-header {
     font-weight: 400;
     color: #000;}
 
+/*-- Order Train --*/
+
+.page-header .breadcrumb > li a {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: white;}
+
+.page-header .breadcrumb > h6 {
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
 
 /*-- Footer --*/
 
