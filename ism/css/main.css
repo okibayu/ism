@@ -553,7 +553,8 @@ section.page-header.bg-page-header {
     font-size: 15px;
     font-weight: 500;
     color: green;
-    cursor: pointer;}
+    cursor: pointer;
+    line-height: 17px;}
     #detilpergi::after {
         content:"\f107"; 
         font-family: "Font Awesome 5 Free";
@@ -567,18 +568,18 @@ section.page-header.bg-page-header {
 
 #detilpergi.accordion.collapsed::after {
     content:"\f107"; 
-    font-family: "Font Awesome 5 Free";
-    font-size: 18px; 
-    font-weight: 900;
-    line-height: 19px;
-    float: right;
-    color: green;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;}
+    font-family: "Font Awesome 5 Free";}
     #detilpergi.accordion[aria-expanded="true"]:after {
         -webkit-transform: rotate(-180deg);
         -moz-transform: rotate(-180deg);
         transform: rotate(-180deg);}
+
+.bg-dashed {
+    height: 66px;
+    position: absolute;
+    top: -26px;
+    left: 23px;
+    border-left: 1px dashed #007bff;}
 
 /*-- Footer --*/
 
