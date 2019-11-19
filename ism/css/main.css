@@ -184,7 +184,6 @@ section.page-header.bg-page-header {
 .progress { 
     height: 5px !important;
     background: linear-gradient(45deg, rgba(250, 250, 250, 0.8) 0%, #f8f9fa 35%, #dee2e6 100%);
-    border-bottom: 0px solid #eaeaea;
     -webkit-transition: none !important;
     transition: none !important;}
 
