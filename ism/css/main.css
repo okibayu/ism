@@ -547,7 +547,40 @@ section.page-header.bg-page-header {
     transition: all 0.2s ease;
     color: white;
     font-size: 15px;
+    font-weight: 500;}
+
+#detilpergi {
+    font-size: 15px;
     font-weight: 500;
+    color: green;
+    cursor: pointer;}
+    #detilpergi::after {
+        content:"\f107"; 
+        font-family: "Font Awesome 5 Free";
+        font-size: 18px; 
+        font-weight: 900;
+        line-height: 19px;
+        float: right;
+        color: green;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;}
+
+
+
+#detilpergi.accordion.collapsed::after {
+    content:"\f107"; 
+    font-family: "Font Awesome 5 Free";
+    font-size: 18px; 
+    font-weight: 900;
+    line-height: 19px;
+    float: right;
+    color: green;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;}
+    #detilpergi.accordion[aria-expanded="true"]:after {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        transform: rotate(-180deg);}
 
 /*-- Footer --*/
 
