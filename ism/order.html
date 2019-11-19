@@ -129,7 +129,7 @@
             <div class="col-lg-8">
               <div class="bg-light shadow-md rounded confirm-details">
                 <div class="card-body">
-                  <h2 class="text-5 mb-3">Passenger Details - <span class="text-3"><a data-toggle="modal" data-target="#login-signup" href="#" title="Login / Sign up">Login</a> to book faster</span></h2>
+                  <h2 class="text-5 mb-3">Passenger Details</h2>
                   <p class="font-weight-600">Contact Details</p>
                   <div class="form-row">
                     <div class="col-sm-3 form-group">
@@ -142,12 +142,12 @@
                     </div>
                     <div class="col-sm-5 form-group">
                       <label>First Name*</label>
-                      <input class="form-control" id="firstName" required type="text">
+                      <input class="form-control" id="firstName" placeholder="First Name" required type="text">
                       <p class="text-info text-0 ml-2">Fill in according to KTP/ Passport/ SIM (without punctuation and title) </p>
                     </div>
                     <div class="col-sm-4 form-group">
                       <label>Last Name</label>
-                      <input class="form-control" id="lastName" type="text">
+                      <input class="form-control" placeholder="Last Name" id="lastName" type="text">
                     </div>
                   </div>
                   <div class="form-row">
@@ -161,8 +161,8 @@
                       </select>
                     </div>
                     <div class="col-sm-5 form-group">
-                      <label>Phone Number*</label>
-                      <input class="form-control" id="phonenumber" required placeholder="8112345678" type="number">
+                      <label>Phone*</label>
+                      <input class="form-control" id="phonenumber" required placeholder="Phone" type="number">
                       <p class="text-info text-0 ml-2">Example: +628112345678, +62 for Country Code and 87712345678 for phone number 08112345678</p>
                     </div>
                     <div class="col-sm-4 form-group">
@@ -176,7 +176,7 @@
                   <hr class="mt-0">
                   
                   <div class="form-check custom-control custom-checkbox pb-3">
-                    <input id="samecontact" class="custom-control-input" type="checkbox">
+                    <input id="samecontact" class="custom-control-input" type="checkbox" checked>
                     <label class="custom-control-label" for="samecontact">Same with the passenger</label>
                   </div>                
                   <div class="form-row">
@@ -212,17 +212,14 @@
                       <input class="form-control" id="idnumber" required type="number">
                       <p class="text-info text-0 ml-2">Fill in according to KTP/ Passport/ SIM (without punctuation and title) </p>
                     </div>
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <div class="p-2 bordered alert alert-warning alert-dismissible fade show" role="alert">
                       <strong><i class="fas fa-allert-lg"></i> Attention!</strong> You should fill in all of those fields above according to KTP/ Passport/ SIM (without punctuation and title).
-                      <button type="button" class="close d-block" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
                     </div>                  
                   </div>
-                  <div class="col-sm-12 text-right pt-3 pr-0">
-                      <button class="btn btn-sm btn-warning" onclick="location.href='#!';" type="submit">Select Seat</button>
-                      <button class="btn btn-sm btn-primary" onclick="location.href='#!';" type="submit">Proceed To Payment</button>
-                    </div>
+                  <div class="col-sm-12 text-right pt-3 pb-3 pr-1">
+                    <button class="btn btn-sm btn-warning" onclick="location.href='#!';" type="submit">Select Seat</button>
+                    <button class="btn btn-sm btn-primary" onclick="location.href='#!';" type="submit">Proceed To Payment</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -234,16 +231,16 @@
                 <h3 class="text-5 mb-3">Detail Pesanan</h3>
                 <p>Perjalanan Pergi</p>
                 <hr>
-                <h6><strong>Gambir (GMR) - Bandung (BD)</strong></h6>
+                <h6 class="font-weight-600">Gambir (GMR) - Bandung (BD)</h6>
                 <span>Berangkat:<br>
                 Wednesday 11 November 2019<br>
                 3 hour(s) 14 minute(s)</span>
                 <p></p>
-                <div id="detilpergi" class="accordion mb-0" data-toggle="collapse" data-target="#detilnya" aria-expanded="false" aria-controls="detilnya">Detil Pesanan</div>
+                <div id="detilpergi" class="accordion mb-2" data-toggle="collapse" data-target="#detilnya" aria-expanded="false" aria-controls="detilnya">Detil Pesanan</div>
                 <div class="collapse" id="detilnya">
-                  <div class="card border-0 p-2">
+                  <div class="card border-light p-0 bg-light-1">
                     <div class="card-body bg-white">
-                      <h5 class="text-3 m-0"><strong>Argo Parahyangan 7098</strong></h5>
+                      <h6 class="text-3 m-0 font-weight-600">Argo Parahyangan 7098</h6>
                       <span class="text-1 text-muted pt-0">Economy (C)</span>
                       <div class="row pt-2 pb-10">
                         <div class="col-1 pt-1">
@@ -269,14 +266,13 @@
                           <span>12 Sep 2019</span>
                         </div>
                       </div>
-
                     </div>
                   </div> 
                 </div>
               </div>
-
               <div id="1" class="bg-light shadow-md rounded p-3 mt-3">
-                <h3 class="text-5 mb-3">Fare Details</h3>
+                <h3 class="text-5 mb-3">Detil Harga</h3>
+                <hr>
                 <ul class="list-unstyled pl-3 pr-3">
                   <li class="mb-2">Base Fare 
                     <span class="float-right text-dark">Rp 540.000</span><br>
@@ -289,11 +285,14 @@
                     <span class="float-right text-dark">Rp 10.000</span>
                   </li>
                 </ul>
-                <div class="text-dark bg-light-4 text-3 font-weight-500 p-3 mb-3"> Total Amount 
+                <div class="text-dark text-3 font-weight-600 border-top p-3 mb-2">Total Price 
                   <span class="float-right text-3">Rp 650.000</span>
                 </div>
+                <div class="text-1 bg-light-3 bordered p-2">
+                  <i class="fas fa-allert-lg"></i><p>Perubahan harga dari Kereta Api mungkin terjadi dari sisa kursi pada saat proses pemesanan. Harga final adalah harga pada halaman pembayaran.</p>
+                  </div> 
+                </div>
               </div>
-            </div>
             </aside>
             <!-- Fare Details end -->
           </div>
@@ -392,61 +391,7 @@
       <i class="fa fa-chevron-up"></i>
     </a>
 
-    <!-- Modal Login/Signup -->
-    <div id="login-signup" class="modal fade" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content p-sm-3">
-          <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <ul class="nav nav-tabs" role="tablist">
-              <li class="nav-item"> <a id="login-tab" class="nav-link active text-4" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a> </li>
-              <li class="nav-item"> <a id="signup-tab" class="nav-link text-4" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a> </li>
-            </ul>
-            <div class="tab-content pt-4">
-              <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-                <form id="loginForm" method="post">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="loginMobile" required placeholder="Mobile or Email ID">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="loginPassword" required placeholder="Password">
-                  </div>
-                  <div class="row mb-4">
-                    <div class="col-sm">
-                      <div class="form-check custom-control custom-checkbox">
-                        <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
-                        <label class="custom-control-label" for="remember-me">Remember Me</label>
-                      </div>
-                    </div>
-                    <div class="col-sm text-right"> <a class="justify-content-end" href="#">Forgot Password ?</a> </div>
-                  </div>
-                  <button class="btn btn-primary btn-block" type="submit">Login</button>
-                </form>
-              </div>
-              <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-                <form id="signupForm" method="post">
-                  <div class="form-group">
-                    <input type="text" class="form-control" data-bv-field="number" id="signupEmail" required placeholder="Email ID">
-                  </div>
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="signupMobile" required placeholder="Mobile Number">
-                  </div>
-                  <div class="form-group">
-                    <input type="password" class="form-control" id="signuploginPassword" required placeholder="Password">
-                  </div>
-                  <button class="btn btn-primary btn-block" type="submit">Signup</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal Login/Signup end -->
-
-    <!-- Script -->
+        <!-- Script -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
