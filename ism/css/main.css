@@ -470,8 +470,8 @@ section.page-header.bg-page-header {
     width: 182px;}
 
 @media (min-width: 1140px) {
-    #kelas div > ul > li { margin-right: 0; width: 130px; }
-    #kereta div > ul > li { margin-right: 0; width: 140px; }
+    #kelas div > ul > li { /*margin-right: 0; width: 130px;*/ }
+    #kereta div > ul > li { /*margin-right: 0; width: 140px;*/ }
     #jam-berangkat div > ul > li { margin-right: 165px; width: 185px;}
     #harga-tikets div > ul > li { margin-right: 50%; }
     #slider-range { width: 60%;}
