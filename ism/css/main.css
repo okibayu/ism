@@ -478,11 +478,12 @@ section.page-header.bg-page-header {
 } 
 
 /*-- Dropdown Travellers --*/
-
-.travellers-dropdown .qty .btn {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    border-radius: 5px;}
+.travellers-dropdown {
+    z-index: 3000!important;}
+    .travellers-dropdown .qty .btn {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-radius: 5px;}
 
 /*-- Avail list --*/
 
