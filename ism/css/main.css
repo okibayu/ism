@@ -614,7 +614,23 @@ section.page-header.bg-page-header {
     background-color: #fff3cd;}
 
 #avail div > #total-bayar {
-    background: linear-gradient(37deg, #e9ecef 0%, #fff 100%, #f8f9fa 100%);}
+    background: linear-gradient(37deg, rgba(250, 250, 250, 0.8) 0%, #ffffff 100%, rgba(0, 0, 0, 0.15) 100%);}
+
+#avail div > #aktif-pergi, #aktif-pulang {
+    border-bottom: 0.5px dashed rgba(0, 0, 0, 0.15)!important;}
+
+#avail div > #aktif-pergi div.border-right, #aktif-pulang div.border-right {
+    border-right: 0.5px dashed rgba(0, 0, 0, 0.15)!important;}
+
+#avail.bg-results {
+    background: linear-gradient(-5deg, #e9ecef 0%, #fff 100%, #f8f9fa 100%);
+    box-shadow: 0 10px 20px #ccc;
+    margin-top: 10px !important;
+    margin-bottom: 1px;
+    border-radius: 5px 5px 0 0!important;
+    border-top: 0.5px solid #ffffff;
+    border-left: 0.5px solid #e4e9ec;
+    border-right: 0.5px solid #e4e9ec;}
 
 
 /*-- Footer --*/
