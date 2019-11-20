@@ -537,6 +537,10 @@ section.page-header.bg-page-header {
 
 /*-- Order Train --*/
 
+.page-header .breadcrumb {
+    font-size: 12px!important;
+    font-weight: 400;}
+
 .page-header .breadcrumb > li a {
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
@@ -549,13 +553,13 @@ section.page-header.bg-page-header {
     font-size: 15px;
     font-weight: 500;}
 
-#detilpergi {
+#detilpergi, #detilpulang {
     font-size: 15px;
     font-weight: 500;
     color: green;
     cursor: pointer;
     line-height: 17px;}
-    #detilpergi::after {
+    #detilpergi::after, #detilpulang::after {
         content:"\f107"; 
         font-family: "Font Awesome 5 Free";
         font-size: 18px; 
@@ -566,20 +570,45 @@ section.page-header.bg-page-header {
         -webkit-transition: all 0.5s ease;
         transition: all 0.5s ease;}
 
-#detilpergi.accordion.collapsed::after {
+#detilpergi.accordion.collapsed::after, #detilpulang.accordion.collapsed::after {
     content:"\f107"; 
     font-family: "Font Awesome 5 Free";}
-    #detilpergi.accordion[aria-expanded="true"]:after {
+    #detilpergi.accordion[aria-expanded="true"]:after, #detilpulang.accordion[aria-expanded="true"]:after {
         -webkit-transform: rotate(-180deg);
         -moz-transform: rotate(-180deg);
         transform: rotate(-180deg);}
 
 .bg-dashed {
-    height: 66px;
+    height: 85px;
     position: absolute;
     top: -26px;
-    left: 23px;
+    left: 24px;
     border-left: 1px dashed #007bff;}
+
+.title-dashed {
+    margin-top: 15px;
+    height: 25px;
+    color: #999;}
+
+.alert-gray p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #777;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #eee;}
+
+.alert-yellow p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #856404;
+    padding: 5px;
+    margin-bottom: 0;
+    border: 1px solid #fff3cd;
+    border-radius: 5px;
+    background-color: #fff3cd;}
 
 /*-- Footer --*/
 
