@@ -105,7 +105,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-8 text-light pt-1">
-              <h1 class="text-white">Train Cart</h1>
+              <h1 class="text-white">My Cart (2)</h1>
             </div>
             <div class="col-md-4">
               <ul class="breadcrumb justify-content-end mt-2">
@@ -127,118 +127,275 @@
         <section class="container pt-4">
           <div class="row">
             <div class="col-lg-8">
-              <div class="bg-light shadow-md rounded confirm-details">
+              <!-- Jadwal Pergi -->
+              <div class="bg-light shadow-md rounded confirm-details mb-3">
                 <div class="card-body">
-                  <h6 class="text-warning">Pergi</h6>
-                  <h5 class="text-2 text-dark">Gambir (GMR) &nbsp;<i class="fas fa-long-arrow-alt-right"></i> Bandung (BD)</h5>
-                  <hr>
-                  <h5 class="title2">Kamis, 11 September 2019</h5>
-                  <h3 class="text-2 text-dark">Rp 732.400</h3>
-                  <p></p>
-                  <div id="detilpergi" class="accordion mb-2" data-toggle="collapse" data-target="#detilnya" aria-expanded="false" aria-controls="detilnya">Detil Pergi</div>
-                  <div class="collapse" id="detilnya">
-                    <div class="card border-light p-0 bg-light-1">
-                      <div class="card-body bg-white">
-                        <h6 class="text-3 m-0 font-weight-600">Argo Parahyangan 7098</h6>
-                        <span class="text-1 text-muted pt-0">Economy (C)</span>
-                        <div class="row pt-2 pb-10">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <h5 class="text-4 mb-3"><i class="fas fa-train"></i>&nbsp;Gambir (GMR)&nbsp;<i class="fas fa-long-arrow-alt-right"></i> Bandung (BD)</h5>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <h5 class="text-5 text-success mb-3">Rp 805.640</h5>
+                    </div>
+                  </div>
+                  <hr class="mt-0">
+                  <div class="row mb-4">
+                    <div class="col-md-5">
+                      <h6 class="text-3 m-0 font-weight-600">Argo Parahyangan 7098</h6>
+                      <span class="text-2 text-muted pt-0">Economy (C)</span>
+                    </div>
+                    <div class="col-md-5">
+                      <h6 class="text-2 m-0 font-weight-600">Waktu Keberangkatan</h6>
+                      <span class="text-2 text-muted pt-0">Kamis, 11 Sep 2019</span><br>
+                      <span class="text-2 text-muted pt-0"><i class="far fa-clock"></i> 3 Jam 14 menit</span>
+                    </div>
+                    <div class="col-md-2">
+                      <h6 class="text-2 m-0 font-weight-600">Batas Waktu</h6>
+                      <span class="text-2 text-danger font-weight-600 pt-0">09:46:00</span>
+                    </div>
+                  </div>
+                  <div class="accordion" id="filterTop">
+                    
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#detilpergi1" aria-expanded="false" aria-controls="detilpergi1" style="width: 107px;">Detail Pergi</div>
+                    <div class="collapse" id="detilpergi1" data-parent="#filterTop">
+                      <div class="card-body bg-white p-3">
+                        <div class="row">
                           <div class="col-1 pt-1">
                             <i class="text-primary far fa-circle fa-lg"></i>
                           </div>
                           <div class="col-10">
-                            <p class="m-0"><strong>22:30</strong> Gambir (GMR)</p>
+                            <p class="m-0"><span class="font-weight-bold">22:30</span> St. Gambir (GMR)</p>
                             <span>11 Sep 2019</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-1 pt-1 h-25"><p class="bg-dashed"></p></div>
-                          <div class="col-10"><p class="title-dashed">3j 14m</p></div>
+                          <div class="col-10"><p class="title-dashed">Durasi: 3j 14m</p></div>
                         </div> 
-                        <div class="row">
+                        <div class="row mb-3">
                           <div class="col-1 pt-1">
-                            <i class="text-primary fas fa-circle  fa-lg"></i>
+                            <i class="text-primary fas fa-circle fa-lg"></i>
                           </div>
                           <div class="col-10">
-                            <p class="m-0"><strong>01:44 (+1 hari)</strong> Bandung (BD)</p>
+                            <p class="m-0"><span class="font-weight-bold">01:44 (+1 hari)</span> St. Bandung (BD)</p>
                             <span>12 Sep 2019</span>
                           </div>
                         </div>
                       </div>
-                    </div> 
-                  </div>            
+                    </div>
+
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#detilpenumpang" aria-expanded="false" aria-controls="detilpenumpang" style="width: 163px;">Detail Penumpang</div>
+                    <div class="collapse" id="detilpenumpang" data-parent="#filterTop">
+                      <div class="card-body bg-white p-3">
+                        <div class="row border-top border-bottom">
+                          <div class="col-md-1">No.</div>
+                          <div class="col-md-5">Name</div>
+                          <div class="col-md-3">Pax Type</div>
+                          <div class="col-md-3">Chair</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-1 text-center font-weight-bold">1</div>
+                          <div class="col-md-5 font-weight-bold">Mr. Oki BAYU</div>
+                          <div class="col-md-3 font-weight-bold">Dewasa</div>
+                          <div class="col-md-3 font-weight-bold">Executive 3/ 7D</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#detilharga" aria-expanded="false" aria-controls="detilharga" style="width: 114px;">Detail Harga</div>
+                    <div class="collapse" id="detilharga" data-parent="#filterTop">
+                      <div class="card-body bg-white p-3">
+                        <div class="row">
+                          <div class="col-md-6 font-weight-bold">Dewasa (1)</div>
+                          <div class="col-md-6 text-right font-weight-bold">Rp 732.400</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">Taxes</div>
+                          <div class="col-md-6 text-right">Rp 73.240</div>
+                        </div>
+                        <div class="row border-top">
+                          <div class="col-md-6 text-3 font-weight-bold">Total Amount</div>
+                          <div class="col-md-6 text-3 text-right font-weight-bold">Rp 805.640</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#bookingcontact" aria-expanded="false" aria-controls="bookingcontact" style="width: 193px;">Detail Booking Contact</div>
+                    <div class="collapse" id="bookingcontact" data-parent="#filterTop">
+                      <div class="card-body bg-white p-3">
+                        <div class="row border-top border-bottom">
+                          <div class="col-md-3">Name</div>
+                          <div class="col-md-3">Email</div>
+                          <div class="col-md-3">Phone</div>
+                          <div class="col-md-3">Country</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3 font-weight-bold">Mr. Oki BAYU</div>
+                          <div class="col-md-3 font-weight-bold">oki.bayu@gmail.com</div>
+                          <div class="col-md-3 font-weight-bold">08771234567890</div>
+                          <div class="col-md-3 font-weight-bold">Indonesia</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-1 text-right">
+                      <button type="submit" class="btn btn-sm btn-danger mt-2 col-3"> Delete </button>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <!-- Jadwal Pergi end -->
+
+              <!-- Jadwal Pulang -->
+              <div class="bg-light shadow-md rounded confirm-details mb-2">
                 <div class="card-body">
-                  <h6 class="font-weight-600">Bandung (BD) - Gambir (GMR)</h6>
-                  <span>Berangkat:<br>
-                  Wednesday, 13 September 2019<br>
-                  3 hour(s) 14 minute(s)</span>
-                  <p></p>
-                  <div id="detilpulang" class="accordion mb-2" data-toggle="collapse" data-target="#detilnya1" aria-expanded="false" aria-controls="detilnya1">Detil Pulang</div>
-                  <div class="collapse" id="detilnya1">
-                    <div class="card border-light p-0 bg-light-1">
-                      <div class="card-body bg-white">
-                        <h6 class="text-3 m-0 font-weight-600">Argo Parahyangan 7098</h6>
-                        <span class="text-1 text-muted pt-0">Economy (C)</span>
-                        <div class="row pt-2 pb-10">
+                  <div class="row">
+                    <div class="col-md-6 text-left">
+                      <h5 class="text-4 mb-3"><i class="fas fa-train"></i>&nbsp;Bandung (BD)&nbsp;<i class="fas fa-long-arrow-alt-right"></i> Gambir (GMR)</h5>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <h5 class="text-5 text-success mb-3">Rp 805.640</h5>
+                    </div>
+                  </div>
+                  <hr class="mt-0">
+                  <div class="row mb-4">
+                    <div class="col-md-5">
+                      <h6 class="text-3 m-0 font-weight-600">Argo Parahyangan 7098</h6>
+                      <span class="text-2 text-muted pt-0">Economy (C)</span>
+                    </div>
+                    <div class="col-md-4">
+                      <h6 class="text-2 m-0 font-weight-600">Waktu Keberangkatan</h6>
+                      <span class="text-2 text-muted pb-0">Senin, 13 Sep 2019</span><br>
+                      <span class="text-2 text-muted pt-0"><i class="far fa-clock"></i> 3 Jam 14 menit</span>
+                    </div>
+                    <div class="col-md-3">
+                      <h6 class="text-2 m-0 font-weight-600">Batas Waktu</h6>
+                      <span class="text-2 text-danger font-weight-600 pt-0">09:46:00</span>
+                    </div>
+                  </div>
+                  <div class="accordion" id="filterTop2">
+                    
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#detilpergi3" aria-expanded="false" aria-controls="detilpergi3" style="width: 118px;">Detail Pulang</div>
+                    <div class="collapse" id="detilpergi3" data-parent="#filterTop2">
+                      <div class="card-body bg-white p-3">
+                        <div class="row">
                           <div class="col-1 pt-1">
                             <i class="text-primary far fa-circle fa-lg"></i>
                           </div>
                           <div class="col-10">
-                            <p class="m-0"><strong>22:30</strong> Bandung (BD)</p>
+                            <p class="m-0"><span class="font-weight-bold">22:30</span> St. Bandung (BD)</p>
                             <span>13 Sep 2019</span>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-1 pt-1 h-25"><p class="bg-dashed"></p></div>
-                          <div class="col-10"><p class="title-dashed">3j 14m</p></div>
+                          <div class="col-10"><p class="title-dashed">Durasi: 3j 14m</p></div>
                         </div> 
-                        <div class="row">
+                        <div class="row mb-3">
                           <div class="col-1 pt-1">
-                            <i class="text-primary fas fa-circle  fa-lg"></i>
+                            <i class="text-primary fas fa-circle fa-lg"></i>
                           </div>
                           <div class="col-10">
-                            <p class="m-0"><strong>01:44 (+1 hari)</strong> Gambir (GMR)</p>
+                            <p class="m-0"><span class="font-weight-bold">01:44 (+1 hari)</span> St. Gambir (GMR)</p>
                             <span>14 Sep 2019</span>
                           </div>
                         </div>
                       </div>
-                    </div> 
+                    </div>
+
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#detilpenumpang2" aria-expanded="false" aria-controls="detilpenumpang2" style="width: 163px;">Detail Penumpang</div>
+                    <div class="collapse" id="detilpenumpang2" data-parent="#filterTop2">
+                      <div class="card-body bg-white p-3">
+                        <div class="row border-top border-bottom">
+                          <div class="col-md-1">No.</div>
+                          <div class="col-md-5">Name</div>
+                          <div class="col-md-3">Pax Type</div>
+                          <div class="col-md-3">Chair</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-1 text-center font-weight-bold">1</div>
+                          <div class="col-md-5 font-weight-bold">Mr. Oki BAYU</div>
+                          <div class="col-md-3 font-weight-bold">Dewasa</div>
+                          <div class="col-md-3 font-weight-bold">Executive 3/ 7D</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#detilharga2" aria-expanded="false" aria-controls="detilharga2" style="width: 114px;">Detail Harga</div>
+                    <div class="collapse" id="detilharga2" data-parent="#filterTop2">
+                      <div class="card-body bg-white p-3">
+                        <div class="row">
+                          <div class="col-md-6 font-weight-bold mt-0">Dewasa (1)</div>
+                          <div class="col-md-6 text-right font-weight-bold">Rp 732.400</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">Taxes</div>
+                          <div class="col-md-6 text-right">Rp 73.240</div>
+                        </div>
+                        <div class="row border-top">
+                          <div class="col-md-6 text-3 font-weight-bold">Total Amount</div>
+                          <div class="col-md-6 text-3 text-right font-weight-bold">Rp 805.640</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div id="detilpergi" class="accordion mb-2 mr-auto" data-toggle="collapse" data-target="#bookingcontact2" aria-expanded="false" aria-controls="bookingcontact2" style="width: 193px;">Detail Booking Contact</div>
+                    <div class="collapse" id="bookingcontact2" data-parent="#filterTop2">
+                      <div class="card-body bg-white p-3">
+                        <div class="row border-top border-bottom">
+                          <div class="col-md-3">Name</div>
+                          <div class="col-md-3">Email</div>
+                          <div class="col-md-3">Phone</div>
+                          <div class="col-md-3">Country</div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3 font-weight-bold">Mr. Oki BAYU</div>
+                          <div class="col-md-3 font-weight-bold">oki.bayu@gmail.com</div>
+                          <div class="col-md-3 font-weight-bold">08771234567890</div>
+                          <div class="col-md-3 font-weight-bold">Indonesia</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-1 text-right">
+                      <button type="submit" class="btn btn-sm btn-danger mt-2 col-3"> Delete </button>
+                    </div>
                   </div>
                 </div>
               </div>
+              <!-- Jadwal Pulang end -->              
             </div>
-
+            
             <!-- Fare Summaries -->
             <aside class="col-lg-4 mt-4 mt-lg-0">
               <div class="sticky-top">
                 <div id="1" class="bg-light shadow-md rounded p-3">
                   <h3 class="text-5 mb-3">Rangkuman Harga</h3>
                   <hr>
-                  <ul class="list-unstyled pl-3 pr-3">
-                    <li class="mb-2">Base Fare 
-                      <span class="float-right text-dark">Rp 540.000</span><br>
-                      <small class="text-muted">Dewasa : 1, Anak : 0, Bayi : 0</small>
-                    </li>
-                    <li class="mb-2">Taxes 
-                      <span class="float-right text-dark">Rp 100.000</span>
-                    </li>
-                    <li class="mb-2">Insurance 
-                      <span class="float-right text-dark">Rp 10.000</span>
-                    </li>
-                  </ul>
-                  <div class="text-dark text-3 font-weight-600 border-top p-3 mb-2">Total Price 
-                    <span class="float-right text-3">Rp 650.000</span>
+                  <div class="card-body bg-white pl-2 pr-2 pt-0">
+                    <div class="row">
+                      <div class="col-md-6 text-2">Dewasa (2x)</div>
+                      <div class="col-md-6 text-2 text-right">Rp 1.464.800</div>
+                    </div>
+                    <div class="row pb-3">
+                      <div class="col-md-6">Taxes</div>
+                      <div class="col-md-6 text-right">Rp 146.480</div>
+                    </div>
+                    <div class="row border-top pt-2">
+                      <div class="col-md-6 text-3 font-weight-bold">Total Amount</div>
+                      <div class="col-md-6 text-3 text-right font-weight-bold">Rp 1.611.280</div>
+                    </div>
                   </div> 
                 </div>
 
                 <div class="form-group pt-4 pb-2">
-                  <div class="custom-control custom-checkbox pb-3">
+                  <div class="custom-control custom-checkbox pb-4 ml-5">
                     <input type="checkbox" class="custom-control-input" id="iagree">
                     <label class="custom-control-label" for="iagree">
-                      I agree with <a>Term & Conditions</a>
+                      I agree with <a class="text-primary" href="#!">Term & Conditions</a>
                     </label>
                   </div>
-                  <button type="submit" class="btn btn-primary btn-block">Process to payment</button>
+                  <button type="submit" class="btn btn-success btn-block">Process to payment</button>
                   <p></p>
                   <button type="submit" class="btn btn-warning btn-block">Create new order</button>
                 </div>
@@ -252,7 +409,8 @@
 
       <!-- Footer -->
       <footer id="footer"> 
-        <div class="container mt-4">
+        <div class="container mt-5">
+          <hr>
           <div class="row">
             <div class="col-md-4 mb-3 mb-md-0">
               <p><strong>Payment Partner</strong></p>
@@ -298,7 +456,6 @@
         </div>
       </footer>
       <!-- Footer end -->
-      
     </div>
     <!-- Document Wrapper end -->
 
@@ -307,7 +464,7 @@
       <i class="fa fa-chevron-up"></i>
     </a>
 
-        <!-- Script -->
+    <!-- Script -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
