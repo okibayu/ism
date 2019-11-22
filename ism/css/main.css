@@ -1,9 +1,35 @@
+:root {
+--color1: linear-gradient(-45deg, #e9ecef 0%, #fff 100%, #f8f9fa 10%); 
+--color2: linear-gradient(37deg, rgba(250, 250, 250, 0.8) 0%, #ffffff 100%, rgba(0, 0, 0, 0.15) 100%);;
+--color3: linear-gradient(153deg, rgba(3,79,140,1) 0%, rgba(0,130,235,0.8379726890756303) 26%, rgba(0,88,133,1) 100%);
+--color4: linear-gradient(-5deg, #e9ecef 0%, #fff 100%, #f8f9fa 100%);
+}
+
+.bg1 { background-color: var(--color1); }
+.bg2 { background-color: var(--color2); }
+.bg3 { background-color: var(--color3); }
+.bg4 { background-color: var(--color4); }
+
 body {
     background: #e7e9ed;
-    color: #535b61;
+    color: #777;
     font-family: "Poppins", sans-serif;
-    font-size: 14px!important;
+    font-size: 14px;
     line-height: 22px!important;}
+
+.font-weight-md {
+    font-size: 14px;
+    font-weight: 500!important;}
+
+.bg-gradient-blue {
+    background: linear-gradient(-5deg, #e9ecef 0%, #fff 100%, #f8f9fa 100%);
+    box-shadow: 0 10px 20px #ccc;
+    margin-top: 10px !important;
+    margin-bottom: 1px;
+    border-radius: 5px 5px 0 0!important;
+    border-top: 0.5px solid #ffffff;
+    border-left: 0.5px solid #e4e9ec;
+    border-right: 0.5px solid #e4e9ec;}
 
 .navbar-brand {
     display: inline-block;
@@ -632,6 +658,12 @@ section.page-header.bg-page-header {
     border-left: 0.5px solid #e4e9ec;
     border-right: 0.5px solid #e4e9ec;}
 
+.text-info {
+    font-size: 10px;
+    color: #ccc!important;
+    line-height: 12px;
+    padding-top: 5px;
+    margin-left: 3px!important;}
 
 /*-- Footer --*/
 
