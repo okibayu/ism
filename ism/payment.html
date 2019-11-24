@@ -223,7 +223,7 @@
                       </div>
                       <div class="tab-pane fade" id="secondTab" role="tabpanel" aria-labelledby="second-tab">
                         <div class="row">
-                          <div class="col-md-auto mb-4"> <img class="img-fluid" src="img/payments/ipaymu.png" alt="iPaymu Logo" title="Pay easily, fast and secure with iPaymu." style="height: 60px!important;">
+                          <div class="col-md-auto mb-4"> <img class="img-fluid" data-toggle="tooltip" src="img/payments/ipaymu.png" alt="iPaymu Logo" title="Pay with iPaymu." style="height: 60px!important;">
                             <p class="lead">Pay easily, fast and secure with iPaymu.</p>
                             <p class="text-info mb-4"><i class="fas fa-info-circle"></i> You will be redirected to iPaymu to complete your payment securely.</p>
                             <button class="btn btn-warning d-flex align-items-center" type="submit">Pay via iPaymu</button>
@@ -247,28 +247,29 @@
                             </ul>
                             <div class="card">
                               <div class="card-body">  
-                                  <div class="row">
-                                    <div class="col-sm col-6">
-                                      <h6 class="card-title">
-                                        <p class="text-3">VA No.<br>5678 0000 1111 2222 &nbsp;<a href="#" class="text-1">(Copy)</a>
-                                        </p></h6>
-                                    </div>
-                                    <div class="col-sm col-6 text-right">
-                                      <img src="img/bni-detail.png" alt="">
-                                    </div>
+                                <div class="row">
+                                  <div class="col-sm col-6">
+                                    <h6 class="card-title">
+                                      <p class="text-3">VA No.<br>5678 0000 1111 2222 &nbsp;<a href="#" class="text-1">(Copy)</a>
+                                      </p>
+                                    </h6>
+                                  </div>
+                                  <div class="col-sm col-6 text-right">
+                                    <img src="img/bni-detail.png" alt="">
                                   </div>
                                 </div>
                               </div>
-                              <div id="how" class="mt-2 mb-2">
-                                <li class="list-group-item d-flex justify-content-between lh-condensed mb-2" data-toggle="collapse" data-target="#howto" style="cursor: pointer;">
+                            </div>
+                              <div id="how" class="filter-header">
+                                <div class="list-group-item d-flex justify-content-between lh-condensed border-0 p-3 collapsed" data-toggle="collapse" data-target="#howto" style="cursor: pointer;">
                                   <div>
-                                    <h6 class="text-3 mt-2">How to transfer your VA?</h6> 
+                                    <h6 class="text-3 mt-2">How to transfer?</h6> 
                                   </div>
                                   <div>
                                     <i class="fas fa-chevron-down float-right mt-2"></i>
                                   </div>
-                                </li>
-                                <div id="howto" class="collapse ml-3 mt-3 mb-3" data-parent="#how">
+                                </div>
+                                <div id="howto" class="collapse ml-3 mt-2" data-parent="#how">
                                   <div class="col-sm">
                                       <small>1. Input your card and PIN</small>
                                   </div>
@@ -291,13 +292,13 @@
                                       <small>7. Finish</small>
                                   </div>
                                 </div>
-                                <div class="card bg-light-3 p-2">
-                                  <p class="mb-2">Payment Confirmation:</p>
-                                  <p class="text-1 mb-0">Do not hesitate to reach our <a href="#">support team</a> if you have any queries.</p>
-                                </div>
                               </div>
                           </div>
                         </div>
+                        <div class="card bg-light-3 p-2">
+                              <p class="mb-2">Payment Confirmation:</p>
+                              <p class="text-1 mb-0">Do not hesitate to reach our <a href="#">support team</a> if you have any queries.</p>
+                            </div>
                       </div>
                     </div>
                   </div>
