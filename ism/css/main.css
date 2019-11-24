@@ -50,6 +50,19 @@ body {
     -ms-flex-direction: row;
     flex-direction: row;
     background-color: #ffffff;}
+
+div#menu.navbar-collapse.collapse.show {
+    z-index: -1 !important;
+    background-color: #fff;
+    display: block;
+    background: rgb(255, 255, 255);
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;}
+
 }
 
 .navbar .navbar-nav .nav-link {

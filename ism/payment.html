@@ -105,7 +105,7 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-md-8 text-light pt-1">
-              <h1 class="text-white">Select Payment</h1>
+              <h1 class="text-white">Payment</h1>
             </div>
             <div class="col-md-4">
               <ul class="breadcrumb justify-content-end mt-2">
@@ -129,374 +129,151 @@
             <div class="col-lg-8">
               <!-- Payment -->
               <div class="shadow bg3 rounded mb-3">
-                <div class="card-body">
-                  
-                  <div class="row">
-                    <div class="col-md-3">
-                      <ul class="nav nav-nav-tabs flex-column" id="myTab" role="tablist">
-                        <li class="nav-item">
-                          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">iPaymu</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Bank Transfer</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">COD</a>
-                        </li>
-                      </ul>
+                <div class="bg-light shadow-md rounded">
+                  <div class="row align-items-center p-4">
+                    <div class="col-md-6">
+                      <h5 class="text-primary d-flex align-items-center m-0"><span class="text-5 text-dark mr-1">Total Amount: </span> Rp 1.611.280</h5>
                     </div>
-                    <div class="col-9">
-
-                      <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-
-                        <!-- iPaymu -->
-                        <div id="pembayaran" class="col-12 box card shadow bg-white mb-3" style="border: none;">
-                          <div class="card-body">
-                            <h6 class="card-title3">Kartu Kredit/Debit</h6>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed border-bottom border-0">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#kredit">
-                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input"/>
-                                    <label class="custom-control-label" for="customRadio1" style="font-size: 15px;">Kartu Kredit</label>
-                                </div>
-                                <div>
-                                    <img src="img/visa.png" alt="">
-                                    <img src="img/mastercard.png" alt="">
-                                </div>
-                            </li>
-                            <div id="kredit" class="collapse" data-parent="#pembayaran">
-                                <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                    <div class="card-body">
-                                        <h6 class="card-title3" style="font-weight: bold;">Rincian Pembayaran</h6>
-                                        <div class="row">
-                                            <div class="col-sm col-6">
-                                                <p>Harga</p>
-                                            </div>
-                                            <div class="col-sm col-6 text-right">
-                                                <p>732.400</p>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-sm col-6">
-                                                <p>Biaya layanan</p>
-                                            </div>
-                                            <div class="col-sm col-6 text-right">
-                                                <p class="text-success">GRATIS</p>
-                                            </div>
-                                            <span class="section-separator5b"></span>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm col-6">
-                                                <p>Total Pembayaran</p>
-                                            </div>
-                                            <div class="col-sm col-6 text-right">
-                                                <h6 style="font-weight: bold; color: #0064D2;">IDR 732.400</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 ml-3">
-                                    <img src="img/visa-detail.png" alt="">
-                                    <img src="img/mastercard-detail.png" alt=""><br>
-                                    <p class="mt-3 mb-3" style="font-size: 14px;">Hanya dapat dilakukan menggunakan kartu kredit</p>
-                                </div>
-                            </div>
-
-                            <li class="list-group-item d-flex justify-content-between lh-condensed" style="border-left: none; border-right: none;">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#debit">
-                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input"/>
-                                    <label class="custom-control-label" for="customRadio2" style="font-size: 15px;">Kartu Debit</label>
-                                </div>
-                                <div>
-                                    <i class="far fa-credit-card fa-lg"></i> 
-                                </div>
-                            </li>
-                            <div id="debit" class="collapse" data-parent="#pembayaran">
-                                <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                    <div class="card-body">
-                                        <h6 class="card-title3" style="font-weight: bold;">Rincian Pembayaran</h6>
-                                        <div class="row">
-                                            <div class="col-sm col-6">
-                                                <p>Harga</p>
-                                            </div>
-                                            <div class="col-sm col-6 text-right">
-                                                <p>732.400</p>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-sm col-6">
-                                                <p>Biaya layanan</p>
-                                            </div>
-                                            <div class="col-sm col-6 text-right">
-                                                <p class="text-success">GRATIS</p>
-                                            </div>
-                                            <span class="section-separator5b"></span>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-sm col-6">
-                                                <p>Total Pembayaran</p>
-                                            </div>
-                                            <div class="col-sm col-6 text-right">
-                                                <h6 style="font-weight: bold; color: #0064D2;">IDR 732.400</h6>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 ml-3">
-                                    <p class="mt-3 mb-3" style="font-size: 14px;">Hanya dapat dilakukan menggunakan kartu debit</p>
-                                </div>
-                            </div>
-
-                            <h6 class="card-title3 mt-5" style="font-weight: bold;">Virtual Account</h6>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed border-bottom border-0">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#va-bni">
-                                    <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio3" style="font-size: 15px;">BNI</label>
-                                </div>
-                                <div>
-                                    <img src="img/bni.png" alt="">
-                                </div>
-                            </li>
-                            <div id="va-bni" class="collapse" data-parent="#pembayaran">
-                              <div class="mt-3 ml-3">
-                                <img src="img/bni-detail.png" alt=""><br>
-                                <p class="mt-3 mb-3" style="font-size: 15px;">Berikut rincian pembayaran anda dengan BNI Virtual Account :</p>
-                              </div>
-                              <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                  <div class="card-body">
-                                      <h6 class="card-title3" style="font-weight: bold;">DETIL PEMBAYARAN</h6>
-                                      <div class="row">
-                                          <div class="col-sm col-6">
-                                              <p>Harga</p>
-                                          </div>
-                                          <div class="col-sm col-6 text-right">
-                                              <p>IDR 732.400</p>
-                                          </div>
-                                      </div>
-                                      <div class="row mb-3">
-                                          <div class="col-sm col-6">
-                                              <p>Biaya layanan</p>
-                                          </div>
-                                          <div class="col-sm col-6 text-right">
-                                              <p class="text-success">GRATIS</p>
-                                          </div>
-                                          <span class="section-separator5b"></span>
-                                      </div>
-                                      <div class="row">
-                                          <div class="col-sm col-6">
-                                              <p>Total Pembayaran</p>
-                                          </div>
-                                          <div class="col-sm col-6 text-right">
-                                              <h6 style="font-weight: bold; color: #0064D2;">IDR 732.400</h6>
-                                          </div>
-                                      </div>
+                    <div class="col-md-6">
+                      <p class="text-md-right pb-0 mb-0">Transaction ID: <span class="text-body">0123456789</span></p>
+                    </div>
+                  </div>
+                  <hr class="m-0">
+                  <div class="p-4">
+                    <h5 class="mb-4">Select payment method</h5>
+                    <div class="row">
+                      <div class="col-md-3 col-lg-4">
+                        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+                          <li class="nav-item"> <a class="nav-link active" id="first-tab" data-toggle="tab" href="#firstTab" role="tab" aria-controls="firstTab" aria-selected="true">Credit/Debit Card</a> </li>
+                          <li class="nav-item"> <a class="nav-link" id="second-tab" data-toggle="tab" href="#secondTab" role="tab" aria-controls="secondTab" aria-selected="false">iPaymu</a> </li>
+                        </ul>
+                      </div>
+                      <div class="col-md-8 col-lg-8">
+                        <div class="tab-content my-3" id="myTabContentVertical">
+                          <div class="tab-pane fade show active" id="firstTab" role="tabpanel" aria-labelledby="first-tab">
+                            <div class="row">
+                              <div class="col-lg-auto mb-4">
+                                <p>We Accept:</p>
+                                <ul class="payments-types mb-3">
+                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa"></a></li>
+                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover"></a></li>
+                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express"></a></li>
+                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover"></a></li>
+                                </ul>
+                                <form id="payment" method="post">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" data-bv-field="cardnumber" id="cardNumber" required placeholder="Card Number">
                                   </div>
-                              </div> 
-                              <p class="card-content no-border p-4 text-justify" style="font-size: 12px;">
-                                <strong>Catatan :</strong><br>Pembayaran Anda telah dikonfirmasi jika Anda menerima e-tiket/voucher di email Anda. Jika Anda belum menerima e-tiket/voucher dalam 60 menit, silahkan klik <a class="text-primary link text-capitalize" href="#">Konfirmasi Pembayaran</a> dan  mengirimkan bukti pembayaran kepada kami. Mohon dapat menghubungi <a class="text-primary link text-capitalize" href="#">support kami</a> untuk info lebih lanjut.
-                            </p></div>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed" style="border-left: none; border-right: none;">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#va-bca">
-                                    <input type="radio" id="customRadio4" name="customRadio" class="custom-control-input"/>
-                                    <label class="custom-control-label" for="customRadio4" style="font-size: 15px;">BCA</label>
-                                </div>
-                                <div>
-                                    <img src="img/bca.png" alt="">
-                                </div>
-                            </li>
-                            <div id="va-bca" class="collapse" data-parent="#pembayaran">
-                                    <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                        <div class="card-body">
-                                            <h6 class="card-title3" style="font-weight: bold;">Rincian Pembayaran</h6>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Harga</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p>732.400</p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm col-6">
-                                                    <p>Biaya layanan</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p class="text-success">GRATIS</p>
-                                                </div>
-                                                <span class="section-separator5b"></span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Total Pembayaran</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <h6 style="font-weight: bold; color: #0064D2;">732.400</h6>
-                                                </div>
-                                            </div>
-                                        </div>
+                                  <div class="form-row">
+                                    <div class="col-lg-4">
+                                      <div class="form-group">
+                                        <select class="custom-select" required="">
+                                          <option value="">Expiry Month</option>
+                                          <option>January</option>
+                                          <option>February</option>
+                                          <option>March</option>
+                                          <option>April</option>
+                                          <option>May</option>
+                                          <option>June</option>
+                                          <option>July</option>
+                                          <option>August</option>
+                                          <option>September</option>
+                                          <option>October</option>
+                                          <option>November</option>
+                                          <option>December</option>
+                                        </select>
+                                      </div>
                                     </div>
-                                    <div class="mt-3 ml-3">
-                                        <img src="img/bca-detail.png" alt=""><br>
-                                        <p class="mt-3 mb-3" style="font-size: 14px;">Hanya dapat dilakukan menggunakan BCA, konfirmasi pembayaran akan otomatis terdeteksi</p>
+                                    <div class="col-lg-4">
+                                      <div class="form-group">
+                                        <select class="custom-select" required="">
+                                          <option value="">Expiry Year</option>
+                                          <option>2018</option>
+                                          <option>2019</option>
+                                          <option>2020</option>
+                                          <option>2021</option>
+                                          <option>2022</option>
+                                          <option>2023</option>
+                                          <option>2024</option>
+                                          <option>2025</option>
+                                          <option>2026</option>
+                                          <option>2027</option>
+                                          <option>2028</option>
+                                          <option>2029</option>
+                                          <option>2030</option>
+                                          <option>2031</option>
+                                          <option>2032</option>
+                                          <option>2033</option>
+                                          <option>2034</option>
+                                          <option>2035</option>
+                                          <option>2036</option>
+                                          <option>2037</option>
+                                          <option>2038</option>
+                                          <option>2039</option>
+                                          <option>2040</option>
+                                          <option>2041</option>
+                                          <option>2042</option>
+                                          <option>2043</option>
+                                          <option>2044</option>
+                                          <option>2045</option>
+                                          <option>2046</option>
+                                          <option>2047</option>
+                                          <option>2048</option>
+                                          <option>2049</option>
+                                          <option>2050</option>
+                                        </select>
+                                      </div>
                                     </div>
+                                    <div class="col-lg-4">
+                                      <div class="form-group">
+                                        <input type="text" class="form-control" data-bv-field="cvvnumber" id="cvvNumber" required placeholder="CVV Number">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" data-bv-field="cardholdername" id="cardHolderName" required placeholder="Card Holder Name">
+                                  </div>
+                                  <div class="form-group custom-control custom-checkbox">
+                                    <input id="save-card" name="savecard" class="custom-control-input" type="checkbox">
+                                    <label class="custom-control-label" for="save-card">Save my card Details.</label>
+                                  </div>
+                                  <button class="btn btn-warning" type="submit">Proceed to Payment</button>
+                                </form>
+                              </div>
+                              <div class="col-lg-auto mt-lg-0 mt-4">
+                                <div class="card bg-light-3 p-3">
+                                  <p class="mb-2">Billing Enquiries</p>
+                                  <p class="text-1 mb-0">Do not hesitate to reach our <a href="#">support team</a> if you have any queries.</p>
+                                </div>
+                              </div>
                             </div>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed" style="border-left: none; border-right: none;">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#va-mandiri">
-                                    <input type="radio" id="customRadio5" name="customRadio" class="custom-control-input"/>
-                                    <label class="custom-control-label" for="customRadio5" style="font-size: 15px;">Mandiri</label>
+                          </div>
+                          <div class="tab-pane fade" id="secondTab" role="tabpanel" aria-labelledby="second-tab">
+                            <div class="row">
+                              <div class="col-md-auto mb-4"> <img class="img-fluid" src="img/payments/ipaymu.png" alt="iPaymu Logo" title="Pay easily, fast and secure with iPaymu." style="height: 60px!important;">
+                                <p class="lead">Pay easily, fast and secure with iPaymu.</p>
+                                <p class="text-info mb-4"><i class="fas fa-info-circle"></i> You will be redirected to iPaymu to complete your payment securely.</p>
+                                <button class="btn btn-warning d-flex align-items-center" type="submit">Pay via iPaymu</button>
+                              </div>
+                              <div class="col-md-auto mt-md-0 mt-4">
+                                <div class="card bg-light-3 p-3">
+                                  <p class="mb-2">We value your Privacy.</p>
+                                  <p class="text-1 mb-0">We will not sell or distribute your contact information. Read our <a href="#">Privacy Policy</a>.</p>
                                 </div>
-                                <div>
-                                    <img src="img/mandiri.png" alt="">
-                                </div>
-                            </li>
-                            <div id="va-mandiri" class="collapse" data-parent="#pembayaran">
-                                    <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                        <div class="card-body">
-                                            <h6 class="card-title3" style="font-weight: bold;">Rincian Pembayaran</h6>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Harga</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p>732.400</p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm col-6">
-                                                    <p>Biaya layanan</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p class="text-success">GRATIS</p>
-                                                </div>
-                                                <span class="section-separator5b"></span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Total Pembayaran</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <h6 style="font-weight: bold; color: #0064D2;">732.400</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 ml-3">
-                                        <img src="img/mandiri-detail.png" alt=""><br>
-                                        <p class="mt-3 mb-3" style="font-size: 14px;">Hanya dapat dilakukan menggunakan Mandiri, konfirmasi pembayaran akan otomatis terdeteksi</p>
-                                    </div>
-                            </div>
-
-                            <h6 class="card-title3 mt-5" style="font-weight: bold;">Transfer</h6>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed border-bottom border-0">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#tf-mandiri">
-                                    <input type="radio" id="customRadio6" name="customRadio" class="custom-control-input"/>
-                                    <label class="custom-control-label" for="customRadio6" style="font-size: 15px;">Mandiri</label>
-                                </div>
-                                <div>
-                                    <img src="img/mandiri.png" alt="">
-                                </div>
-                            </li>
-                            <div id="tf-mandiri" class="collapse" data-parent="#pembayaran">
-                                    <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                        <div class="card-body">
-                                            <h6 class="card-title3" style="font-weight: bold;">Rincian Pembayaran</h6>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Harga</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p>732.400</p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm col-6">
-                                                    <p>Biaya layanan</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p>6.500</p>
-                                                </div>
-                                                <span class="section-separator5b"></span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Total Pembayaran</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <h6 style="font-weight: bold; color: #0064D2;">738.900</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 ml-3">
-                                        <img src="img/mandiri-detail.png" alt=""><br>
-                                        <p class="mt-3 mb-3" style="font-size: 14px;">Dapat dilakukan menggunakan layanan Bank lain.</p>
-                                    </div>
-                            </div>
-                            <li class="list-group-item d-flex justify-content-between lh-condensed" style="border-left: none; border-right: none;">
-                                <div class="custom-control custom-radio" data-toggle="collapse" data-target="#tf-bca">
-                                    <input type="radio" id="customRadio7" name="customRadio" class="custom-control-input"/>
-                                    <label class="custom-control-label" for="customRadio7" style="font-size: 15px;">BCA</label>
-                                </div>
-                                <div>
-                                    <img src="img/bca.png" alt="">
-                                </div>
-                            </li>
-                            <div id="tf-bca" class="collapse" data-parent="#pembayaran">
-                                    <div class="box card mt-3" style="background-color: #F3FCFB; border: none;">
-                                        <div class="card-body">
-                                            <h6 class="card-title3" style="font-weight: bold;">Rincian Pembayaran</h6>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Harga</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p>732.400</p>
-                                                </div>
-                                            </div>
-                                            <div class="row mb-3">
-                                                <div class="col-sm col-6">
-                                                    <p>Biaya layanan</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <p>6.500</p>
-                                                </div>
-                                                <span class="section-separator5b"></span>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm col-6">
-                                                    <p>Total Pembayaran</p>
-                                                </div>
-                                                <div class="col-sm col-6 text-right">
-                                                    <h6 style="font-weight: bold; color: #0064D2;">738.900</h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mt-3 ml-3">
-                                        <img src="img/bca-detail.png" alt=""><br>
-                                        <p class="mt-3 mb-3" style="font-size: 14px;">Dapat dilakukan menggunakan layanan Bank lain.</p>
-                                    </div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        <!-- iPaymu end -->
-
-                        </div>
-                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Lorem ipsum dolor sit amet, consectetur adipisicingLorem ipsum dolor sit amet, consectetur adipisicing</div>
-                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Lorem ipsum dolor sit amet, consectetur adipisicingLorem ipsum dolor sit amet, consectetur adipisicingLorem ipsum dolor sit amet, consectetur adipisicing</div>
                       </div>
                     </div>
                   </div>
-
-
-
                 </div>
               </div>
               <!-- Payment end -->            
             </div>
             
             <!-- Fare Summaries -->
-            <aside class="col-lg-4 mt-4 mt-lg-0">
+            <aside class="col-lg-4 mt-3 mt-lg-0">
               <div class="sticky-top">
                 <div id="1" class="bg-light shadow-md rounded p-3">
                   <h3 class="text-5 mb-3">Rangkuman Harga</h3>
