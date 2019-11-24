@@ -52,7 +52,7 @@
                   <a class="nav-link" href="#">Booking Check</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" href="#"><i class="fas fa-shopping-basket"></i> Chart (2)</a>
+                  <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Chart (2)</a>
                 </li>
                 <li class="dropdown nav-item">
                   <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="language">
@@ -126,149 +126,183 @@
       <div id="content">    
         <section class="container pt-4">
           <div class="row">
-            <div class="col-lg-8">
+            <div class="col-lg-8 mt-3 mt-lg-0">
               <!-- Payment -->
-              <div class="shadow bg3 rounded mb-3">
-                <div class="bg-light shadow-md rounded">
-                  <div class="row align-items-center p-4">
-                    <div class="col-md-6">
-                      <h5 class="text-primary d-flex align-items-center m-0"><span class="text-5 text-dark mr-1">Total Amount: </span> Rp 1.611.280</h5>
-                    </div>
-                    <div class="col-md-6">
-                      <p class="text-md-right pb-0 mb-0">Transaction ID: <span class="text-body">0123456789</span></p>
-                    </div>
+              <div class="bg-light shadow-md rounded p-3"> 
+                <div class="row">
+                  <div class="col-md-6">
+                    <h3 class="text-5 mb-3">Select payment method</h3>
                   </div>
-                  <hr class="m-0">
-                  <div class="p-4">
-                    <h5 class="mb-4">Select payment method</h5>
-                    <div class="row">
-                      <div class="col-md-3 col-lg-4">
-                        <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
-                          <li class="nav-item"> <a class="nav-link active" id="first-tab" data-toggle="tab" href="#firstTab" role="tab" aria-controls="firstTab" aria-selected="true">Credit/Debit Card</a> </li>
-                          <li class="nav-item"> <a class="nav-link" id="second-tab" data-toggle="tab" href="#secondTab" role="tab" aria-controls="secondTab" aria-selected="false">iPaymu</a> </li>
-                        </ul>
-                      </div>
-                      <div class="col-md-8 col-lg-8">
-                        <div class="tab-content my-3" id="myTabContentVertical">
-                          <div class="tab-pane fade show active" id="firstTab" role="tabpanel" aria-labelledby="first-tab">
-                            <div class="row">
-                              <div class="col-lg-auto mb-4">
-                                <p>We Accept:</p>
-                                <ul class="payments-types mb-3">
-                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa"></a></li>
-                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover"></a></li>
-                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express"></a></li>
-                                  <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover"></a></li>
-                                </ul>
-                                <form id="payment" method="post">
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" data-bv-field="cardnumber" id="cardNumber" required placeholder="Card Number">
-                                  </div>
-                                  <div class="form-row">
-                                    <div class="col-lg-4">
-                                      <div class="form-group">
-                                        <select class="custom-select" required="">
-                                          <option value="">Expiry Month</option>
-                                          <option>January</option>
-                                          <option>February</option>
-                                          <option>March</option>
-                                          <option>April</option>
-                                          <option>May</option>
-                                          <option>June</option>
-                                          <option>July</option>
-                                          <option>August</option>
-                                          <option>September</option>
-                                          <option>October</option>
-                                          <option>November</option>
-                                          <option>December</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                      <div class="form-group">
-                                        <select class="custom-select" required="">
-                                          <option value="">Expiry Year</option>
-                                          <option>2018</option>
-                                          <option>2019</option>
-                                          <option>2020</option>
-                                          <option>2021</option>
-                                          <option>2022</option>
-                                          <option>2023</option>
-                                          <option>2024</option>
-                                          <option>2025</option>
-                                          <option>2026</option>
-                                          <option>2027</option>
-                                          <option>2028</option>
-                                          <option>2029</option>
-                                          <option>2030</option>
-                                          <option>2031</option>
-                                          <option>2032</option>
-                                          <option>2033</option>
-                                          <option>2034</option>
-                                          <option>2035</option>
-                                          <option>2036</option>
-                                          <option>2037</option>
-                                          <option>2038</option>
-                                          <option>2039</option>
-                                          <option>2040</option>
-                                          <option>2041</option>
-                                          <option>2042</option>
-                                          <option>2043</option>
-                                          <option>2044</option>
-                                          <option>2045</option>
-                                          <option>2046</option>
-                                          <option>2047</option>
-                                          <option>2048</option>
-                                          <option>2049</option>
-                                          <option>2050</option>
-                                        </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-lg-4">
-                                      <div class="form-group">
-                                        <input type="text" class="form-control" data-bv-field="cvvnumber" id="cvvNumber" required placeholder="CVV Number">
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="form-group">
-                                    <input type="text" class="form-control" data-bv-field="cardholdername" id="cardHolderName" required placeholder="Card Holder Name">
-                                  </div>
-                                  <div class="form-group custom-control custom-checkbox">
-                                    <input id="save-card" name="savecard" class="custom-control-input" type="checkbox">
-                                    <label class="custom-control-label" for="save-card">Save my card Details.</label>
-                                  </div>
-                                  <button class="btn btn-warning" type="submit">Proceed to Payment</button>
-                                </form>
+                  <div class="col-md-6">
+                    <p class="text-md-right pb-0 mb-0">Transaction ID: <span class="text-body">0123456789</span></p>
+                  </div>
+                </div>
+                <hr class="m-0">
+                <div class="row">
+                  <div class="col-md-3 col-lg-4">
+                    <ul class="nav nav-tabs flex-column" id="myTab" role="tablist">
+                      <li class="nav-item"> <a class="nav-link active" id="first-tab" data-toggle="tab" href="#firstTab" role="tab" aria-controls="firstTab" aria-selected="true">Credit/Debit Card</a> </li>
+                      <li class="nav-item"> <a class="nav-link" id="second-tab" data-toggle="tab" href="#secondTab" role="tab" aria-controls="secondTab" aria-selected="false">iPaymu</a> </li>
+                      <li class="nav-item"> <a class="nav-link" id="second-tab" data-toggle="tab" href="#thirdTab" role="tab" aria-controls="thirdTab" aria-selected="false">Bank Transfer</a> </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-8 col-lg-8">
+                    <div class="tab-content my-3" id="myTabContentVertical">
+                      <div class="tab-pane fade show active" id="firstTab" role="tabpanel" aria-labelledby="first-tab">
+                        <div class="row">
+                          <div class="col-lg-auto mb-4">
+                            <p>We Accept:</p>
+                            <ul class="payments-types mb-3">
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa"></a></li>
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover"></a></li>
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express"></a></li>
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover"></a></li>
+                            </ul>
+                            <form id="payment" method="post">
+                              <div class="form-group">
+                                <input type="text" class="form-control" data-bv-field="cardnumber" id="cardNumber" required placeholder="Card Number">
                               </div>
-                              <div class="col-lg-auto mt-lg-0 mt-4">
-                                <div class="card bg-light-3 p-3">
-                                  <p class="mb-2">Billing Enquiries</p>
+                              <div class="form-row">
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <select class="custom-select" required="">
+                                      <option value="">Expiry Month</option>
+                                      <option>January</option>
+                                      <option>February</option>
+                                      <option>March</option>
+                                      <option>April</option>
+                                      <option>May</option>
+                                      <option>June</option>
+                                      <option>July</option>
+                                      <option>August</option>
+                                      <option>September</option>
+                                      <option>October</option>
+                                      <option>November</option>
+                                      <option>December</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <select class="custom-select" required="">
+                                      <option value="">Expiry Year</option>
+                                      <option>2018</option>
+                                      <option>2019</option>
+                                      <option>2020</option>
+                                      <option>2021</option>
+                                      <option>2022</option>
+                                      <option>2023</option>
+                                      <option>2024</option>
+                                      <option>2025</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4">
+                                  <div class="form-group">
+                                    <input type="text" class="form-control" data-bv-field="cvvnumber" id="cvvNumber" required placeholder="CVV Number">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group">
+                                <input type="text" class="form-control" data-bv-field="cardholdername" id="cardHolderName" required placeholder="Card Holder Name">
+                              </div>
+                              <div class="form-group custom-control custom-checkbox">
+                                <input id="save-card" name="savecard" class="custom-control-input" type="checkbox">
+                                <label class="custom-control-label" for="save-card">Save my card Details.</label>
+                              </div>
+                              <button class="btn btn-warning" type="submit">Proceed to Payment</button>
+                            </form>
+                          </div>
+                          <div class="col-lg-auto mt-lg-0 mt-4">
+                            <div class="card bg-light-3 p-3">
+                              <p class="mb-2">Billing Enquiries</p>
+                              <p class="text-1 mb-0">Do not hesitate to reach our <a href="#">support team</a> if you have any queries.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="secondTab" role="tabpanel" aria-labelledby="second-tab">
+                        <div class="row">
+                          <div class="col-md-auto mb-4"> <img class="img-fluid" src="img/payments/ipaymu.png" alt="iPaymu Logo" title="Pay easily, fast and secure with iPaymu." style="height: 60px!important;">
+                            <p class="lead">Pay easily, fast and secure with iPaymu.</p>
+                            <p class="text-info mb-4"><i class="fas fa-info-circle"></i> You will be redirected to iPaymu to complete your payment securely.</p>
+                            <button class="btn btn-warning d-flex align-items-center" type="submit">Pay via iPaymu</button>
+                          </div>
+                          <div class="col-md-auto mt-md-0 mt-4">
+                            <div class="card bg-light-3 p-3">
+                              <p class="mb-2">We value your Privacy.</p>
+                              <p class="text-1 mb-0">We will not sell or distribute your contact information. Read our <a href="#">Privacy Policy</a>.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="thirdTab" role="tabpanel" aria-labelledby="second-tab">
+                        <div class="row">
+                          <div class="col-lg-12 mt-lg-0 mt-4 mb-2">
+                            <p>Bank Partners:</p>
+                            <ul class="payments-types mb-3">
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/bni.png" alt="bni" title="BNI"></a></li>
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/bca.png" alt="bca" title="BCA"></a></li>
+                              <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mandiri.png" alt="mandiri" title="Mandiri"></a></li>
+                            </ul>
+                            <div class="card">
+                              <div class="card-body">  
+                                  <div class="row">
+                                    <div class="col-sm col-6">
+                                      <h6 class="card-title">
+                                        <p class="text-3">VA No.<br>5678 0000 1111 2222 &nbsp;<a href="#" class="text-1">(Copy)</a>
+                                        </p></h6>
+                                    </div>
+                                    <div class="col-sm col-6 text-right">
+                                      <img src="img/bni-detail.png" alt="">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div id="how" class="mt-2 mb-2">
+                                <li class="list-group-item d-flex justify-content-between lh-condensed mb-2" data-toggle="collapse" data-target="#howto" style="cursor: pointer;">
+                                  <div>
+                                    <h6 class="text-3 mt-2">How to transfer your VA?</h6> 
+                                  </div>
+                                  <div>
+                                    <i class="fas fa-chevron-down float-right mt-2"></i>
+                                  </div>
+                                </li>
+                                <div id="howto" class="collapse ml-3 mt-3 mb-3" data-parent="#how">
+                                  <div class="col-sm">
+                                      <small>1. Input your card and PIN</small>
+                                  </div>
+                                  <div class="col-sm">
+                                      <small>2. Select Payment</small>
+                                  </div>
+                                  <div class="col-sm">
+                                      <small>3. Input 007 as Bank Code</small>
+                                  </div>
+                                  <div class="col-sm">
+                                      <small>4. Input your VA number, eg. 5678 0000 1111 2222</small>
+                                  </div>
+                                  <div class="col-sm">
+                                      <small>5. Select Yes</small>
+                                  </div>
+                                  <div class="col-sm">
+                                      <small>6. Take your payment copy</small>
+                                  </div>
+                                  <div class="col-sm">
+                                      <small>7. Finish</small>
+                                  </div>
+                                </div>
+                                <div class="card bg-light-3 p-2">
+                                  <p class="mb-2">Payment Confirmation:</p>
                                   <p class="text-1 mb-0">Do not hesitate to reach our <a href="#">support team</a> if you have any queries.</p>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="tab-pane fade" id="secondTab" role="tabpanel" aria-labelledby="second-tab">
-                            <div class="row">
-                              <div class="col-md-auto mb-4"> <img class="img-fluid" src="img/payments/ipaymu.png" alt="iPaymu Logo" title="Pay easily, fast and secure with iPaymu." style="height: 60px!important;">
-                                <p class="lead">Pay easily, fast and secure with iPaymu.</p>
-                                <p class="text-info mb-4"><i class="fas fa-info-circle"></i> You will be redirected to iPaymu to complete your payment securely.</p>
-                                <button class="btn btn-warning d-flex align-items-center" type="submit">Pay via iPaymu</button>
-                              </div>
-                              <div class="col-md-auto mt-md-0 mt-4">
-                                <div class="card bg-light-3 p-3">
-                                  <p class="mb-2">We value your Privacy.</p>
-                                  <p class="text-1 mb-0">We will not sell or distribute your contact information. Read our <a href="#">Privacy Policy</a>.</p>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
+                </div>    
+              </div> 
               <!-- Payment end -->            
             </div>
             
@@ -278,7 +312,7 @@
                 <div id="1" class="bg-light shadow-md rounded p-3">
                   <h3 class="text-5 mb-3">Rangkuman Harga</h3>
                   <hr>
-                  <div class="card-body bg-white pl-2 pr-2 pt-0">
+                  <div class="card-body bg-white pl-2 pr-2 pb-0 pt-0">
                     <div class="row">
                       <div class="col-md-6 text-2">Dewasa (2x)</div>
                       <div class="col-md-6 text-2 text-right">Rp 1.464.800</div>
@@ -293,7 +327,6 @@
                     </div>
                   </div> 
                 </div>
-
                 <div class="form-group pt-4 pb-2">
                   <button type="submit" class="btn btn-success btn-block">Create new order</button>
                 </div>
