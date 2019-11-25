@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/owl.carouselhttp://sandbox.ipaymu.com/assets/owl.theme.default.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
     <link rel="stylesheet" type="text/css" href="vendor/ion-rangeslider/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-seat-charts/jquery.seat-charts.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
 
@@ -129,51 +130,43 @@
             <div class="col-lg-8 bg-light shadow-md rounded p-3">
               <!-- Seat Map -->
               
-              xxx
-                
+              <div class="wrapper">
+                <div class="container text-center">
+                  <div class="row">
+                    <div class="col-12">
+                      <div id="seat-map" class="">
+                        <div class="front-indicator">EKONOMI</div>
+                      </div>
+                      <div class="booking-details">       
+                        <div id="legend" class="text-4"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
               <!-- Seat Map -->            
             </div>
-            
             <!-- Seat Selections -->
             <aside class="col-lg-4">
               <div class="sticky-top">
                 <div id="1" class="bg-light shadow-md rounded p-3">
                   <!-- card selected -->
-                  <div class="alert alert-warning fade show p-2 m-2" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-top: -15px;margin-right: -5px;">
-                      <span class="text-2" aria-hidden="true">&times;</span>
-                    </button>
-                    <h5 class="text-2 font-weight-bold">Mr. Oki BAYU</h5>
-                    <span>Eksekutif A/ 1A</span>
-                  </div>
-                  <div class="alert alert-info fade show p-2 m-2" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-top: -15px;margin-right: -5px;">
-                      <span class="text-2 mt-0 pt-0" aria-hidden="true">&times;</span>
-                    </button>
-                    <h5 class="text-2">Ms. Felicia</h5>
-                    <span>Economy C/ 5B</span>
-                  </div>
-                  <div class="alert alert-info fade show p-2 m-2">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close" style="margin-top: -15px;margin-right: -5px;">
-                      <span class="text-2" aria-hidden="true">&times;</span>
-                    </button>
-                    <h5 class="text-2">Mr. Athalla</h5>
-                    <span>Economy C/ 4B</span>
+                  <h3 class="text-4">Selected Seats (<span id="counter">0</span>):</h3>
+                  <hr>
+                  <ul id="selected-seats"></ul>
+                  <div class="fade show mt-2 mb-3">
+                    <h3 class="text-3">Total: <b>Rp <span id="total">0</span></b></h5>
                   </div>
                   <!-- card selected end -->
-
                   <div class="row justify-content-center pt-2 pl-2 pr-2">
                     <div class="col-md-6">
                       <button type="submit" class="btn btn-sm btn-danger btn-block">Reset</button>
                     </div>
                     <div class="col-md-6">
-                      <button type="submit" class="btn btn-sm btn-warning btn-block">Select</button>
+                      <button type="submit" class="btn btn-sm btn-warning btn-block checkout-button">Select</button>
                     </div>
                   </div>
                 </div>
-
-
-
               </div>
             </aside>
             <!-- Seat Selections end -->
@@ -248,6 +241,7 @@
     <script src="vendor/daterangepicker/moment.min.js"></script> 
     <script src="vendor/daterangepicker/daterangepicker.js"></script>
     <script src="vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script src="vendor/jquery-seat-charts/jquery.seat-charts.js"></script>
     <script type="text/javascript">
       $(".js-range-slider").ionRangeSlider({
         type: "double",
@@ -299,6 +293,7 @@
         " - Rp " + $( "#slider-range" ).slider( "values", 1 ) );
       });
     </script>
+    <script src="js/train-seat.js"></script>
     <script src="js/main.js"></script>
     
   </body>

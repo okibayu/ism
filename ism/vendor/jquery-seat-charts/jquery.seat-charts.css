@@ -14,8 +14,8 @@
 	position: relative;
 }
 .seatCharts-cell {
-	height: 27px;
-	width: 27px;
+	height: 30px;
+	width: 30px;
 	line-height: 27px;
 	margin: 3px;
 	float: left;
@@ -47,25 +47,31 @@
 	background-color: white;
 }
 .seatCharts-row {
-	height: 35px;
+	height: 38px;
+	width: 100%;
+	justify-content: center;
 }
 .seatCharts-row:after {
 	clear: both;
 }
 .seatCharts-seat.selected {
-	background-color: #20bf7a;
+	background-color: #0065b3;
 }
 .seatCharts-seat.focused {
-	background-color: #20bf7a;
+	background-color: #fff;
+	border: 2px solid #0065b3;
+	color: #0065b3;
 }
 .seatCharts-seat.available {
-	background-color: #ccc;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	color: #999;
 }
 .seatCharts-seat.available.first-class {
-	background-color: #999;
+	background-color: #ccc;
 }
 .seatCharts-seat.unavailable {
-	background-color: #F00;
+	background-color: #999;
 	cursor: not-allowed;
 }
 ul.seatCharts-legendList {
@@ -74,13 +80,14 @@ ul.seatCharts-legendList {
 	padding: 0;
 }
 li.seatCharts-legendItem {
-	margin-top: 5px;
-	display: inline-block;
-	margin-right: 6px;
-	font-size: 13px;
+	margin-top: 10px;
+    display: inline-block;
+    margin-right: 35px;
+    font-size: 15px;
+    line-height: 27px;
 }
 li.seatCharts-legendItem .seatCharts-cell {
-	width: 15px;
-	height: 15px;
+	width: 20px;
+	height: 20px;
 	cursor: default;
 }
