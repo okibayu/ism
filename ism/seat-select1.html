@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
     <link href="img/favicon.png" rel="icon" />
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+    <!-- <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css" />
@@ -124,62 +125,207 @@
       </section>
 
       <!-- Content -->
-      <div id="content">    
+      <div id="content-train">    
         <section class="container pt-4">
-          <div class="row">
-            <!-- Seat Selections -->
-            <aside class="col-lg-4">
-              <div class="sticky-top">
-                <div id="1" class="bg-light shadow-md rounded text-center p-4">
-                  <!-- card selected -->
-                  <h6 class="text-3 m-0 font-weight-600">Selected Seats (<span id="counter">0</span>):</h6>
-                  <hr>
-                  <ul id="selected-seats"></ul>
+          <h6 class="text-3 font-weight-bold">Pilih Kursi Keberangkatan </h6>
+          <div class="card shadow-md p-3">
+            <div class="row justify-content-between">
+              <div id="title" class="col-md-6">
+                <div class="col-auto pl-0">
+                  <h5 class="stations text-3 font-weight-bold"><i class="fas fa-train"></i> Gambir (GMR) <i class="fas fa-long-arrow-alt-right"></i> Bandung (BD)</h5>
+                  <h6 class="date text-2"><i class="fas fa-calendar-alt"></i> Kamis, 11 September 2019</h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div id="timer" class="row justify-content-end">
+                  <div class="col-auto text-right">
+                    <h6 class="text-3 font-weight-bold">Batas Waktu</h6>
+                    <span class="limit text-2 text-danger">00:10:25</span>
                   </div>
                 </div>
-              </aside>
-            <!-- Seat Selections end -->
-            <div class="col-lg-8 bg-white shadow-md rounded p-3">
-              <!-- Seat Map -->
-              <div class="wrapper">
-                <div class="container text-center">
-                  <div class="row border-bottom pb-2">
-                    <div class="col-md-6 text-left">
-                      <h6 class="text-3 m-0 font-weight-600">Gambir (GMR) - Bandung (BD)</h6>
-                      <span class="text-2">Kamis, 11 September 2019</span>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-md-auto ">
+                <!-- Selected card -->
+                  <div class="p-card active">
+                    <div class="p-chair">
+                      <h6>P1</h6>
                     </div>
-                    <div class="col-md-6 text-right">
-                      <h6 class="text-2 m-0 font-weight-600">Batas Waktu</h6>
-                      <span class="text-2 text-danger font-weight-600 pt-0">09:46:00</span>
-                    </div>
-                  </div>                   
-                  <div class="row">
-                    <div class="col-md-12 mt-3 justify-content-center">
-                      <h6 class="front-indicator">EKONOMI</h6>
-                      <div id="seat-map" class="mb-2 mt-2"></div>
-                    </div>
-                    <div class="col-md-12 mb-4">
-                      <div class="booking-details">       
-                        <div id="legend" class="text-4 align-content-center"></div>
-                      </div>
+                    <div class="p-user">
+                      <h6>Mr.Oki BAYU</h6>
+                      <h5>Eksekutif 1/ A1</h5>
                     </div>
                   </div>
-                <div class="row justify-content-center pt-2 pl-2 pr-2">
-                      <div class="col-md-6">
-                        <button type="submit" class="btn btn-sm btn-danger btn-block">Reset</button>
-                      </div>
-                      <div class="col-md-6">
-                        <button type="submit" class="btn btn-sm btn-warning btn-block checkout-button">Select</button>
-                      </div>
+                  <div class="p-card selected">
+                    <div class="p-chair">
+                      <h6>P2</h6>
                     </div>
+                    <div class="p-user">
+                      <h6>Ms.Felicia</h6>
+                      <h5>Eksekutif 1/ B1</h5>
+                    </div>
+                  </div>
+                  <div class="p-card selected">
+                    <div class="p-chair">
+                      <h6>P3</h6>
+                    </div>
+                    <div class="p-user">
+                      <h6>Mr.Athallah</h6>
+                      <h5>Eksekutif 1/ C1</h5>
+                    </div>
+                  </div>
+                  <div class="p-card selected">
+                    <div class="p-chair">
+                      <h6>P4</h6>
+                    </div>
+                    <div class="p-user">
+                      <h6>Ms.Odelia</h6>
+                      <h5>Eksekutif 1/ D1</h5>
+                    </div>
+                  </div>
+                <!-- Selected Card end -->
               </div>
-            </div>  
-            <!-- Seat Map -->            
+              <div class="col-md-auto">
+                <!-- Selected Wagon -->
+                <div id="wagon" class="card shadow-md">
+                  <div class="w-name"> 
+                    <h6 class="text-4 text-white">Eksekutif 1</h6>
+                  </div>  
+                  <div class="w-seat">
+                    <div class="p-4" style="overflow-x: scroll;">
+                      <table class="d-md-table">
+                        <tbody>
+                          <tr>
+                            <td><span class="w-col">A</span></td>
+                            <td><span class="w-selected">P1</span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="w-col">B</span></td>
+                            <td><span class="w-selected">P2</span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="w-col"> </span></td>
+                            <td><span class="w-blank">1</span></td>
+                            <td><span class="w-blank">2</span></td>
+                            <td><span class="w-blank">3</span></td>
+                            <td><span class="w-blank">4</span></td>
+                            <td><span class="w-blank">5</span></td>
+                            <td><span class="w-blank">6</span></td>
+                            <td><span class="w-blank">7</span></td>
+                            <td><span class="w-blank">8</span></td>
+                            <td><span class="w-blank">9</span></td>
+                            <td><span class="w-blank">10</span></td>
+                            <td><span class="w-blank">11</span></td>
+                            <td><span class="w-blank">12</span></td>
+                            <td><span class="w-blank">13</span></td>
+                            <td><span class="w-blank">14</span></td>
+                            <td><span class="w-blank">15</span></td>
+                            <td><span class="w-blank">16</span></td>
+                            <td><span class="w-blank">17</span></td>
+                            <td><span class="w-blank">18</span></td>
+                            <td><span class="w-blank">19</span></td>
+                            <td><span class="w-blank">20</span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="w-col">C</span></td>
+                            <td><span class="w-selected">P3</span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                          </tr>
+                          <tr>
+                            <td><span class="w-col">D</span></td>
+                            <td><span class="w-blank"></span></td>
+                            <td><span class="w-selected">P4</span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair-0"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                            <td><span class="w-chair"></span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Selected Wagon end -->
+              </div>      
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- Content end -->
-    </div>
 
       <!-- Footer -->
       <footer id="footer"> 

@@ -47,8 +47,13 @@
 			},
 			naming : {
 				top : false,
+				//columns: ['A', 'B', 'C', '','D', 'E'],
+				//rows: ['I', 'II', 'III', 'IV', 'V'],
+				//getId  : function(character, row, column) {
+					//return row + '_' + column;
+				//},
 				getLabel : function (character, row, column) {
-					return firstSeatLabel++;
+							return firstSeatLabel++;
 				},
 			},
 
@@ -64,14 +69,14 @@
 
 			click: function () {
 				
-				if (this.data().classes == 'first-class' & this.status() == 'available') {
+				if (this.data().classes == 'focused' & this.status() == 'available') {
 					$('<li><div class="alert alert-warning fade show p-2 m-2" role="alert"><button type="button" class="close cancel-cart-item" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">\&times;<\/span><\/button><h5 class="text-3 font-weight-bold">Passenger <span id="counter">'+$counter.text()+'<\/h5><\/span>'+this.data().category+'<br><h5 class=text-3>Kursi No: '+this.settings.label+''+data('seatId', this.settings.id)+'<\/h5><\/div><\/li>')
 						.attr('id', 'cart-item-'+this.settings.id)
 						.data('seatId', this.settings.id)
 						.appendTo($cart); 
 					
 					$counter.text(sc.find('selected').length+1);
-					$total.text(recalculateTotal(sc)+this.data().price);
+					//$total.text(recalculateTotal(sc)+this.data().price);
 					
 					return 'selected';
 			} else if (this.data().classes == 'economy-class' & this.status() == 'available') {
@@ -81,7 +86,7 @@
 						.appendTo($cart); 
 					
 					$counter.text(sc.find('selected').length+1);
-					$total.text(recalculateTotal(sc)+this.data().price);
+					//$total.text(recalculateTotal(sc)+this.data().price);
 					
 					return 'selected'; 
 						
@@ -113,7 +118,6 @@
 
 		//let's pretend some seats have already been booked
 		sc.get(['1_2', '4_1', '7_1', '7_2']).status('unavailable');
-		sc.get(['1_5', '2_6', '4_6', '7_5']).status('unavailable');
 
 });
 

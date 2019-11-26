@@ -667,7 +667,8 @@ section.page-header.bg-page-header {
     border-radius: 5px 5px 0 0!important;
     border-top: 0.5px solid #ffffff;
     border-left: 0.5px solid #e4e9ec;
-    border-right: 0.5px solid #e4e9ec;}
+    border-right: 0.5px solid #e4e9ec;
+    z-index: 1024!important;}
 
 .text-info {
     font-size: 10px;
@@ -686,6 +687,154 @@ ul#selected-seats {
     text-decoration: none!important;
     list-style: none!important;
     padding-left:0;}
+
+.seatCharts-container .seatmap {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 25px 25px 20px 10px;
+    display: inline-flex!important;
+    position: relative;
+    height: 300px;
+    overflow-x: scroll!important;}
+
+.p-card.active {
+    width: 200px;
+    max-width: 250px;
+    height: 60px;
+    border: 1px solid #ffc107;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
+    .p-card.active .p-chair {
+        width: 54px;
+        height: 100%;
+        padding: 10px;
+        padding-top: 20px;
+        margin-right: 15px;
+        text-align: center;
+        background-color: #ffc107;
+        border-radius: 5px 0 0 5px;
+        float: left;}
+        .p-card.active .p-chair h6 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;}        
+        .p-card.active .p-user {
+            width: 100%;
+            background-color: #ffc10775;
+            height: 100%;}
+            .p-card.active .p-user h6 {
+                padding-top: 10px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #000;}
+            .p-card.active .p-user h5 {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 5px;}
+
+.p-card.selected {
+    width: 200px;
+    max-width: 250px;
+    height: 60px;
+    border: 1px solid #0071cc;
+    padding: 0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;}
+    .p-card.selected .p-chair {
+        width: 54px;
+        height: 100%;
+        padding: 10px;
+        padding-top: 20px;
+        margin-right: 15px;
+        text-align: center;
+        background: #007bff40;
+        border-radius: 5px 0 0 5px;
+        float: left;}
+        .p-card.selected .p-chair h6 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #0071cc;}        
+        .p-card.selected .p-user {
+            width: 100%;
+            height: 100%;}
+            .p-card.selected .p-user h6 {
+                padding-top: 10px;
+                font-size: 15px;
+                font-weight: 600;
+                color: #0071cc;}
+            .p-card.selected .p-user h5 {
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 5px;}
+    
+#wagon .w-seat .w-col {
+    width: 20px;
+    height: 20px;
+    border: 0px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle; 
+    font-size: 12px;
+    font-weight: 600;
+    color: #777;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: block;
+    position: relative;}
+    #wagon .w-seat .w-blank {
+        width: 20px;
+        height: 20px;
+        border: 0px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        color: #0071cc;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;}
+    #wagon .w-seat .w-chair {    
+        width: 20px;
+        height: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #fff;
+        color: #fff;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;}
+    #wagon .w-seat .w-chair-0 {    
+        width: 20px;
+        height: 20px;
+        border: 0px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #ccc;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;}
+        #wagon .w-seat .w-selected { 
+            width: 20px;
+            height: 20px;
+            border: 0px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #0071cc;
+            color: #fff;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            display: inline-block;
+            position: relative;}
 
 /*-- Footer --*/
 
