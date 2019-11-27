@@ -700,36 +700,40 @@ ul#selected-seats {
 /*-- New Seat Selected --*/
 
 #seat-selected .p-card {
-    width: 200px;
-    height: 50px;}
+    width: 100%;
+    max-width: 180px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    position: relative;}
 
 #seat-selected .p-card.active {
-    max-width: 200px;
-    height: 60px;
     border: 1px solid #ffc107;
-    padding: 0;
     margin-bottom: 10px;
     border-radius: 5px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
     .p-card.active .p-chair {
         min-width: 54px;
-        height: 100%;
-        margin-right: 15px;
         background-color: #ffc107;
-        border-radius: 5px 0 0 5px;
-        float: left;}
+        position: relative;
+        float: left;
+        height: 100%;}
         .p-card.active .p-chair h6 {
             font-size: 20px;
             font-weight: 500;
             color: #fff;
             text-align: center;
-            padding-top: 16px;}        
+            padding-top: 11px;
+            display: block;
+            position: relative;}        
         .p-card.active .p-user {
             width: 100%;
             background-color: #ffc10775;
-            height: 100%;}
+            height: 100%;
+            padding-left: 70px;
+            padding-top: 6px;}
             .p-card.active .p-user h6 {
-                padding-top: 10px;
                 font-size: 14px;
                 font-weight: 500;
                 color: #000;}
@@ -740,7 +744,6 @@ ul#selected-seats {
 
 .p-card.selected {
     max-width: 200px;
-    height: 60px;
     border: 1px solid #0071cc;
     padding: 0;
     margin-bottom: 10px;
@@ -772,25 +775,39 @@ ul#selected-seats {
                 font-weight: 500;
                 line-height: 5px;}
 
+#wagon { 
+    border: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.10)!important;
+    margin-bottom: 20px;}
 
 #wagon .w-name {
     width: 100%;
-    height: 100px;
+    height: 80px;
     background-color: #0071cc;
     color: #fff;
-    padding-top: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin: 0;}
+    padding-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 0 0;}
     #wagon .w-name h6 {
         font-size: 15px;
         font-weight: 500;
         text-align: center;
         vertical-align: middle;}
 
+#wagon .w-block {
+    width: 100%;
+    overflow-x: auto;
+    position: relative;}
+
 #wagon .w-seat {
+    max-width: 100%;
     font-size: 12px;
-    font-weight: normal;}
+    font-weight: normal;
+    padding: 15px 20px;
+    margin-left: auto;
+    margin-right: auto;}
 
 #wagon .w-seat .w-col {
     width: 20px;
