@@ -744,7 +744,7 @@ ul#selected-seats {
 
 .p-card.selected {
     max-width: 200px;
-    border: 1px solid #0071cc;
+    border: 1px solid #007bff75;
     padding: 0;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -759,8 +759,8 @@ ul#selected-seats {
         border-radius: 5px 0 0 5px;
         float: left;}
         .p-card.selected .p-chair h6 {
-            font-size: 14px;
-            font-weight: 500;
+            font-size: 15px;
+            font-weight: 600;
             color: #0071cc;}        
         .p-card.selected .p-user {
             width: 100%;
@@ -876,6 +876,40 @@ ul#selected-seats {
             position: relative;}
         #wagon .w-seat .w-selected.active {
             background-color: orange;}
+
+
+#wagon .w-legend {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
+    #wagon .w-legend ul {
+        list-style: none;
+        text-decoration: none;}
+        #wagon .w-legend li {
+            display: inline-flex;}
+        #wagon .w-legend li > h5 {
+            font-size: 14px;
+            line-height: 20px;
+            padding-right: 10px;
+            margin-left: 10px;}
+        #wagon .w-legend li > div {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: transparent;}
+        #wagon .w-legend li > div.active {
+            border: 1px solid #ffa500;
+            background-color: #ffa500;}
+        #wagon .w-legend li > div.selected {
+            border: 1px solid #0071cc;
+            background-color: #0071cc;}
+        #wagon .w-legend li > div.available {
+            border: 1px solid #ccc;
+            background-color: #fff;}
+        #wagon .w-legend li > div.booked {
+            border: 1px solid #ccc;
+            background-color: #ccc;}
 
 /*-- Footer --*/
 

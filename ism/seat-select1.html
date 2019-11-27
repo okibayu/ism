@@ -127,7 +127,7 @@
       <!-- Content -->
       <div id="content-train">    
         <section class="container pt-4">
-          <h6 class="text-3 font-weight-bold">Pilih Kursi Keberangkatan </h6>
+          <h6 class="text-4 pb-3">Pilih Kursi Keberangkatan</h6>
           <div class="card shadow-md p-3">
             <div class="row justify-content-between">
               <div id="title" class="col-md-6">
@@ -147,7 +147,7 @@
             </div>
             <hr>
             <div class="row">
-              <div class="col-md-3 ">
+              <div class="col-md-3 justify-content-start">
                 <!-- Selected card -->
                 <div id="seat-selected">
                   <div class="p-card active">
@@ -198,7 +198,7 @@
                     </div>
                   </div> 
                   <div class="w-seat">
-                    <div class="w-block">
+                    <div class="w-block pt-3 pb-3">
                       <table>
                         <tbody>
                           <tr>
@@ -320,9 +320,20 @@
                       </table>
                     </div>
                   </div>
+                  <div class="w-legend pt-3">
+                    <ul>
+                      <li><div class="active"></div><h5>Aktif</h5></li>
+                      <li><div class="selected"></div><h5>Terpilih</h5></li>
+                      <li><div class="available"></div><h5>Tersedia</h5></li>
+                      <li><div class="booked"></div><h5>Tidak Tersedia</h5></li>
+                    </ul>
+                  </div>
                 </div>
-
                 <!-- Selected Wagon end -->
+                <div class="w-button text-right">
+                  <button type="submit" class="btn btn-sm btn-danger mt-2 col-2">Reset</button>&nbsp;
+                  <button type="submit" class="btn btn-sm btn-warning mt-2 col-2">Selanjutnya</button>
+                </div>
               </div>      
             </div>
           </div>
