@@ -39,24 +39,20 @@ body {
     text-transform: uppercase;
     text-align: center;}
 
-@media (min-width: 992px){
+.navbar-toggler {
+    width: 23px!important;}
+
+.dropdown-menu {
+    left: -89px!important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 20px 5px;
+    border}
+
+@media (min-width: 991px){
 
 .navbar-expand-lg .navbar-nav {
     -ms-flex-direction: row;
     flex-direction: row;
     background-color: #ffffff;}
-
-div#menu.navbar-collapse.collapse.show {
-    z-index: -1 !important;
-    background-color: #fff;
-    display: block;
-    background: rgb(255, 255, 255);
-    position: absolute;
-    top: 0px;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px;}
 
 }
 
@@ -90,67 +86,17 @@ div#menu.navbar-collapse.collapse.show {
 .navbar-expand-md .navbar-nav .nav-link {
     padding: 10px 15px !important;}
 
-.navbar-expand-md .dropdown-menu {
-    position: relative;
-    top: 100%;
-    display: none;
-    float: left;
-    min-width: 10rem;
-    padding: .5rem 0;
-    margin: .125rem 0 0;
-    font-size: 1rem;
-    color: #212529;
-    text-align: left;
-    list-style: none;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.15);
-    border-radius: .25rem;}
-
 .navbar-toggler .collapsed button {
     width: 20px;
     height: 20px;}
 
 #header {
     background: #fff;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-    box-shadow: 0px 2px 60px 10px #21252996 !important;
     position: relative;
     z-index: 1000;}
-    #header:hover {
-        -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
-        box-shadow: 0px 2px 60px 20px #21252996 !important;
-        transition: all 0.1s cubic-bezier(0, 0, 0, 1) 0.1s;}
-
-#menu .navbar-collapse .collapse .show {
-    padding: .25rem .75rem;
-    font-size: 1.25rem;
-    line-height: 1;
-    background-color: transparent;
-    border: 1px solid transparent;
-    border-radius: .25rem;}
-
-#menu ul > li > div.dropdown-menu.show {
-    padding: 15px;
-    font-size: 14px;
-    font-weight: 400;
-    left: -87px;
-    border: 0.3px solid #e4e4e4;
-    box-shadow: rgba(0, 0, 0, 0.10) 0px 1px 6px 2px;}
-    #menu ul > li > div.dropdown-menu.show:hover{
-        box-shadow: rgba(0, 0, 0, 0.20) 0px 5px 20px 5px;
-        transition: all 0.1s cubic-bezier(0, 0, 0, 1) 0.5s;}
-    #menu ul > li > div.dropdown-menu.show a:hover {
-        color: #007bff;
-        background-color: #e4e4e4;}
-
-#menu div > .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
-    text-decoration: none;
-    background-color: #0065b3 !important;}
 
 .login-form {
-    padding: 0 8px;
+    padding: 15px!important;
     text-transform: capitalize;}
 
 section.page-header.bg-page-header {
