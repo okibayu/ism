@@ -115,6 +115,7 @@ section.page-header.bg-page-header {
     background: rgb(3,79,140);
     background: linear-gradient(153deg, rgba(3,79,140,1) 0%, rgba(0,130,235,0.8379726890756303) 26%, rgba(0,88,133,1) 100%);}
 
+
 /*-- Sliders --*/
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
@@ -331,6 +332,7 @@ section.page-header.bg-page-header {
     border-color: #ffc107!important;
     background-color: #ffc107!important;}
 
+
 /* indicator */
 
 #filterTop div > .filter-header .status {
@@ -461,12 +463,14 @@ section.page-header.bg-page-header {
 } 
 
 /*-- Dropdown Travellers --*/
+
 .travellers-dropdown {
     z-index: 3000!important;}
     .travellers-dropdown .qty .btn {
         padding-top: 5px;
         padding-bottom: 5px;
         border-radius: 5px;}
+
 
 /*-- Avail list --*/
 
@@ -628,27 +632,8 @@ section.page-header.bg-page-header {
     padding-top: 5px;
     margin-left: 3px!important;}
 
+
 /*-- Seat Select --*/
-
-ul#selected-seats li > .x-up {
-    margin-top: -15px; 
-    margin-right: -5px;}
-
-ul#selected-seats {
-    text-decoration: none!important;
-    list-style: none!important;
-    padding-left:0;}
-
-.seatCharts-container .seatmap {
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 25px 25px 20px 10px;
-    display: inline-flex!important;
-    position: relative;
-    height: 300px;
-    overflow-x: scroll!important;}
-
-/*-- New Seat Selected --*/
 
 #seat-selected .p-card {
     width: 100%;
@@ -758,50 +743,52 @@ ul#selected-seats {
     position: relative;}
 
 #wagon .w-seat {
-        font-size: 12px;
-        font-weight: normal;
-        padding: 15px 20px;
-        position: relative;
-        display: flex;
-        margin-left: 40px;
-        margin-right: 40px;}
+    font-size: 12px;
+    font-weight: normal;
+    padding: 15px 20px;
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;}
 
 @media screen and (min-width: 1440px) {
-    #wagon .w-seat {
-        font-size: 12px;
-        font-weight: normal;
-        padding: 15px 20px;
-        position: relative;
-        display: flex;
-        margin-left: 40px;
-        margin-right: 40px;}
-    
-    #wagon .carousel-control-prev {
-        border-radius: 0 5px 5px 0;
-        left: -45px!important;}
 
-    #wagon .carousel-control-next {
-        border-radius: 0 5px 5px 0;
-        right: -45px!important;}
+#wagon .w-seat {
+    font-size: 12px;
+    font-weight: normal;
+    padding: 15px 20px;
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-right: 40px;}
+
+#wagon .carousel-control-prev {
+    border-radius: 0 5px 5px 0;
+    left: -45px!important;}
+
+#wagon .carousel-control-next {
+    border-radius: 0 5px 5px 0;
+    right: -45px!important;}
 }
 
 @media screen and (max-width: 1024px) and (min-width: 425px) {
-    #wagon .w-seat {
-        font-size: 14px;
-        font-weight: normal;
-        padding: 15px 20px;
-        position: relative;
-        display: flex;
-        margin-left: 30px;
-        margin-right: 30px;}
 
-    #wagon .carousel-control-prev {
-        border-radius: 0 5px 5px 0;
-        left: -35px!important;}
+#wagon .w-seat {
+    font-size: 14px;
+    font-weight: normal;
+    padding: 15px 20px;
+    position: relative;
+    display: flex;
+    margin-left: 30px;
+    margin-right: 30px;}
 
-    #wagon .carousel-control-next {
-        border-radius: 0 5px 5px 0;
-        right: -35px!important;}
+#wagon .carousel-control-prev {
+    border-radius: 0 5px 5px 0;
+    left: -35px!important;}
+
+#wagon .carousel-control-next {
+    border-radius: 0 5px 5px 0;
+    right: -35px!important;}
 }
 
 #wagon .w-seat .w-col {
@@ -810,6 +797,7 @@ ul#selected-seats {
     border: none;
     border-radius: 5px;
     text-align: center;
+    user-select: none;
     line-height: 26px;
     font-size: 13px;
     font-weight: inherit;
@@ -819,12 +807,13 @@ ul#selected-seats {
     display: block;
     position: relative;}
 
-#wagon .w-seat .w-blank {
+#wagon .w-seat .w-row {
     width: 25px;
     height: 25px;
     border: none;
-    border-radius: 5px;
+    font-size: 10px;
     text-align: center;
+    user-select: none;
     vertical-align: middle;
     color: #0071cc;
     margin-right: 5px;
@@ -846,27 +835,33 @@ ul#selected-seats {
     display: inline-block;
     position: relative;}
 
-#wagon .w-seat .w-chair-0 {    
+#wagon .w-seat .w-booked {    
     width: 25px;
     height: 25px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 5px;
+    font-size: 10px;
+    line-height: 26px;
     text-align: center;
+    user-select: none;
     vertical-align: middle;
-    background-color: #ccc;
+    color: #eaeaea;
+    background-color: #eaeaea;
     margin-right: 5px;
     margin-bottom: 5px;
     display: inline-block;
     position: relative;}
+    #wagon .w-seat .w-booked:hover {
+        color: #999;
+        font-size: 10px;}
 
 #wagon .w-seat .w-selected { 
     width: 25px;
     height: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid transparent;
     border-radius: 5px;
     text-align: center;
-    vertical-align: middle;
+    line-height: 25px;
     background-color: #0071cc;
     color: #fff;
     margin-right: 5px;
@@ -897,9 +892,11 @@ ul#selected-seats {
 
 #wagon .w-seat .w-chair:hover input ~ .checkmark {
     background-color: orange;
-    border: 1px solid transparent;}
+    border: 1px solid transparent;
+    display: block;
+    position: relative;}
 
-#wagon .w-seat .w-chair input:checked ~ .checkmark {
+#wagon .w-seat .w-chair input:checked + .checkmark {
     background-color: #0071cc;
     border: 1px solid transparent;}
 
@@ -951,7 +948,8 @@ ul#selected-seats {
             background-color: #ccc;}
 
 #wagon .carousel-inner {
-    overflow-x: auto;}
+    overflow-x: auto;
+    height: 200px; }
 
 #wagon .carousel-control-next, #wagon .carousel-control-prev {
     position: absolute;
