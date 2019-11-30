@@ -12,6 +12,16 @@ body {
     font-size: 14px;
     line-height: 22px!important;}
 
+body::-webkit-scrollbar {
+    width: 10px;}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #e5e5e5;
+    border-radius: 10px;}
+
+body::-webkit-scrollbar-thumb {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, rgba(255, 255, 255, .2)), color-stop(.5, transparent), to(transparent));}
+
 .font-weight-md {
     font-size: 14px;
     font-weight: 500!important;}
@@ -866,15 +876,9 @@ ul#selected-seats {
     #wagon .w-seat .w-selected.active {
         background-color: orange;}
 
-
-
-
-
-/* Hide the browser's default checkbox */
 #wagon .w-seat .w-chair input {
     display: none;}
 
-/* Create a custom checkbox */
 .checkmark {
     position: absolute;
     width: 25px;
@@ -891,45 +895,25 @@ ul#selected-seats {
     left: -1px;
     cursor: pointer;}
 
-/* On mouse-over, add a grey background color */
 #wagon .w-seat .w-chair:hover input ~ .checkmark {
-  background-color: #ccc;
-}
+    background-color: orange;
+    border: 1px solid transparent;}
 
-/* When the checkbox is checked, add a blue background */
 #wagon .w-seat .w-chair input:checked ~ .checkmark {
-  background-color: #2196F3;
-}
+    background-color: #0071cc;
+    border: 1px solid transparent;}
 
-/* Create the checkmark/indicator (hidden when not checked) */
+#wagon .w-seat .w-chair input:active ~ .checkmark {
+    background-color: orange;
+    border: 1px solid transparent;}
+
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+    content: "";
+    position: absolute;
+    display: none;}
 
-/* Show the checkmark when checked */
 #wagon .w-seat .w-chair input:checked ~ .checkmark:after {
-  display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    display: block;}
 
 #wagon .w-legend {
     width: 100%;
@@ -966,7 +950,9 @@ ul#selected-seats {
             border: 1px solid #ccc;
             background-color: #ccc;}
 
-#wagon .carousel-inner { overflow: hidden;}
+#wagon .carousel-inner {
+    overflow-x: auto;}
+
 #wagon .carousel-control-next, #wagon .carousel-control-prev {
     position: absolute;
     top: 0;
