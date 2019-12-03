@@ -135,8 +135,8 @@
               </div>
             </div>
             <hr>
-            <div class="row">
-              <div class="col-sm-12 col-md-3 justify-content-start">
+            <div class="row justify-content-center">
+              <div class="col">
                 <!-- Selected card -->
                 <div id="seat-selected">
                   <div class="p-card active">
@@ -144,8 +144,8 @@
                       <h6>P1</h6>
                     </div>
                     <div class="p-user">
-                      <h6>Mr.Oki BAYU</h6>
-                      <h5>Eksekutif 1/ A1</h5>
+                      <h6>Mr. Kenedy</h6>
+                      <h5>Eksekutif 1/ 1C</h5>
                     </div>
                   </div>
                   <div class="p-card selected">
@@ -153,7 +153,7 @@
                       <h6>P2</h6>
                     </div>
                     <div class="p-user">
-                      <h6>Ms.Felicia</h6>
+                      <h6>Mr. Arifan</h6>
                       <h5>Eksekutif 1/ B1</h5>
                     </div>
                   </div>
@@ -162,8 +162,8 @@
                       <h6>P3</h6>
                     </div>
                     <div class="p-user">
-                      <h6>Mr.Athallah</h6>
-                      <h5>Eksekutif 1/ C1</h5>
+                      <h6>Mr. Fajar</h6>
+                      <h5>Eksekutif 1/ 1A</h5>
                     </div>
                   </div>
                   <div class="p-card selected">
@@ -171,8 +171,8 @@
                       <h6>P4</h6>
                     </div>
                     <div class="p-user">
-                      <h6>Ms.Odelia</h6>
-                      <h5>Eksekutif 1/ D2</h5>
+                      <h6>Ms. keke</h6>
+                      <h5>Eksekutif 1/ 2A</h5>
                     </div>
                   </div>
                 </div>
@@ -183,7 +183,7 @@
                 <div id="wagon" class="card">
                   <div class="w-name justify-content-center">
                     <div class="text-center">
-	                    <select class="select col-3">
+	                    <select class="select col-md-4">
 							<option value="eksekutif1" selected>Eksekutif 1</option>
 							<option value="eksekutif2">Eksekutif 2</option>
 							<option value="eksekutif3">Eksekutif 3</option>
@@ -212,10 +212,15 @@
                                   <td>
                                     <label class="w-chair">
                                       <input type="checkbox" onclick="changeSeat()" checked="">
-                                      <span id="selected" class="checkmark" data-toggle="tooltip" title="A1">P1</span>
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" title="A1">P3</span>
                                     </label>
                                   </td>
-                                  <td><span class="w-booked">A2</span></td>
+                                  <td>
+                                    <label class="w-chair">
+                                      <input type="checkbox" onclick="changeSeat()" checked="">
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="D2">P4</span>
+                                    </label>
+                                  </td>
                                   <td><span class="w-booked">A3</span></td>
                                   <td><span class="w-booked">A4</span></td>
                                   <td><span class="w-booked">A5</span></td>
@@ -300,7 +305,7 @@
                                   <td>
                                     <label class="w-chair">
                                       <input type="checkbox" onclick="changeSeat()" checked="">
-                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C1">P3</span>
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C1">P1</span>
                                     </label>
                                   </td>
                                   <td><span class="w-booked">C2</span></td>
@@ -329,12 +334,7 @@
                                 <tr>
                                   <td><span class="w-col">D</span></td>
                                   <td><span class="w-row"></span></td>
-                                  <td>
-                                    <label class="w-chair">
-                                      <input type="checkbox" onclick="changeSeat()" checked="">
-                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="D2">P4</span>
-                                    </label>
-                                  </td>
+                                  <td><span class="w-booked">D2</td>
                                   <td><span class="w-booked">D3</span></td>
                                   <td><span class="w-booked">D4</span></td>
                                   <td><span class="w-booked">D5</span></td>
@@ -382,11 +382,11 @@
                 </div>
                 <!-- Selected Wagon end -->
                 <div class="row mb-2 justify-content-end">
-                  <div class="col-md-6 col-lg-3">
+                  <div class="col-md-4 col-lg-3">
                     <button type="submit" class="btn btn-outline-primary mt-2 btn-block">Reset</button>&nbsp;
                   </div>
-                  <div class="col-md-6 col-lg-4">
-                    <button type="submit" class="btn btn-warning mt-2 btn-block">Selanjutnya</button>
+                  <div class="col-md-5 col-lg-4">
+                    <button type="submit" class="btn btn-warning mt-2 btn-block">Selesai</button>
                   </div>
                 </div>
               </div>
