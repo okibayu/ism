@@ -734,9 +734,15 @@ section.page-header.bg-page-header {
         margin-top: -7px;
         font-size: 13px;
         font-weight: 300;
-        margin-bottom: 0;}
+        margin-bottom: 0;
+        color: #fff!important;}
     #wagon div > #wagon-name i {
         opacity: 1;}
+
+    #wagon div > #collapsex {
+        border-radius: 5px;
+        border: 1px solid transparent;
+        box-shadow: 0 0.5rem 1rem #0000005c;}
     #wagon div > #collapsex i {
         display: none;}
     #wagon div > #collapsex h6 {
@@ -746,8 +752,31 @@ section.page-header.bg-page-header {
     #wagon div > #collapsex p {
         font-size: 12px;
         font-weight: 300;
-        line-height: 0px;
-        color: #e50000;}
+        line-height: 10px;
+        color: #e50000;
+        margin-bottom: 3px;}
+
+    #wagon div > #collapsex .w-list {
+        padding: 5px;
+        border-radius: 5px;
+        margin: 5px;
+        background-color: #007bff21;}
+
+@media and (max-width: 1140px) and (min-width: 1025px) {
+    #wagon div > #collapsex p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 5px;
+    color: #e50000;}
+}
+
+@media and (max-width: 768px) and (min-width: 425px) {
+    #wagon div > #collapsex p {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 15px;
+    color: #e50000;}
+}
 
 #wagon .w-name {
     width: 100%;
@@ -758,7 +787,8 @@ section.page-header.bg-page-header {
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px 5px 0 0;
-    background: var(--bg3);}
+    background: var(--bg3);
+    box-shadow: 0 0.5rem 1rem #0000005c;}
 
 #wagon .w-name select.select {
     width: auto;
@@ -1001,8 +1031,10 @@ section.page-header.bg-page-header {
 #wagon select.#w-selected {
     background-color: transparent;
     color: #fff;
-    width: auto;
-}
+    width: auto;}
+
+#wagon div > #cr-wagon .carousel-item.active ~ #collapsex .w-list {
+    background-color: yellow!important;}
 
 /*-- Footer --*/
 

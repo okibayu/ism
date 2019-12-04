@@ -181,64 +181,51 @@
               <div class="col-md-9 justify-content-center">
                 <!-- Selected Wagon -->
                 <div id="wagon" class="card">
-                  <div class="w-name text-center pt-2 pb-2">                  	
-				    <button id="wagon-name" type="button" class="btn-wagon text-white" data-toggle="collapse" aria-expanded="false" aria-controls="collapsex" data-target="#collapsex">
-				    	<h6>Executive 1 <i class="fas fa-chevron-down"></i></h6>
+                  <div class="w-name text-center p-3">                  	
+				    <button id="wagon-name" type="button" class="btn-wagon text-white w-100" data-toggle="collapse" aria-expanded="false" aria-controls="collapsex" data-target="#collapsex">
+				    	<h6>Eksekutif 1 <i class="fas fa-chevron-down fa-sm"></i></h6>
 				    	<p>(0 Seats Available)</p>
                     </button> 
-                    <div class="collapse" id="collapsex">
+                    <div class="collapse bg-white" id="collapsex">
 				    	<div class="dropdown-content">
-					    	<div class="row bg-white p-3 mt-2 ml-1 mr-1 rounded">
+					    	<div class="row bg-white mt-2 mb-2 ml-1 mr-1 rounded">
 					    		<div class="w-list col-md-3">
 									<a href="#cr-wagon" data-slide-to="0">
-						      			<h6>Executive 1 <i class="fas fa-chevron-down"></i></h6>
-						      			<p>(0 Seats Available)</p>
+						      			<h6>Eksekutif 1 <i class="fas fa-chevron-down"></i></h6>
+						      			<p>(6 Seats)</p>
 			                    	</a>
 			                    </div>
 			                    <div class="w-list col-md-3">
 			                    	<a href="#cr-wagon" data-slide-to="1">
-						      			<h6>Executive 2 <i class="fas fa-chevron-down"></i></h6>
-								    	<p>(5 Seats Available)</p>
+						      			<h6>Eksekutif 2 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(12 Seats)</p>
 			                    	</a>
 			                    </div>
 			                    <div class="w-list col-md-3">
 			                    	<a href="#cr-wagon" data-slide-to="2">
-						      			<h6>Executive 3 <i class="fas fa-chevron-down"></i></h6>
-								    	<p>(7 Seats Available)</p>
+						      			<h6>Bisnis 1 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(7 Seats)</p>
 			                    	</a>
 			                    </div>
 			                    <div class="w-list col-md-3">
 			                    	<a href="#cr-wagon" data-slide-to="3">
-						      			<h6>Executive 4 <i class="fas fa-chevron-down"></i></h6>
-								    	<p>(12 Seats Available)</p>
+						      			<h6>Bisnis 2 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(12 Seats)</p>
 			                    	</a>
 			                    </div>
 
 			                    <div class="w-list col-md-3">
 									<a href="#cr-wagon" data-slide-to="0">
-						      			<h6>Executive 1 <i class="fas fa-chevron-down"></i></h6>
-						      			<p>(0 Seats Available)</p>
+						      			<h6>Ekonomi 1 <i class="fas fa-chevron-down"></i></h6>
+						      			<p class="text-muted">Full</p>
 			                    	</a>
 			                    </div>
 			                    <div class="w-list col-md-3">
 			                    	<a href="#cr-wagon" data-slide-to="1">
-						      			<h6>Executive 2 <i class="fas fa-chevron-down"></i></h6>
-								    	<p>(5 Seats Available)</p>
+						      			<h6>Ekonomi 2 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(9 Seats)</p>
 			                    	</a>
 			                    </div>
-			                    <div class="w-list col-md-3">
-			                    	<a href="#cr-wagon" data-slide-to="2">
-						      			<h6>Executive 3 <i class="fas fa-chevron-down"></i></h6>
-								    	<p>(7 Seats Available)</p>
-			                    	</a>
-			                    </div>
-			                    <div class="w-list col-md-3">
-			                    	<a href="#cr-wagon" data-slide-to="3">
-						      			<h6>Executive 4 <i class="fas fa-chevron-down"></i></h6>
-								    	<p>(12 Seats Available)</p>
-			                    	</a>
-			                    </div>
-
 					    	</div>
 				    	</div>
 					
@@ -249,7 +236,7 @@
                       <div id="cr-wagon" class="carousel slide" data-ride="carousel" data-interval="100000" data-pause="true">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            	<table>
+                            <table>
                               <tbody>
 
                                 <!-- ROW A -->
@@ -273,7 +260,12 @@
                                   <td><span class="w-booked">A4</span></td>
                                   <td><span class="w-booked">A5</span></td>
                                   <td><span class="w-booked">A6</span></td>
-                                  <td><span class="w-booked">A7</span></td>
+                                  <td>
+                                    <label class="w-chair">
+                                      <input type="checkbox" onclick="changeSeat()">
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="A7">A7</span>
+                                    </label>
+                                  </td>
                                   <td><span class="w-booked">A8</span></td>
                                   <td><span class="w-booked">A9</span></td>
                                   <td><span class="w-booked">A10</span></td>
@@ -304,7 +296,12 @@
                                   <td><span class="w-booked">B4</span></td>
                                   <td><span class="w-booked">B5</span></td>
                                   <td><span class="w-booked">B6</span></td>
-                                  <td><span class="w-booked">B7</span></td>
+                                  <td>
+                                    <label class="w-chair">
+                                      <input type="checkbox" onclick="changeSeat()">
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B7">B7</span>
+                                    </label>
+                                  </td>
                                   <td><span class="w-booked">B8</span></td>
                                   <td><span class="w-booked">B9</span></td>
                                   <td><span class="w-booked">B10</span></td>
@@ -357,8 +354,18 @@
                                     </label>
                                   </td>
                                   <td><span class="w-booked">C2</span></td>
-                                  <td><span class="w-booked">C3</span></td>
-                                  <td><span class="w-booked">C4</span></td>
+                                  <td>
+                                    <label class="w-chair">
+                                      <input type="checkbox" onclick="changeSeat()">
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C3">C3</span>
+                                    </label>
+                                  </td>
+                                  <td>
+                                    <label class="w-chair">
+                                      <input type="checkbox" onclick="changeSeat()">
+                                      <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C4">C4</span>
+                                    </label>
+                                  </td>
                                   <td><span class="w-booked">C5</span></td>
                                   <td><span class="w-booked">C6</span></td>
                                   <td><span class="w-booked">C7</span></td>
