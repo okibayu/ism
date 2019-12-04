@@ -722,6 +722,7 @@ section.page-header.bg-page-header {
     background: #fff;
     align-content: center;}
     #wagon div > button.btn-wagon {
+        margin: 5px;
         border: 0;
         background-color: transparent;
         cursor: pointer;}
@@ -740,14 +741,15 @@ section.page-header.bg-page-header {
         opacity: 1;}
 
     #wagon div > #collapsex {
-        border-radius: 5px;
+        text-align: center;
+        border-radius: 0 0 5px 5px;
         border: 1px solid transparent;
-        box-shadow: 0 0.5rem 1rem #0000005c;}
+        box-shadow: 0 0.5rem 1rem #00000026;}
     #wagon div > #collapsex i {
         display: none;}
     #wagon div > #collapsex h6 {
         font-size: 13px;
-        font-weight: 500;
+        font-weight: 600;
         color: #0071cc;}
     #wagon div > #collapsex p {
         font-size: 12px;
@@ -757,10 +759,21 @@ section.page-header.bg-page-header {
         margin-bottom: 3px;}
 
     #wagon div > #collapsex .w-list {
+        width: 100%;
         padding: 5px;
         border-radius: 5px;
         margin: 5px;
-        background-color: #007bff21;}
+        border: 2px solid #fff;
+        background-color: #007bff1a;}
+        #wagon div > #collapsex .w-list:hover {
+            color: #999;
+            background-color: #007bff21;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px 2px #eaeaea;}
+            #wagon div > #collapsex .w-list:hover h6 {
+                font-size: 13px;
+                font-weight: 600;
+                color: #000;}
 
 @media and (max-width: 1140px) and (min-width: 1025px) {
     #wagon div > #collapsex p {
@@ -971,6 +984,7 @@ section.page-header.bg-page-header {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    border-radius: 5px;
     background: var(--bg1);}
     #wagon .w-legend ul {
         list-style: none;
@@ -1033,7 +1047,7 @@ section.page-header.bg-page-header {
     color: #fff;
     width: auto;}
 
-#wagon div > #cr-wagon .carousel-item.active ~ #collapsex .w-list {
+#wagon div > #cr-wagon .carousel-item:active + .w-list {
     background-color: yellow!important;}
 
 /*-- Footer --*/
