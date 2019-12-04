@@ -178,48 +178,75 @@
                 </div>
                 <!-- Selected Card end -->
               </div>
-              <div class="col-md-9">
+              <div class="col-md-9 justify-content-center">
                 <!-- Selected Wagon -->
                 <div id="wagon" class="card">
-                  <div class="w-name text-center">                  	
-				    <button id="wagon-name" type="button" class="btn-wagon text-white" data-toggle="dropdown">
-				    	<h6 class="text-3 text-white">Executive 1 <i class="fas fa-chevron-down"></i></h6>
-				    	<p class="text-1 mb-0">(0 Seats Available)</p>
+                  <div class="w-name text-center pt-2 pb-2">                  	
+				    <button id="wagon-name" type="button" class="btn-wagon text-white" data-toggle="collapse" aria-expanded="false" aria-controls="collapsex" data-target="#collapsex">
+				    	<h6>Executive 1 <i class="fas fa-chevron-down"></i></h6>
+				    	<p>(0 Seats Available)</p>
                     </button> 
-                    <div class="dropdown-menu">
-				    	<ul class="w-drop">
-				    		<li class="dropdown-item">
-				      			<a href="#cr-wagon" data-slide-to="0">
-					      			<h6 class="text-3 text-white">Executive 1 <i class="fas fa-chevron-down"></i></h6>
-					      			<p class="text-1 mb-0">(0 Seats Available)</p>
-		                    	</a>
-				  			</li>
-				  			<li class="dropdown-item">
-				      			<a href="#cr-wagon" data-slide-to="1">
-					      			<h6 class="text-3 text-white">Executive 2</h6>
-							    	<p class="text-1 mb-0">(12 Seats Available)</p>
-		                    	</a>
-				  			</li>
-				  			<li class="dropdown-item">
-				      			<a href="#cr-wagon" data-slide-to="2">
-					      			<h6 class="text-3 text-white">Executive 3</h6>
-							    	<p class="text-1 mb-0">(30 Seats Available)</p>			                    	
-		                    	</a>
-				  			</li>
-				  			<li class="dropdown-item">
-				      			<a href="#cr-wagon" data-slide-to="3">
-					      			<h6 class="text-3 text-white">Executive 4</h6>
-							    	<p class="text-1 mb-0">(10 Seats Available)</p>
-			                    </a>
-				  			</li>
-						</ul>
-				      
+                    <div class="collapse" id="collapsex">
+				    	<div class="dropdown-content">
+					    	<div class="row bg-white p-3 mt-2 ml-1 mr-1 rounded">
+					    		<div class="w-list col-md-3">
+									<a href="#cr-wagon" data-slide-to="0">
+						      			<h6>Executive 1 <i class="fas fa-chevron-down"></i></h6>
+						      			<p>(0 Seats Available)</p>
+			                    	</a>
+			                    </div>
+			                    <div class="w-list col-md-3">
+			                    	<a href="#cr-wagon" data-slide-to="1">
+						      			<h6>Executive 2 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(5 Seats Available)</p>
+			                    	</a>
+			                    </div>
+			                    <div class="w-list col-md-3">
+			                    	<a href="#cr-wagon" data-slide-to="2">
+						      			<h6>Executive 3 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(7 Seats Available)</p>
+			                    	</a>
+			                    </div>
+			                    <div class="w-list col-md-3">
+			                    	<a href="#cr-wagon" data-slide-to="3">
+						      			<h6>Executive 4 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(12 Seats Available)</p>
+			                    	</a>
+			                    </div>
+
+			                    <div class="w-list col-md-3">
+									<a href="#cr-wagon" data-slide-to="0">
+						      			<h6>Executive 1 <i class="fas fa-chevron-down"></i></h6>
+						      			<p>(0 Seats Available)</p>
+			                    	</a>
+			                    </div>
+			                    <div class="w-list col-md-3">
+			                    	<a href="#cr-wagon" data-slide-to="1">
+						      			<h6>Executive 2 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(5 Seats Available)</p>
+			                    	</a>
+			                    </div>
+			                    <div class="w-list col-md-3">
+			                    	<a href="#cr-wagon" data-slide-to="2">
+						      			<h6>Executive 3 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(7 Seats Available)</p>
+			                    	</a>
+			                    </div>
+			                    <div class="w-list col-md-3">
+			                    	<a href="#cr-wagon" data-slide-to="3">
+						      			<h6>Executive 4 <i class="fas fa-chevron-down"></i></h6>
+								    	<p>(12 Seats Available)</p>
+			                    	</a>
+			                    </div>
+
+					    	</div>
+				    	</div>
+					
                   	</div>
                   </div>
                   <div class="w-seat">
                     <div class="w-block pt-3 pb-3">
-                      <div id="cr-wagon" class="carousel slide" data-ride="carousel" data-interval="50000" data-pause="true">
-                      	
+                      <div id="cr-wagon" class="carousel slide" data-ride="carousel" data-interval="100000" data-pause="true">
                         <div class="carousel-inner">
                           <div class="carousel-item active">
                             	<table>
@@ -390,14 +417,14 @@
                           	<h1>WAGON 4</h1>
                           </div>
                         </div>
-                        <!-- Navigations --
+                        <!-- Navigations -->
                         <a class="carousel-control-prev" href="#cr-wagon" role="button" data-slide="prev">
                           <i class="fas fa-angle-left fa-3x red"></i>
                         </a>
                         <a class="carousel-control-next" href="#cr-wagon" role="button" data-slide="next">
                           <i class="fas fa-angle-right fa-3x red"></i>
                         </a>
-                        -- Navigations end -->
+                        <!-- Navigations end -->
                       </div>
                     </div>
                   </div>
@@ -533,9 +560,13 @@
       });
 
       // Wagon Chair Selected
-      $('#wagon li').on('click', function() {
+      $('#wagon div.w-list').on('click', function() {
         $('#wagon-name').html($(this).find('a').html());
     	});
+
+      $(document).on('click',function(){
+			$('.collapse').collapse('hide');
+		})
 
       function changeSeat() {
       document.getElementById("selected");

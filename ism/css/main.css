@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb {
 .navbar-toggler {
     width: 23px!important;}
 
-.dropdown-menu {
+#menu .dropdown-menu {
     left: -89px!important;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 20px 5px;
     border}
@@ -719,17 +719,35 @@ section.page-header.bg-page-header {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.09);
     margin-bottom: 20px;
-    background: #fff;}
+    background: #fff;
+    align-content: center;}
     #wagon div > button.btn-wagon {
         border: 0;
-        background-color: transparent;}
-        #wagon div > .w-drop {
-            width: 200px;
-            position: relative;
-            grid-column: 3;
-            padding: 5px 5px;
-            margin-bottom: 0;
-            background-color: rgba(0,123,255,.25);}
+        background-color: transparent;
+        cursor: pointer;}
+
+    #wagon div > #wagon-name h6 {
+        font-size: 15px;
+        font-weight: 500;
+        color: #fff;} 
+    #wagon div > #wagon-name p {
+        margin-top: -7px;
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 0;}
+    #wagon div > #wagon-name i {
+        opacity: 1;}
+    #wagon div > #collapsex i {
+        display: none;}
+    #wagon div > #collapsex h6 {
+        font-size: 13px;
+        font-weight: 500;
+        color: #0071cc;}
+    #wagon div > #collapsex p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 0px;
+        color: #e50000;}
 
 #wagon .w-name {
     width: 100%;
