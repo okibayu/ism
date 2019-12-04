@@ -181,27 +181,48 @@
               <div class="col-md-9">
                 <!-- Selected Wagon -->
                 <div id="wagon" class="card">
-                  <div class="w-name justify-content-center">
-                    <div class="text-center">
-	                    <select class="select col-md-4">
-							<option value="eksekutif1" selected>Eksekutif 1</option>
-							<option value="eksekutif2">Eksekutif 2</option>
-							<option value="eksekutif3">Eksekutif 3</option>
-							<option value="eksekutif4">Eksekutif 4</option>
-						</select>
-                    </div>
+                  <div class="w-name text-center">                  	
+				    <button id="wagon-name" type="button" class="btn-wagon text-white" data-toggle="dropdown">
+				    	<h6 class="text-3 text-white">Executive 1 <i class="fas fa-chevron-down"></i></h6>
+				    	<p class="text-1 mb-0">(0 Seats Available)</p>
+                    </button> 
+                    <div class="dropdown-menu">
+				    	<ul class="w-drop">
+				    		<li class="dropdown-item">
+				      			<a href="#cr-wagon" data-slide-to="0">
+					      			<h6 class="text-3 text-white">Executive 1 <i class="fas fa-chevron-down"></i></h6>
+					      			<p class="text-1 mb-0">(0 Seats Available)</p>
+		                    	</a>
+				  			</li>
+				  			<li class="dropdown-item">
+				      			<a href="#cr-wagon" data-slide-to="1">
+					      			<h6 class="text-3 text-white">Executive 2</h6>
+							    	<p class="text-1 mb-0">(12 Seats Available)</p>
+		                    	</a>
+				  			</li>
+				  			<li class="dropdown-item">
+				      			<a href="#cr-wagon" data-slide-to="2">
+					      			<h6 class="text-3 text-white">Executive 3</h6>
+							    	<p class="text-1 mb-0">(30 Seats Available)</p>			                    	
+		                    	</a>
+				  			</li>
+				  			<li class="dropdown-item">
+				      			<a href="#cr-wagon" data-slide-to="3">
+					      			<h6 class="text-3 text-white">Executive 4</h6>
+							    	<p class="text-1 mb-0">(10 Seats Available)</p>
+			                    </a>
+				  			</li>
+						</ul>
+				      
+                  	</div>
                   </div>
                   <div class="w-seat">
                     <div class="w-block pt-3 pb-3">
                       <div id="cr-wagon" class="carousel slide" data-ride="carousel" data-interval="50000" data-pause="true">
-                        <ol class="carousel-indicators" hidden="">
-                          <li data-target="#cr-wagon" data-slide-to="0" class="active"></li>
-                          <li data-target="#cr-wagon" data-slide-to="1"></li>
-                          <li data-target="#cr-wagon" data-slide-to="2"></li>
-                        </ol>
+                      	
                         <div class="carousel-inner">
                           <div class="carousel-item active">
-                            <table>
+                            	<table>
                               <tbody>
 
                                 <!-- ROW A -->
@@ -357,17 +378,26 @@
                                 <!-- ROW D end -->
 
                               </tbody>
-                            </table>
+                            	</table>
+                          </div>
+                          <div class="carousel-item">
+                          	<h1>WAGON 2</h1>
+                          </div>
+                          <div class="carousel-item">
+                          	<h1>WAGON 3</h1>
+                          </div>
+                          <div class="carousel-item">
+                          	<h1>WAGON 4</h1>
                           </div>
                         </div>
-                        <!-- Navigations -->
+                        <!-- Navigations --
                         <a class="carousel-control-prev" href="#cr-wagon" role="button" data-slide="prev">
                           <i class="fas fa-angle-left fa-3x red"></i>
                         </a>
                         <a class="carousel-control-next" href="#cr-wagon" role="button" data-slide="next">
                           <i class="fas fa-angle-right fa-3x red"></i>
                         </a>
-                        <!-- Navigations end -->
+                        -- Navigations end -->
                       </div>
                     </div>
                   </div>
@@ -442,9 +472,9 @@
               <p class="copyright-text">Copyright © 2019. All Rights Reserved.</p>
             </div>
           </div>
-        </footer>
-        <!-- Footer end -->
-      </div>
+   	  </footer>
+      <!-- Footer end -->
+    </div>
       <!-- Document Wrapper end -->
       <!-- Back to Top -->
       <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)">
@@ -502,10 +532,14 @@
       $('[data-toggle="tooltip"]').tooltip({ boundary: 'window' });
       });
 
-      // Chair Selected
+      // Wagon Chair Selected
+      $('#wagon li').on('click', function() {
+        $('#wagon-name').html($(this).find('a').html());
+    	});
+
       function changeSeat() {
       document.getElementById("selected");
-      }                                  
+      } 
       </script>
       <script src=" js/main.js"></script>
       
