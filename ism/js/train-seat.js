@@ -46,15 +46,15 @@
 				
 			},
 			naming : {
-				top : false,
-				//columns: ['A', 'B', 'C', '','D', 'E'],
-				//rows: ['I', 'II', 'III', 'IV', 'V'],
-				//getId  : function(character, row, column) {
-					//return row + '_' + column;
-				//},
-				getLabel : function (character, row, column) {
-							return firstSeatLabel++;
+				top : true,
+				columns: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+				rows: ['A', 'B', 'C', '', 'D', 'E'],
+				getId  : function(character, row, column) {
+					return row + '' + column;
 				},
+				// getLabel : function (character, row, column) {
+				// 			return firstSeatLabel++;
+				// },
 			},
 
 			legend : {
@@ -70,7 +70,7 @@
 			click: function () {
 				
 				if (this.data().classes == 'focused' & this.status() == 'available') {
-					$('<li><div class="alert alert-warning fade show p-2 m-2" role="alert"><button type="button" class="close cancel-cart-item" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">\&times;<\/span><\/button><h5 class="text-3 font-weight-bold">Passenger <span id="counter">'+$counter.text()+'<\/h5><\/span>'+this.data().category+'<br><h5 class=text-3>Kursi No: '+this.settings.label+''+data('seatId', this.settings.id)+'<\/h5><\/div><\/li>')
+					$('<li><div class="alert alert-warning fade show p-2 m-2" role="alert"><button type="button" class="close cancel-cart-item" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">\&times;<\/span><\/button><h5 class="text-3 font-weight-bold">Passenger <span id="counter">'+$counter.text()+'<\/h5><\/span>'+this.data().category+' Seat # '+this.settings.label+'<br><h5 class=text-3>Kursi No: '+this.settings.label+''+data('seatId', this.settings.id)+'<\/h5><\/div><\/li>')
 						.attr('id', 'cart-item-'+this.settings.id)
 						.data('seatId', this.settings.id)
 						.appendTo($cart); 
