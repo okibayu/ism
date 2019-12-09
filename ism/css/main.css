@@ -754,12 +754,16 @@ section.page-header.bg-page-header {
 
     #wagon #collapsex div > a.carousel-control {
         display: block;
+        width: 100%;
+        min-width: 100px;
+        height: 100%;
         padding: 5px 0;
         background-color: #0000001a;
         padding: 5px 0;
         border-radius: 5px;}
         #wagon #collapsex div > a.carousel-control.active {
-            background-color: #007bff40;}
+            background-color: #007bff40;
+            transition: opacity 10s ease;}
 
     #wagon #collapsex i {
         display: none;}
@@ -777,23 +781,10 @@ section.page-header.bg-page-header {
         color: #0071cc;}
 
     #wagon #collapsex .w-list {
-        width: 100%;
         padding: 5px;
         border-radius: 5px;
         margin: 5px;
-        border: 0.5px solid #eaeaea;
-        background-color: #f8f9fa;}
-        #wagon #collapsex .w-list:hover, #wagon #collapsex .w-list.active {
-            font-size: 14px;
-            font-weight: 600;
-            color: #0071cc;
-            background-color: var(--bg1);
-            border: 0.5px solid #eaeaea;
-            box-shadow: 0 1px 5px #eaeaea;}
-        #wagon #collapsex .w-list:hover h6 {
-            font-size: 14px;
-            font-weight: 600;
-            color: #0071cc;}
+        border: 0.5px solid #eaeaea;}
 
 @media screen and (max-width: 1140px) and (min-width: 1025px) {
     #wagon #collapsex p {
@@ -810,16 +801,16 @@ section.page-header.bg-page-header {
 
 @media screen and (max-width: 425px) {
     
-    #wagon #collapsex p {
+    #wagon #collapsex .w-list h6 {
+        font-size: 12px;
+        font-weight: 600;
+        color: #0071cc;}
+
+    #wagon #collapsex .w-list p {
         font-size: 10px;
         font-weight: 300;
-        line-height: 15px;
+        line-height: 0;
         color: #e50000;}
-    
-    #wagon #collapsex h6 {
-        font-size: 11px;
-        font-weight: 500;
-        color: #0071cc;}
 }
 
 #wagon .w-name {
@@ -948,7 +939,8 @@ section.page-header.bg-page-header {
     margin-right: 5px;
     margin-bottom: 5px;
     display: inline-block;
-    position: relative;}
+    position: relative;
+    transition: opacity 0.5s ease;}
     #wagon .w-seat .w-booked:hover {
         color: #999;
         font-size: 10px;}
@@ -970,7 +962,8 @@ section.page-header.bg-page-header {
     color: #fff;
     top: -1px;
     left: -1px;
-    cursor: pointer;}
+    cursor: pointer;
+    transition: opacity 0.5s ease;}
 
 #wagon .w-seat .w-chair:hover input ~ .checkmark {
     background-color: orange;
@@ -984,7 +977,8 @@ section.page-header.bg-page-header {
 
 #wagon .w-seat .w-chair.active input:focus ~ .checkmark {
     background-color: orange;
-    border: 1px solid transparent;}
+    border: 1px solid transparent;
+    transition: opacity 0.5s ease;}
 
 .checkmark:after {
     content: "";
@@ -1049,8 +1043,8 @@ section.page-header.bg-page-header {
     opacity: 0.5;
     color: #ccc;
     transition: opacity 0.5s ease;}
-    #wagon .carousel-control-next:hover ~ , #wagon .carousel-control-prev:hover { 
-        color: #ffa500; opacity: 1;}
+    #wagon .carousel-control-next:hover , #wagon .carousel-control-prev:hover { 
+        color: #ffa500; opacity: 0.8;}
     #wagon .carousel-control-prev { 
         border-radius: 0 5px 5px 0; left: -40px;}
     #wagon .carousel-control-next { 
