@@ -45,23 +45,15 @@ $(document).ready(function() {
 });
 
 // Wagon Chair Selected
-$('#wagon div.w-list').on('click', function() {
+$('.w-list').on('click', function() {
     $('#wagon-name').html($(this).find('a').html());
 });
 
-function changeSeat() {
-  var x = document.getElementById("selected").innerHTML = "P3";
-  document.getElementById("selected").value;
-  }
+$('.cr-wagon').on('click', function() {
+    $('#wagon-name').replaceHtml($(this).find('h6 p').html());
+});
 
-//Navigations
-// $(document).on('click', function() {
-//     $('.collapse').collapse('hide');
-// });
-
-
-//Carousel menu
-
+//Carousel menu selection
 $( document ).ready(function() {
   var CLASS_CAROUSEL    = '#cr-wagon';
   var CLASS_INDICATORS  = '.w-list';
@@ -70,12 +62,18 @@ $( document ).ready(function() {
 
   selectCarousel.on('slide.bs.carousel', function (e) {
     var indexTarget = $(e.relatedTarget).index();
-    indexTarget = indexTarget - indexTarget % 3;
+    indexTarget = indexTarget - indexTarget % 1;
     
     var selectTarget = $(CLASS_INDICATORS + '> a[data-slide-to="' + indexTarget + '"]');
     if ( !selectTarget.hasClass('active') ) {
       $(CLASS_ACTIVE).removeClass('active');
-      selectTarget.addClass('active');
+      selectTarget.addClass('active');      
     }
   });
 });
+
+//Change Seat 
+function changeSeat() {
+  var x = document.getElementById("selected").innerHTML = "P3";
+  document.getElementById("selected").value;
+  }

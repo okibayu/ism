@@ -725,10 +725,10 @@ section.page-header.bg-page-header {
     background: #fff;
     align-content: center;}
     #wagon div > button.btn-wagon {
-        margin: 5px;
-        border: 0;
+        border: transparent;
         background-color: transparent;
-        cursor: pointer;}
+        cursor: pointer;
+        padding: 5px 0 5px 0;}
 
     #wagon div > #wagon-name h6 {
         font-size: 15px;
@@ -745,13 +745,21 @@ section.page-header.bg-page-header {
 
     #wagon #collapsex {
         text-align: center;
-        border-radius: 0 0 5px 5px;
-        border: 1px solid transparent;
-        box-shadow: 0 0.5rem 1rem #00000026;
-        z-index: 0;
-        border: none;
-        border-radius: 0px 0px 5px 5px;
-        background-color: var(--bg2)!important;}
+        padding: 0 5px 0 5px;
+        border-radius: 0;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0.5rem 1rem #0000001a;
+        z-index: 0;}
+
+    #wagon #collapsex div > a.carousel-control {
+        display: block;
+        padding: 5px 0;
+        background-color: #0000001a;
+        padding: 5px 0;
+        border-radius: 5px;}
+        #wagon #collapsex div > a.carousel-control.active {
+            background-color: #007bff40;}
 
     #wagon #collapsex i {
         display: none;}
@@ -759,13 +767,13 @@ section.page-header.bg-page-header {
     #wagon #collapsex p {
         font-size: 10px;
         font-weight: 300;
-        line-height: 15px;
+        line-height: 5px;
         color: #e50000;
         margin-bottom: 3px;}
     
     #wagon #collapsex h6 {
         font-size: 14px;
-        font-weight: 500;
+        font-weight: 600;
         color: #0071cc;}
 
     #wagon #collapsex .w-list {
@@ -775,22 +783,17 @@ section.page-header.bg-page-header {
         margin: 5px;
         border: 0.5px solid #eaeaea;
         background-color: #f8f9fa;}
-        #wagon #collapsex .w-list:hover, #wagon #collapsex .w-list:active {
+        #wagon #collapsex .w-list:hover, #wagon #collapsex .w-list.active {
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             color: #0071cc;
             background-color: var(--bg1);
             border: 0.5px solid #eaeaea;
             box-shadow: 0 1px 5px #eaeaea;}
         #wagon #collapsex .w-list:hover h6 {
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
             color: #0071cc;}
-        #wagon #collapsex a.active {
-            font-size: 14px;
-            font-weight: 500;
-            color: #0071cc;
-            background-color: yellow;}
 
 @media screen and (max-width: 1140px) and (min-width: 1025px) {
     #wagon #collapsex p {
@@ -933,7 +936,7 @@ section.page-header.bg-page-header {
 #wagon .w-seat .w-booked {    
     width: 25px;
     height: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc6;
     border-radius: 5px;
     font-size: 10px;
     line-height: 26px;
@@ -997,6 +1000,7 @@ section.page-header.bg-page-header {
     margin-right: auto;
     text-align: center;
     border-radius: 0 0 10px 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
     background: var(--bg1);}
     #wagon .w-legend ul {
         list-style: none;
@@ -1004,27 +1008,25 @@ section.page-header.bg-page-header {
     #wagon .w-legend li {
         display: inline-flex;}
         #wagon .w-legend li > h5 {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 12px;
             padding-right: 10px;
-            margin-left: 10px;}
+            margin-left: 10px;
+            margin-top: 4px;}
         #wagon .w-legend li > div {
-            width: 25px;
-            height: 25px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: transparent;}
+            width: 20px;
+            height: 20px;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            background-color: transparent;
+            box-shadow: 0 5px 5px #dee2e6;}
         #wagon .w-legend li > div.active {
-            border: 1px solid #ffa500;
             background-color: #ffa500;}
         #wagon .w-legend li > div.selected {
-            border: 1px solid #0071cc;
             background-color: #0071cc;}
         #wagon .w-legend li > div.available {
-            border: 1px solid #ccc;
+            border: 1px solid #ccc!important;
             background-color: #fff;}
         #wagon .w-legend li > div.booked {
-            border: 1px solid #ccc;
             background-color: #ccc;}
 
 #wagon .carousel-inner {
