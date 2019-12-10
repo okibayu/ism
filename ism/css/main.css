@@ -769,6 +769,10 @@ section.page-header.bg-page-header {
             transition: 1s;
             transform: translateY(0);}
 
+        #wagon #collapsex div > .carousel-control.active && #wagon #collapsex .w-list {
+            border-color: red;
+        }
+
     #wagon #collapsex i {
         display: none;}
 

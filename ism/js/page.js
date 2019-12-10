@@ -44,8 +44,7 @@ $(document).ready(function() {
     });
 });
 
-// Wagon Chair Selected
-
+// Wagon Chair & Mp Selected
 $('.w-list').on('click', function() {
     $('#wagon-name').html($(this).find('a').html());
 });
@@ -53,18 +52,6 @@ $('.w-list').on('click', function() {
 $('#collapsex').on('click',function(){
   $('.collapse').collapse('hide');
 });
-
-
-$('.carousel-control-next').on('click',function(){
-      $('.collapse').collapse('show');
-      $('#wagon-name').html($('.w-list').html());
-  });
-$('.carousel-control-prev').on('click',function(){
-      $('.collapse').collapse('show');
-      $('#wagon-name').html($('.w-list').html());
-  });
-
-
 
 //Carousel menu selection
 $( document ).ready(function() {
@@ -75,12 +62,14 @@ $( document ).ready(function() {
 
   selectCarousel.on('slide.bs.carousel', function (e) {
     var indexTarget = $(e.relatedTarget).index();
-    indexTarget = indexTarget - indexTarget % -1;
+    indexTarget = indexTarget - indexTarget % 1;
     
     var selectTarget = $(CLASS_INDICATORS + '> a[data-slide-to="' + indexTarget + '"]');
     if ( !selectTarget.hasClass('active') ) {
       $(CLASS_ACTIVE).removeClass('active');
-      selectTarget.addClass('active');      
+      selectTarget.addClass('active');
+      $('.collapse').collapse('show');
+      $('#wagon-name').html($('.w-list a.active').html());      
     }
   });
 });
@@ -94,13 +83,13 @@ if (carouselLength) {
 $('.carousel').carousel({
     interval: false,
     wrap: false
-}).on('slide.bs.carousel', function (f) {
+}).on('slide.bs.carousel', function (e) {
     // First one
-    if (f.to == 0) {
+    if (e.to == 0) {
         $('.carousel-control-prev').addClass('d-none');
         $('.carousel-control-next').removeClass('d-none');
     } // Last one
-    else if (f.to == carouselLength) {
+    else if (e.to == carouselLength) {
         $('.carousel-control-prev').removeClass('d-none');
         $('.carousel-control-next').addClass('d-none');
     } // The rest
@@ -114,4 +103,5 @@ $('.carousel').carousel({
 function changeSeat() {
   var x = document.getElementById("selected").innerHTML = "P3";
   document.getElementById("selected").value;
+  $('.collapse').collapse('hide');
   }
