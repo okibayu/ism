@@ -733,13 +733,15 @@ section.page-header.bg-page-header {
     #wagon div > #wagon-name h6 {
         font-size: 15px;
         font-weight: 500;
-        color: #fff;} 
+        color: #fff;
+        transition: all 0.5s ease;} 
     #wagon div > #wagon-name p {
         margin-top: -7px;
         font-size: 13px;
         font-weight: 300;
         margin-bottom: 0;
-        color: #fff!important;}
+        color: #fff!important;
+        transition: all 0.5s ease;}
     #wagon div > #wagon-name i {
         opacity: 1;}
 
@@ -752,18 +754,20 @@ section.page-header.bg-page-header {
         box-shadow: 0 0.5rem 1rem #0000001a;
         z-index: 0;}
 
-    #wagon #collapsex div > a.carousel-control {
+    #wagon #collapsex div > .carousel-control {
         display: block;
         width: 100%;
         min-width: 100px;
         height: 100%;
         padding: 5px 0;
-        background-color: #0000001a;
+        background-color: #0000000a;
         padding: 5px 0;
         border-radius: 5px;}
-        #wagon #collapsex div > a.carousel-control.active {
+        #wagon #collapsex div > .carousel-control.active {
             background-color: #007bff40;
-            transition: opacity 10s ease;}
+            transition-timing-function: ease-out;
+            transition: 1s;
+            transform: translateY(0);}
 
     #wagon #collapsex i {
         display: none;}

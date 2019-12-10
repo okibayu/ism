@@ -45,13 +45,26 @@ $(document).ready(function() {
 });
 
 // Wagon Chair Selected
+
 $('.w-list').on('click', function() {
     $('#wagon-name').html($(this).find('a').html());
 });
 
-$('.cr-wagon').on('click', function() {
-    $('#wagon-name').replaceHtml($(this).find('h6 p').html());
+$('#collapsex').on('click',function(){
+  $('.collapse').collapse('hide');
 });
+
+
+$('.carousel-control-next').on('click',function(){
+      $('.collapse').collapse('show');
+      $('#wagon-name').html($('.w-list').html());
+  });
+$('.carousel-control-prev').on('click',function(){
+      $('.collapse').collapse('show');
+      $('#wagon-name').html($('.w-list').html());
+  });
+
+
 
 //Carousel menu selection
 $( document ).ready(function() {
@@ -62,7 +75,7 @@ $( document ).ready(function() {
 
   selectCarousel.on('slide.bs.carousel', function (e) {
     var indexTarget = $(e.relatedTarget).index();
-    indexTarget = indexTarget - indexTarget % 1;
+    indexTarget = indexTarget - indexTarget % -1;
     
     var selectTarget = $(CLASS_INDICATORS + '> a[data-slide-to="' + indexTarget + '"]');
     if ( !selectTarget.hasClass('active') ) {
@@ -70,6 +83,31 @@ $( document ).ready(function() {
       selectTarget.addClass('active');      
     }
   });
+});
+
+// Carousel controls
+var carouselLength = $('.carousel-item').length - 1;
+if (carouselLength) {
+    $('.carousel-control-next').removeClass('d-none');
+}
+
+$('.carousel').carousel({
+    interval: false,
+    wrap: false
+}).on('slide.bs.carousel', function (f) {
+    // First one
+    if (f.to == 0) {
+        $('.carousel-control-prev').addClass('d-none');
+        $('.carousel-control-next').removeClass('d-none');
+    } // Last one
+    else if (f.to == carouselLength) {
+        $('.carousel-control-prev').removeClass('d-none');
+        $('.carousel-control-next').addClass('d-none');
+    } // The rest
+    else {
+        $('.carousel-control-prev').removeClass('d-none');
+        $('.carousel-control-next').removeClass('d-none');
+    }
 });
 
 //Change Seat 
