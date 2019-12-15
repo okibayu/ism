@@ -44,7 +44,7 @@ $(document).ready(function() {
     });
 });
 
-// Wagon Chair & Mp Selected
+// Wagon Chair & Map Selected
 $('.w-list').on('click', function() {
     $('#wagon-name').html($(this).find('a').html());
 });
