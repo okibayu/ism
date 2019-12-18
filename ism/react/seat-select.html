@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="img/favicon.png" rel="icon" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+    <title>Train - Seat Selections</title>
+  </head>
+  <body>
+    <div id="main-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white" role="navigation">
+            <div class="navbar-brand">
+              <!-- Logo -->
+              <a href="index.html" title="Electra Booking Engine">
+                <img src="img/logo-AMOS.png" alt="Amos Tours" width="auto" height="50px" />
+              </a>
+              <!-- Logo end -->
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu"> <span></span><span></span><span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Flight</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Hotel</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Train</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking Check</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="#"><i class="fas fa-shopping-basket"></i> Chart (2)</a>
+                </li>
+                <li class="dropdown nav-item">
+                  <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="language">
+                  <i class="fas fa-globe"></i> EN</a>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labelledby="language">
+                    <button type="button" tabindex="0" class="dropdown-item active">English (EN)</button>
+                    <button type="button" tabindex="0" class="dropdown-item">Bahasa (ID)</button>
+                  </div>
+                </li>
+                <li class="dropdown nav-item">
+                  <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="login"><i class="fas fa-user">
+                  </i> Login/ Register</a>
+                  <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labeldby="login">
+                    <div class="login-form">
+                      <form class="pt-2 pb-1">
+                        <div class="form-group">
+                          <strong>Login to my account</strong>
+                          <label for="email">Email address</label>
+                          <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                          <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="dropdownCheck">
+                            <label class="custom-control-label" for="dropdownCheck">
+                              Remember me
+                            </label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                      </form>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">New around here? Sign up</a>
+                      <a class="dropdown-item" href="#">Forgot password?</a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Header end -->
+      <!-- Page Header -->
+      <section class="page-header page-header-text-light bg-page-header mb-0">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-8 text-light pt-1">
+              <h1 class="text-white">Seat Select</h1>
+            </div>
+            <div class="col-md-4">
+              <ul class="breadcrumb justify-content-end mt-2">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Kereta</a></li>
+                <li class="active">Pilih Kursi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Header end -->
+      <section class="progress p-0">
+      </section>
+      <!-- Content -->
+      <div id="content-train">
+        <section class="container pt-4">
+          <h6 class="text-4 pb-3">Pilih Kursi Keberangkatan</h6>
+          <div class="card border-0 shadow-md bg1 p-4">
+            <div class="row justify-content-between">
+              <div id="title" class="col-md-6">
+                <div class="col-auto pl-0">
+                  <h5 class="stations text-3"><i class="fas fa-train"></i> Gambir (GMR) <i class="fas fa-long-arrow-alt-right"></i> Bandung (BD)</h5>
+                  <h6 class="date text-2"><i class="fas fa-calendar-alt"></i> Kamis, 11 September 2019</h6>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div id="timer" class="row justify-content-end">
+                  <div class="col-auto text-right">
+                    <h6 class="text-3">Batas Waktu</h6>
+                    <span class="limit text-2 font-weight-bold text-danger">00:10:25</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row justify-content-center">
+              <div class="col">
+                <!-- Selected card -->
+                <div id="seat-selected">
+                  <div class="p-card active">
+                    <div class="p-chair">
+                      <h6>P1</h6>
+                    </div>
+                    <div class="p-user">
+                      <h6>Mr. Kenedy</h6>
+                      <h5>Eksekutif 1/ 1C</h5>
+                    </div>
+                  </div>
+                  <div class="p-card selected">
+                    <div class="p-chair">
+                      <h6>P2</h6>
+                    </div>
+                    <div class="p-user">
+                      <h6>Mr. Arifan</h6>
+                      <h5>Eksekutif 1/ B1</h5>
+                    </div>
+                  </div>
+                  <div class="p-card selected">
+                    <div class="p-chair">
+                      <h6>P3</h6>
+                    </div>
+                    <div class="p-user">
+                      <h6>Mr. Fajar</h6>
+                      <h5>Eksekutif 1/ 1A</h5>
+                    </div>
+                  </div>
+                  <div class="p-card selected">
+                    <div class="p-chair">
+                      <h6>P4</h6>
+                    </div>
+                    <div class="p-user">
+                      <h6>Ms. keke</h6>
+                      <h5>Eksekutif 1/ 2A</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- Selected Card end -->
+              </div>
+              <!-- Selected Wagon -->
+              <div class="col-md-9 justify-content-center">
+                <div id="wagon" class="card">
+                  <div class="w-name text-center p-1">                  	
+				            <button id="wagon-name" type="button" class="btn-wagon text-white w-100" data-toggle="collapse" aria-expanded="false" aria-controls="collapsex" data-target="#collapsex">
+				    	        <h6>Eksekutif 1 <i class="fas fa-chevron-down"></i></h6>
+                      <p>Sisa 6 Kursi</p>
+                    </button> 
+                  </div>
+                <!-- <div> -->
+                <div id="collapsex" class="collapse">
+    				    	<div class="dropdown-content">
+    					    	<div  class="row mt-2 mb-2 ml-1 mr-1">
+    					    		<div class="w-list col">
+									       <a href="#cr-wagon" data-slide-to="0" class="carousel-control active">
+						      		     <h6>Eksekutif 1 <i class="fas fa-chevron-down"></i></h6>
+						      			   <p>Sisa 6 Kursi</p>
+			                   </a>
+    			            </div>
+	                    <div class="w-list col">
+                    	  <a href="#cr-wagon" data-slide-to="1" class="carousel-control">
+      				      			<h6>Eksekutif 2 <i class="fas fa-chevron-down"></i></h6>
+      						    	  <p>Sisa 12 Kursi</p>
+    	                  </a>
+	                    </div>
+	                    <div class="w-list col">
+	                    	<a href="#cr-wagon" data-slide-to="2" class="carousel-control">
+        				      		<h6>Bisnis 1 <i class="fas fa-chevron-down"></i></h6>
+        						    	<p>Sisa 7 Kursi</p>
+	                    	</a>
+	                    </div>
+	                    <div class="w-list col">
+	                    	<a href="#cr-wagon" data-slide-to="3" class="carousel-control">
+    				      			  <h6>Ekonomi AC <i class="fas fa-chevron-down"></i></h6>
+    						    	    <p>Sisa 8 Kursi</p>
+	                    	</a>
+	                    </div>
+    					    	</div>
+    				    	</div>
+                </div>
+                <!-- </div> -->
+                <!-- Seat Selections -->
+                <div class="w-seat">
+                  <div class="w-block pt-3 pb-3">
+                    <div id="cr-wagon" class="carousel slide">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <table>
+                            <tbody>
+
+                              <!-- ROW A -->
+                              <tr>
+                                <td>
+                                  <span class="w-col">A</span>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" >
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" title="A1">A1</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="A2">P4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A3</span></td>
+                                <td><span class="w-booked">A4</span></td>
+                                <td><span class="w-booked">A5</span></td>
+                                <td><span class="w-booked">A6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="A7">A7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A8</span></td>
+                                <td><span class="w-booked">A9</span></td>
+                                <td><span class="w-booked">A10</span></td>
+                                <td><span class="w-booked">A11</span></td>
+                                <td><span class="w-booked">A12</span></td>
+                                <td><span class="w-booked">A13</span></td>
+                                <td><span class="w-booked">A14</span></td>
+                                <td><span class="w-booked">A15</span></td>
+                                <td><span class="w-booked">A16</span></td>
+                                <td><span class="w-booked">A17</span></td>
+                                <td><span class="w-booked">A18</span></td>
+                                <td><span class="w-booked">A19</span></td>
+                                <td><span class="w-row"></span></td>
+                              </tr>
+                              <!-- ROW A end -->
+
+                              <!-- ROW B -->
+                              <tr>
+                                <td><span class="w-col">B</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B1">P2</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B2</span></td>
+                                <td><span class="w-booked">B3</span></td>
+                                <td><span class="w-booked">B4</span></td>
+                                <td><span class="w-booked">B5</span></td>
+                                <td><span class="w-booked">B6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B7">B7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B8</span></td>
+                                <td><span class="w-booked">B9</span></td>
+                                <td><span class="w-booked">B10</span></td>
+                                <td><span class="w-booked">B11</span></td>
+                                <td><span class="w-booked">B12</span></td>
+                                <td><span class="w-booked">B13</span></td>
+                                <td><span class="w-booked">B14</span></td>
+                                <td><span class="w-booked">B15</span></td>
+                                <td><span class="w-booked">B16</span></td>
+                                <td><span class="w-booked">B17</span></td>
+                                <td><span class="w-booked">B18</span></td>
+                                <td><span class="w-booked">B19</span></td>
+                                <td><span class="w-booked">B20</span></td>
+                              </tr>
+                              <!-- ROW B end -->
+
+                              <!-- ROW Number -->
+                              <tr>
+                                <td><span class="w-col"> </span></td>
+                                <td><span class="w-row">1</span></td>
+                                <td><span class="w-row">2</span></td>
+                                <td><span class="w-row">3</span></td>
+                                <td><span class="w-row">4</span></td>
+                                <td><span class="w-row">5</span></td>
+                                <td><span class="w-row">6</span></td>
+                                <td><span class="w-row">7</span></td>
+                                <td><span class="w-row">8</span></td>
+                                <td><span class="w-row">9</span></td>
+                                <td><span class="w-row">10</span></td>
+                                <td><span class="w-row">11</span></td>
+                                <td><span class="w-row">12</span></td>
+                                <td><span class="w-row">13</span></td>
+                                <td><span class="w-row">14</span></td>
+                                <td><span class="w-row">15</span></td>
+                                <td><span class="w-row">16</span></td>
+                                <td><span class="w-row">17</span></td>
+                                <td><span class="w-row">18</span></td>
+                                <td><span class="w-row">19</span></td>
+                                <td><span class="w-row">20</span></td>
+                              </tr>
+                              <!-- ROW Number end -->
+
+                              <!-- ROW C -->
+                              <tr>
+                                <td><span class="w-col">C</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C1">P1</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C2</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C3">C3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C4">C4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C5</span></td>
+                                <td><span class="w-booked">C6</span></td>
+                                <td><span class="w-booked">C7</span></td>
+                                <td><span class="w-booked">C8</span></td>
+                                <td><span class="w-booked">C9</span></td>
+                                <td><span class="w-booked">C10</span></td>
+                                <td><span class="w-booked">C11</span></td>
+                                <td><span class="w-booked">C12</span></td>
+                                <td><span class="w-booked">C13</span></td>
+                                <td><span class="w-booked">C14</span></td>
+                                <td><span class="w-booked">C15</span></td>
+                                <td><span class="w-booked">C16</span></td>
+                                <td><span class="w-booked">C17</span></td>
+                                <td><span class="w-booked">C18</span></td>
+                                <td><span class="w-booked">C19</span></td>
+                                <td><span class="w-booked">C20</span></td>
+                              </tr>
+                              <!-- ROW C end -->
+
+                              <!-- ROW D -->
+                              <tr>
+                                <td><span class="w-col">D</span></td>
+                                <td><span class="w-row"></span></td>
+                                <td><span class="w-booked">D2</td>
+                                <td><span class="w-booked">D3</span></td>
+                                <td><span class="w-booked">D4</span></td>
+                                <td><span class="w-booked">D5</span></td>
+                                <td><span class="w-booked">D6</span></td>
+                                <td><span class="w-booked">D7</span></td>
+                                <td><span class="w-booked">D8</span></td>
+                                <td><span class="w-booked">D9</span></td>
+                                <td><span class="w-booked">D10</span></td>
+                                <td><span class="w-booked">D11</span></td>
+                                <td><span class="w-booked">D12</span></td>
+                                <td><span class="w-booked">D13</span></td>
+                                <td><span class="w-booked">D14</span></td>
+                                <td><span class="w-booked">D15</span></td>
+                                <td><span class="w-booked">D16</span></td>
+                                <td><span class="w-booked">D17</span></td>
+                                <td><span class="w-booked">D18</span></td>
+                                <td><span class="w-booked">D19</span></td>
+                                <td><span class="w-booked">D20</span></td>
+                              </tr>
+                              <!-- ROW D end -->
+
+                            </tbody>
+                          	</table>
+                        </div>
+                        <div class="carousel-item">
+                        	<table>
+                            <tbody>
+
+                              <!-- ROW A -->
+                              <tr>
+                                <td>
+                                  <span class="w-col">A</span>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" title="A1">P3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="D2">P4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A3</span></td>
+                                <td><span class="w-booked">A4</span></td>
+                                <td><span class="w-booked">A5</span></td>
+                                <td><span class="w-booked">A6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="A7">A7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A8</span></td>
+                                <td><span class="w-booked">A9</span></td>
+                                <td><span class="w-booked">A10</span></td>
+                                <td><span class="w-booked">A11</span></td>
+                                <td><span class="w-booked">A12</span></td>
+                                <td><span class="w-booked">A13</span></td>
+                                <td><span class="w-booked">A14</span></td>
+                                <td><span class="w-booked">A15</span></td>
+                                <td><span class="w-booked">A16</span></td>
+                                <td><span class="w-booked">A17</span></td>
+                                <td><span class="w-booked">A18</span></td>
+                                <td><span class="w-booked">A19</span></td>
+                                <td><span class="w-row"></span></td>
+                              </tr>
+                              <!-- ROW A end -->
+
+                              <!-- ROW B -->
+                              <tr>
+                                <td><span class="w-col">B</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B1">P2</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B2</span></td>
+                                <td><span class="w-booked">B3</span></td>
+                                <td><span class="w-booked">B4</span></td>
+                                <td><span class="w-booked">B5</span></td>
+                                <td><span class="w-booked">B6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B7">B7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B8</span></td>
+                                <td><span class="w-booked">B9</span></td>
+                                <td><span class="w-booked">B10</span></td>
+                                <td><span class="w-booked">B11</span></td>
+                                <td><span class="w-booked">B12</span></td>
+                                <td><span class="w-booked">B13</span></td>
+                                <td><span class="w-booked">B14</span></td>
+                                <td><span class="w-booked">B15</span></td>
+                                <td><span class="w-booked">B16</span></td>
+                                <td><span class="w-booked">B17</span></td>
+                                <td><span class="w-booked">B18</span></td>
+                                <td><span class="w-booked">B19</span></td>
+                                <td><span class="w-booked">B20</span></td>
+                              </tr>
+                              <!-- ROW B end -->
+
+                              <!-- ROW Number -->
+                              <tr>
+                                <td><span class="w-col"> </span></td>
+                                <td><span class="w-row">1</span></td>
+                                <td><span class="w-row">2</span></td>
+                                <td><span class="w-row">3</span></td>
+                                <td><span class="w-row">4</span></td>
+                                <td><span class="w-row">5</span></td>
+                                <td><span class="w-row">6</span></td>
+                                <td><span class="w-row">7</span></td>
+                                <td><span class="w-row">8</span></td>
+                                <td><span class="w-row">9</span></td>
+                                <td><span class="w-row">10</span></td>
+                                <td><span class="w-row">11</span></td>
+                                <td><span class="w-row">12</span></td>
+                                <td><span class="w-row">13</span></td>
+                                <td><span class="w-row">14</span></td>
+                                <td><span class="w-row">15</span></td>
+                                <td><span class="w-row">16</span></td>
+                                <td><span class="w-row">17</span></td>
+                                <td><span class="w-row">18</span></td>
+                                <td><span class="w-row">19</span></td>
+                                <td><span class="w-row">20</span></td>
+                              </tr>
+                              <!-- ROW Number end -->
+
+                              <!-- ROW C -->
+                              <tr>
+                                <td><span class="w-col">C</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C1">P1</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C2</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C3">C3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C4">C4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C5</span></td>
+                                <td><span class="w-booked">C6</span></td>
+                                <td><span class="w-booked">C7</span></td>
+                                <td><span class="w-booked">C8</span></td>
+                                <td><span class="w-booked">C9</span></td>
+                                <td><span class="w-booked">C10</span></td>
+                                <td><span class="w-booked">C11</span></td>
+                                <td><span class="w-booked">C12</span></td>
+                                <td><span class="w-booked">C13</span></td>
+                                <td><span class="w-booked">C14</span></td>
+                                <td><span class="w-booked">C15</span></td>
+                                <td><span class="w-booked">C16</span></td>
+                                <td><span class="w-booked">C17</span></td>
+                                <td><span class="w-booked">C18</span></td>
+                                <td><span class="w-booked">C19</span></td>
+                                <td><span class="w-booked">C20</span></td>
+                              </tr>
+                              <!-- ROW C end -->
+
+                              <!-- ROW D -->
+                              <tr>
+                                <td><span class="w-col">D</span></td>
+                                <td><span class="w-row"></span></td>
+                                <td><span class="w-booked">D2</td>
+                                <td><span class="w-booked">D3</span></td>
+                                <td><span class="w-booked">D4</span></td>
+                                <td><span class="w-booked">D5</span></td>
+                                <td><span class="w-booked">D6</span></td>
+                                <td><span class="w-booked">D7</span></td>
+                                <td><span class="w-booked">D8</span></td>
+                                <td><span class="w-booked">D9</span></td>
+                                <td><span class="w-booked">D10</span></td>
+                                <td><span class="w-booked">D11</span></td>
+                                <td><span class="w-booked">D12</span></td>
+                                <td><span class="w-booked">D13</span></td>
+                                <td><span class="w-booked">D14</span></td>
+                                <td><span class="w-booked">D15</span></td>
+                                <td><span class="w-booked">D16</span></td>
+                                <td><span class="w-booked">D17</span></td>
+                                <td><span class="w-booked">D18</span></td>
+                                <td><span class="w-booked">D19</span></td>
+                                <td><span class="w-booked">D20</span></td>
+                              </tr>
+                              <!-- ROW D end -->
+
+                            </tbody>
+                          	</table>
+                        </div>
+                        <div class="carousel-item">
+                        	<table>
+                            <tbody>
+
+                              <!-- ROW A -->
+                              <tr>
+                                <td>
+                                  <span class="w-col">A</span>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" title="A1">P3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="D2">P4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A3</span></td>
+                                <td><span class="w-booked">A4</span></td>
+                                <td><span class="w-booked">A5</span></td>
+                                <td><span class="w-booked">A6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="A7">A7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A8</span></td>
+                                <td><span class="w-booked">A9</span></td>
+                                <td><span class="w-booked">A10</span></td>
+                                <td><span class="w-booked">A11</span></td>
+                                <td><span class="w-booked">A12</span></td>
+                                <td><span class="w-booked">A13</span></td>
+                                <td><span class="w-booked">A14</span></td>
+                                <td><span class="w-booked">A15</span></td>
+                                <td><span class="w-booked">A16</span></td>
+                                <td><span class="w-booked">A17</span></td>
+                                <td><span class="w-booked">A18</span></td>
+                                <td><span class="w-booked">A19</span></td>
+                                <td><span class="w-row"></span></td>
+                              </tr>
+                              <!-- ROW A end -->
+
+                              <!-- ROW B -->
+                              <tr>
+                                <td><span class="w-col">B</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B1">P2</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B2</span></td>
+                                <td><span class="w-booked">B3</span></td>
+                                <td><span class="w-booked">B4</span></td>
+                                <td><span class="w-booked">B5</span></td>
+                                <td><span class="w-booked">B6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B7">B7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B8</span></td>
+                                <td><span class="w-booked">B9</span></td>
+                                <td><span class="w-booked">B10</span></td>
+                                <td><span class="w-booked">B11</span></td>
+                                <td><span class="w-booked">B12</span></td>
+                                <td><span class="w-booked">B13</span></td>
+                                <td><span class="w-booked">B14</span></td>
+                                <td><span class="w-booked">B15</span></td>
+                                <td><span class="w-booked">B16</span></td>
+                                <td><span class="w-booked">B17</span></td>
+                                <td><span class="w-booked">B18</span></td>
+                                <td><span class="w-booked">B19</span></td>
+                                <td><span class="w-booked">B20</span></td>
+                              </tr>
+                              <!-- ROW B end -->
+
+                              <!-- ROW Number -->
+                              <tr>
+                                <td><span class="w-col"> </span></td>
+                                <td><span class="w-row">1</span></td>
+                                <td><span class="w-row">2</span></td>
+                                <td><span class="w-row">3</span></td>
+                                <td><span class="w-row">4</span></td>
+                                <td><span class="w-row">5</span></td>
+                                <td><span class="w-row">6</span></td>
+                                <td><span class="w-row">7</span></td>
+                                <td><span class="w-row">8</span></td>
+                                <td><span class="w-row">9</span></td>
+                                <td><span class="w-row">10</span></td>
+                                <td><span class="w-row">11</span></td>
+                                <td><span class="w-row">12</span></td>
+                                <td><span class="w-row">13</span></td>
+                                <td><span class="w-row">14</span></td>
+                                <td><span class="w-row">15</span></td>
+                                <td><span class="w-row">16</span></td>
+                                <td><span class="w-row">17</span></td>
+                                <td><span class="w-row">18</span></td>
+                                <td><span class="w-row">19</span></td>
+                                <td><span class="w-row">20</span></td>
+                              </tr>
+                              <!-- ROW Number end -->
+
+                              <!-- ROW C -->
+                              <tr>
+                                <td><span class="w-col">C</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C1">P1</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C2</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C3">C3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C4">C4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C5</span></td>
+                                <td><span class="w-booked">C6</span></td>
+                                <td><span class="w-booked">C7</span></td>
+                                <td><span class="w-booked">C8</span></td>
+                                <td><span class="w-booked">C9</span></td>
+                                <td><span class="w-booked">C10</span></td>
+                                <td><span class="w-booked">C11</span></td>
+                                <td><span class="w-booked">C12</span></td>
+                                <td><span class="w-booked">C13</span></td>
+                                <td><span class="w-booked">C14</span></td>
+                                <td><span class="w-booked">C15</span></td>
+                                <td><span class="w-booked">C16</span></td>
+                                <td><span class="w-booked">C17</span></td>
+                                <td><span class="w-booked">C18</span></td>
+                                <td><span class="w-booked">C19</span></td>
+                                <td><span class="w-booked">C20</span></td>
+                              </tr>
+                              <!-- ROW C end -->
+
+                              <!-- ROW D -->
+                              <tr>
+                                <td><span class="w-col">D</span></td>
+                                <td><span class="w-row"></span></td>
+                                <td><span class="w-booked">D2</td>
+                                <td><span class="w-booked">D3</span></td>
+                                <td><span class="w-booked">D4</span></td>
+                                <td><span class="w-booked">D5</span></td>
+                                <td><span class="w-booked">D6</span></td>
+                                <td><span class="w-booked">D7</span></td>
+                                <td><span class="w-booked">D8</span></td>
+                                <td><span class="w-booked">D9</span></td>
+                                <td><span class="w-booked">D10</span></td>
+                                <td><span class="w-booked">D11</span></td>
+                                <td><span class="w-booked">D12</span></td>
+                                <td><span class="w-booked">D13</span></td>
+                                <td><span class="w-booked">D14</span></td>
+                                <td><span class="w-booked">D15</span></td>
+                                <td><span class="w-booked">D16</span></td>
+                                <td><span class="w-booked">D17</span></td>
+                                <td><span class="w-booked">D18</span></td>
+                                <td><span class="w-booked">D19</span></td>
+                                <td><span class="w-booked">D20</span></td>
+                              </tr>
+                              <!-- ROW D end -->
+
+                            </tbody>
+                          	</table>
+                        </div>
+                        <div class="carousel-item">
+                        	<table>
+                            <tbody>
+
+                              <!-- ROW A -->
+                              <tr>
+                                <td>
+                                  <span class="w-col">A</span>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" title="A1">P3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="D2">P4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A3</span></td>
+                                <td><span class="w-booked">A4</span></td>
+                                <td><span class="w-booked">A5</span></td>
+                                <td><span class="w-booked">A6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="A7">A7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">A8</span></td>
+                                <td><span class="w-booked">A9</span></td>
+                                <td><span class="w-booked">A10</span></td>
+                                <td><span class="w-booked">A11</span></td>
+                                <td><span class="w-booked">A12</span></td>
+                                <td><span class="w-booked">A13</span></td>
+                                <td><span class="w-booked">A14</span></td>
+                                <td><span class="w-booked">A15</span></td>
+                                <td><span class="w-booked">A16</span></td>
+                                <td><span class="w-booked">A17</span></td>
+                                <td><span class="w-booked">A18</span></td>
+                                <td><span class="w-booked">A19</span></td>
+                                <td><span class="w-row"></span></td>
+                              </tr>
+                              <!-- ROW A end -->
+
+                              <!-- ROW B -->
+                              <tr>
+                                <td><span class="w-col">B</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B1">P2</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B2</span></td>
+                                <td><span class="w-booked">B3</span></td>
+                                <td><span class="w-booked">B4</span></td>
+                                <td><span class="w-booked">B5</span></td>
+                                <td><span class="w-booked">B6</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="B7">B7</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">B8</span></td>
+                                <td><span class="w-booked">B9</span></td>
+                                <td><span class="w-booked">B10</span></td>
+                                <td><span class="w-booked">B11</span></td>
+                                <td><span class="w-booked">B12</span></td>
+                                <td><span class="w-booked">B13</span></td>
+                                <td><span class="w-booked">B14</span></td>
+                                <td><span class="w-booked">B15</span></td>
+                                <td><span class="w-booked">B16</span></td>
+                                <td><span class="w-booked">B17</span></td>
+                                <td><span class="w-booked">B18</span></td>
+                                <td><span class="w-booked">B19</span></td>
+                                <td><span class="w-booked">B20</span></td>
+                              </tr>
+                              <!-- ROW B end -->
+
+                              <!-- ROW Number -->
+                              <tr>
+                                <td><span class="w-col"> </span></td>
+                                <td><span class="w-row">1</span></td>
+                                <td><span class="w-row">2</span></td>
+                                <td><span class="w-row">3</span></td>
+                                <td><span class="w-row">4</span></td>
+                                <td><span class="w-row">5</span></td>
+                                <td><span class="w-row">6</span></td>
+                                <td><span class="w-row">7</span></td>
+                                <td><span class="w-row">8</span></td>
+                                <td><span class="w-row">9</span></td>
+                                <td><span class="w-row">10</span></td>
+                                <td><span class="w-row">11</span></td>
+                                <td><span class="w-row">12</span></td>
+                                <td><span class="w-row">13</span></td>
+                                <td><span class="w-row">14</span></td>
+                                <td><span class="w-row">15</span></td>
+                                <td><span class="w-row">16</span></td>
+                                <td><span class="w-row">17</span></td>
+                                <td><span class="w-row">18</span></td>
+                                <td><span class="w-row">19</span></td>
+                                <td><span class="w-row">20</span></td>
+                              </tr>
+                              <!-- ROW Number end -->
+
+                              <!-- ROW C -->
+                              <tr>
+                                <td><span class="w-col">C</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()" checked="">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C1">P1</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C2</span></td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C3">C3</span>
+                                  </label>
+                                </td>
+                                <td>
+                                  <label class="w-chair">
+                                    <input type="checkbox" onclick="changeSeat()">
+                                    <span id="selected" class="checkmark" data-toggle="tooltip" data-placement="top" title="C4">C4</span>
+                                  </label>
+                                </td>
+                                <td><span class="w-booked">C5</span></td>
+                                <td><span class="w-booked">C6</span></td>
+                                <td><span class="w-booked">C7</span></td>
+                                <td><span class="w-booked">C8</span></td>
+                                <td><span class="w-booked">C9</span></td>
+                                <td><span class="w-booked">C10</span></td>
+                                <td><span class="w-booked">C11</span></td>
+                                <td><span class="w-booked">C12</span></td>
+                                <td><span class="w-booked">C13</span></td>
+                                <td><span class="w-booked">C14</span></td>
+                                <td><span class="w-booked">C15</span></td>
+                                <td><span class="w-booked">C16</span></td>
+                                <td><span class="w-booked">C17</span></td>
+                                <td><span class="w-booked">C18</span></td>
+                                <td><span class="w-booked">C19</span></td>
+                                <td><span class="w-booked">C20</span></td>
+                              </tr>
+                              <!-- ROW C end -->
+
+                              <!-- ROW D -->
+                              <tr>
+                                <td><span class="w-col">D</span></td>
+                                <td><span class="w-row"></span></td>
+                                <td><span class="w-booked">D2</td>
+                                <td><span class="w-booked">D3</span></td>
+                                <td><span class="w-booked">D4</span></td>
+                                <td><span class="w-booked">D5</span></td>
+                                <td><span class="w-booked">D6</span></td>
+                                <td><span class="w-booked">D7</span></td>
+                                <td><span class="w-booked">D8</span></td>
+                                <td><span class="w-booked">D9</span></td>
+                                <td><span class="w-booked">D10</span></td>
+                                <td><span class="w-booked">D11</span></td>
+                                <td><span class="w-booked">D12</span></td>
+                                <td><span class="w-booked">D13</span></td>
+                                <td><span class="w-booked">D14</span></td>
+                                <td><span class="w-booked">D15</span></td>
+                                <td><span class="w-booked">D16</span></td>
+                                <td><span class="w-booked">D17</span></td>
+                                <td><span class="w-booked">D18</span></td>
+                                <td><span class="w-booked">D19</span></td>
+                                <td><span class="w-booked">D20</span></td>
+                              </tr>
+                              <!-- ROW D end -->
+
+                            </tbody>
+                          	</table>
+                        </div>
+                      </div>
+                      <!-- Navigations -->
+                      <a class="carousel-control-prev d-none" href="#cr-wagon" role="button" data-slide="prev">
+                        <i class="fas fa-angle-left fa-3x red"></i>
+                      </a>
+                      <a class="carousel-control-next d-none" href="#cr-wagon" role="button" data-slide="next">
+                        <i class="fas fa-angle-right fa-3x red"></i>
+                      </a>
+                      <!-- Navigations end -->
+                    </div>
+                  </div>
+                </div>
+                <!-- Seat Selections end -->
+                <div class="w-legend pt-3">
+                  <ul>
+                    <li><div class="active"></div><h5>Aktif</h5></li>
+                    <li><div class="selected"></div><h5>Terpilih</h5></li>
+                    <li><div class="available"></div><h5>Tersedia</h5></li>
+                    <li><div class="booked"></div><h5>Tidak Tersedia</h5></li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Selected Wagon end -->
+              <div class="row mb-2 justify-content-end">
+                <div class="col-md-4 col-lg-3">
+                  <button type="submit" class="btn btn-outline-primary mt-2 btn-block">Reset</button>&nbsp;
+                </div>
+                <div class="col-md-5 col-lg-4">
+                  <button type="submit" class="btn btn-warning mt-2 btn-block">Selesai</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+      <!-- Content end -->
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container mt-5">
+          <hr>
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <p><strong>Payment Partner</strong></p>
+              <ul class="payments-types">
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <p><strong>Subscribe to our newsletter</strong></p>
+              <div class="input-group newsletter">
+                <input class="form-control" placeholder="Your Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                <span class="input-group-append">
+                  <button class="btn btn-secondary" type="submit">Subscribe</button>
+                </span> </div>
+              </div>
+              <div class="col-md-4 d-flex align-items-md-end flex-column">
+                <p><strong>Keep in touch</strong></p>
+                <ul class="social-icons">
+                  <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                  <li class="social-icons-linkedin"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li class="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                  <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="footer-copyright">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"> <a class="nav-link active" href="#">About Us</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Faq</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Support</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Terms of Use</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">Privacy Policy</a> </li>
+              </ul>
+              <p class="copyright-text">Copyright © 2019. All Rights Reserved.</p>
+            </div>
+          </div>
+   	  </footer>
+      <!-- Footer end -->
+    </div>
+    <!-- Document Wrapper end -->
+    <!-- Back to Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    <!-- Script -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script>
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <script src=" js/page.js"></script>
+    <script src=" js/main.js"></script>    
+  </body>
+</html>

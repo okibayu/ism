@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="img/favicon.png" rel="icon" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/ion-rangeslider/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+    <title>Train - Available</title>
+  </head>
+
+  <body>
+    <div id="main-wrapper">
+      <!-- Header -->
+      <header id="header">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="navbar-brand"> 
+              <!-- Logo -->                
+              <a href="index.html" title="Electra Booking Engine">
+                <img src="img/logo-AMOS.png" alt="Amos Tours" width="auto" height="50px" />
+              </a> 
+              <!-- Logo end -->  
+            </div>
+            <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu"> <span></span><span></span><span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">               
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Flight</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Hotel</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Train</a>
+                  </li>
+                </ul>
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Booking Check</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i> Chart (0)</a>
+                  </li>
+                  <li class="dropdown nav-item">
+                    <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="language">
+                      <i class="fas fa-globe"></i> EN</a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labelledby="language">
+                      <button type="button" tabindex="0" class="dropdown-item active">English (EN)</button>
+                      <button type="button" tabindex="0" class="dropdown-item">Bahasa (ID)</button>
+                    </div>
+                  </li>
+                  <li class="dropdown nav-item">
+                    <a aria-haspopup="true" type="text" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="login"><i class="fas fa-user">
+                      </i> Login/ Register</a>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu" aria-labeldby="login">
+                      <div class="login-form">
+                        <form class="pt-2 pb-1">
+                          <div class="form-group">
+                            <strong>Login to my account</strong>
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                          </div>
+                          <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                          </div>
+                          <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                              <input type="checkbox" class="custom-control-input" id="dropdownCheck">
+                              <label class="custom-control-label" for="dropdownCheck">
+                                Remember me
+                              </label>
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-primary w-100">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">New around here? Sign up</a>
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- Header end -->
+
+      <!-- Page Header -->
+      <section class="page-header text-white bg-page-header mb-0">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-8">
+              <h6 class="text-white"><i class="fas fa-train"></i> Jakarta (GMR) &nbsp;<i class="fas fa-long-arrow-alt-right"></i> Bandung (BD)</h6>
+              <span><i class="fas fa-calendar-alt"></i> Rabu, 3 Juli 2019 - Sabtu, 5 Juli 2019 - <i class="fas fa-male"></i> 1 Dewasa, <i class="fas fa-baby"></i>  0 Bayi</span>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-link float-right text-center-sm" data-toggle="collapse" aria-expanded="false" aria-controls="searchForm" data-target="#searchForm">
+                <i class="fas fa-search"></i> Change</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Page Header end -->
+
+      <section class="progress p-0">
+        <div class="progress-bar bg-progress" role="progressbar"  aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </section>
+
+      <!-- Search form -->
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <div class="collapse bg-white shadow-lg rounded-bottom pl-3 pr-3" id="searchForm">
+              <div class="col-md-12 p-3">
+                <form id="bookingTrain">
+                  <div class="mb-3">
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input id="train-oneway" name="train-trip" class="custom-control-input" checked="" required type="radio">
+                      <label class="custom-control-label" for="train-oneway">One Way</label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                      <input id="train-roundtrip" name="train-trip" class="custom-control-input" required type="radio">
+                      <label class="custom-control-label" for="train-roundtrip">Round Trip</label>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-6 col-lg-6 form-group">
+                      <input type="text" class="form-control" id="trainFrom" required="" placeholder="From">
+                      <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
+                     </div>
+                    <div class="col-md-6 col-lg-6 form-group">
+                      <input type="text" class="form-control" id="trainTo" required="" placeholder="To">
+                      <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
+                    </div>
+                    <div class="col-md-6 col-lg-3 form-group">
+                      <input id="trainsDepart" type="text" class="form-control" required placeholder="Depart Date">
+                      <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                    <div class="col-md-6 col-lg-3 form-group">
+                      <input id="trainsReturn" type="text" class="form-control" required placeholder="Return Date">
+                      <span class="icon-inside"><i class="far fa-calendar-alt"></i></span>
+                    </div>
+                    <div class="col-md-6 col-lg-3 travellers-class form-group">
+                      <input type="text" id="trainTravellersClass" class="travellers-class-input form-control" name="train-travellers-class" placeholder="Penumpang, Kelas" readonly="" required="" onkeypress="return false;">
+                      <span class="icon-inside"><i class="fas fa-caret-down"></i></span>
+                      <div class="travellers-dropdown">
+                        <div class="row align-items-center">
+                          <div class="col-sm-7">
+                            <p class="mb-sm-0">Dewasa <small class="text-muted">(12+ thn)</small></p>
+                          </div>
+                          <div class="col-sm-5">
+                            <div class="qty input-group">
+                              <div class="input-group-prepend">
+                                <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#trainAdult-travellers" data-toggle="spinner">-</button>
+                              </div>
+                              <input type="text" data-ride="spinner" id="trainAdult-travellers" class="qty-spinner form-control" value="1" readonly="">
+                              <div class="input-group-append">
+                                <button type="button" class="btn bg-light-4" data-value="increase" data-target="#trainAdult-travellers" data-toggle="spinner">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-2">
+                        <div class="row align-items-center">
+                          <div class="col-sm-7">
+                            <p class="mb-sm-0">Anak <small class="text-muted">(2-12 thn)</small></p>
+                          </div>
+                          <div class="col-sm-5">
+                            <div class="qty input-group">
+                              <div class="input-group-prepend">
+                                <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#trainChildren-travellers" data-toggle="spinner">-</button>
+                              </div>
+                              <input type="text" data-ride="spinner" id="trainChildren-travellers" class="qty-spinner form-control" value="0" readonly="">
+                              <div class="input-group-append">
+                                <button type="button" class="btn bg-light-4" data-value="increase" data-target="#trainChildren-travellers" data-toggle="spinner">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr class="my-2">
+                        <div class="row align-items-center">
+                          <div class="col-sm-7">
+                            <p class="mb-sm-0">Bayi <small class="text-muted">(< 2 yrs)</small></p>
+                          </div>
+                          <div class="col-sm-5">
+                            <div class="qty input-group">
+                              <div class="input-group-prepend">
+                                <button type="button" class="btn bg-light-4" data-value="decrease" data-target="#trainInfants-travellers" data-toggle="spinner">-</button>
+                              </div>
+                              <input type="text" data-ride="spinner" id="trainInfants-travellers" class="qty-spinner form-control" value="0" readonly="">
+                              <div class="input-group-append">
+                                <button type="button" class="btn bg-light-4" data-value="increase" data-target="#trainInfants-travellers" data-toggle="spinner">+</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group mt-3">
+                          <select id="train-class" name="train-class" class="custom-select">
+                            <option value="0">All Class</option>
+                            <option value="1">Ekonomi</option>
+                            <option value="2">Bisnis</option>
+                            <option value="3">Eksekutif</option>
+                          </select>
+                        </div>
+                        <button class="btn btn-primary btn-block submit-done" type="button">Done</button>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 form-group">
+                      <button class="btn btn-search btn-block" type="submit" href="index-train.html"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <!-- Search form end -->
+
+      <!-- Content -->
+      <section id="content">    
+        <div class="container">
+          
+          <!-- Filter --> 
+          <div class="mt-3 accordion" id="filterTop">
+            <form method="post">
+              <div class="btn-filter">
+                <div class="filter-header">
+                  <span>Filter :</span>
+                </div>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
+                  <div class="status"></div>
+                </div>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
+                </div>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
+                </div>
+                <div class="filter-header">
+                  <a class="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
+                </div>
+                <div class="filter-header">
+                  <input class="filter-reset btn btn-link" type="reset" value="Reset">
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="card bg-gradient-blue rounded mt-0 mb-0 pb-0">
+                <div class="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+                  <div class="form-group custom-control custom-checkbox">
+                    <ul>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="ekonomi">
+                        <label class="custom-control-label" for="ekonomi">Ekonomi</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="bisnis">
+                        <label class="custom-control-label" for="bisnis">Bisnis</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="eksekutif">
+                        <label class="custom-control-label" for="eksekutif">Eksekutif</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
+                  <div class="form-group custom-control custom-checkbox">
+                    <ul>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="argolawu">
+                        <label class="custom-control-label" for="argolawu">Argolawu</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="parahyangan">
+                        <label class="custom-control-label" for="parahyangan">Argo Parahyangan</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="fajarutama">
+                        <label class="custom-control-label" for="fajarutama">Fajar Utama</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="sembrani">
+                        <label class="custom-control-label" for="sembrani">Sembrani Priority</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="argobromo">
+                        <label class="custom-control-label" for="argobromo">Argo Bromo</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="argomuria">
+                        <label class="custom-control-label" for="argomuria">Argo Muria</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="argosindoro">
+                        <label class="custom-control-label" for="argosindoro">Argo Sindoro</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="argobromoa">
+                        <label class="custom-control-label" for="argobromoa">Argo Bromo Anggrek</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
+                  <div class="form-group custom-control custom-checkbox">
+                    <ul>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="pagi">
+                        <label class="custom-control-label" for="pagi">Pagi (00:00 - 11:00)</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="siang">
+                        <label class="custom-control-label" for="siang">Siang (11:00 - 15:00)</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="sore">
+                        <label class="custom-control-label" for="sore">Sore (15:00 - 18:30)</label>
+                      </li>
+                      <li>
+                        <input class="custom-control-input" type="checkbox" id="malam">
+                        <label class="custom-control-label" for="malam">Malam (18.30:00 - 23:59)</label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                  <div class="form-group custom-control">
+                    <div class="card-body pt-0 pb-1 pl-0 pr-4 w-60">
+                      <p>
+                        <input id="amount" type="text" readonly="" class="form-control border-0 bg-transparent p-0">
+                      </p>
+                      <div id="slider-range" class="ui-slider ui-corner-all ui-slider-horizontal ui-widget ui-widget-content">
+                        <div class="ui-slider-range ui-corner-all ui-widget-header">
+                        </div>
+                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 10.4167%;">
+                        </span>
+                        <span tabindex="0" class="ui-slider-handle ui-corner-all ui-state-default" style="left: 81.6667%;">
+                        </span>
+                      </div>
+                    </div> 
+                    <!-- <input type="text" class="js-range-slider" name="my_range" value="" /> --> 
+                  </div>
+                </div>
+              </div>
+            </form>
+            <!-- Sort Desktop -->
+            <div id="sort-avail" class="card bg-white shadow-sm rounded pt-0 mb-3">
+              <div class="card-body">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3 pl-0">
+                    <a href="#">Kereta Api <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2 pl-0">
+                    <a href="#">Berangkat <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2 pl-0">
+                    <a href="#">Tiba <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1 pl-0">
+                    <a href="#">Durasi <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2 pl-0">
+                    <a href="#">Harga  <i class="fas fa-sort"></i></a>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    &nbsp;
+                  </div>
+                </div> 
+              </div>
+            </div>
+            <!-- Sort Desktop end -->    
+          </div>          
+          <!-- Filter end -->
+
+          <!-- Avail Train -->  
+          <section class="train-avail mt-2">        
+            <!-- Train list -->
+            <div id="avail" class="card border-light bg-white mb-3">
+              <div class="card-body shadow">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <h3 class="title1">Argo Parahyangan 7098</h3>
+                    <h5 class="title2">Ekonomi (C)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">22:30</h4>
+                    <h5 class="station">Gambir (GMR)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">01:44 <small class="text-muted">(+1 hari)</small></h4>
+                    <h5 class="station">Bandung (BD)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <h4 class="duration">3j 14m</h4>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h3 class="price">IDR 732.400<br>
+                      <small class="text-danger">sisa 5 kursi</small>
+                    </h3>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#" class="btn btn-primary btn-sm d-block">Book</a>
+                  </div>
+                  <div class="col">
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div id="avail" class="card border-light bg-white mb-3">
+              <div class="card-body shadow">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <h3 class="title1">Argo Parahyangan 7098</h3>
+                    <h5 class="title2">Ekonomi (C)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">22:30</h4>
+                    <h5 class="station">Gambir (GMR)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">01:44 <small class="text-muted">(+1 hari)</small></h4>
+                    <h5 class="station">Bandung (BD)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <h4 class="duration">3j 14m</h4>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h3 class="price">IDR 732.400<br>
+                      <small class="text-danger">sisa 12 kursi</small>
+                    </h3>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#" class="btn btn-primary btn-sm d-block">Book</a>
+                  </div>
+                  <div class="col">
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div id="avail" class="card border-light bg-white mb-3">
+              <div class="card-body shadow">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <h3 class="title1">Argo Parahyangan 7098</h3>
+                    <h5 class="title2">Ekonomi (C)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">22:30</h4>
+                    <h5 class="station">Gambir (GMR)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">01:44 <small class="text-muted">(+1 hari)</small></h4>
+                    <h5 class="station">Bandung (BD)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <h4 class="duration">3j 14m</h4>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h3 class="price">IDR 732.400<br>
+                      <small class="text-danger"></small>
+                    </h3>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#" class="btn btn-primary btn-sm d-block">Book</a>
+                  </div>
+                  <div class="col">
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div id="avail" class="card border-light bg-white mb-3">
+              <div class="card-body shadows-sm" style="opacity: 0.7;">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <h3 class="title1">Argo Parahyangan 7098</h3>
+                    <h5 class="title2">Ekonomi (C)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">22:30</h4>
+                    <h5 class="station">Gambir (GMR)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">01:44 <small class="text-muted">(+1 hari)</small></h4>
+                    <h5 class="station">Bandung (BD)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <h4 class="duration">3j 14m</h4>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h3 class="price">IDR 732.400<br>
+                      <small class="text-danger">sisa 24 kursi</small>
+                    </h3>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#" class="btn btn-grey btn-sm d-block disabled">FULL</a>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div id="avail" class="card border-light bg-white mb-3">
+              <div class="card-body shadows-sm" style="opacity: 0.7;">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <h3 class="title1">Argo Parahyangan 7098</h3>
+                    <h5 class="title2">Ekonomi (C)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">22:30</h4>
+                    <h5 class="station">Gambir (GMR)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">01:44 <small class="text-muted">(+1 hari)</small></h4>
+                    <h5 class="station">Bandung (BD)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <h4 class="duration">3j 14m</h4>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h3 class="price">IDR 732.400<br>
+                      <small class="text-danger">sisa 24 kursi</small>
+                    </h3>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#" class="btn btn-grey btn-sm d-block disabled">FULL</a>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <div id="avail" class="card border-light bg-white mb-3">
+              <div class="card-body shadows-sm" style="opacity: 0.7;">
+                <div class="row align-items-center">
+                  <div class="col-sm-2 col-md-3 col-lg-3">
+                    <h3 class="title1">Argo Parahyangan 7098</h3>
+                    <h5 class="title2">Ekonomi (C)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">22:30</h4>
+                    <h5 class="station">Gambir (GMR)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h4 class="time">01:44 <small class="text-muted">(+1 hari)</small></h4>
+                    <h5 class="station">Bandung (BD)</h5>
+                  </div>
+                  <div class="col-sm-2 col-md-1 col-lg-1">
+                    <h4 class="duration">3j 14m</h4>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <h3 class="price">IDR 732.400<br>
+                      <small class="text-danger">sisa 24 kursi</small>
+                    </h3>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2">
+                    <a href="#" class="btn btn-grey btn-sm d-block disabled">FULL</a>
+                  </div>
+                </div>
+              </div> 
+            </div>
+            <!-- Train list --> 
+            <ul class="pagination justify-content-center mt-4 mb-0">
+                <li class="page-item disabled"> <a class="page-link" href="#" tabindex="-1"><i class="fas fa-angle-left"></i></a> </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"> <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a> </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"> <a class="page-link" href="#"><i class="fas fa-angle-right"></i></a> </li>
+              </ul>        
+          </section>
+          <!-- Avail Train end -->
+        </div>
+        <!-- Content end -->
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="container mt-4">
+          <hr class="mt-5">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <p><strong>Payment Partner</strong></p>
+              <ul class="payments-types">
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express"></a></li>
+                <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover"></a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+              <p><strong>Subscribe to our newsletter</strong></p>
+              <div class="input-group newsletter">
+                <input class="form-control" placeholder="Your Email Address" name="newsletterEmail" id="newsletterEmail" type="text">
+                <span class="input-group-append">
+                <button class="btn btn-secondary" type="submit">Subscribe</button>
+                </span> </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-md-end flex-column">
+              <p><strong>Keep in touch</strong></p>
+              <ul class="social-icons">
+                <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li class="social-icons-linkedin"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube"><i class="fab fa-youtube"></i></a></li>
+                <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="footer-copyright">
+            <ul class="nav justify-content-center">
+              <li class="nav-item"> <a class="nav-link active" href="#">About Us</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Faq</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Contact</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Support</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Terms of Use</a> </li>
+              <li class="nav-item"> <a class="nav-link" href="#">Privacy Policy</a> </li>
+            </ul>
+            <p class="copyright-text">Copyright © 2019. All Rights Reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer end -->
+    </div>
+    <!-- Document Wrapper end -->
+
+    <!-- Back to Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+
+    <!-- Script -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
+    <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
+    <script src="vendor/daterangepicker/moment.min.js"></script> 
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <script src="vendor/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <script type="text/javascript">
+      $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 500000,
+        from: 100000,
+        to: 350000,
+        grid: true
+      });
+    </script>
+    <script type="text/javascript">
+      $(".progress-bar").animate({
+          width: "100%"
+      }, 5000);
+    </script> 
+    <script>
+    $(function() {
+     'use strict';
+
+      // Trains Depart Date
+      $('#trainsDepart').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: true,
+      }, function(chosen_date) {
+      $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
+      });
+      
+      // Trains Return Date
+      $('#trainsReturn').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: true,
+      }, function(chosen_date) {
+      $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
+      });
+
+      // Price Range
+      $( "#slider-range" ).slider({
+        range: true,
+        min: 500000,
+        max: 5000000,
+        values: [ 800000, 4500000 ],
+        slide: function( event, ui ) {
+        $( "#amount" ).val( "Rp " + ui.values[ 0 ] + " - Rp " + ui.values[ 1 ] );
+        }
+      });
+      $( "#amount" ).val( "Rp " + $( "#slider-range" ).slider( "values", 0 ) +
+        " - Rp " + $( "#slider-range" ).slider( "values", 1 ) );
+      });
+    </script>
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
