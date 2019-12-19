@@ -31,25 +31,116 @@
       <div id="content">
         
         <!-- Image Sliders -->
-        <div id="slider"></div>
+        <div id="slider" class="hero-wrap">
+          <div class="owl-carousel owl-theme slideshow single-slider">
+            <div class="item owl-caption" style="background-image: url(img/sliders/train.jpg); background-position: center center; background-size: cover; width: 100%; height: 500px;">
+              <h1 class="animated fadeInDown">Train Booking Offers – Avail Best Deals</h1>
+              <h4 class="animated fadeInUp">December Best deal Upto 10%
+                <button class="btn-danger rounded">Book Now!</button>
+              </h4>
+              <div class="owl-back"></div>
+            </div>
+            <div class="item owl-caption" style="background-image: url(img/sliders/train5.png); background-position: center center; background-size: cover; width: 100%; height: 500px;">
+              <h1 class="animated fadeInDown">Book Your Holiday Travel Early and Save</h1>
+              <h4 class="animated fadeInUp">December Discount Upto 20%
+                <button class="btn-danger rounded">Book Now!</button>
+              </h4>
+              <div class="owl-back"></div>
+            </div>
+            <div class="item owl-caption" style="background-image: url(img/sliders/train3.png); background-position: center center; background-size: cover; width: 100%; height: 500px;">
+              <h1>Students Get a Fast Track to Savings</h1>
+              <h4 class="animated fadeInUp">Save 25% on Travel in Jakarta and Bandung
+                <button class="btn-danger rounded">Book Now!</button>
+              </h4>
+              <div class="owl-back"></div>
+            </div>
+          </div>
+        </div>
         <!-- Image Sliders -->
 
         <!-- Search form -->
         <section class="train-section">
-          <div id="search-form"></div>
+          <div id="search-form" class="container pb-1"></div>
         </section>
         <!-- Search form end -->
 
         <!-- promo -->
-        <div id="promo-card"></div>
+        <div class="section bg-light shadow-md">
+          <div class="container pb-1">
+            <div class="owl-carousel owl-theme banner">
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 4" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner7.jpg" alt="banner 5" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner8.jpg" alt="banner 6" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner9.jpg" alt="banner 7" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner10.jpg" alt="banner 8" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 9" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 4" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner7.jpg" alt="banner 5" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner8.jpg" alt="banner 6" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner9.jpg" alt="banner 7" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner10.jpg" alt="banner 8" />
+                </a>
+              </div>
+              <div class="item">
+                <a href="#">
+                  <img class="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 9" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Promo end -->
 
         <!-- Why Book -->
-        <div id="why-book"></div>
+        <section id="why-book" class="section pb-5 pt-5">
+        </section>
         <!-- Why Book end -->
 
         <!-- Popular Destinations -->
-        <div id="popular"></div>
+        <section id="popular" class="section bg-light shadow-md">
+        </section>
         <!-- Popular Destinations end -->
 
         <!-- Refer & Earn -->
@@ -61,7 +152,8 @@
         <!-- Train Partner end-->
 
         <!-- Footer -->
-        <div id="footer"></div>
+        <footer id="footer">
+        </footer>
         <!-- Footer end -->
       </div>
       <!-- Content end -->
@@ -142,19 +234,10 @@
       autoUpdateInput: false,
       }, function(chosen_date) {
       $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
-    });});
-
-    $('#trainTravellersClass').on('click', function() {
-      $('.travellers-dropdown').slideToggle('fast');
-      $('.qty-spinner, #train-class').on('change', function() {
-      var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
-      var totalCount = ids.reduce(function (prev, id) {
-        return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      var fc = $('#train-class option:selected').text();
-      
-      $('#trainTravellersClass').val(totalCount + ' - ' + fc);
-        }).trigger('change');
       });
+
+  });
+
     </script>
     <script src="js/main.js"></script>
     
