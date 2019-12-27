@@ -10,11 +10,11 @@ class Footer extends React.Component {
              <div className="col-md-4 mb-3 mb-md-0">
                <p><strong>Payment Partner</strong></p>
                <ul className="payments-types">
-                 <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa" /></a></li>
-                 <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover" /></a></li>
-                 <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal" /></a></li>
-                 <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express" /></a></li>
-                 <li><a href="#" target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover" /></a></li>
+                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa" /></a></li>
+                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover" /></a></li>
+                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal" /></a></li>
+                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express" /></a></li>
+                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover" /></a></li>
                </ul>
              </div>
              <div className="col-md-4 mb-3 mb-md-0">
@@ -40,12 +40,12 @@ class Footer extends React.Component {
          <div className="container">
            <div className="footer-copyright">
              <ul className="nav justify-content-center">
-               <li className="nav-item"> <a className="nav-link active" href="#">About Us</a> </li>
-               <li className="nav-item"> <a className="nav-link" href="#">Faq</a> </li>
-               <li className="nav-item"> <a className="nav-link" href="#">Contact</a> </li>
-               <li className="nav-item"> <a className="nav-link" href="#">Support</a> </li>
-               <li className="nav-item"> <a className="nav-link" href="#">Terms of Use</a> </li>
-               <li className="nav-item"> <a className="nav-link" href="#">Privacy Policy</a> </li>
+               <li className="nav-item"> <a href="about" className="nav-link active" >About Us</a> </li>
+               <li className="nav-item"> <a href="faq" className="nav-link" >Faq</a> </li>
+               <li className="nav-item"> <a href="contact" className="nav-link" >Contact</a> </li>
+               <li className="nav-item"> <a href="support" className="nav-link" >Support</a> </li>
+               <li className="nav-item"> <a href="term-of-use" className="nav-link" >Terms of Use</a> </li>
+               <li className="nav-item"> <a href="privacy-policy" className="nav-link" >Privacy Policy</a> </li>
              </ul>
              <p className="copyright-text"> Copyright © 2019. All Rights Reserved. </p>
            </div>

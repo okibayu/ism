@@ -7,7 +7,7 @@ class NavbarTop extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
-            <a href="index.html" title="Electra Booking Engine">
+            <a href="/" title="Electra Booking Engine">
               <img
                 src="img/logo-AMOS.png"
                 alt="Amos Tours"
@@ -30,37 +30,37 @@ class NavbarTop extends React.Component {
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/flights">
                   Flight
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/hotels">
                   Hotel
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" href="#">
+                <a className="nav-link" href="/trains">
                   Train
                 </a>
               </li>
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/booked">
                   Booking Check
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="/chart">
                   <i className="fas fa-shopping-basket" /> Chart (0)
                 </a>
               </li>
               <li className="dropdown nav-item">
                 <a
+                  href=""
                   aria-haspopup="true"
                   type="text"
-                  href="#"
                   className="nav-link"
                   data-toggle="dropdown"
                   aria-expanded="false"
@@ -91,7 +91,6 @@ class NavbarTop extends React.Component {
                 <a
                   aria-haspopup="true"
                   type="text"
-                  href="#"
                   className="nav-link"
                   data-toggle="dropdown"
                   aria-expanded="false"
@@ -147,10 +146,10 @@ class NavbarTop extends React.Component {
                       </button>
                     </form>
                     <div className="dropdown-divider" />
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item">
                       New around here? Sign up
                     </a>
-                    <a className="dropdown-item" href="#">
+                    <a className="dropdown-item">
                       Forgot password?
                     </a>
                   </div>

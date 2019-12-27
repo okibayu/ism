@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
@@ -23,27 +23,27 @@ class PromoCard extends React.Component{
                 navText={['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']}
             >
                 <div className="item">
-                    <a href="#">
+                    <a>
                     <img className="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 4" />
                     </a>
                 </div>
                 <div className="item">
-                    <a href="#">
+                    <a>
                     <img className="img-fluid rounded" src="img/sliders/banner7.jpg" alt="banner 5" />
                     </a>
                 </div>
                 <div className="item">
-                    <a href="#">
+                    <a>
                     <img className="img-fluid rounded" src="img/sliders/banner8.jpg" alt="banner 6" />
                     </a>
                 </div>
                 <div className="item">
-                    <a href="#">
+                    <a>
                     <img className="img-fluid rounded" src="img/sliders/banner9.jpg" alt="banner 7" />
                     </a>
                 </div>
                 <div className="item">
-                    <a href="#">
+                    <a>
                     <img className="img-fluid rounded" src="img/sliders/banner10.jpg" alt="banner 8" />
                     </a>
                 </div>
