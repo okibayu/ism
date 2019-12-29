@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavbarTop from './components/NavbarTop';
+import NavbarTop from './components/reused/NavbarTop';
 import SliderTop from './components/SliderTop';
 import SearchForm from './components/SearchForm';
 import PromoCard from './components/PromoCard';
@@ -8,18 +8,17 @@ import WhyBook from './components/WhyBook';
 import PopularTrain from './components/PopularTrain';
 import Referer from './components/Referer';
 import TrainPartner from './components/TrainPartner';
-import Footer from './components/Footer';
+import Footer from './components/reused/Footer';
 
-{/* Declared all components */}
+const $ = window.$;
+
 class Main extends React.Component {
   render() {
     return (
       <div id="main-wrapper">
-        {/* Main Wrapper */}
         <header id="header">
           <NavbarTop />
         </header>
-        {/* Start Content */}
         <div id="content">
           <div id="slider" className="hero-wrap">
             <SliderTop />
@@ -55,8 +54,6 @@ class Main extends React.Component {
             <Footer />
           </section>
         </div>
-        {/* Start Content end */}
-        {/* Main Wrapper end */}
       </div>
     );
   }

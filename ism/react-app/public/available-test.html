@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="img/favicon.png" rel="icon" />
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/font-awesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/owl.carousel/assets/owl.theme.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/ion-rangeslider/css/ion.rangeSlider.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
+
+    <title>Train - Available</title>
+  </head>
+
+  <body>
+
+    <div id="xxx"></div>
+      <script type="text/babel" data-plugins="transform-class-properties" src="/trains/index.js"></script>
+      <!-- Scroll to top -->
+      <a id="back-to-top" data-toggle="tooltip" title="" href="javascript:void(0)" data-original-title="Back to Top" style="display: inline;">
+        <i class="fa fa-chevron-up"></i>
+      </a>
+
+      <!-- Script -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="vendor/owl.carousel/owl.carousel.min.js"></script> 
+      <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
+      <script src="vendor/daterangepicker/moment.min.js"></script> 
+      <script src="vendor/daterangepicker/daterangepicker.js"></script> 
+      <script>
+      $(function(){'use strict';$(window).on('load',function(){$('[data-loader="circle-side"]').fadeOut();$('#preloader').delay(333).fadeOut('slow');$('body').delay(333)});$('#flightDepart').daterangepicker({singleDatePicker:true,minDate:moment(),autoUpdateInput:false,},function(a){$('#flightDepart').val(a.format('MM-DD-YYYY'))});$('#flightReturn').daterangepicker({singleDatePicker:true,minDate:moment(),autoUpdateInput:false,},function(a){$('#flightReturn').val(a.format('MM-DD-YYYY'))});$('#hotelsCheckIn').daterangepicker({singleDatePicker:true,minDate:moment(),autoUpdateInput:false,},function(a){$('#hotelsCheckIn').val(a.format('MM-DD-YYYY'))});$('#hotelsCheckOut').daterangepicker({singleDatePicker:true,minDate:moment(),autoUpdateInput:false,},function(a){$('#hotelsCheckOut').val(a.format('MM-DD-YYYY'))});$('#trainsDepart').daterangepicker({singleDatePicker:true,minDate:moment(),autoUpdateInput:false,},function(a){$('#trainsDepart').val(a.format('MM-DD-YYYY'))});$('#trainsReturn').daterangepicker({singleDatePicker:true,minDate:moment(),autoUpdateInput:false,},function(a){$('#trainsReturn').val(a.format('MM-DD-YYYY'))});$('#flightTravellersClass').on('click',function(){$('.travellers-dropdown').slideToggle('fast');$('.qty-spinner, .flight-class').on('change',function(){var c=['flightAdult','flightChildren','flightInfants'];var d=c.reduce(function(a,b){return parseInt($('#'+b+'-travellers').val())+a},0);var e=$('input[name="flight-class"]:checked  + label').text();$('#flightTravellersClass').val(d+' - '+e)}).trigger('change')});$('#hotelsTravellersClass').on('click',function(){$('.travellers-dropdown').slideToggle('fast');$('.qty-spinner').on('change',function(){var c=['adult','children'];var d=c.reduce(function(a,b){return parseInt($('#'+b+'-travellers').val())+a},0)+' '+'People';var e=['hotels-rooms'];var f=e.reduce(function(a,b){return parseInt($('#hotels-rooms').val())+a},0)+' '+'Room';$('#hotelsTravellersClass').val(f+' / '+d)}).trigger('change')});$('#trainTravellersClass').on('click',function(){$('.travellers-dropdown').slideToggle('fast');$('.qty-spinner, #train-class').on('change',function(){var c=['trainAdult','trainChildren','trainInfants'];var d=c.reduce(function(a,b){return parseInt($('#'+b+'-travellers').val())+a},0);var e=$('#train-class option:selected').text();$('#trainTravellersClass').val(d+' - '+e)}).trigger('change')});$(document).on('click',function(b){if(!$(b.target).closest(".travellers-class").length){$(".travellers-dropdown").hide()}$('.submit-done').on('click',function(){$('.travellers-dropdown').fadeOut(function(){$(this).hide()})});$('[data-toggle=\'tooltip\']').tooltip({container:'body'});$(function(){$(window).on('scroll',function(){if($(this).scrollTop()>150){$('#back-to-top').fadeIn()}else{$('#back-to-top').fadeOut()}})});$('#back-to-top').on("click",function(){$('html, body').animate({scrollTop:0},'slow');return false});$('.smooth-scroll a').on("click",function(){var a=$(this).attr('href');$('html, body').animate({scrollTop:$(a).offset().top-50},600)})})});
+      </script> 
+  </body>
+</html>

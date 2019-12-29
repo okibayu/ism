@@ -1,20 +1,29 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 
-class NavbarTop extends React.Component {
-  render() {
-    return (
+
+export default function MenuTop() {
+  return (
+    <Router>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
-            <a href="/" title="Electra Booking Engine">
+            <Link to="/" title="Electra Booking Engine">
               <img
                 src="img/logo-AMOS.png"
                 alt="Amos Tours"
                 width="auto"
                 height="50px"
               />
-            </a>
+            </Link>
             {/* Logo end */}
           </div>
           <button
@@ -30,35 +39,24 @@ class NavbarTop extends React.Component {
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/flights">
-                  Flight
-                </a>
+                <Link to="/flights" className="nav-link">Flight</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/hotels">
-                  Hotel
-                </a>
+                <Link to="/hotels" className="nav-link">Hotels</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/trains">
-                  Train
-                </a>
+                <Link to="/trains" className="nav-link">Trains</Link>
               </li>
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/booked">
-                  Booking Check
-                </a>
+                <Link to="/booked" className="nav-link">Booking Check</Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/chart">
-                  <i className="fas fa-shopping-basket" /> Chart (0)
-                </a>
+                <Link to="/chart" className="nav-link">Chart (0)</Link>
               </li>
               <li className="dropdown nav-item">
-                <a
-                  href=""
+                <Link to="#"
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -67,7 +65,7 @@ class NavbarTop extends React.Component {
                   id="language"
                 >
                   <i className="fas fa-globe" /> EN
-                </a>
+                </Link>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -88,7 +86,7 @@ class NavbarTop extends React.Component {
                 </div>
               </li>
               <li className="dropdown nav-item">
-                <a
+                <Link to="#"
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -97,7 +95,7 @@ class NavbarTop extends React.Component {
                   id="login"
                 >
                   <i className="fas fa-user"></i> Login/ Register
-                </a>
+                </Link>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -146,12 +144,12 @@ class NavbarTop extends React.Component {
                       </button>
                     </form>
                     <div className="dropdown-divider" />
-                    <a className="dropdown-item">
+                    <Link to="#" className="dropdown-item">
                       New around here? Sign up
-                    </a>
-                    <a className="dropdown-item">
+                    </Link>
+                    <Link to="#" className="dropdown-item">
                       Forgot password?
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </li>
@@ -159,8 +157,39 @@ class NavbarTop extends React.Component {
           </div>
         </nav>
       </div>
-      )
-  }
+
+        <Switch>
+          <Route path="/">
+            <IndexPage />
+          </Route>
+          <Route path="/flights">
+            <FlightsPage />
+          </Route>
+          <Route path="/hotels">
+            <HotelsPage />
+          </Route>
+          <Route path="/trains">
+            <TrainsPage />
+          </Route>
+        </Switch>
+    </Router>
+  );
 }
 
-export default NavbarTop
+
+
+function IndexPage() {
+  return <h1>This Index Page</h1>;
+}
+
+function FlightsPage() {
+  return <h1>This Flight Page</h1>;
+}
+
+function HotelsPage() {
+  return <h1>This Hotel Page</h1>;
+}
+
+function TrainsPage() {
+  return <h1>This Train Page</h1>;
+}

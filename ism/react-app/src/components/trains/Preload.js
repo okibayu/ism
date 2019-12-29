@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Preload extends React.Component {
+className Preload extends React.Component {
     render() {
         return (
 
