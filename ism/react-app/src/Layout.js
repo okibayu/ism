@@ -193,3 +193,4 @@ function HotelsPage() {
 function TrainsPage() {
   return <h1>This Train Page</h1>;
 }
+

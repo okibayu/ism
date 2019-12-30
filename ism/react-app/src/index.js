@@ -9,6 +9,7 @@ import PopularTrain from './components/PopularTrain';
 import Referer from './components/Referer';
 import TrainPartner from './components/TrainPartner';
 import Footer from './components/reused/Footer';
+import MenuTop from './Layout';
 
 const $ = window.$;
 
