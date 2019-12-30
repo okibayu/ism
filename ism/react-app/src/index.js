@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import NavbarTop from './components/reused/NavbarTop';
 import SliderTop from './components/SliderTop';
 import SearchForm from './components/SearchForm';
@@ -9,32 +10,31 @@ import PopularTrain from './components/PopularTrain';
 import Referer from './components/Referer';
 import TrainPartner from './components/TrainPartner';
 import Footer from './components/reused/Footer';
-import MenuTop from './Layout';
-
-const $ = window.$;
 
 class Main extends React.Component {
   render() {
     return (
+    <Router>
       <div id="main-wrapper">
         <header id="header">
           <NavbarTop />
         </header>
+      <Switch>
         <div id="content">
           <div id="slider" className="hero-wrap">
-            <SliderTop />
+            <Route path="/" component={SliderTop} />
           </div>
           <section className="train-section">
-            <SearchForm />
+            <Route path="/" component={SearchForm} />
           </section>
           <div className="section bg-light shadow-md">
-            <PromoCard />
+          <Route path="/" component={PromoCard} />
           </div>
           <section className="section pb-5 pt-5">
-            <WhyBook />
+            <Route path="/" component={WhyBook} />
           </section>
           <section className="section bg-light shadow-md">
-            <PopularTrain />
+            <Route path="/" component={PopularTrain} />
           </section>
           <section className="text-light shadow-md pt-5 pb-5"
             style={{
@@ -49,13 +49,15 @@ class Main extends React.Component {
             <Referer />
           </section>
           <section className="bg-light shadow-md p-5">
-            <TrainPartner />
+            <Route path="/" component={TrainPartner} />
           </section>
-          <section className="footer">
-            <Footer />
-          </section>
+          </div>
+      </Switch>
+        <section className="footer">
+          <Footer />
+        </section>
         </div>
-      </div>
+    </Router>
     );
   }
 }
