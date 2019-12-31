@@ -4,7 +4,6 @@ class PageHeader extends React.Component {
     render() {
         return (
 
-        {/* Page Header */}
         <section className="page-header text-white bg-page-header mb-0">
             <div className="container">
                 <div className="row align-items-center">
@@ -19,7 +18,7 @@ class PageHeader extends React.Component {
                 </div>
             </div>
         </section>
-      {/* Page Header end */}
+      
         )
     }
 }

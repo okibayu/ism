@@ -6,7 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 class SliderTop extends React.Component {
   render() {
     return (
-      
+    
     <div id="slider" className="hero-wrap">
       <OwlCarousel
           className="owl-theme slideshow single-slider"

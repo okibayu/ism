@@ -3,8 +3,8 @@ import React from 'react';
 class Footer extends React.Component {
     render() {
       return (
- 
-       <footer id="footer">
+      <section className="footer">
+        <footer id="footer">
          <div className="container mt-4">
            <div className="row">
              <div className="col-md-4 mb-3 mb-md-0">
@@ -50,7 +50,8 @@ class Footer extends React.Component {
              <p className="copyright-text"> Copyright © 2019. All Rights Reserved. </p>
            </div>
          </div>
-       </footer>      
+        </footer> 
+      </section>     
      );
    }
  }

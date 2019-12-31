@@ -6,6 +6,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 class PromoCard extends React.Component{
   render() {
     return (
+    <div className="section bg-light shadow-md">
         <div className="container pb-1">
             <OwlCarousel
                 className="owl-carousel owl-theme"
@@ -49,7 +50,8 @@ class PromoCard extends React.Component{
                 </div>
             </OwlCarousel>
         </div>
-    );
+        </div>
+    )
   }
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 class WhyBook extends React.Component {
   render () {
     return (
-      
+    <section className="section pb-5 pt-5">   
       <div className="container">
         <h2 className="text-9 font-weight-600 text-center">Why Book Train with Us?</h2>
         <p className="lead mb-5 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -31,6 +31,7 @@ class WhyBook extends React.Component {
           </div>
         </div>
       </div>
+      </section>
       );
   }
 }

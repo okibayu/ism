@@ -4,6 +4,15 @@ class Referer extends React.Component {
     render() {
       return (
       
+      <section className="text-light shadow-md pt-5 pb-5"
+        style={{
+        backgroundImage: 'url("img/sliders/rewards.png")',
+        opacity: 1,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundBlendMode: "soft-light"
+        }} >
         <div className="container">
           <h2 className="text-9 text-light font-weight-600 text-center">
             Refer &amp; Earn
@@ -56,7 +65,8 @@ class Referer extends React.Component {
             </a>{" "}
           </div>
         </div>
-      );
+      </section>
+      )
     }
   }
 

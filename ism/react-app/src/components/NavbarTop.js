@@ -1,13 +1,17 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
-import { Nav } from 'react-bootstrap';
+import {
+  Route,
+  NavLink,
+  BrowserRouter as Router,
+  Switch,
+} from 'react-router-dom'
 
 class NavbarTop extends React.Component {
   render() {
     return (
       
       <div className="container">
-        <Nav className="navbar navbar-expand-lg navbar-light bg-white">
+        <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
             <NavLink activeClassName="active" to="/">
@@ -101,7 +105,7 @@ class NavbarTop extends React.Component {
                   id="login"
                 >
                   <i className="fas fa-user"></i> Login/ Register
-                </a>
+                </NavLink>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -152,16 +156,16 @@ class NavbarTop extends React.Component {
                     <div className="dropdown-divider" />
                     <a className="dropdown-item" href="#">
                       New around here? Sign up
-                    </a>
+                    </NavLink>
                     <a className="dropdown-item" href="#">
                       Forgot password?
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </li>
             </ul>
           </div>
-        </Nav>
+        </nav>
       </div>
       )
   }
