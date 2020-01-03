@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from "react-router-dom";
 
 class NavbarTop extends React.Component {
   render() {
@@ -7,14 +8,14 @@ class NavbarTop extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
-            <a href="/" title="Electra Booking Engine">
+            <NavLink to="/" title="Electra Booking Engine">
               <img
                 src="img/logo-AMOS.png"
                 alt="Amos Tours"
                 width="auto"
                 height="50px"
               />
-            </a>
+            </NavLink>
             {/* Logo end */}
           </div>
           <button
@@ -30,35 +31,34 @@ class NavbarTop extends React.Component {
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/flights">
+                <NavLink to="/flights" className="nav-link">
                   Flight
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/hotels">
-                  Hotel
-                </a>
+                <NavLink to="/hotels" className="nav-link">
+                    Hotel
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/trains">
-                  Train
-                </a>
+                <NavLink to="/trains" className="nav-link">
+                    Train
+                </NavLink>
               </li>
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/booked">
+                <NavLink to="booked" className="nav-link">
                   Booking Check
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/chart">
+                <NavLink to="/chart" className="nav-link">
                   <i className="fas fa-shopping-basket" /> Chart (0)
-                </a>
+                </NavLink>
               </li>
               <li className="dropdown nav-item">
-                <a
-                  href=""
+                <NavLink to={{hash: "", pathname: "#", search: "", state: null}}
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -67,7 +67,7 @@ class NavbarTop extends React.Component {
                   id="language"
                 >
                   <i className="fas fa-globe" /> EN
-                </a>
+                </NavLink>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -88,7 +88,7 @@ class NavbarTop extends React.Component {
                 </div>
               </li>
               <li className="dropdown nav-item">
-                <a
+                <NavLink to={{hash: "", pathname: "#", search: "", state: null}}
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -97,7 +97,7 @@ class NavbarTop extends React.Component {
                   id="login"
                 >
                   <i className="fas fa-user"></i> Login/ Register
-                </a>
+                </NavLink>
                 <div
                   tabIndex={-1}
                   role="menu"
