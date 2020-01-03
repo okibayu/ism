@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from "react-router-dom";
 
 class SearchForm extends React.Component {
   render() {
@@ -7,24 +8,42 @@ class SearchForm extends React.Component {
         <div id="search-form" className="container pb-1">
           <div className="card">               
             <div className="card-header justify-content-lg-around-start pt-0 pb-0">
-              <ul className="nav nav-fill" id="myTab" role="tablist">
+              <ul className="nav" id="myTab" role="tablist">
                 <li className="nav-item">
-                  <a className="nav-link" id="flight-tab" data-toggle="tab" href="#flight" role="tab" aria-controls="flight" aria-selected="false">
+                  <NavLink to={{hash: "#", pathname: "#flight", search: "", state: null}} 
+                  className="nav-link" 
+                  id="flight-tab" 
+                  data-toggle="tab" 
+                  role="tab" 
+                  aria-controls="flight" 
+                  aria-selected="false">
                     <i className="fas fa-plane fa-lg" style={{transform: 'rotate(-45deg)'}} />
                     <p>Flight</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" id="hotel-tab" data-toggle="tab" href="#hotel" role="tab" aria-controls="hotel" aria-selected="false">
+                  <NavLink to={{hash: "#", pathname: "#hotel", search: "", state: null}} 
+                  className="nav-link" 
+                  id="hotel-tab" 
+                  data-toggle="tab"
+                  role="tab" 
+                  aria-controls="hotel" 
+                  aria-selected="false">
                     <i className="fas fa-hotel fa-lg" />
                     <p>Hotel</p>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" id="train-tab" data-toggle="tab" href="#train" role="tab" aria-controls="train" aria-selected="true">
+                  <NavLink to={{hash: "#", pathname: "#train", search: "", state: null}} 
+                  className="nav-link active" 
+                  id="train-tab" 
+                  data-toggle="tab"
+                  role="tab" 
+                  aria-controls="train" 
+                  aria-selected="false">
                     <i className="fas fa-train fa-lg" />
                     <p>Train</p>
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>           

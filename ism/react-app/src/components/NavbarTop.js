@@ -47,7 +47,7 @@ class NavbarTop extends React.Component {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" to="/trains">
+                <NavLink activeClassName="selected" to="/trains">
                   Train
                 </NavLink>
               </li>
