@@ -85,7 +85,16 @@ class SearchForm extends React.Component {
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
-                        <input id="flightTravellersClass" type="text" className="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" readOnly="" required="" onKeyPress={{return: false }}/>                  
+                        <input 
+                        id="flightTravellersClass"
+                        onClick={this.bind}
+                        type="text" 
+                        className="travellers-class-input form-control" 
+                        name="flight-travellers-class" 
+                        placeholder="Travellers, Class" 
+                        readOnly="" 
+                        required="" 
+                        />                  
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown" style={{display: 'none'}}>
                           <div className="row align-items-center">
@@ -185,7 +194,14 @@ class SearchForm extends React.Component {
                         <input id="hotelsCheckOut" type="text" className="form-control" required placeholder="Check Out" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span> </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
-                        <input type="text" id="hotelsTravellersClass" className="travellers-class-input form-control" name="hotels-travellers-class" placeholder="Rooms / People" required onkeypress="return false;" />
+                        <input type="text" 
+                        id="hotelsTravellersClass" 
+                        onClick={this.bind}
+                        className="travellers-class-input form-control" 
+                        name="hotels-travellers-class" 
+                        placeholder="Rooms / People" 
+                        required=""
+                        />
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown">
                           <div className="row align-items-center">
@@ -284,13 +300,13 @@ class SearchForm extends React.Component {
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
                         <input 
                           id="trainTravellersClass" 
+                          onClick={this.bind}
                           className="travellers-class-input form-control" 
                           type="text" 
                           name="train-travellers-class" 
                           placeholder="Travellers, Class" 
-                          readonly="" 
-                          required="" 
-                          onkeypress="return=false;" 
+                          readOnly=""
+                          required=""
                         />
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown">
