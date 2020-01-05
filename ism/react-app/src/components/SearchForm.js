@@ -2,6 +2,19 @@ import React from 'react';
 import {NavLink} from "react-router-dom";
 
 class SearchForm extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState(state => ({
+      isToggleOn: !state.isToggleOn
+    }));
+  }
+
   render() {
     return (
       <section className="train-section">
@@ -87,7 +100,7 @@ class SearchForm extends React.Component {
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
                         <input 
                         id="flightTravellersClass"
-                        onClick={this.bind}
+                        onClick={this.handleClick}
                         type="text" 
                         className="travellers-class-input form-control" 
                         name="flight-travellers-class" 
@@ -196,7 +209,7 @@ class SearchForm extends React.Component {
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
                         <input type="text" 
                         id="hotelsTravellersClass" 
-                        onClick={this.bind}
+                        onClick={this.handleClick}
                         className="travellers-class-input form-control" 
                         name="hotels-travellers-class" 
                         placeholder="Rooms / People" 
@@ -300,7 +313,7 @@ class SearchForm extends React.Component {
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
                         <input 
                           id="trainTravellersClass" 
-                          onClick={this.bind}
+                          onClick={this.handleClick}
                           className="travellers-class-input form-control" 
                           type="text" 
                           name="train-travellers-class" 

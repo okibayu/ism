@@ -11,7 +11,6 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
   
 class Main extends React.Component {
   render() {
-
     return (
     <Router>
       <div id="main-wrapper">
