@@ -10,10 +10,13 @@ class PromoCard extends React.Component{
         <div className="container pb-1">
             <OwlCarousel
                 className="owl-carousel owl-theme"
-                loop
+                loop={true}
+                autoplay={true}
+                autoplayTimeout={5000}
+                lazyLoad={true}
                 margin={10}
-                nav
-                dots
+                nav={true}
+                dots={true}
                 autoplay={true} 
                 responsive={{
                     0:{items:1,},
