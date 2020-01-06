@@ -6,6 +6,7 @@ import {
   Switch,
 } from 'react-router-dom'
 
+
 class NavbarTop extends React.Component {
   render() {
     return (
@@ -13,16 +14,14 @@ class NavbarTop extends React.Component {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
-            {/* Logo */}
             <NavLink activeClassName="active" to="/">
               <img
-                src="img/logo-AMOS.png"
-                alt="Amos Tours"
+                src={logo}
+                alt="Logo"
                 width="auto"
                 height="50px"
               />
             </NavLink>
-            {/* Logo end */}
           </div>
           <button
             className="navbar-toggler border-0"

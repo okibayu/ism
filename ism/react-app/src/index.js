@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import NavbarTop from './components/reused/NavbarTop'
 import Footer from './components/reused/Footer'
 import ContentHome from './components/reused/ContentHome'
@@ -5,10 +8,7 @@ import ContentFlights from './components/reused/ContentFlights'
 import ContentHotels from './components/reused/ContentHotels'
 import ContentTrains from './components/reused/ContentTrains'
 import Notfound from './components/Notfound'
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
-  
+
 class Main extends React.Component {
   render() {
     return (
@@ -33,4 +33,4 @@ class Main extends React.Component {
   }
 }
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<Main />, document.getElementById('content'));

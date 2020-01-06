@@ -1,19 +1,22 @@
-import React from 'react'
+import React from 'react';
 import {NavLink} from "react-router-dom";
+import logo from '../img/logo.png';
 
 class NavbarTop extends React.Component {
+  
   render() {
     return (
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
-            <NavLink to="/" title="Electra Booking Engine">
+            <NavLink to="/">
               <img
-                src="img/logo-AMOS.png"
+                src={logo}
                 alt="Amos Tours"
                 width="auto"
                 height="50px"
+                title="Logo Booking Engine"
               />
             </NavLink>
             {/* Logo end */}
