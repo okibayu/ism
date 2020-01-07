@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import SliderTop from '../SliderTop';
-import SearchForm from '../reused/SearchForm';
+import SearchForm from '../SearchForm';
 import PromoCard from '../PromoCard';
 import WhyBook from '../WhyBook';
 import PopularTrain from '../PopularTrain';

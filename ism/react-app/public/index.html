@@ -34,7 +34,7 @@
       <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
       <script src="vendor/daterangepicker/moment.min.js"></script> 
       <script src="vendor/daterangepicker/daterangepicker.js"></script> 
-      <script src="js/main.js"></script>
+      <!-- <script src="js/main.js"></script> -->
       <script>
       $(function() {
       'use strict';
@@ -91,10 +91,32 @@
         // Trains Return Date
         $('#trainsReturn').daterangepicker({
         singleDatePicker: true,
-        minDate: moment(),
+        minDate: moment({}),
         autoUpdateInput: false,
         }, function(chosen_date) {
         $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
+        });
+
+        $('#back-to-top').on("click", function() {
+        $('html, body').animate({scrollTop:0}, 'slow');
+        return false;
+        });
+
+        $('.smooth-scroll a').on("click", function() {
+          var sectionTo = $(this).attr('href');
+          $('html, body').animate({
+            scrollTop: $(sectionTo).offset().top - 50}, 600);
+        });
+
+        // Scroll to top
+        $(function () {
+        $(window).on('scroll', function(){
+          if ($(this).scrollTop() > 150) {
+            $('#back-to-top').fadeIn();
+          } else {
+            $('#back-to-top').fadeOut();
+          }
+          });
         });
       });
       </script>      

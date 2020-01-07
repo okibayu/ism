@@ -3,16 +3,80 @@ import {NavLink} from "react-router-dom";
 
 class SearchForm extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {isToggleOn: true};
-    this.handleClick = this.handleClick.bind(this);
+  componentDidMount() {
+    const $ = window.$;
+    
+    //Flights
+    $('#flightTravellersClass').on('click', function() {
+      $('.travellers-dropdown').slideToggle('fast');
+    
+    $('.qty-spinner, .flight-class').on('change', function() {
+    var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
+    var totalCount = ids.reduce(function (prev, id) {
+      return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+      var fc = $('input[name="flight-class"]:checked  + label').text();
+      $('#flightTravellersClass').val(totalCount + ' - ' + fc);
+      }).trigger('change');
+    });
+    // End Flights
+
+    // Hotels
+    $('#hotelsTravellersClass').on('click', function() {
+      $('.travellers-dropdown').slideToggle('fast');
+    
+    $('.qty-spinner').on('change', function() {
+    var ids = ['adult', 'children'];
+    var totalCount = ids.reduce(function (prev, id) {
+      return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ ' ' +'People'; 
+    var idsRoom = ['hotels-rooms'];
+    var totalCountRoom = idsRoom.reduce(function (prev, id) {
+      return parseInt($('#hotels-rooms').val()) + prev}, 0)+ ' ' +'Room';
+      $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
+      }).trigger('change');
+    });
+    // End Hotels
+
+    // Trains
+    $('#trainTravellersClass').on('click', function() {
+      $('.travellers-dropdown').slideToggle('fast');
+    
+    $('.qty-spinner, #train-class').on('change', function() {
+      var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
+      var totalCount = ids.reduce(function (prev, id) {
+        return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+      var fc = $('#train-class option:selected').text();
+      $('#trainTravellersClass').val(totalCount + ' - ' + fc);
+      }).trigger('change');
+    });
+    // End Trains
+
+    $(document).on('click', function(event) {
+    if (!$(event.target).closest(".travellers-class").length) {
+        $(".travellers-dropdown").hide();
+      }
+      $('.submit-done').on('click', function() {
+          $('.travellers-dropdown').fadeOut(function() {
+              $(this).hide();
+          });
+      });
+    });
+
+    this.$el = $(this.el);
+
+    this.handleClick = this.handleClick;
+    this.$el.on('click', this.handleClick);
+
+    this.handleChange = this.handleChange;
+    this.$el.on('change', this.handleChange);
+
+    this.slideToggle = this.slideToggle;
+    this.$el.slideToggle('fast', this.handleClick);
+
   }
 
-  handleClick() {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn
-    }));
+  componentWillUnmount() {
+    this.$el.off('change', this.handleChange);
+    this.$el.off('click', this.handleClick);
   }
 
   render() {

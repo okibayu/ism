@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import NavbarTop from './components/reused/NavbarTop'
@@ -9,7 +9,13 @@ import ContentHotels from './components/reused/ContentHotels'
 import ContentTrains from './components/reused/ContentTrains'
 import Notfound from './components/Notfound'
 
-class Main extends React.Component {
+class Main extends React.Component { 
+
+  componentDidMount() {
+    const $ = window.$;
+    // Tooltips
+    $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
+  }
   render() {
     return (
     <Router>
