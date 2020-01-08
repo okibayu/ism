@@ -1,8 +1,8 @@
-import React, {Component} from 'react'
+import React from 'react'
 import PageHeader from '../reused/PageHeader'
-import PromoCard from '../PromoCard'
+import PromoCard from '../reused/PromoCard'
 
-class ContentHotels extends Component {
+class ContentHotels extends React.Component {
     render() {
       return ( 
         <div>
@@ -12,6 +12,5 @@ class ContentHotels extends Component {
       )
     }
 }
-    
 
 export default ContentHotels

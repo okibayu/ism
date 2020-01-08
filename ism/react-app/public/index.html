@@ -34,7 +34,7 @@
       <script src="vendor/bootstrap-spinner/bootstrap-spinner.js"></script> 
       <script src="vendor/daterangepicker/moment.min.js"></script> 
       <script src="vendor/daterangepicker/daterangepicker.js"></script> 
-      <!-- <script src="js/main.js"></script> -->
+      
       <script>
       $(function() {
       'use strict';
@@ -45,7 +45,7 @@
         
         // Flight Depart Date
         $('#flightDepart').daterangepicker({
-        singleDatePicker: true,
+        //singleDatePicker: true,
         minDate: moment(),
         autoUpdateInput: false,
         }, function(chosen_date) {
@@ -54,7 +54,7 @@
         
         // Flight Return Date
         $('#flightReturn').daterangepicker({
-        singleDatePicker: true,
+        //singleDatePicker: true,
         minDate: moment(),
         autoUpdateInput: false,
         }, function(chosen_date) {

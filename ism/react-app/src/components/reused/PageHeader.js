@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressBar from './Preload'
 
 class PageHeader extends React.Component {
 
@@ -40,13 +41,10 @@ class PageHeader extends React.Component {
                 </div>
             </div>
         </section>
-        <section className="progress p-0">
-            <div className="progress-bar bg-progress" role="progressbar"  aria-valuemin="0" aria-valuemax="100">
-            </div>
-        </section>
+        <ProgressBar />
         {headerForm}
         </div>
-        );
+        )
     }
 }
 
@@ -58,7 +56,7 @@ const headerForm =
             <div className="col-md-auto">
                 <div className="collapse bg-white shadow-lg rounded-bottom pl-3 pr-3" id="searchForm">
                     <div className="col-md-12 p-3">
-                    <form id="bookingTrain">
+                    <form id="bookingTrain" style={{zIndex: 2}}>
                         <div className="mb-3">
                         <div className="custom-control custom-radio custom-control-inline">
                             <input id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />

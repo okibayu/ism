@@ -1,10 +1,9 @@
 import React from 'react';
 
-className Filter extends React.Component {
+class Filter extends React.Component {
     render() {
         return (
-
-        {/* Filter */} 
+ 
         <div className="mt-3 accordion" id="filterTop">
         <form method="post">
             <div className="btn-filter">
@@ -154,8 +153,7 @@ className Filter extends React.Component {
             </div>
         </div>
         {/* Sort Desktop end */}    
-        </div>          
-        {/* Filter end */}
+        </div> 
 
         )
     }

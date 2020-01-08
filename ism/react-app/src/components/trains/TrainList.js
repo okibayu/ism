@@ -1,11 +1,9 @@
 import React from 'react';
 
-className TrainList extends React.Component {
+class TrainList extends React.Component {
     render() {
         return (
-
-            <div>
-            {/* Train list */}
+          <div>
             <div id="avail" className="card border-light bg-white mb-3">
               <div className="card-body shadow">
                 <div className="row align-items-center">
@@ -187,7 +185,7 @@ className TrainList extends React.Component {
               </div> 
             </div>
           </div>
-        )
+        );
     }
 }
 

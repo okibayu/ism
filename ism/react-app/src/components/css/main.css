@@ -1,4 +1,5 @@
-const converted = {
+const StyleCSS = {
+  
   ":root": {
     "-Bg1": "linear-gradient(-45deg, #e9ecef 0%, #fff 100%, #f8f9fa 10%)",
     "-Bg2":

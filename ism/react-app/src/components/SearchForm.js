@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
+import moment from 'react-moment'
 
 class SearchForm extends React.Component {
 
   componentDidMount() {
     const $ = window.$;
-    
+
     //Flights
     $('#flightTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
