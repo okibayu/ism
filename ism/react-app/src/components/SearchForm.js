@@ -1,12 +1,11 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import moment from 'react-moment'
+import moment from 'moment';
 
 class SearchForm extends React.Component {
 
   componentDidMount() {
     const $ = window.$;
-
     //Flights
     $('#flightTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
@@ -14,9 +13,9 @@ class SearchForm extends React.Component {
     $('.qty-spinner, .flight-class').on('change', function() {
     var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
     var totalCount = ids.reduce(function (prev, id) {
-      return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      var fc = $('input[name="flight-class"]:checked  + label').text();
-      $('#flightTravellersClass').val(totalCount + ' - ' + fc);
+    return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+    var fc = $('input[name="flight-class"]:checked  + label').text();
+    $('#flightTravellersClass').val(totalCount + ' - ' + fc);
       }).trigger('change');
     });
     // End Flights
@@ -28,38 +27,92 @@ class SearchForm extends React.Component {
     $('.qty-spinner').on('change', function() {
     var ids = ['adult', 'children'];
     var totalCount = ids.reduce(function (prev, id) {
-      return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ ' ' +'People'; 
+    return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ ' ' +'People'; 
     var idsRoom = ['hotels-rooms'];
     var totalCountRoom = idsRoom.reduce(function (prev, id) {
-      return parseInt($('#hotels-rooms').val()) + prev}, 0)+ ' ' +'Room';
-      $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
-      }).trigger('change');
+    return parseInt($('#hotels-rooms').val()) + prev}, 0)+ ' ' +'Room';
+    $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
+    }).trigger('change');
     });
     // End Hotels
 
     // Trains
     $('#trainTravellersClass').on('click', function() {
-      $('.travellers-dropdown').slideToggle('fast');
+    $('.travellers-dropdown').slideToggle('fast');
     
     $('.qty-spinner, #train-class').on('change', function() {
-      var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
-      var totalCount = ids.reduce(function (prev, id) {
-        return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      var fc = $('#train-class option:selected').text();
-      $('#trainTravellersClass').val(totalCount + ' - ' + fc);
-      }).trigger('change');
+    var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
+    var totalCount = ids.reduce(function (prev, id) {
+      return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+    var fc = $('#train-class option:selected').text();
+    $('#trainTravellersClass').val(totalCount + ' - ' + fc);
+    }).trigger('change');
     });
     // End Trains
 
     $(document).on('click', function(event) {
     if (!$(event.target).closest(".travellers-class").length) {
-        $(".travellers-dropdown").hide();
-      }
-      $('.submit-done').on('click', function() {
-          $('.travellers-dropdown').fadeOut(function() {
-              $(this).hide();
-          });
+    $(".travellers-dropdown").hide();
+    }
+    $('.submit-done').on('click', function() {
+    $('.travellers-dropdown').fadeOut(function() {
+    $(this).hide();
+        });
       });
+    });
+
+    // Flight Depart Date
+    $('#flightDepart').daterangepicker({
+    singleDatePicker: true,
+    minDate: moment(),
+    autoUpdateInput: false,
+    }, function(chosen_date) {
+    $('#flightDepart').val(chosen_date.format('MM-DD-YYYY'));
+    });
+      
+    // Flight Return Date
+    $('#flightReturn').daterangepicker({
+    singleDatePicker: true,
+    minDate: moment(),
+    autoUpdateInput: false,
+    }, function(chosen_date) {
+    $('#flightReturn').val(chosen_date.format('MM-DD-YYYY'));
+    });
+    
+    // Hotels Check In Date
+    $('#hotelsCheckIn').daterangepicker({
+    singleDatePicker: true,
+    minDate: moment(),
+    autoUpdateInput: false,
+    }, function(chosen_date) {
+    $('#hotelsCheckIn').val(chosen_date.format('MM-DD-YYYY'));
+    });
+      
+    // Hotels Check Out Date
+    $('#hotelsCheckOut').daterangepicker({
+    singleDatePicker: true,
+    minDate: moment(),
+    autoUpdateInput: false,
+    }, function(chosen_date) {
+    $('#hotelsCheckOut').val(chosen_date.format('MM-DD-YYYY'));
+    });
+
+    // Trains Depart Date
+    $('#trainsDepart').daterangepicker({
+    singleDatePicker: true,
+    minDate: moment(),
+    autoUpdateInput: false,
+    }, function(chosen_date) {
+    $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
+    });
+      
+    // Trains Return Date
+    $('#trainsReturn').daterangepicker({
+    singleDatePicker: true,
+    minDate: moment(),
+    autoUpdateInput: false,
+    }, function(chosen_date) {
+    $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
     });
 
     this.$el = $(this.el);
@@ -142,27 +195,39 @@ class SearchForm extends React.Component {
                       </div>
                     </div>
                     <div className="form-row">
-                      <div className="col-md-6 col-lg-3 form-group">
-                        <input type="text" className="form-control" id="flightFrom" required placeholder="From" />
+                      <div className="col-md-6 col-lg-4 form-group">
+                        <input type="text" className="form-control" id="flightFrom" placeholder="From" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
-                      <div className="col-md-6 col-lg-3 form-group">
-                        <input type="text" className="form-control" id="flightTo" required placeholder="To" />
+                      <div className="col-md-6 col-lg-4 form-group">
+                        <input type="text" className="form-control" id="flightTo" placeholder="To" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
-                      <div className="col-md-12 col-lg-6 form-group">
-                        <input id="airlines" type="text" className="form-control" required placeholder="Airlines" />
-                        <span className="icon-inside"><i className="fas fa-plane fa-lg" /></span>
+                      <div className="col-md-12 col-lg-4 form-group">
+                        <input id="airlines" type="text" className="form-control" placeholder="Airlines" />
+                        <span className="icon-inside"><i className="fas fa-plane fa-lg" style={{transform: 'rotate(-45deg)'}} /></span>
                       </div>
-                      <div className="col-md-6 col-lg-3 form-group">
-                        <input id="flightDepart" type="text" className="form-control" required placeholder="Depart Date" />
+                      <div className="col-md-6 col-lg-4 form-group">
+                        <input 
+                        id="flightDepart" 
+                        type="text" 
+                        className="form-control" 
+                        // required 
+                        placeholder="Depart Date" 
+                        />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
-                      <div className="col-md-6 col-lg-3 form-group">
-                        <input id="flightReturn" type="text" className="form-control" required placeholder="Return Date" />
+                      <div className="col-md-6 col-lg-4 form-group">
+                        <input 
+                        id="flightReturn" 
+                        type="text" 
+                        className="form-control" 
+                        // required 
+                        placeholder="Return Date" 
+                        />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
-                      <div className="col-md-6 col-lg-6 travellers-class form-group">
+                      <div className="col-md-6 col-lg-4 travellers-class form-group">
                         <input 
                         id="flightTravellersClass"
                         onClick={this.handleClick}
@@ -171,7 +236,7 @@ class SearchForm extends React.Component {
                         name="flight-travellers-class" 
                         placeholder="Travellers, Class" 
                         readOnly="" 
-                        required="" 
+                        // required="" 
                         />                  
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown" style={{display: 'none'}}>
@@ -263,13 +328,13 @@ class SearchForm extends React.Component {
                   <form id="bookingHotels" method="post">
                     <div className="form-row">
                       <div className="col-md-12 col-lg-6 form-group">
-                        <input type="text" className="form-control" id="hotelsFrom" required placeholder="Enter City/Hotel" />
+                        <input type="text" className="form-control" id="hotelsFrom"  placeholder="Enter City/Hotel" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span> </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="hotelsCheckIn" type="text" className="form-control" required placeholder="Check In" />
+                        <input id="hotelsCheckIn" type="text" className="form-control" placeholder="Check In" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span> </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="hotelsCheckOut" type="text" className="form-control" required placeholder="Check Out" />
+                        <input id="hotelsCheckOut" type="text" className="form-control" placeholder="Check Out" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span> </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
                         <input type="text" 
@@ -278,7 +343,7 @@ class SearchForm extends React.Component {
                         className="travellers-class-input form-control" 
                         name="hotels-travellers-class" 
                         placeholder="Rooms / People" 
-                        required=""
+                        
                         />
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown">
@@ -336,7 +401,7 @@ class SearchForm extends React.Component {
                         </div>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <button className="btn btn-search btn-block" type="submit"><i className="fas fa-search" /> Search</button>
+                        <button className="btn btn-search btn-block" type="submit"><i className="fas fa-search" onClick={('/available')} /> Search</button>
                       </div>
                     </div>
                   </form>
@@ -359,19 +424,19 @@ class SearchForm extends React.Component {
                       </div>
                     </div>
                     <div className="form-row">
-                      <div className="col-md-6 col-lg-6 form-group">
+                      <div className="col-md-6 col-lg-3 form-group">
                         <input type="text" className="form-control" id="trainFrom" required placeholder="From" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
-                      <div className="col-md-6 col-lg-6 form-group">
+                      <div className="col-md-6 col-lg-3 form-group">
                         <input type="text" className="form-control" id="trainTo" required placeholder="To" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
-                      <div className="col-md-6 col-lg-6 form-group">
+                      <div className="col-md-6 col-lg-3 form-group">
                         <input id="trainsDepart" type="text" className="form-control" required placeholder="Depart Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
-                      <div className="col-md-6 col-lg-6 form-group">
+                      <div className="col-md-6 col-lg-3 form-group">
                         <input id="trainsReturn" type="text" className="form-control" required placeholder="Return Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
