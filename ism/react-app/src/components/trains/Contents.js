@@ -1,6 +1,6 @@
 import React from 'react';
-import Filter from './Filter';
-import AvailTrain from './AvailTrain';
+import Filter from '../trains/Filter';
+import AvailTrain from '../trains/AvailTrains';
 
 class Contents extends React.Component {
     render() {

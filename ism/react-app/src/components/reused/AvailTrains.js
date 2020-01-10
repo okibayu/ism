@@ -1,8 +1,8 @@
 import React from 'react';
-import PageHeader from '../trains/PageHeader';
-import Contents from '../trains/Contents';
+import PageHeader from '../reused/PageHeader';
+import Contents from '../trains/Contents'
 
-class IndexResults extends React.Component {
+class AvailTrains extends React.Component {
     render() {
       return ( 
         <div>
@@ -14,4 +14,4 @@ class IndexResults extends React.Component {
 }
     
 
-export default IndexResults
+export default AvailTrains

@@ -1,6 +1,7 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import moment from 'moment';
+import { Redirect } from 'react-router-dom';
 
 class SearchForm extends React.Component {
 
@@ -125,7 +126,7 @@ class SearchForm extends React.Component {
 
     this.slideToggle = this.slideToggle;
     this.$el.slideToggle('fast', this.handleClick);
-
+    
   }
 
   componentWillUnmount() {
@@ -133,7 +134,22 @@ class SearchForm extends React.Component {
     this.$el.off('click', this.handleClick);
   }
 
+  constructor () {
+    super();
+    this.state = {
+      fireRedirect: false
+    }
+  }
+  
+  submitForm = (e) => {
+    e.preventDefault()
+    this.setState({ fireRedirect: true })
+  }
+
   render() {
+
+    const { fireRedirect } = this.state;
+
     return (
       <section className="train-section">
         <div id="search-form" className="container pb-1">
@@ -183,7 +199,12 @@ class SearchForm extends React.Component {
               <div className="tab-pane fade" id="flight" role="tabpanel" aria-labelledby="flight-tab">
                 <div className="bg-light">
                   <h2 className="text-4 mb-3">Book Domestic and International Flights</h2>
-                  <form id="bookingFlight" method="post">
+                  <form 
+                  id="bookingFlight" 
+                  method="post" 
+                  onSubmit={this.submitForm}
+                  >
+                  {fireRedirect && (<Redirect to={'/available'}/>)}
                     <div className="mb-3">
                       <div className="custom-control custom-radio custom-control-inline">
                         <input id="oneway" name="flight-trip" className="custom-control-input" defaultChecked required type="radio" />
@@ -325,7 +346,12 @@ class SearchForm extends React.Component {
               <div className="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                 <div className="bg-light">
                   <h2 className="text-4 mb-3">Book Domestic and International Hotels</h2>
-                  <form id="bookingHotels" method="post">
+                  <form 
+                  id="bookingHotels" 
+                  method="post" 
+                  onSubmit={this.submitForm}
+                  >
+                    {fireRedirect && (<Redirect to={'/available'}/>)}
                     <div className="form-row">
                       <div className="col-md-12 col-lg-6 form-group">
                         <input type="text" className="form-control" id="hotelsFrom"  placeholder="Enter City/Hotel" />
@@ -401,7 +427,7 @@ class SearchForm extends React.Component {
                         </div>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <button className="btn btn-search btn-block" type="submit"><i className="fas fa-search" onClick={('/available')} /> Search</button>
+                        <button className="btn btn-search btn-block" type="submit"><i className="fas fa-search"/> Search</button>
                       </div>
                     </div>
                   </form>
@@ -412,7 +438,12 @@ class SearchForm extends React.Component {
               <div className="tab-pane fade show active" id="train" role="tabpanel" aria-labelledby="train-tab">
                 <div className="bg-light">
                   <h2 className="text-4 mb-3">Book Train Tickets</h2>
-                  <form id="bookingTrain" method="post">
+                  <form 
+                  id="bookingTrain" 
+                  method="post" 
+                  onSubmit={this.submitForm}
+                  >
+                    {fireRedirect && (<Redirect to={'/available'}/>)}
                     <div className="mb-3">
                       <div className="custom-control custom-radio custom-control-inline">
                         <input id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />
@@ -425,19 +456,19 @@ class SearchForm extends React.Component {
                     </div>
                     <div className="form-row">
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input type="text" className="form-control" id="trainFrom" required placeholder="From" />
+                        <input type="text" className="form-control" id="trainFrom" placeholder="From" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input type="text" className="form-control" id="trainTo" required placeholder="To" />
+                        <input type="text" className="form-control" id="trainTo" placeholder="To" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="trainsDepart" type="text" className="form-control" required placeholder="Depart Date" />
+                        <input id="trainsDepart" type="text" className="form-control" placeholder="Depart Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="trainsReturn" type="text" className="form-control" required placeholder="Return Date" />
+                        <input id="trainsReturn" type="text" className="form-control" placeholder="Return Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
@@ -449,7 +480,7 @@ class SearchForm extends React.Component {
                           name="train-travellers-class" 
                           placeholder="Travellers, Class" 
                           readOnly=""
-                          required=""
+                          
                         />
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown">

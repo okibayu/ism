@@ -1,17 +1,17 @@
 import React from 'react';
 import PageHeader from '../reused/PageHeader';
-import Contents from '../trains/Contents';
+import Contents from '../trains/Contents'
 
-class ContentFlights extends React.Component {
+class AvailHotels extends React.Component {
     render() {
-      return ( 
-        <div>
+        return (
+
+            <div>
             <PageHeader /> 
             <Contents />
         </div>
-      )
+        )
     }
 }
-    
 
-export default ContentFlights
+export default AvailHotels

@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from 'logo.svg';
 
 class NavbarTop extends React.Component {
   render() {
@@ -9,10 +10,10 @@ class NavbarTop extends React.Component {
             {/* Logo */}
             <a href="/" title="Electra Booking Engine">
               <img
-                src="img/logo-AMOS.png"
-                alt="Amos Tours"
+                src={logo}
+                alt="Logo Title"
                 width="auto"
-                height="50px"
+                height={50}
               />
             </a>
             {/* Logo end */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import logo from '../img/logo.png';
+import logo from 'logo.svg';
 
 class NavbarTop extends React.Component {
   
@@ -13,9 +13,9 @@ class NavbarTop extends React.Component {
             <NavLink to="/">
               <img
                 src={logo}
-                alt="Amos Tours"
+                alt="Logo"
                 width="auto"
-                height="50px"
+                height={50}
                 title="Logo Booking Engine"
               />
             </NavLink>
