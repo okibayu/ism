@@ -1,26 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 import NavbarTop from './components/reused/NavbarTop';
 import Footer from './components/reused/Footer';
 import ContentHome from './components/reused/ContentHome';
 import ContentFlights from './components/reused/ContentFlights';
 import ContentHotels from './components/reused/ContentHotels';
 import ContentTrains from './components/reused/ContentTrains';
-import AvailFlights from './components/trains/AvailFlights';
-import AvailHotels from './components/trains/AvailHotels';
-import AvailTrains from './components/trains/AvailTrains';
-import Notfound from './components/reused/Notfound';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/scss/main.scss';
+import Background from './components/img/bg404.jpg';
+
+function Child () {
+  let { id } = useParams();
+  let bg404 = {
+    width: "100%",
+    height: "50vh",
+    backgroundImage: `url(${Background})`,
+    position: "center"
+  };
+
+  return (
+    <div className="section p-0 m-0" style={bg404} background-position="center" background-size="contain">
+      <div className="row justify-contents-center">
+        <div className="col text-center p-5">
+          <h3>404 - WHOOPS!</h3>
+          <div>
+          Looks like something's broken here.<br></br>
+          The page you were looking for could not be found.<br></br>
+          URL: <span className="text-danger">{id}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 class Main extends React.Component { 
-
-  componentDidMount() {
-  const $ = window.$;
-   //eslint-disable-line
-    $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
-  }
 
   render() {
     return (
@@ -33,13 +49,10 @@ class Main extends React.Component {
         <div id="content">
           <Switch>
             <Route exact path="/" component={ContentHome} />
-            <Route path="/flights/#" component={ContentFlights} />
-            <Route path="/hotels/#" component={ContentHotels} />
-            <Route path="/trains/" component={ContentTrains} />
-            <Route path="/trains/available" component={AvailTrains} />
-            <Route path="/flights/available" component={AvailFlights} />
-            <Route path="/hotels/available" component={AvailHotels} />
-            <Route component={Notfound} />
+            <Route path="/flights" component={ContentFlights} />
+            <Route path="/hotels" component={ContentHotels} />
+            <Route path="/trains" component={ContentTrains} />
+            <Route path="/:id" children={<Child />} />
           </Switch>
         </div>
         <Footer />
@@ -49,5 +62,4 @@ class Main extends React.Component {
     );
   }
 }
-
 ReactDOM.render(<Main />, document.getElementById('content'));

@@ -6,6 +6,7 @@ class NavbarTop extends React.Component {
   
   render() {
     return (
+
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
@@ -21,15 +22,8 @@ class NavbarTop extends React.Component {
             </NavLink>
             {/* Logo end */}
           </div>
-          <button
-            className="navbar-toggler border-0"
-            type="button"
-            data-toggle="collapse"
-            data-target="#menu"
-          >
-            <span />
-            <span />
-            <span />
+          <button className="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu">
+            <span></span><span></span><span></span>
           </button>
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
@@ -51,7 +45,7 @@ class NavbarTop extends React.Component {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink to="booked" className="nav-link">
+                <NavLink to="booking-check" className="nav-link">
                   Booking Check
                 </NavLink>
               </li>

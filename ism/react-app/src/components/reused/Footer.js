@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-dom';
 
 class Footer extends React.Component {
     render() {
@@ -10,11 +11,11 @@ class Footer extends React.Component {
              <div className="col-md-4 mb-3 mb-md-0">
                <p><strong>Payment Partner</strong></p>
                <ul className="payments-types">
-                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa" /></a></li>
-                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover" /></a></li>
-                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal" /></a></li>
-                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express" /></a></li>
-                 <li><a target="_blank"> <img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover" /></a></li>
+                 <li><img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa" /></li>
+                 <li><img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover" /></li>
+                 <li><img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal" /></li>
+                 <li><img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express" /></li>
+                 <li><img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover" /></li>
                </ul>
              </div>
              <div className="col-md-4 mb-3 mb-md-0">
