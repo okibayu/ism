@@ -2,7 +2,8 @@ import React from 'react';
 import Filter from '../trains/Filter';
 import AvailTrain from '../trains/AvailTrains';
 
-class Contents extends React.Component {
+class AvailContents extends React.Component {
+    
     render() {
         return (
 
@@ -16,4 +17,4 @@ class Contents extends React.Component {
     }
 }
 
-export default Contents
+export default AvailContents

@@ -1,8 +1,8 @@
 import React from 'react';
 import Filter from '../trains/Filter';
-import AvailTrain from '../trains/AvailTrains';
+import TrainList from '../trains/TrainList';
 
-class IndexResults extends React.Component {
+class TrainAvails extends React.Component {
   
   render() {
     return (
@@ -10,12 +10,11 @@ class IndexResults extends React.Component {
     <section id="content">    
     <div className="container">
         <Filter />
-        <AvailTrain />
+        <TrainList />
     </div>
     </section>
     )
 }
-}
     
 
-export default IndexResults
+export default TrainAvails

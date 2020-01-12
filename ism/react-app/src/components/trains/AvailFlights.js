@@ -1,6 +1,7 @@
 import React from 'react';
 import PageHeader from '../reused/PageHeader';
-import Contents from '../trains/Contents'
+import Filter from '../trains/Filter';
+import AvailTrain from '../trains/AvailTrains';
 
 class AvailFlights extends React.Component {
     render() {
@@ -8,7 +9,8 @@ class AvailFlights extends React.Component {
 
         <div>
             <PageHeader /> 
-            <Contents />
+            <Filter />
+            <AvailTrain />
         </div>
         )
     }

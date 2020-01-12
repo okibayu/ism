@@ -6,11 +6,10 @@ import { Redirect } from 'react-router-dom';
 class SearchForm extends React.Component {
 
   componentDidMount() {
-    const $ = window.$;
+    const $ = window  .$;
     //Flights
     $('#flightTravellersClass').on('click', function() {
-      $('.travellers-dropdown').slideToggle('fast');
-    
+      $('.travellers-dropdown').slideToggle('fast');    
     $('.qty-spinner, .flight-class').on('change', function() {
     var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
     var totalCount = ids.reduce(function (prev, id) {
@@ -204,7 +203,7 @@ class SearchForm extends React.Component {
                   method="post" 
                   onSubmit={this.submitForm}
                   >
-                  {fireRedirect && (<Redirect to={'/available'}/>)}
+                  {fireRedirect && (<Redirect to={'/flights/available'}/>)}
                     <div className="mb-3">
                       <div className="custom-control custom-radio custom-control-inline">
                         <input id="oneway" name="flight-trip" className="custom-control-input" defaultChecked required type="radio" />
@@ -351,7 +350,7 @@ class SearchForm extends React.Component {
                   method="post" 
                   onSubmit={this.submitForm}
                   >
-                    {fireRedirect && (<Redirect to={'/available'}/>)}
+                    {fireRedirect && (<Redirect to={'/flights/available'}/>)}
                     <div className="form-row">
                       <div className="col-md-12 col-lg-6 form-group">
                         <input type="text" className="form-control" id="hotelsFrom"  placeholder="Enter City/Hotel" />
@@ -443,7 +442,7 @@ class SearchForm extends React.Component {
                   method="post" 
                   onSubmit={this.submitForm}
                   >
-                    {fireRedirect && (<Redirect to={'/available'}/>)}
+                    {fireRedirect && (<Redirect to={'/trains/available'}/>)}
                     <div className="mb-3">
                       <div className="custom-control custom-radio custom-control-inline">
                         <input id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />

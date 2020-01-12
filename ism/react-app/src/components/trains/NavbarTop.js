@@ -1,21 +1,23 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import logo from 'logo.svg';
 
 class NavbarTop extends React.Component {
+
   render() {
     return (
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
-            <a href="/" title="Electra Booking Engine">
+            <Link to="/" title="Electra Booking Engine">
               <img
                 src={logo}
                 alt="Logo Title"
                 width="auto"
                 height={50}
               />
-            </a>
+            </Link>
             {/* Logo end */}
           </div>
           <button
@@ -31,35 +33,35 @@ class NavbarTop extends React.Component {
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/flights">
+                <Link className="nav-link" to="/flights">
                   Flight
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/hotels">
+                <Link className="nav-link" to="/hotels">
                   Hotel
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/trains">
+                <Link className="nav-link" to="/trains">
                   Train
-                </a>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/booked">
+                <Link className="nav-link" to="/booked">
                   Booking Check
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/chart">
+                <Link className="nav-link" to="/chart">
                   <i className="fas fa-shopping-basket" /> Chart (0)
-                </a>
+                </Link>
               </li>
               <li className="dropdown nav-item">
-                <a
-                  href=""
+                <Link
+                  to=""
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -68,7 +70,7 @@ class NavbarTop extends React.Component {
                   id="language"
                 >
                   <i className="fas fa-globe" /> EN
-                </a>
+                </Link>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -89,7 +91,7 @@ class NavbarTop extends React.Component {
                 </div>
               </li>
               <li className="dropdown nav-item">
-                <a
+                <Link
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -98,7 +100,7 @@ class NavbarTop extends React.Component {
                   id="login"
                 >
                   <i className="fas fa-user"></i> Login/ Register
-                </a>
+                </Link>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -147,12 +149,17 @@ class NavbarTop extends React.Component {
                       </button>
                     </form>
                     <div className="dropdown-divider" />
-                    <a className="dropdown-item">
+                    <Link 
+                    to={{hash: "#", pathname: "", search: "", state: null}}
+                    className="dropdown-item"
+                    >
                       New around here? Sign up
-                    </a>
-                    <a className="dropdown-item">
+                    </Link>
+                    <Link 
+                    to={{hash: "#", pathname: "", search: "", state: null}}
+                    className="dropdown-item">
                       Forgot password?
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </li>

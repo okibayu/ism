@@ -27,12 +27,12 @@ class PromoCard extends React.Component{
                 navText={['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']}
             >
                 <div className="item">
-                    <a>
+                    <a href={'#'}>
                     <img className="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 4" />
                     </a>
                 </div>
                 <div className="item">
-                    <a>
+                    <a href={'#'}>
                     <img className="img-fluid rounded" src="img/sliders/banner7.jpg" alt="banner 5" />
                     </a>
                 </div>

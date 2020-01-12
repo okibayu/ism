@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHeader from '../reused/PageHeader';
-import Contents from '../trains/Contents'
+import Contents from '../trains/Contents';
 
 class AvailHotels extends React.Component {
     render() {
@@ -8,7 +8,7 @@ class AvailHotels extends React.Component {
 
             <div>
             <PageHeader /> 
-            <Contents />
+            {/* <Contents /> */}
         </div>
         )
     }

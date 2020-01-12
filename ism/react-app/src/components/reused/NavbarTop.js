@@ -1,12 +1,11 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import logo from 'logo.svg';
+import logo from '../img/logo.svg';
 
 class NavbarTop extends React.Component {
   
   render() {
     return (
-
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
@@ -143,12 +142,16 @@ class NavbarTop extends React.Component {
                       </button>
                     </form>
                     <div className="dropdown-divider" />
-                    <a className="dropdown-item">
+                    <NavLink 
+                    to={{hash: "#", pathname: "#", search: "", state: null}}
+                    className="dropdown-item">
                       New around here? Sign up
-                    </a>
-                    <a className="dropdown-item">
+                    </NavLink>
+                    <NavLink 
+                    to={{hash: "#", pathname: "#", search: "", state: null}}
+                    className="dropdown-item">
                       Forgot password?
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </li>
