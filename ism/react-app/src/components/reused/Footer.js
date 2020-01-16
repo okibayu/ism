@@ -34,10 +34,10 @@ class Footer extends React.Component {
              <div className="col-md-4 d-flex align-items-md-end flex-column">
                <p><strong>Keep in touch</strong></p>
                <ul className="social-icons">
-                 <li className="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook" rel="noreferrer"><i className="fab fa-facebook-f" /></a></li>
-                 <li className="social-icons-linkedin"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Linkedin" rel="noreferrer"><i className="fab fa-linkedin-in" /></a></li>
-                 <li className="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube" rel="noreferrer"><i className="fab fa-youtube" /></a></li>
-                 <li className="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram" rel="noreferrer"><i className="fab fa-instagram" /></a></li>
+                 <li className="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook" rel="noopener noreferrer"><i className="fab fa-facebook-f" /></a></li>
+                 <li className="social-icons-linkedin"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Linkedin" rel="noopener noreferrer"><i className="fab fa-linkedin-in" /></a></li>
+                 <li className="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube" rel="noopener noreferrer"><i className="fab fa-youtube" /></a></li>
+                 <li className="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram" rel="noopener noreferrer"><i className="fab fa-instagram" /></a></li>
                </ul>
              </div>
            </div>

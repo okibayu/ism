@@ -1,19 +1,18 @@
-import React from 'react';
-import PageHeader from '../reused/PageHeader';
-import Filter from '../trains/Filter';
-import AvailTrain from '../trains/AvailTrains';
+import React, {Component} from 'react';
+import SliderTop from '../SliderTop';
+import SearchForm from '../SearchForm';
+import PopularTrain from '../PopularTrain';
 
-class AvailFlights extends React.Component {
+class ContentFlights extends Component {
     render() {
-        return (
-
+      return ( 
         <div>
-            <PageHeader /> 
-            <Filter />
-            <AvailTrain />
+            <SliderTop />
+            <SearchForm />
+            <PopularTrain />
         </div>
-        )
+      )
     }
 }
 
-export default AvailFlights
+export default ContentFlights

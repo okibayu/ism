@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Switch, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 import { Suspense } from 'react';
 import loadable from '@loadable/component';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,7 +19,7 @@ const Footer = loadable(() => import('./components/reused/Footer'));
 class Main extends React.Component {
   render() {
     return (
-    <Router>
+    <BrowserRouter>
       <div id="main-wrapper">
         <header id="header">
           <NavbarTop fallback={<Loading />}/>
@@ -31,13 +31,13 @@ class Main extends React.Component {
             <Route path="/flights" component={ContentFlights} />
             <Route path="/hotels" component={ContentHotels} />
             <Route path="/trains" component={ContentTrains} />
-            <Route path="/:id" children={<Child/>} />
+            <Route path="/:id" children={<Child />} />
           </Switch>
         </div>
         </Suspense>
         <Footer />
       </div>
-    </Router>
+    </BrowserRouter>
     );
   }
 }
@@ -51,17 +51,12 @@ function Child () {
     position: "cover"
   };
 
-  let icon = {
-    src:`url(${icon404})`
-  };
-
-
-  return (
+return (
     <div className="section" style={bg404} background-size="contain">
       <div className="container">
         <div className="row align-items-center p-3">
         <div className="col text-center">
-          <img src={icon404}></img>
+          <img src={icon404}></img> >
           <h3>WHOOPS!</h3>
             Looks like something's broken here.<br></br>
             The page you were looking for could not be found.<br></br>

@@ -15,9 +15,8 @@ class PromoCard extends React.Component{
                 autoplayTimeout={5000}
                 lazyLoad={true}
                 margin={10}
-                nav={true}
+                
                 dots={true}
-                autoplay={true} 
                 responsive={{
                     0:{items:1,},
                     576:{items:2,},
@@ -27,33 +26,33 @@ class PromoCard extends React.Component{
                 navText={['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']}
             >
                 <div className="item">
-                    <a>
+                    <a href="#">
                     <img className="img-fluid rounded" src="img/sliders/banner6.jpg" alt="banner 4" />
                     </a>
                 </div>
                 <div className="item">
-                    <a>
+                    <a href="#">
                     <img className="img-fluid rounded" src="img/sliders/banner7.jpg" alt="banner 5" />
                     </a>
                 </div>
                 <div className="item">
-                    <a>
+                    <a href="#">
                     <img className="img-fluid rounded" src="img/sliders/banner8.jpg" alt="banner 6" />
                     </a>
                 </div>
                 <div className="item">
-                    <a>
+                    <a href="#">
                     <img className="img-fluid rounded" src="img/sliders/banner9.jpg" alt="banner 7" />
                     </a>
                 </div>
                 <div className="item">
-                    <a>
+                    <a href="#">
                     <img className="img-fluid rounded" src="img/sliders/banner10.jpg" alt="banner 8" />
                     </a>
                 </div>
             </OwlCarousel>
         </div>
-        </div>
+    </div>
     )
   }
 }
