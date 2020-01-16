@@ -16,31 +16,6 @@ const ContentHotels = loadable(() => import('./components/reused/ContentHotels')
 const ContentTrains = loadable(() => import('./components/reused/ContentTrains'));
 const Footer = loadable(() => import('./components/reused/Footer'));
 
-class Main extends React.Component {
-  render() {
-    return (
-    <BrowserRouter>
-      <div id="main-wrapper">
-        <header id="header">
-          <NavbarTop fallback={<Loading />}/>
-        </header>
-        <Suspense fallback={<Loading />}>
-        <div id="content">
-          <Switch>
-            <Route exact path="/" component={ContentHome} />
-            <Route path="/flights" component={ContentFlights} />
-            <Route path="/hotels" component={ContentHotels} />
-            <Route path="/trains" component={ContentTrains} />
-            <Route path="/:id" children={<Child />} />
-          </Switch>
-        </div>
-        </Suspense>
-        <Footer />
-      </div>
-    </BrowserRouter>
-    );
-  }
-}
 
 function Child () {
   let {id} = useParams();
@@ -67,6 +42,32 @@ return (
       </div>
     </div>
   );
+}
+
+class Main extends React.Component {
+  render() {
+    return (
+    <BrowserRouter>
+      <div id="main-wrapper">
+        <header id="header">
+          <NavbarTop fallback={<Loading />}/>
+        </header>
+        <div id="content">
+        <Suspense fallback={<Loading />}>
+          <Switch>
+            <Route exact path="/" component={ContentHome} />
+            <Route path="/flights" component={ContentFlights} />
+            <Route path="/hotels" component={ContentHotels} />
+            <Route path="/trains" component={ContentTrains} />
+            <Route path="/:id" children={<Child />} />
+          </Switch>
+        </Suspense>
+        </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
+    );
+  }
 }
 
 ReactDOM.render(<Main />, document.getElementById('content'));

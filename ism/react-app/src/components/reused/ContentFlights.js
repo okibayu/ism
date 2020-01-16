@@ -1,15 +1,14 @@
-import React from 'react';
-import PageHeader from '../reused/PageHeader';
-import Filter from '../trains/Filter';
-import AvailTrain from '../trains/AvailTrains';
+import React from 'react'
+import PageHeader from '../reused/PageHeader'
+import PromoCard from '../reused/PromoCard'
+import PopularTrain from '../PopularTrain'
 
 class ContentFlights extends React.Component {
     render() {
       return ( 
         <div>
-            <PageHeader /> 
-            <Filter />
-            <AvailTrain />
+            <PageHeader />
+            <PopularTrain />
         </div>
       )
     }

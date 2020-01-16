@@ -1,11 +1,12 @@
 import React from 'react';
-import {NavLink} from "react-router-dom";
+import {Route, NavLink} from "react-router-dom";
 import logo from '../img/logo.svg';
 
 class NavbarTop extends React.Component {
   
   render() {
     return (
+      <Route>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
@@ -44,7 +45,7 @@ class NavbarTop extends React.Component {
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink to="booking-check" className="nav-link">
+                <NavLink to="/booking-check" className="nav-link">
                   Booking Check
                 </NavLink>
               </li>
@@ -143,12 +144,12 @@ class NavbarTop extends React.Component {
                     </form>
                     <div className="dropdown-divider" />
                     <NavLink 
-                    to={{hash: "#", pathname: "#", search: "", state: null}}
+                    to={{hash: "#", pathname: "", search: "", state: null}}
                     className="dropdown-item">
                       New around here? Sign up
                     </NavLink>
                     <NavLink 
-                    to={{hash: "#", pathname: "#", search: "", state: null}}
+                    to={{hash: "#", pathname: "", search: "", state: null}}
                     className="dropdown-item">
                       Forgot password?
                     </NavLink>
@@ -159,7 +160,8 @@ class NavbarTop extends React.Component {
           </div>
         </nav>
       </div>
-      )
+      </Route>
+    )
   }
 }
 
