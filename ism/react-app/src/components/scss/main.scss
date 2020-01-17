@@ -1,4 +1,3 @@
-
 @import '~bootstrap/scss/bootstrap.scss';
 
 @import "variables";
@@ -368,6 +367,24 @@ section.page-header.bg-page-header {
 	max-width: 100%;
 	height: 160px !important;
 }
+
+.scroll-to-top {
+	position: fixed;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	animation: fadeIn 700ms ease-in-out 1s both;
+	cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+	from {
+	  opacity: 0;
+	}
+	to {
+	  opacity: 1;
+	}
+}
+
 #back-to-top {
 	bottom: 50px !important;
 	right: 23px !important;

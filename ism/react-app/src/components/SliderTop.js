@@ -9,12 +9,12 @@ class SliderTop extends React.Component {
     <div id="slider" className="hero-wrap">
       <OwlCarousel
           className="owl-theme slideshow single-slider"
-          autoplay={true}
+          autoplay
           autoplayTimeout={4500}
           animateOut= {'fadeOut'}
           animateIn= {'fadeIn'}
-          lazyLoad={true}
-          loop={true}
+          lazyLoad
+          loop
           nav
           responsive={{
             0:{items:1,},

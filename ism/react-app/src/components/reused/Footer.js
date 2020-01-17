@@ -1,12 +1,10 @@
 import React from 'react';
+import { Tooltip } from 'react-bootstrap';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import ScrollToTopBtn from "./ScrollToTop";
 
 class Footer extends React.Component {
-  componentDidMount() {
-    
-    const $ = window.$;
-    $('[data-toggle=\'tooltip\']').tooltip({container: 'body'});
   
-  }
     render() {
       return (
        <footer id="footer">
@@ -15,11 +13,36 @@ class Footer extends React.Component {
              <div className="col-md-4 mb-3 mb-md-0">
                <p><strong>Payment Partner</strong></p>
                <ul className="payments-types">
-                 <li><img data-toggle="tooltip" src="img/payments/visa.png" alt="visa" title="Visa" /></li>
-                 <li><img data-toggle="tooltip" src="img/payments/discover.png" alt="discover" title="Discover" /></li>
-                 <li><img data-toggle="tooltip" src="img/payments/paypal.png" alt="paypal" title="PayPal" /></li>
-                 <li><img data-toggle="tooltip" src="img/payments/american.png" alt="american express" title="American Express" /></li>
-                 <li><img data-toggle="tooltip" src="img/payments/mastercard.png" alt="discover" title="Discover" /></li>
+                <li>
+                  <OverlayTrigger
+                    overlay={<Tooltip id={`tooltip-top`}>Visa</Tooltip>}>
+                    <img src="img/payments/visa.png" alt="visa" title="Visa" />
+                  </OverlayTrigger>
+                </li>
+                <li>
+                  <OverlayTrigger
+                    overlay={<Tooltip id={`tooltip-top`}>Discover</Tooltip>}>
+                    <img src="img/payments/discover.png" alt="discover" title="Discover" />
+                  </OverlayTrigger>
+                </li>
+                <li>
+                  <OverlayTrigger
+                    overlay={<Tooltip id={`tooltip-top`}>PayPal</Tooltip>}>
+                    <img src="img/payments/paypal.png" alt="paypal" title="PayPal" />
+                  </OverlayTrigger>
+                </li>
+                <li>
+                  <OverlayTrigger
+                    overlay={<Tooltip id={`tooltip-top`}>American Express</Tooltip>}>
+                    <img src="img/payments/american.png" alt="american express" title="American Express" />
+                  </OverlayTrigger>
+                </li>
+                <li>
+                  <OverlayTrigger
+                    overlay={<Tooltip id={`tooltip-top`}>Mastercard</Tooltip>}>
+                    <img src="img/payments/mastercard.png" alt="discover" title="Mastercard" />
+                  </OverlayTrigger>
+                </li>
                </ul>
              </div>
              <div className="col-md-4 mb-3 mb-md-0">
@@ -34,10 +57,38 @@ class Footer extends React.Component {
              <div className="col-md-4 d-flex align-items-md-end flex-column">
                <p><strong>Keep in touch</strong></p>
                <ul className="social-icons">
-                 <li className="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/" target="_blank" title="Facebook" rel="noopener noreferrer"><i className="fab fa-facebook-f" /></a></li>
-                 <li className="social-icons-linkedin"><a data-toggle="tooltip" href="http://www.linkedin.com/" target="_blank" title="Linkedin" rel="noopener noreferrer"><i className="fab fa-linkedin-in" /></a></li>
-                 <li className="social-icons-youtube"><a data-toggle="tooltip" href="http://www.youtube.com/" target="_blank" title="Youtube" rel="noopener noreferrer"><i className="fab fa-youtube" /></a></li>
-                 <li className="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/" target="_blank" title="Instagram" rel="noopener noreferrer"><i className="fab fa-instagram" /></a></li>
+                  <li className="social-icons-facebook">
+                   <a href="http://www.facebook.com/" target="_blank" title="Facebook" rel="noopener noreferrer">
+                    <OverlayTrigger
+                      overlay={<Tooltip id={`tooltip-top`}>Facebook</Tooltip>}>
+                      <i className="fab fa-facebook-f" />
+                    </OverlayTrigger>
+                   </a>
+                  </li>
+                  <li className="social-icons-linkedin">
+                   <a href="http://www.linkedin.com/" target="_blank" title="Linkedin" rel="noopener noreferrer">
+                    <OverlayTrigger
+                      overlay={<Tooltip id={`tooltip-top`}>Linkedin</Tooltip>}>
+                      <i className="fab fa-linkedin-in" />
+                    </OverlayTrigger>
+                   </a>
+                  </li>
+                  <li className="social-icons-youtube">
+                   <a href="http://www.youtube.com/" target="_blank" title="Youtube" rel="noopener noreferrer">
+                    <OverlayTrigger
+                      overlay={<Tooltip id={`tooltip-top`}>Youtube</Tooltip>}>
+                      <i className="fab fa-youtube" />
+                    </OverlayTrigger>
+                   </a>
+                  </li>
+                  <li className="social-icons-instagram">
+                   <a href="http://www.instagram.com/" target="_blank" title="Instagram" rel="noopener noreferrer">
+                    <OverlayTrigger
+                      overlay={<Tooltip id={`tooltip-top`}>Instagram</Tooltip>}>
+                      <i className="fab fa-instagram" />
+                    </OverlayTrigger>
+                   </a>
+                  </li>
                </ul>
              </div>
            </div>
@@ -55,7 +106,8 @@ class Footer extends React.Component {
              <p className="copyright-text"> Copyright © 2019. All Rights Reserved. </p>
            </div>
          </div>
-       </footer>      
+         <ScrollToTopBtn />
+       </footer>
      );
    }
  }

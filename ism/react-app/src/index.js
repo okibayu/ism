@@ -43,7 +43,7 @@ return (
     </div>
   );
 }
-
+  
 class Main extends React.Component {
   render() {
     return (
@@ -59,6 +59,7 @@ class Main extends React.Component {
             <Route path="/flights" component={ContentFlights} />
             <Route path="/hotels" component={ContentHotels} />
             <Route path="/trains" component={ContentTrains} />
+            <Route path="/trains/available" component={ContentTrains} />
             <Route path="/:id" children={<Child />} />
           </Switch>
         </Suspense>
