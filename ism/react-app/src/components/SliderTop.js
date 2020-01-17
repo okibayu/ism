@@ -9,20 +9,19 @@ class SliderTop extends React.Component {
     <div id="slider" className="hero-wrap">
       <OwlCarousel
           className="owl-theme slideshow single-slider"
-          items={1}
-	        autoplay={true}
+          autoplay={true}
           autoplayTimeout={4500}
           animateOut= {'fadeOut'}
           animateIn= {'fadeIn'}
           lazyLoad={true}
           loop={true}
-          nav={true}
+          nav
           responsive={{
             0:{items:1,},
             576:{items:1,},
             768:{items:1,},
             992:{items:1,}
-        }}
+            }}
           navText={['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']}
           >
         <div className="item owl-caption" style={{backgroundImage: 'url(img/sliders/train.jpg)', backgroundPosition: 'center center', backgroundSize: 'cover', width: '100%', height: '500px'}}>

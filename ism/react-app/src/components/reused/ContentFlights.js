@@ -1,6 +1,5 @@
 import React from 'react'
 import PageHeader from '../reused/PageHeader'
-import PromoCard from '../reused/PromoCard'
 import PopularTrain from '../PopularTrain'
 
 class ContentFlights extends React.Component {
