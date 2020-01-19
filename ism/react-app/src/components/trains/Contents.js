@@ -1,18 +1,15 @@
 import React from 'react';
 import Filter from '../trains/Filter';
-import AvailTrain from '../trains/AvailTrains';
+import TrainList from '../trains/TrainList';
 
 class AvailContents extends React.Component {
     
     render() {
         return (
-
-        <section id="content">    
-        <div className="container">
+            <div>
             <Filter />
-            <AvailTrain />
-        </div>
-        </section>
+            <TrainList />
+            </div>
         )
     }
 }

@@ -1,14 +1,22 @@
-import React from 'react'
-import PageHeader from '../reused/PageHeader'
-import PopularTrain from '../PopularTrain'
+import React from 'react';
+import loadable from '@loadable/component';
+import { Suspense } from 'react';
+import PageHeader from '../reused/PageHeader';
+import Loading from '../reused/Loading';
+
+const Contents = loadable(() => import('../trains/Contents'));
 
 class ContentFlights extends React.Component {
     render() {
       return ( 
-        <div>
+        <section id="content">    
             <PageHeader />
-            <PopularTrain />
-        </div>
+            <div className="container">
+              <Suspense fallback={<Loading />}>
+                <Contents />
+              </Suspense>
+            </div>
+        </section>
       )
     }
 }
