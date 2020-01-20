@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
 import { Suspense } from 'react';
@@ -14,8 +14,25 @@ const ContentHome = loadable(() => import('./components/reused/ContentHome'));
 const ContentFlights = loadable(() => import('./components/reused/ContentFlights'));
 const ContentHotels = loadable(() => import('./components/reused/ContentHotels'));
 const ContentTrains = loadable(() => import('./components/reused/ContentTrains'));
+// const TrainResults = loadable(() => import('./components/trains/TrainResults'));
 const Footer = loadable(() => import('./components/reused/Footer'));
 
+class DynamicImport extends Component {
+  state = {
+    component: null
+  }
+  UNSAFE_componentDidMount () {
+    this.props.load()
+      .then((component) => {
+        this.setState(() => ({
+          component: component.default ? component.default : component
+        }))
+      })
+  }
+  render() {
+    return this.props.children(this.state.component)
+  }
+}
 
 function Child () {
   let {id} = useParams();
@@ -43,7 +60,15 @@ return (
     </div>
   );
 }
-  
+
+const TrainResults = (props) => (
+  <DynamicImport load={() => import('./components/trains/TrainResults')}>
+    {(Component) => Component === null
+      ? <Loading />
+      : <Component {...props} />}
+  </DynamicImport>
+)
+
 class Main extends React.Component {
   render() {
     return (
@@ -59,7 +84,7 @@ class Main extends React.Component {
             <Route path="/flights" component={ContentFlights} />
             <Route path="/hotels" component={ContentHotels} />
             <Route path="/trains" component={ContentTrains} />
-            <Route path="/trains/available" component={ContentTrains} />
+            <Route path="/trains/results" component={TrainResults} />
             <Route path="/:id" children={<Child />} />
           </Switch>
         </Suspense>
