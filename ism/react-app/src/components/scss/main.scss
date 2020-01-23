@@ -404,7 +404,7 @@ section.page-header.bg-page-header {
 				font-weight: 400;
 			}
 			a {
-				color: orange;
+				color: #0071cc;
 				font-weight: 400;
 				font-size: 14px;
 				padding: 5px 10px;
@@ -412,19 +412,21 @@ section.page-header.bg-page-header {
 				text-align: left;
 				width: 120px;
 				&::after {
-					content: "\f107";
+					content: " \f107";
 					font-family: "Font Awesome 5 Free";
 					font-size: 18px;
-					font-weight: 900;
+					font-weight: 600;
 					line-height: 19px;
 					float: right;
-					color: orange;
-					-webkit-transition: all 0.5s ease;
-					transition: all 0.5s ease;
+					color: lightgrey;
+					-webkit-transition: all 0.2s ease-in-out;
+					transition: all 0.2s ease-in-out;
 				}
 			}
 			a[aria-expanded="true"] {
-				&:after {
+				&::after {
+					content: "\f107";
+					color: #ffc100;
 					-webkit-transform: rotate(-180deg);
 					-moz-transform: rotate(-180deg);
 					transform: rotate(-180deg);

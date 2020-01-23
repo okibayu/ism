@@ -1,10 +1,9 @@
 import React from 'react';
 
-className SearchFormTrain extends React.Component {
+class SearchFormTrain extends React.Component {
     render() {
         return (
 
-        {/* Search form */}
         <div className="container">
             <div className="row justify-content-md-center">
                 <div className="col-md-auto">
@@ -113,7 +112,6 @@ className SearchFormTrain extends React.Component {
                 </div>
             </div>
         </div>
-        {/* Search form end */}
         )
     }
 }

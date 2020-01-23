@@ -2,8 +2,8 @@ import React from 'react';
 import IonRangeSlider from 'react-ion-slider';
 
 class Filter extends React.Component {
-    render() {
-    return ( 
+    render() {    
+        return ( 
     <div className="mt-3 accordion" id="filterTop">
         <form method="post">
             <div className="btn-filter">
@@ -11,17 +11,16 @@ class Filter extends React.Component {
                     <span>Filter :</span>
                 </div>
                 <div className="filter-header">
-                    <a className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
-                    <div className="status" />
+                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
                 </div>
                 <div className="filter-header">
-                    <a className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
+                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
                 </div>
                 <div className="filter-header">
-                    <a className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
+                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
                 </div>
                 <div className="filter-header">
-                    <a className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
+                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
                 </div>
                 <div className="filter-header">
                     <input className="filter-reset btn btn-link" type="reset" defaultValue="Reset" />
