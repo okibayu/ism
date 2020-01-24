@@ -12,6 +12,7 @@ class Filter extends React.Component {
                 </div>
                 <div className="filter-header">
                     <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
+                    <div className="status" />
                 </div>
                 <div className="filter-header">
                     <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>

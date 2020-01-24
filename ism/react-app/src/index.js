@@ -14,7 +14,6 @@ const ContentHome = loadable(() => import('./components/reused/ContentHome'));
 const ContentFlights = loadable(() => import('./components/reused/ContentFlights'));
 const ContentHotels = loadable(() => import('./components/reused/ContentHotels'));
 const ContentTrains = loadable(() => import('./components/reused/ContentTrains'));
-// const TrainResults = loadable(() => import('./components/trains/TrainResults'));
 const Footer = loadable(() => import('./components/reused/Footer'));
 
 class DynamicImport extends Component {
@@ -36,30 +35,29 @@ class DynamicImport extends Component {
 
 function Child () {
   let {id} = useParams();
-  let bg404 = {
-    width: "100%",
-    height: "100%",
-    backgroundImage: `url(${Background})`,
-    position: "cover"
-  };
+  const bg404 = {
+        width: "100%",
+        backgroundImage: `url(${Background})`,
+        position: "cover"
+      };
 
-return (
-    <div className="section" style={bg404} background-size="contain">
-      <div className="container">
-        <div className="row align-items-center p-3">
-        <div className="col text-center">
-          <img src={icon404}></img> >
-          <h3>WHOOPS!</h3>
-            Looks like something's broken here.<br></br>
-            The page you were looking for could not be found.<br></br>
-            <i className="fas fa-link"></i> <span className="text-danger"> {id}<br></br>
-            </span>
-        </div>
-      </div>
-      </div>
-    </div>
-  );
-}
+      return (
+          <div className="section" style={bg404} background-size="contain">
+            <div className="container">
+              <div className="row align-items-center p-3">
+              <div className="col text-center">
+                <img src={icon404}></img> >
+                <h3>WHOOPS!</h3>
+                  Looks like something's broken here.<br></br>
+                  The page you were looking for could not be found.<br></br>
+                  <i className="fas fa-link"></i> <span className="text-danger"> {id}<br></br>
+                  </span>
+              </div>
+            </div>
+            </div>
+          </div>
+        );
+  }
 
 const TrainResults = (props) => (
   <DynamicImport load={() => import('./components/trains/TrainResults')}>

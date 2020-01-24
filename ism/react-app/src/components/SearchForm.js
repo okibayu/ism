@@ -124,7 +124,7 @@ class SearchForm extends React.Component {
     this.$el.on('change', this.handleChange);
 
     this.slideToggle = this.slideToggle;
-    this.$el.slideToggle('fast', this.handleClick);
+    this.$el.slideToggle('fast', this.state);
     
   }
 
@@ -442,7 +442,7 @@ class SearchForm extends React.Component {
                   method="post" 
                   onSubmit={this.submitForm}
                   >
-                    {fireRedirect && (<Redirect to={'/trains/available'}/>)}
+                    {fireRedirect && (<Redirect to={'/trains/results'}/>)}
                     <div className="mb-3">
                       <div className="custom-control custom-radio custom-control-inline">
                         <input id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />
