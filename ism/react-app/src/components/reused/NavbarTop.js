@@ -1,5 +1,5 @@
-import React from 'react';
-import {Route, NavLink} from "react-router-dom";
+import React from "react";
+import { Route, Link } from "react-router-dom";
 import logo from '../img/logo.svg';
 
 class NavbarTop extends React.Component {
@@ -11,7 +11,7 @@ class NavbarTop extends React.Component {
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
             {/* Logo */}
-            <NavLink to="/">
+            <Link to="/">
               <img
                 src={logo}
                 alt="Logo"
@@ -19,7 +19,7 @@ class NavbarTop extends React.Component {
                 height={50}
                 title="Logo Booking Engine"
               />
-            </NavLink>
+            </Link>
             {/* Logo end */}
           </div>
           <button className="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu">
@@ -28,34 +28,39 @@ class NavbarTop extends React.Component {
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <NavLink to="/flights" className="nav-link">
+                <Link to="/flights" className="nav-link">
                   Flight
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavLink to="/hotels" className="nav-link">
+                <Link to="/trains/results" className="nav-link">
+                  Test Link
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/hotels" className="nav-link">
                     Hotel
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavLink to="/trains" className="nav-link">
+                <Link to="/trains" className="nav-link">
                     Train
-                </NavLink>
+                </Link>
               </li>
             </ul>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <NavLink to="/booking-check" className="nav-link">
+                <Link to="/booking-check" className="nav-link">
                   Booking Check
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item">
-                <NavLink to="/chart" className="nav-link">
+                <Link to="/chart" className="nav-link">
                   <i className="fas fa-shopping-basket" /> Chart (0)
-                </NavLink>
+                </Link>
               </li>
               <li className="dropdown nav-item">
-                <NavLink to={{hash: "", pathname: "#", search: "", state: null}}
+                <Link to={{hash: "", pathname: "#", search: "", state: null}}
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -64,7 +69,7 @@ class NavbarTop extends React.Component {
                   id="language"
                 >
                   <i className="fas fa-globe" /> EN
-                </NavLink>
+                </Link>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -85,7 +90,7 @@ class NavbarTop extends React.Component {
                 </div>
               </li>
               <li className="dropdown nav-item">
-                <NavLink to={{hash: "", pathname: "#", search: "", state: null}}
+                <Link to={{hash: "", pathname: "#", search: "", state: null}}
                   aria-haspopup="true"
                   type="text"
                   className="nav-link"
@@ -94,7 +99,7 @@ class NavbarTop extends React.Component {
                   id="login"
                 >
                   <i className="fas fa-user"></i> Login/ Register
-                </NavLink>
+                </Link>
                 <div
                   tabIndex={-1}
                   role="menu"
@@ -143,16 +148,16 @@ class NavbarTop extends React.Component {
                       </button>
                     </form>
                     <div className="dropdown-divider" />
-                    <NavLink 
+                    <Link 
                     to={{hash: "#", pathname: "", search: "", state: null}}
                     className="dropdown-item">
                       New around here? Sign up
-                    </NavLink>
-                    <NavLink 
+                    </Link>
+                    <Link 
                     to={{hash: "#", pathname: "", search: "", state: null}}
                     className="dropdown-item">
                       Forgot password?
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
               </li>
@@ -160,7 +165,7 @@ class NavbarTop extends React.Component {
           </div>
         </nav>
       </div>
-      </Route>
+    </Route>
     )
   }
 }

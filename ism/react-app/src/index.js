@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, useParams } from 'react-router-dom';
-import { Suspense } from 'react';
 import loadable from '@loadable/component';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './components/scss/main.scss';
@@ -76,18 +75,18 @@ class Main extends React.Component {
           <NavbarTop fallback={<Loading />}/>
         </header>
         <div id="content">
-        <Suspense fallback={<Loading />}>
-          <Switch>
+        
+          <Switch fallback={<Loading />}>
             <Route exact path="/" component={ContentHome} />
             <Route path="/flights" component={ContentFlights} />
             <Route path="/hotels" component={ContentHotels} />
             <Route path="/trains" component={ContentTrains} />
-            <Route path="/trains/results" component={TrainResults} />
+            <Route path="/trains/:id" component={TrainResults} />
             <Route path="/:id" children={<Child />} />
           </Switch>
-        </Suspense>
+        
         </div>
-        <Footer />
+        <Footer fallback={<Loading />}/>
       </div>
     </BrowserRouter>
     );
