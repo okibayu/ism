@@ -81,10 +81,10 @@ class Main extends React.Component {
             <Route path="/flights" component={ContentFlights} />
             <Route path="/hotels" component={ContentHotels} />
             <Route path="/trains" component={ContentTrains} />
-            <Route path="/trains/:id" component={TrainResults} />
+            {/* <Route path="/trains/results" component={this.TrainResults} /> */}
             <Route path="/:id" children={<Child />} />
           </Switch>
-        
+          
         </div>
         <Footer fallback={<Loading />}/>
       </div>

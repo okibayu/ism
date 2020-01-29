@@ -399,11 +399,11 @@ section.page-header.bg-page-header {
 			font-size: 14px;
 			font-weight: 400;
 			float: left;
-			a.collapsed {
+			>Button {
 				color: #000;
 				font-weight: 400;
 			}
-			a {
+			>Button {
 				color: #0071cc;
 				font-weight: 400;
 				font-size: 14px;
@@ -423,7 +423,7 @@ section.page-header.bg-page-header {
 					transition: all 0.2s ease-in-out;
 				}
 			}
-			a[aria-expanded="true"] {
+			>Button[aria-expanded="true"] {
 				&::after {
 					content: "\f107";
 					color: #ffc100;
@@ -432,22 +432,22 @@ section.page-header.bg-page-header {
 					transform: rotate(-180deg);
 				}
 			}
-			.status {
-				position: relative;
-				background-color: #fd6372;
-				width: 10px;
-				height: 10px;
-				border-radius: 25px;
-				border: solid 1px white;
-				box-shadow: 0 2px 5px #ccc;
-				display: none;
-				opacity: 0.3;
-				left: -3px;
-				top: -35px;
-				-webkit-transition: all 0.5s ease;
-				transition: all 0.5s ease;
-			}
-			a.input:checked {
+			// .status {
+			// 	position: relative;
+			// 	background-color: #fd6372;
+			// 	width: 10px;
+			// 	height: 10px;
+			// 	border-radius: 25px;
+			// 	border: solid 1px white;
+			// 	box-shadow: 0 2px 5px #ccc;
+			// 	display: none;
+			// 	opacity: 0.3;
+			// 	left: -3px;
+			// 	top: -35px;
+			// 	-webkit-transition: all 0.5s ease;
+			// 	transition: all 0.5s ease;
+			// }
+			>Button.input:checked {
 				~ {
 					.status {
 						&::after {
@@ -470,7 +470,7 @@ section.page-header.bg-page-header {
 				height: 100%;
 			}
 		}
-		>button {
+		>Button {
 			>i {
 				color: orange;
 				padding-left: 5px;

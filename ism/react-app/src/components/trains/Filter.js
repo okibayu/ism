@@ -1,27 +1,56 @@
 import React from 'react';
 import IonRangeSlider from 'react-ion-slider';
+import Accordion from 'react-bootstrap/Accordion'
+import Button from 'react-bootstrap/Button'
 
 class Filter extends React.Component {
     render() {    
         return ( 
-    <div className="mt-3 accordion" id="filterTop">
+    <Accordion 
+    defaultActiveKey=""
+    className="mt-3 accordion" 
+    id="filterTop">
         <form method="post">
             <div className="btn-filter">
                 <div className="filter-header">
                     <span>Filter :</span>
                 </div>
                 <div className="filter-header">
-                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kelas" role="button" aria-expanded="false" aria-controls="#kelas">Kelas</a>
+                    <Accordion.Toggle as={Button} variant="light" eventKey="0"
+                    className="btn btn-sm shadow-sm collapsed" 
+                    data-toggle="collapse" 
+                    data-target="#kelas"
+                    >
+                        Kelas
+                    </Accordion.Toggle>
                     <div className="status" />
                 </div>
                 <div className="filter-header">
-                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#kereta" role="button" aria-expanded="false" aria-controls="#kereta">Kereta Api</a>
+                    <Accordion.Toggle as={Button} variant="light" eventKey="1"
+                    className="btn btn-sm shadow-sm collapsed" 
+                    data-toggle="collapse" 
+                    data-target="#kereta" 
+                    >
+                        Kereta Api
+                    </Accordion.Toggle>
                 </div>
                 <div className="filter-header">
-                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#jam-berangkat" role="button" aria-expanded="false" aria-controls="#jam-berangkat">Waktu</a>
+                    <Accordion.Toggle as={Button} variant="light" eventKey="2"
+                    className="btn btn-sm shadow-sm collapsed" 
+                    data-toggle="collapse" 
+                    data-target="#jam-berangkat" 
+                    >
+                        Waktu
+                    </Accordion.Toggle>
                 </div>
                 <div className="filter-header">
-                    <a href="#" className="btn btn-sm shadow-sm collapsed" data-toggle="collapse" data-target="#harga-tiket" role="button" aria-expanded="false" aria-controls="#harga-tiket">Harga</a>
+                <Accordion.Toggle as={Button} variant="light" eventKey="3"
+                className="btn btn-sm shadow-sm collapsed" 
+                data-toggle="collapse" 
+                data-target="#harga-tiket" 
+                >
+                    Harga
+                </Accordion.Toggle>
                 </div>
                 <div className="filter-header">
                     <input className="filter-reset btn btn-link" type="reset" defaultValue="Reset" />
@@ -29,7 +58,7 @@ class Filter extends React.Component {
             </div>
             <div className="clearfix" />
                 <div className="card bg-gradient-blue rounded mt-0 mb-0 pb-0">
-                    <div className="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+                    <Accordion.Collapse eventKey="0" className="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
                         <div className="form-group custom-control custom-checkbox">
                         <ul>
                             <li>
@@ -46,8 +75,8 @@ class Filter extends React.Component {
                             </li>
                         </ul>
                         </div>
-                    </div>
-                    <div className="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
+                    </Accordion.Collapse>
+                    <Accordion.Collapse eventKey="1" className="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
                         <div className="form-group custom-control custom-checkbox">
                         <ul>
                             <li>
@@ -84,8 +113,8 @@ class Filter extends React.Component {
                             </li>
                         </ul>
                         </div>
-                    </div>
-                    <div className="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
+                    </Accordion.Collapse>
+                    <Accordion.Collapse eventKey="2"  className="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
                         <div className="form-group custom-control custom-checkbox">
                         <ul>
                             <li>
@@ -106,8 +135,8 @@ class Filter extends React.Component {
                             </li>
                         </ul>
                         </div>
-                    </div>
-                    <div className="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                    </Accordion.Collapse>
+                    <Accordion.Collapse eventKey="3" className="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
                         <div className="form-group custom-control">
                             <div className="card-body pt-0 pb-1 pl-0 pr-4 w-60">
                             <IonRangeSlider
@@ -128,7 +157,7 @@ class Filter extends React.Component {
                             />
                             </div>  
                         </div>
-                    </div>
+                    </Accordion.Collapse>
                 </div>
         </form>
         {/* Sort Desktop */}
@@ -157,7 +186,7 @@ class Filter extends React.Component {
             </div>
         </div>
         {/* Sort Desktop end */}    
-    </div> 
+    </Accordion> 
         )
     }
 }

@@ -11,9 +11,9 @@ class AvailContents extends React.Component {
     render() {
         return (
             <div>
-            <Filter fallback={<Loading />}/> 
+            <Filter /> 
             <TrainList fallback={<Loading />}/>
-            <PageNumber fallback={<Loading />}/>
+            <PageNumber />
             </div>
         )
     }
