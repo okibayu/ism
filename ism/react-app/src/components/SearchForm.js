@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 class SearchForm extends React.Component {
 
   componentDidMount() {
-    const $ = window  .$;
+    const $ = window .$;
     //Flights
     $('#flightTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');    
@@ -27,10 +27,10 @@ class SearchForm extends React.Component {
     $('.qty-spinner').on('change', function() {
     var ids = ['adult', 'children'];
     var totalCount = ids.reduce(function (prev, id) {
-    return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ ' ' +'People'; 
+    return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ ' People'; 
     var idsRoom = ['hotels-rooms'];
     var totalCountRoom = idsRoom.reduce(function (prev, id) {
-    return parseInt($('#hotels-rooms').val()) + prev}, 0)+ ' ' +'Room';
+    return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
     $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
     }).trigger('change');
     });
@@ -117,13 +117,13 @@ class SearchForm extends React.Component {
 
     this.$el = $(this.el);
 
-    this.handleClick = this.handleClick;
+    //this.handleClick = this.handleClick;
     this.$el.on('click', this.handleClick);
 
-    this.handleChange = this.handleChange;
+    //this.handleChange = this.handleChange;
     this.$el.on('change', this.handleChange);
 
-    this.slideToggle = this.slideToggle;
+    //this.slideToggle = this.slideToggle;
     this.$el.slideToggle('fast', this.state);
     
   }
