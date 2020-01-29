@@ -32,11 +32,11 @@ class NavbarTop extends React.Component {
                   Flight
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link to="/trains/results" className="nav-link">
                   Test Link
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item">
                 <Link to="/hotels" className="nav-link">
                     Hotel

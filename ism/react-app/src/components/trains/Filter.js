@@ -6,9 +6,7 @@ import Button from 'react-bootstrap/Button'
 class Filter extends React.Component {
     render() {    
         return ( 
-    <Accordion 
-    defaultActiveKey=""
-    className="mt-3 accordion" 
+    <Accordion className="mt-3" 
     id="filterTop">
         <form method="post">
             <div className="btn-filter">
@@ -17,7 +15,7 @@ class Filter extends React.Component {
                 </div>
                 <div className="filter-header">
                     <Accordion.Toggle as={Button} variant="light" eventKey="0"
-                    className="btn btn-sm shadow-sm collapsed" 
+                    className="btn btn-sm shadow-sm" 
                     data-toggle="collapse" 
                     data-target="#kelas"
                     >
@@ -27,7 +25,7 @@ class Filter extends React.Component {
                 </div>
                 <div className="filter-header">
                     <Accordion.Toggle as={Button} variant="light" eventKey="1"
-                    className="btn btn-sm shadow-sm collapsed" 
+                    className="btn btn-sm shadow-sm" 
                     data-toggle="collapse" 
                     data-target="#kereta" 
                     >
@@ -36,7 +34,7 @@ class Filter extends React.Component {
                 </div>
                 <div className="filter-header">
                     <Accordion.Toggle as={Button} variant="light" eventKey="2"
-                    className="btn btn-sm shadow-sm collapsed" 
+                    className="btn btn-sm shadow-sm" 
                     data-toggle="collapse" 
                     data-target="#jam-berangkat" 
                     >
@@ -44,13 +42,13 @@ class Filter extends React.Component {
                     </Accordion.Toggle>
                 </div>
                 <div className="filter-header">
-                <Accordion.Toggle as={Button} variant="light" eventKey="3"
-                className="btn btn-sm shadow-sm collapsed" 
-                data-toggle="collapse" 
-                data-target="#harga-tiket" 
-                >
-                    Harga
-                </Accordion.Toggle>
+                    <Accordion.Toggle as={Button} variant="light" eventKey="3"
+                    className="btn btn-sm shadow-sm" 
+                    data-toggle="collapse" 
+                    data-target="#harga-tiket" 
+                    >
+                        Harga
+                    </Accordion.Toggle>
                 </div>
                 <div className="filter-header">
                     <input className="filter-reset btn btn-link" type="reset" defaultValue="Reset" />
@@ -58,7 +56,12 @@ class Filter extends React.Component {
             </div>
             <div className="clearfix" />
                 <div className="card bg-gradient-blue rounded mt-0 mb-0 pb-0">
-                    <Accordion.Collapse eventKey="0" className="collapse" id="kelas" aria-labelledby="kelas" data-parent="#filterTop">
+                    <Accordion.Collapse 
+                    eventKey="0" 
+                    id="kelas" 
+                    aria-labelledby="kelas" 
+                    data-parent="#filterTop"
+                    >
                         <div className="form-group custom-control custom-checkbox">
                         <ul>
                             <li>
@@ -76,7 +79,12 @@ class Filter extends React.Component {
                         </ul>
                         </div>
                     </Accordion.Collapse>
-                    <Accordion.Collapse eventKey="1" className="collapse" id="kereta" aria-labelledby="kereta" data-parent="#filterTop">
+                    <Accordion.Collapse 
+                    eventKey="1" 
+                    id="kereta" 
+                    aria-labelledby="kereta" 
+                    data-parent="#filterTop"
+                    >
                         <div className="form-group custom-control custom-checkbox">
                         <ul>
                             <li>
@@ -114,7 +122,12 @@ class Filter extends React.Component {
                         </ul>
                         </div>
                     </Accordion.Collapse>
-                    <Accordion.Collapse eventKey="2"  className="collapse" id="jam-berangkat" aria-labelledby="jam-berangkat" data-parent="#filterTop">
+                    <Accordion.Collapse 
+                    eventKey="2"
+                    id="jam-berangkat" 
+                    aria-labelledby="jam-berangkat" 
+                    data-parent="#filterTop"
+                    >
                         <div className="form-group custom-control custom-checkbox">
                         <ul>
                             <li>
@@ -136,7 +149,12 @@ class Filter extends React.Component {
                         </ul>
                         </div>
                     </Accordion.Collapse>
-                    <Accordion.Collapse eventKey="3" className="collapse" id="harga-tiket" aria-labelledby="harga-tiket" data-parent="#filterTop">
+                    <Accordion.Collapse 
+                    eventKey="3" 
+                    id="harga-tiket" 
+                    aria-labelledby="harga-tiket" 
+                    data-parent="#filterTop"
+                    >
                         <div className="form-group custom-control">
                             <div className="card-body pt-0 pb-1 pl-0 pr-4 w-60">
                             <IonRangeSlider
@@ -147,7 +165,6 @@ class Filter extends React.Component {
                             to={400000} 
                             step={10000} 
                             skin="round"
-                            type="double"
                             grid={false}
                             grid_snap={true}
                             prefix="Rp "

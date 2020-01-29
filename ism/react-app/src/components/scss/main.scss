@@ -399,11 +399,11 @@ section.page-header.bg-page-header {
 			font-size: 14px;
 			font-weight: 400;
 			float: left;
-			>Button {
+			Button {
 				color: #000;
 				font-weight: 400;
 			}
-			>Button {
+			Button {
 				color: #0071cc;
 				font-weight: 400;
 				font-size: 14px;
@@ -423,7 +423,7 @@ section.page-header.bg-page-header {
 					transition: all 0.2s ease-in-out;
 				}
 			}
-			>Button[aria-expanded="true"] {
+			Button[aria-expanded="true"] {
 				&::after {
 					content: "\f107";
 					color: #ffc100;
@@ -447,7 +447,7 @@ section.page-header.bg-page-header {
 			// 	-webkit-transition: all 0.5s ease;
 			// 	transition: all 0.5s ease;
 			// }
-			>Button.input:checked {
+			Button.input:checked {
 				~ {
 					.status {
 						&::after {

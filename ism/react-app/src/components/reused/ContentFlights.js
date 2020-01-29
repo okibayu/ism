@@ -41,8 +41,10 @@ class ContentFlights extends React.Component {
       singleDatePicker: true,
       minDate: moment(),
       autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
+      opens: 'right',
+      linkedCalendars: true
+      }, function(start) {
+      $('#trainsDepart').val(start.format('MM-DD-YYYY'));
       });
         
       // Trains Return Date
@@ -50,8 +52,10 @@ class ContentFlights extends React.Component {
       singleDatePicker: true,
       minDate: moment(),
       autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
+      opens: 'left',
+      linkedCalendars: true
+      }, function(end) {
+      $('#trainsReturn').val(end.format('MM-DD-YYYY'));
       });
   
       this.$el = $(this.el);
@@ -75,7 +79,7 @@ class ContentFlights extends React.Component {
     render() {
       return ( 
         <section id="content">    
-            <PageHeader />
+            <PageHeader fallback={<Loading />}/>
             <div className="container">
               <Suspense fallback={<Loading />}>
                 <Contents />
