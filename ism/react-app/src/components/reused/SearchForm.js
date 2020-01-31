@@ -1,6 +1,6 @@
 import React from 'react';
-import {NavLink, Route} from "react-router-dom";
-import { route } from 'next/dist/next-server/server/router';
+import { NavLink } from 'react-router-dom';
+import { Button, Form } from 'react-bootstrap';
 
 class SearchForm extends React.Component {
 
@@ -130,48 +130,54 @@ class SearchForm extends React.Component {
               <div className="tab-pane fade" id="flight" role="tabpanel" aria-labelledby="flight-tab">
                 <div className="bg-light">
                   <h2 className="text-4 mb-3">Book Domestic and International Flights</h2>
-                  <form id="bookingFlight" method="post">
+                  <Form id="bookingFlight" method="post">
                     <div className="mb-3">
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input id="oneway" name="flight-trip" className="custom-control-input" defaultChecked required type="radio" />
-                        <label className="custom-control-label" htmlFor="oneway">One Way</label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <input id="roundtrip" name="flight-trip" className="custom-control-input" required type="radio" />
-                        <label className="custom-control-label" htmlFor="roundtrip">Round Trip</label>
-                      </div>
+                      <Form.Group id="bookflight">
+                        <Form.Check id="oneway" name="selecttype"
+                          custom
+                          inline
+                          label={'One Way'}
+                          type={'radio'}
+                        />
+                        <Form.Check id="roundtrip" name="selecttype"
+                          custom
+                          inline
+                          label={'Round Trip'}
+                          type={'radio'}
+                        />
+                      </Form.Group>
                     </div>
-                    <div className="form-row">
+                    <Form.Row className="form-row">
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input type="text" className="form-control" id="flightFrom" required placeholder="From" />
+                        <Form.Control type="text" className="form-control" id="flightFrom" required placeholder="From" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input type="text" className="form-control" id="flightTo" required placeholder="To" />
+                        <Form.Control type="text" className="form-control" id="flightTo" required placeholder="To" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
                       <div className="col-md-12 col-lg-6 form-group">
-                        <input id="airlines" type="text" className="form-control" required placeholder="Airlines" />
+                        <Form.Control id="airlines" type="text" className="form-control" required placeholder="Airlines" />
                         <span className="icon-inside"><i className="fas fa-plane fa-lg" /></span>
                       </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="flightDepart" type="text" className="form-control" required placeholder="Depart Date" />
+                        <Form.Control id="flightDepart" type="text" className="form-control" required placeholder="Depart Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="flightReturn" type="text" className="form-control" required placeholder="Return Date" />
+                        <Form.Control id="flightReturn" type="text" className="form-control" required placeholder="Return Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
-                        <input 
-                        id="flightTravellersClass"
-                        onClick={this.handleClick}
-                        type="text" 
-                        className="travellers-class-input form-control" 
-                        name="flight-travellers-class" 
-                        placeholder="Travellers, Class" 
-                        readOnly="" 
-                        required="" 
+                        <Form.Control 
+                          id="flightTravellersClass"
+                          onClick={this.handleClick}
+                          type="text" 
+                          className="travellers-class-input form-control" 
+                          name="flight-travellers-class" 
+                          placeholder="Travellers, Class" 
+                          readOnly="" 
+                          required="" 
                         />                  
                         <span className="icon-inside"><i className="fas fa-caret-down" /></span>
                         <div className="travellers-dropdown" style={{display: 'none'}}>
@@ -182,11 +188,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-6">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="flightAdult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="flightAdult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -199,11 +205,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-6">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="flightChildren-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="flightChildren-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -216,11 +222,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-6">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="flightInfants-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="flightInfants-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -228,31 +234,36 @@ class SearchForm extends React.Component {
                           <hr className="mt-2" />
                           <div className="mb-3">
                             <div className="custom-control custom-radio">
-                              <input id="flightClassEconomic" name="flight-class" className="flight-class custom-control-input" defaultValue={0} defaultChecked required type="radio" />
-                              <label className="custom-control-label" htmlFor="flightClassEconomic">Economic</label>
+                              <Form.Control id="flightClassEconomic" name="flight-class" className="flight-class custom-control-input" defaultValue={0} defaultChecked required type="radio" />
+                              <Form.Label className="custom-control-label" htmlFor="flightClassEconomic">Economic</Form.Label>
                             </div>
                             <div className="custom-control custom-radio">
-                              <input id="flightClassPremiumEconomic" name="flight-class" className="flight-class custom-control-input" defaultValue={1} required type="radio" />
-                              <label className="custom-control-label" htmlFor="flightClassPremiumEconomic">Premium</label>
+                              <Form.Control id="flightClassPremiumEconomic" name="flight-class" className="flight-class custom-control-input" defaultValue={1} required type="radio" />
+                              <Form.Label className="custom-control-label" htmlFor="flightClassPremiumEconomic">Premium</Form.Label>
                             </div>
                             <div className="custom-control custom-radio">
-                              <input id="flightClassBusiness" name="flight-class" className="flight-class custom-control-input" defaultValue={2} required type="radio" />
-                              <label className="custom-control-label" htmlFor="flightClassBusiness">Business</label>
+                              <Form.Control id="flightClassBusiness" name="flight-class" className="flight-class custom-control-input" defaultValue={2} required type="radio" />
+                              <Form.Label className="custom-control-label" htmlFor="flightClassBusiness">Business</Form.Label>
                             </div>
                             <div className="custom-control custom-radio">
-                              <input id="flightClassFirstClass" name="flight-class" className="flight-class custom-control-input" defaultValue={3} required type="radio" />
-                              <label className="custom-control-label" htmlFor="flightClassFirstClass">First Class</label>
+                              <Form.Control id="flightClassFirstClass" name="flight-class" className="flight-class custom-control-input" defaultValue={3} required type="radio" />
+                              <Form.Label className="custom-control-label" htmlFor="flightClassFirstClass">First Class</Form.Label>
                             </div>
                           </div>
-                          <button className="btn btn-primary btn-block submit-done" type="button">Done</button>
+                          <Button className="btn btn-primary btn-block submit-done" type="button">Done</Button>
                         </div>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group ml-auto">
-                        <button className="btn btn-search btn-block" type="submit"><i className="fas fa-search" /> Search
-                        </button>
+                        <Button 
+                        className="btn btn-search btn-block" 
+                        type="submit"
+                        >
+                        <i className="fas fa-search" /> 
+                          Search
+                        </Button>
                       </div>
-                    </div>
-                  </form>            
+                    </Form.Row>
+                  </Form>            
                 </div>
               </div>
               {/* Search Flight end */}         
@@ -260,19 +271,19 @@ class SearchForm extends React.Component {
               <div className="tab-pane fade" id="hotel" role="tabpanel" aria-labelledby="hotel-tab">
                 <div className="bg-light">
                   <h2 className="text-4 mb-3">Book Domestic and International Hotels</h2>
-                  <form id="bookingHotels" method="post">
+                  <Form id="bookingHotels" method="post">
                     <div className="form-row">
                       <div className="col-md-12 col-lg-6 form-group">
-                        <input type="text" className="form-control" id="hotelsFrom" required placeholder="Enter City/Hotel" />
+                        <Form.Control type="text" className="form-control" id="hotelsFrom" required placeholder="Enter City/Hotel" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span> </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="hotelsCheckIn" type="text" className="form-control" required placeholder="Check In" />
+                        <Form.Control id="hotelsCheckIn" type="text" className="form-control" required placeholder="Check In" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span> </div>
                       <div className="col-md-6 col-lg-3 form-group">
-                        <input id="hotelsCheckOut" type="text" className="form-control" required placeholder="Check Out" />
+                        <Form.Control id="hotelsCheckOut" type="text" className="form-control" required placeholder="Check Out" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span> </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
-                        <input type="text" 
+                        <Form.Control type="text" 
                         id="hotelsTravellersClass" 
                         onClick={this.handleClick}
                         className="travellers-class-input form-control" 
@@ -289,11 +300,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-5">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#hotels-rooms" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#hotels-rooms" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="hotels-rooms" className="qty-spinner form-control" defaultValue={1} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="hotels-rooms" className="qty-spinner form-control" defaultValue={1} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#hotels-rooms" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#hotels-rooms" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -306,11 +317,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-5">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#adult-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#adult-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="adult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="adult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#adult-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#adult-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -323,23 +334,29 @@ class SearchForm extends React.Component {
                             <div className="col-sm-5">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#children-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#children-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="children-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="children-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#children-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#children-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <button className="btn btn-primary btn-block submit-done mt-3" type="button">Done</button>
+                          <Button className="btn btn-primary btn-block submit-done mt-3" type="button">Done</Button>
                         </div>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <button className="btn btn-search btn-block" type="submit"><i className="fas fa-search" /> Search</button>
+                        <Button 
+                        className="btn btn-search btn-block" 
+                        type="submit"
+                        >
+                          <i className="fas fa-search" /> 
+                          Search
+                        </Button>
                       </div>
                     </div>
-                  </form>
+                  </Form>
                 </div>
               </div>
               {/* Search Hotel end */}
@@ -347,36 +364,36 @@ class SearchForm extends React.Component {
               <div className="tab-pane fade show active" id="train" role="tabpanel" aria-labelledby="train-tab">
                 <div className="bg-light">
                   <h2 className="text-4 mb-3">Book Train Tickets</h2>
-                  <form id="bookingTrain" method="post">
+                  <Form id="bookingTrain" method="post">
                     <div className="mb-3">
                       <div className="custom-control custom-radio custom-control-inline">
-                        <input id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />
-                        <label className="custom-control-label" htmlFor="train-oneway">One Way</label>
+                        <Form.Control id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />
+                        <Form.Label className="custom-control-label" htmlFor="train-oneway">One Way</Form.Label>
                       </div>
                       <div className="custom-control custom-radio custom-control-inline">
-                        <input id="train-roundtrip" name="train-trip" className="custom-control-input" required type="radio" />
-                        <label className="custom-control-label" htmlFor="train-roundtrip">Round Trip</label>
+                        <Form.Control id="train-roundtrip" name="train-trip" className="custom-control-input" required type="radio" />
+                        <Form.Label className="custom-control-label" htmlFor="train-roundtrip">Round Trip</Form.Label>
                       </div>
                     </div>
                     <div className="form-row">
                       <div className="col-md-6 col-lg-6 form-group">
-                        <input type="text" className="form-control" id="trainFrom" required placeholder="From" />
+                        <Form.Control type="text" className="form-control" id="trainFrom" required placeholder="From" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <input type="text" className="form-control" id="trainTo" required placeholder="To" />
+                        <Form.Control type="text" className="form-control" id="trainTo" required placeholder="To" />
                         <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <input id="trainsDepart" type="text" className="form-control" required placeholder="Depart Date" />
+                        <Form.Control id="trainsDepart" type="text" className="form-control" required placeholder="Depart Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <input id="trainsReturn" type="text" className="form-control" required placeholder="Return Date" />
+                        <Form.Control id="trainsReturn" type="text" className="form-control" required placeholder="Return Date" />
                         <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
                       </div>
                       <div className="col-md-6 col-lg-6 travellers-class form-group">
-                        <input 
+                        <Form.Control 
                           id="trainTravellersClass" 
                           onClick={this.handleClick}
                           className="travellers-class-input form-control" 
@@ -395,11 +412,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-5">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainAdult-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainAdult-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="trainAdult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="trainAdult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainAdult-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainAdult-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -412,11 +429,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-5">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainChildren-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainChildren-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="trainChildren-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="trainChildren-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainChildren-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainChildren-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -429,11 +446,11 @@ class SearchForm extends React.Component {
                             <div className="col-sm-5">
                               <div className="qty input-group">
                                 <div className="input-group-prepend">
-                                  <button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainInfants-travellers" data-toggle="spinner">-</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainInfants-travellers" data-toggle="spinner">-</Button>
                                 </div>
-                                <input type="text" data-ride="spinner" id="trainInfants-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
+                                <Form.Control type="text" data-ride="spinner" id="trainInfants-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
                                 <div className="input-group-append">
-                                  <button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainInfants-travellers" data-toggle="spinner">+</button>
+                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainInfants-travellers" data-toggle="spinner">+</Button>
                                 </div>
                               </div>
                             </div>
@@ -446,20 +463,20 @@ class SearchForm extends React.Component {
                               <option value={3}>Business</option>
                             </select>
                           </div>
-                          <button className="btn btn-primary btn-block submit-done" type="button">Done</button>
+                          <Button className="btn btn-primary btn-block submit-done" type="button">Done</Button>
                         </div>
                       </div>
                       <div className="col-md-6 col-lg-6 form-group">
-                        <button 
+                        <Button 
                         className="btn btn-search btn-block" 
                         type="submit"
                         >
                           <i className="fas fa-search" /> 
                           Search
-                        </button>
+                        </Button>
                       </div>
                     </div>
-                  </form>
+                  </Form>
                 </div>
               </div>
               {/* Search Train end*/}

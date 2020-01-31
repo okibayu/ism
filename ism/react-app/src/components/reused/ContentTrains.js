@@ -1,23 +1,26 @@
 import React, {Component} from 'react';
-import SliderTop from '../SliderTop';
-import SearchForm from '../SearchForm';
-import PromoCard from '../PromoCard';
-import WhyBook from '../WhyBook';
-import PopularTrain from '../PopularTrain';
-import Referer from '../Referer';
-import TrainPartner from '../TrainPartner';
+import loadable from '@loadable/component';
+import Loading from './Loading';
+
+const SliderTop = loadable(() => import('../SliderTop'));
+const SearchForm = loadable(() => import('../reused/SearchForm'));
+const PromoCard = loadable(() => import('../PromoCard'));
+const WhyBook = loadable(() => import('../WhyBook'));
+const PopularTrain = loadable(() => import('../PopularTrain'));
+const TrainPartner = loadable(() => import('../TrainPartner'));
+const Referer = loadable(() => import('../Referer'));
 
 class ContentTrains extends Component {
     render() {
       return ( 
         <div>
-            <SliderTop />
-            <SearchForm />
-            <PromoCard />
-            <WhyBook /> 
-            <PopularTrain />
-            <Referer />
-            <TrainPartner />
+          <SliderTop fallback={<Loading />} />
+          <SearchForm fallback={<Loading />} />
+          <PromoCard fallback={<Loading />} />
+          <WhyBook fallback={<Loading />} /> 
+          <PopularTrain fallback={<Loading />} />
+          <Referer fallback={<Loading />} />
+          <TrainPartner fallback={<Loading />} />
         </div>
       )
     }

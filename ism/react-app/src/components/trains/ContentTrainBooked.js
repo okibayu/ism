@@ -1,9 +1,9 @@
 import React from 'react';
 import moment from 'moment';
-import PageHeader from '../reused/PageHeader';
-import Contents from '../trains/Contents';
+import PageHeader from './PageHeader';
+import Contents from './Contents';
 
-class ContentFlights extends React.Component {
+class ContentTrainBooked extends React.Component {
 
   componentDidMount() {
     const $ = window.$;
@@ -84,4 +84,4 @@ class ContentFlights extends React.Component {
     }
 }
 
-export default ContentFlights
+export default ContentTrainBooked

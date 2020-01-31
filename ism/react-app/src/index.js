@@ -32,6 +32,15 @@ class DynamicImport extends Component {
   }
 }
 
+// Train selected by click book
+const ContentTrainBooked = (props) => (
+  <DynamicImport load={() => import('./components/trains/ContentTrainBooked')}>
+    {(Component) => Component === null
+      ? <Loading />
+      : <Component {...props} />}
+  </DynamicImport>
+)
+
 function Child () {
   let {id} = useParams();
   const bg404 = {
@@ -58,13 +67,7 @@ function Child () {
         );
   }
 
-const TrainResults = (props) => (
-  <DynamicImport load={() => import('./components/trains/TrainResults')}>
-    {(Component) => Component === null
-      ? <Loading />
-      : <Component {...props} />}
-  </DynamicImport>
-)
+
 
 class Main extends React.Component {
   render() {
@@ -75,16 +78,14 @@ class Main extends React.Component {
           <NavbarTop fallback={<Loading />}/>
         </header>
         <div id="content">
-        
           <Switch fallback={<Loading />}>
             <Route exact path="/" component={ContentHome} />
             <Route path="/flights" component={ContentFlights} />
             <Route path="/hotels" component={ContentHotels} />
             <Route path="/trains" component={ContentTrains} />
-            {/* <Route path="/trains/results" component={this.TrainResults} /> */}
+            <Route path="/select" component={ContentTrainBooked} />
             <Route path="/:id" children={<Child />} />
           </Switch>
-          
         </div>
         <Footer fallback={<Loading />}/>
       </div>
