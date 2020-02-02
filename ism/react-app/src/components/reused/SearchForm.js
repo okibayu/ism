@@ -1,4 +1,5 @@
 import React from 'react'
+import moment from 'moment'
 import { Button, Form, Nav, Tab } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -16,7 +17,61 @@ class SearchForm extends React.Component {
   componentDidMount() {
     const $ = window.$;
     
-    //Flights
+    // Flight Depart Date
+    $('#flightDepart').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: false,
+      }, function(chosen_date) {
+      $('#flightDepart').val(chosen_date.format('MM-DD-YYYY'));
+      });
+      
+      // Flight Return Date
+      $('#flightReturn').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: false,
+      }, function(chosen_date) {
+      $('#flightReturn').val(chosen_date.format('MM-DD-YYYY'));
+      });
+    
+      // Hotels Check In Date
+      $('#hotelsCheckIn').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: false,
+      }, function(chosen_date) {
+      $('#hotelsCheckIn').val(chosen_date.format('MM-DD-YYYY'));
+      });
+      
+      // Hotels Check Out Date
+      $('#hotelsCheckOut').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: false,
+      }, function(chosen_date) {
+      $('#hotelsCheckOut').val(chosen_date.format('MM-DD-YYYY'));
+      });
+
+      // Trains Depart Date
+      $('#trainsDepart').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: false,
+      }, function(chosen_date) {
+      $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
+      });
+      
+      // Trains Return Date
+      $('#trainsReturn').daterangepicker({
+      singleDatePicker: true,
+      minDate: moment(),
+      autoUpdateInput: false,
+      }, function(chosen_date) {
+      $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
+    });
+    
+    //Flights Dropdown
     $('#flightTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
     
@@ -30,7 +85,7 @@ class SearchForm extends React.Component {
     });
     // End Flights
 
-    // Hotels
+    // Hotels Dropdown
     $('#hotelsTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
     
@@ -46,7 +101,7 @@ class SearchForm extends React.Component {
     });
     // End Hotels
 
-    // Trains
+    // Trains Dropdown
     $('#trainTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
     
@@ -189,8 +244,9 @@ class SearchForm extends React.Component {
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control 
+                            <Form.Control
                               id="flightDepart" 
+                              className="form-control"
                               type="text" 
                               required 
                               placeholder="Depart Date" 
@@ -203,7 +259,8 @@ class SearchForm extends React.Component {
                         <Col md={6} lg={3}>
                           <Form.Group>
                             <Form.Control 
-                              id="flightReturn" 
+                              id="flightReturn"
+                              className="form-control"
                               type="text" 
                               required 
                               placeholder="Return Date" 
@@ -270,7 +327,16 @@ class SearchForm extends React.Component {
                                 <Col sm={6}>
                                   <InputGroup className="qty">
                                     <InputGroup.Prepend>
-                                      <Button type="button" variant="light" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner">-</Button>
+                                      <Button 
+                                      type="button" 
+                                      variant="light" 
+                                      data-value="decrease" 
+                                      data-target="#flightInfants-travellers" 
+                                      data-toggle="spinner"
+                                      size="sm"
+                                      >
+                                      <span>-</span>
+                                      </Button>
                                     </InputGroup.Prepend>
                                     <Form.Control 
                                       type="text" 
@@ -281,13 +347,14 @@ class SearchForm extends React.Component {
                                     />
                                     <InputGroup.Append>
                                       <Button 
-                                      type="button" 
-                                      variant="light" 
-                                      data-value="increase" 
-                                      data-target="#flightInfants-travellers" 
-                                      data-toggle="spinner"
+                                        type="button" 
+                                        variant="light" 
+                                        data-value="increase" 
+                                        data-target="#flightInfants-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
                                       >
-                                        +
+                                      <span>+</span>
                                       </Button>
                                     </InputGroup.Append>
                                   </InputGroup>

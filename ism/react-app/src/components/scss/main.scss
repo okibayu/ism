@@ -260,7 +260,11 @@ section.page-header.bg-page-header {
 			margin-top: 0px;
 			right: 0px;
 			position: absolute;
-		}	
+			&:hover {
+				color: black;
+			}
+		}
+		
 	}
 	.nav {
 		display: flex;
