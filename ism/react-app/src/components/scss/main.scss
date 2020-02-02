@@ -250,6 +250,18 @@ section.page-header.bg-page-header {
 	top: -116px;
 	margin-bottom: -100px;
 	z-index: 2;
+	svg {
+		margin-top: -5px;
+		right: 0px;
+		position: absolute;
+	}
+	.travellers-class {
+		svg {
+			margin-top: 0px;
+			right: 0px;
+			position: absolute;
+		}	
+	}
 	.nav {
 		display: flex;
 		flex-wrap: nowrap;
@@ -299,6 +311,7 @@ section.page-header.bg-page-header {
 		overflow-y: hidden;
 	}
 }
+
 #flight {
 	div.bg-light {
 		padding: 10px 15px 0 15px;
@@ -708,9 +721,12 @@ section.page-header.bg-page-header {
 	z-index: 3000 !important;
 	.qty {
 		.btn {
-			padding-top: 5px;
-			padding-bottom: 5px;
-			border-radius: 5px;
+			font-size: inherit;
+			font-weight: 500;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			border-radius: 10px;
+			border-color: #e5e5e5;
 		}
 	}
 }
