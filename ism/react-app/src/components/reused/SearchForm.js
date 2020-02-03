@@ -10,7 +10,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import { FormGroup } from 'react-bootstrap'
 import FormCheck from 'react-bootstrap/FormCheck'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt, faPlane, faCalendarAlt, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt, faPlane, faCalendarAlt, faCaretDown, faSearch } from '@fortawesome/free-solid-svg-icons'
 
 class SearchForm extends React.Component {
 
@@ -79,7 +79,13 @@ class SearchForm extends React.Component {
     var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
     var totalCount = ids.reduce(function (prev, id) {
       return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      var fc = $('input[name="flight-class"]:checked  + label').text();
+      // use for input=radio/checked
+      // var fc = $('input[name="flight-class"]:checked  + label').text();
+      // $('#flightTravellersClass').val(totalCount + ' - ' + fc);
+      // }).trigger('change');
+
+      // use for input=option/select
+      var fc = $('#flight-class option:selected').text();
       $('#flightTravellersClass').val(totalCount + ' - ' + fc);
       }).trigger('change');
     });
@@ -285,7 +291,10 @@ class SearchForm extends React.Component {
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCaretDown} />
                             </span>
-                            <Dropdown className="travellers-dropdown" style={{display: 'none'}}>
+                            <Dropdown 
+                            className="travellers-dropdown" 
+                            style={{display: 'none'}}
+                            >
                               <Row className="align-items-center">
                                 <Col sm={6}>
                                   <p className="mb-sm-0">Adults <small className="text-muted">(12+ yrs)</small></p>
@@ -293,11 +302,36 @@ class SearchForm extends React.Component {
                                 <Col sm={6}>
                                   <InputGroup className="qty">
                                     <InputGroup.Prepend>
-                                      <Button type="button" variant="light" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner">-</Button>
+                                      <Button 
+                                        type="button" 
+                                        variant="light" 
+                                        data-value="decrease" 
+                                        data-target="#flightAdult-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
+                                      >
+                                        <span>-</span>
+                                      </Button>
                                     </InputGroup.Prepend>
-                                    <Form.Control type="text" data-ride="spinner" id="flightAdult-travellers" className="qty-spinner" defaultValue={1} readOnly />
+                                    <Form.Control 
+                                      type="text" 
+                                      data-ride="spinner" 
+                                      id="flightAdult-travellers" 
+                                      className="qty-spinner" 
+                                      defaultValue={1} 
+                                      readOnly 
+                                    />
                                     <InputGroup.Append>
-                                      <Button type="button" variant="light" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner">+</Button>
+                                      <Button 
+                                        type="button" 
+                                        variant="light" 
+                                        data-value="increase" 
+                                        data-target="#flightAdult-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
+                                      >
+                                        <span>+</span>  
+                                      </Button>
                                     </InputGroup.Append>
                                   </InputGroup>
                                 </Col>
@@ -361,8 +395,26 @@ class SearchForm extends React.Component {
                                 </Col>
                               </Row>
                               <hr className="mt-2" />
-                              <div className="mb-3">
-                                <Form.Group >
+                              {/* <div className="mb-3"> */}
+                              <Form.Group className="mt-3 mb-0">
+                                <Form.Control as="select" 
+                                  id="flight-class" 
+                                  name="flight-class"
+                                  className="flight-class"
+                                >
+                                  <option value={0}>All Class</option>
+                                  <option value={1}>Economic</option>
+                                  <option value={2}>Business</option>
+                                  <option value={3}>First Class</option>
+                                </Form.Control>
+                                <Button 
+                                  className="btn btn-primary btn-block submit-done mt-3 mb-0" 
+                                  type="button"
+                                >
+                                  Done
+                                </Button>
+                              </Form.Group>
+                                {/* <Form.Group >
                                   <Form.Check
                                     className="flight-class"
                                     id="flightClassEconomic"
@@ -407,30 +459,29 @@ class SearchForm extends React.Component {
                                     default 
                                     required 
                                   />
-                                </Form.Group>
-                              </div>
-                              <Button 
+                                </Form.Group> */}
+                              {/* </div> */}
+                              {/* <Button 
                                 className="btn btn-primary btn-block submit-done" 
                                 type="button"
                               >
                                 Done
-                              </Button>
+                              </Button> */}
                             </Dropdown>
-                          
                           </Form.Group >
                         </Col>
                         <Col md={6} lg={{ span: 6, offset: 6 }}>
-                        <Form.Group>
-                          <Button 
-                          variant="warning"
-                          className="btn-search btn-block" 
-                          type="submit"
-                          >
-                          <i className="fas fa-search" /> 
-                            Search
-                          </Button>
-                        </Form.Group>
-                      </Col>
+                          <Form.Group>
+                            <Button 
+                            variant="warning"
+                            className="btn-search btn-block" 
+                            type="submit"
+                            >
+                            <i className="fas fa-search" /> 
+                              Search
+                            </Button>
+                          </Form.Group>
+                        </Col>
                       </Form.Row>
                     </Form>
                   </div>
@@ -447,102 +498,198 @@ class SearchForm extends React.Component {
                     <Form.Row>
                       <Col md={12} lg={6}>
                         <Form.Group>
-                          <Form.Control type="text" id="hotelsFrom" required placeholder="Enter City/Hotel" />
-                          <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span> 
+                          <Form.Control 
+                            type="text" 
+                            id="hotelsFrom" 
+                            required 
+                            placeholder="Enter City/Hotel" 
+                          />
+                          <span className="icon-inside">
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />
+                          </span> 
                         </Form.Group>
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control id="hotelsCheckIn" type="text" required placeholder="Check In" />
-                            <span className="icon-inside"><i className="far fa-calendar-alt" /></span> 
+                            <Form.Control 
+                              id="hotelsCheckIn" 
+                              type="text" 
+                              required 
+                              placeholder="Check In" 
+                            />
+                            <span className="icon-inside">
+                              <FontAwesomeIcon icon={faCalendarAlt} />
+                            </span> 
                           </Form.Group>
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control id="hotelsCheckOut" type="text" required placeholder="Check Out" />
-                            <span className="icon-inside"><i className="far fa-calendar-alt" /></span> 
+                            <Form.Control 
+                              id="hotelsCheckOut" 
+                              type="text" 
+                              required 
+                              placeholder="Check Out" 
+                            />
+                            <span className="icon-inside">
+                              <FontAwesomeIcon icon={faCalendarAlt} />
+                            </span> 
                           </Form.Group>
                         </Col>
                         <Col md={6} lg={6}>
                           <Form.Group className="travellers-class">
-                            <Form.Control type="text" 
-                            id="hotelsTravellersClass" 
-                            onClick={this.handleClick}
-                            className="travellers-class-input" 
-                            name="hotels-travellers-class" 
-                            placeholder="Rooms / People" 
-                            required=""
+                            <Form.Control 
+                              type="text" 
+                              id="hotelsTravellersClass" 
+                              onClick={this.handleClick}
+                              className="travellers-class-input" 
+                              name="hotels-travellers-class" 
+                              placeholder="Rooms / People" 
+                              required=""
                             />
-                            <span className="icon-inside"><i className="fas fa-caret-down" /></span>
+                              <span className="icon-inside">
+                                <FontAwesomeIcon icon={faCaretDown} />
+                              </span>
+                            <Dropdown 
+                              className="travellers-dropdown" 
+                              style={{display: 'none'}}
+                              >
+                              <Row className="align-items-center">
+                                <Col sm={7}>
+                                  <p className="mb-sm-0">Rooms</p>
+                                </Col>
+                                <Col sm={5}>
+                                  <InputGroup className="qty">
+                                    <InputGroup.Prepend>
+                                      <Button 
+                                      type="button" 
+                                      variant="light" 
+                                      data-value="decrease" 
+                                      data-target="#hotels-rooms" 
+                                      data-toggle="spinner"
+                                      size="sm"
+                                      >
+                                      <span>-</span>
+                                      </Button>
+                                    </InputGroup.Prepend>
+                                    <Form.Control 
+                                      type="text" 
+                                      data-ride="spinner" 
+                                      id="hotels-rooms" 
+                                      className="qty-spinner" 
+                                      defaultValue={1} 
+                                      readOnly 
+                                    />
+                                    <InputGroup.Append className="input-group-append">
+                                      <Button 
+                                      type="button"
+                                      variant="light" 
+                                      data-value="increase" 
+                                      data-target="#hotels-rooms" 
+                                      data-toggle="spinner"
+                                      size="sm"
+                                      >
+                                      <span>+</span>
+                                      </Button>
+                                    </InputGroup.Append>
+                                  </InputGroup>
+                                </Col>
+                              </Row>
+                              <hr className="mt-2 mb-4" />
+                              <Row className="align-items-center">
+                                <Col sm={7}>
+                                  <p className="mb-sm-0">Adults <small className="text-muted">(12+ yrs)</small></p>
+                                </Col>
+                                <Col sm={5}>
+                                  <InputGroup className="qty">
+                                    <InputGroup.Prepend>
+                                      <Button 
+                                        type="button" 
+                                        variant="light"
+                                        data-value="decrease" 
+                                        data-target="#adult-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
+                                      >
+                                      <span>-</span>
+                                      </Button>
+                                    </InputGroup.Prepend>
+                                    <Form.Control 
+                                      type="text" 
+                                      data-ride="spinner" 
+                                      id="adult-travellers" 
+                                      className="qty-spinner" 
+                                      defaultValue={1} 
+                                      readOnly 
+                                    />
+                                    <InputGroup.Append>
+                                      <Button 
+                                        type="button" 
+                                        variant="light"
+                                        data-value="increase" 
+                                        data-target="#adult-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
+                                      >
+                                      <span>+</span>
+                                      </Button>
+                                    </InputGroup.Append>
+                                  </InputGroup>
+                                </Col>
+                              </Row>
+                              <hr className="my-2" />
+                              <Row className="align-items-center">
+                                <Col sm={7}>
+                                  <p className="mb-sm-0">Children <small className="text-muted">(1-12 yrs)</small></p>
+                                </Col>
+                                <Col sm={5}>
+                                  <InputGroup className="qty">
+                                    <InputGroup.Prepend>
+                                      <Button 
+                                        type="button"
+                                        variant="light" 
+                                        data-value="decrease" 
+                                        data-target="#children-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
+                                      >
+                                      <span>-</span>  
+                                      </Button>
+                                    </InputGroup.Prepend>
+                                    <Form.Control type="text" data-ride="spinner" id="children-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
+                                    <InputGroup.Append>
+                                      <Button 
+                                        type="button"
+                                        variant="light" 
+                                        data-value="increase" 
+                                        data-target="#children-travellers" 
+                                        data-toggle="spinner"
+                                        size="sm"
+                                      >
+                                      <span>+</span>  
+                                      </Button>
+                                    </InputGroup.Append>
+                                  </InputGroup>
+                                </Col>
+                              </Row>
+                              <Button className="btn btn-primary btn-block submit-done mt-3" type="button">Done</Button>
+                            </Dropdown>
                           </Form.Group>
-                          <Dropdown className="travellers-dropdown">
-                          <Row className="align-items-center">
-                            <Col sm={7}>
-                              <p className="mb-sm-0">Rooms</p>
-                            </Col>
-                            <Col sm={5}>
-                              <InputGroup className="qty">
-                                <InputGroup.Prepend>
-                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#hotels-rooms" data-toggle="spinner">-</Button>
-                                </InputGroup.Prepend>
-                                <Form.Control type="text" data-ride="spinner" id="hotels-rooms" className="qty-spinner" defaultValue={1} readOnly />
-                                <InputGroup.Append className="input-group-append">
-                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#hotels-rooms" data-toggle="spinner">+</Button>
-                                </InputGroup.Append>
-                              </InputGroup>
-                            </Col>
-                          </Row>
-                          <hr className="mt-2 mb-4" />
-                          <Row className="align-items-center">
-                            <Col sm={7}>
-                              <p className="mb-sm-0">Adults <small className="text-muted">(12+ yrs)</small></p>
-                            </Col>
-                            <Col sm={5}>
-                              <InputGroup className="qty">
-                                <InputGroup.Prepend>
-                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#adult-travellers" data-toggle="spinner">-</Button>
-                                </InputGroup.Prepend>
-                                <Form.Control type="text" data-ride="spinner" id="adult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
-                                <InputGroup.Append>
-                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#adult-travellers" data-toggle="spinner">+</Button>
-                                </InputGroup.Append>
-                              </InputGroup>
-                            </Col>
-                          </Row>
-                          <hr className="my-2" />
-                          <Row className="row align-items-center">
-                            <Col sm={7}>
-                              <p className="mb-sm-0">Children <small className="text-muted">(1-12 yrs)</small></p>
-                            </Col>
-                            <Col sm={5}>
-                              <InputGroup className="qty">
-                                <InputGroup.Prepend>
-                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#children-travellers" data-toggle="spinner">-</Button>
-                                </InputGroup.Prepend>
-                                <Form.Control type="text" data-ride="spinner" id="children-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
-                                <InputGroup.Append>
-                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#children-travellers" data-toggle="spinner">+</Button>
-                                </InputGroup.Append>
-                              </InputGroup>
-                            </Col>
-                          </Row>
-                          <Button className="btn btn-primary btn-block submit-done mt-3" type="button">Done</Button>
-                        </Dropdown>
                         </Col>
                         <Col md={6} lg={6}>
-                          <FormGroup>
-                          <Button 
-                          className="btn btn-search btn-block" 
-                          type="submit"
-                          >
+                          <Form.Group>
+                            <Button 
+                            variant="warning"
+                            className="btn-search btn-block" 
+                            type="submit"
+                            >
                             <i className="fas fa-search" /> 
-                            Search
-                          </Button>
-                        </FormGroup>
+                              Search
+                            </Button>
+                          </Form.Group>
                         </Col>
-                    </Form.Row>
-                  </Form>
-                </div>
+                      </Form.Row>
+                    </Form>
+                  </div>
                 </Tab.Pane>
               </Tab.Content>
               {/* Search Train */}
@@ -554,116 +701,256 @@ class SearchForm extends React.Component {
                   <h2 className="text-4 mb-3">Book Train Tickets</h2>
                   <Form id="bookingTrain" method="post">
                     <div className="mb-3">
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <Form.Control id="train-oneway" name="train-trip" className="custom-control-input" defaultChecked required type="radio" />
-                        <Form.Label className="custom-control-label" htmlFor="train-oneway">One Way</Form.Label>
-                      </div>
-                      <div className="custom-control custom-radio custom-control-inline">
-                        <Form.Control id="train-roundtrip" name="train-trip" className="custom-control-input" required type="radio" />
-                        <Form.Label className="custom-control-label" htmlFor="train-roundtrip">Round Trip</Form.Label>
-                      </div>
-                    </div>
-                    <div className="form-row">
-                      <div className="col-md-6 col-lg-6 form-group">
-                        <Form.Control type="text" className="form-control" id="trainFrom" required placeholder="From" />
-                        <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
-                      </div>
-                      <div className="col-md-6 col-lg-6 form-group">
-                        <Form.Control type="text" className="form-control" id="trainTo" required placeholder="To" />
-                        <span className="icon-inside"><i className="fas fa-map-marker-alt" /></span>
-                      </div>
-                      <div className="col-md-6 col-lg-6 form-group">
-                        <Form.Control id="trainsDepart" type="text" className="form-control" required placeholder="Depart Date" />
-                        <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
-                      </div>
-                      <div className="col-md-6 col-lg-6 form-group">
-                        <Form.Control id="trainsReturn" type="text" className="form-control" required placeholder="Return Date" />
-                        <span className="icon-inside"><i className="far fa-calendar-alt" /></span>
-                      </div>
-                      <div className="col-md-6 col-lg-6 travellers-class form-group">
-                        <Form.Control 
-                          id="trainTravellersClass" 
-                          onClick={this.handleClick}
-                          className="travellers-class-input form-control" 
-                          type="text" 
-                          name="train-travellers-class" 
-                          placeholder="Travellers, Class" 
-                          readOnly=""
-                          required=""
+                      <Form.Group id="booktrains">
+                        <FormCheck 
+                          id="train-oneway" 
+                          defaultChecked 
+                          name="train-trip"
+                          custom
+                          inline
+                          label={'One Way'}
+                          type={'radio'}
                         />
-                        <span className="icon-inside"><i className="fas fa-caret-down" /></span>
-                        <div className="travellers-dropdown">
-                          <div className="row align-items-center">
-                            <div className="col-sm-7">
-                              <p className="mb-sm-0">Adults <small className="text-muted">(12+ yrs)</small></p>
-                            </div>
-                            <div className="col-sm-5">
-                              <div className="qty input-group">
-                                <div className="input-group-prepend">
-                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainAdult-travellers" data-toggle="spinner">-</Button>
-                                </div>
-                                <Form.Control type="text" data-ride="spinner" id="trainAdult-travellers" className="qty-spinner form-control" defaultValue={1} readOnly />
-                                <div className="input-group-append">
-                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainAdult-travellers" data-toggle="spinner">+</Button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <hr className="my-2" />
-                          <div className="row align-items-center">
-                            <div className="col-sm-7">
-                              <p className="mb-sm-0">Children <small className="text-muted">(2-12 yrs)</small></p>
-                            </div>
-                            <div className="col-sm-5">
-                              <div className="qty input-group">
-                                <div className="input-group-prepend">
-                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainChildren-travellers" data-toggle="spinner">-</Button>
-                                </div>
-                                <Form.Control type="text" data-ride="spinner" id="trainChildren-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
-                                <div className="input-group-append">
-                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainChildren-travellers" data-toggle="spinner">+</Button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <hr className="my-2" />
-                          <div className="row align-items-center">
-                            <div className="col-sm-7">
-                              <p className="mb-sm-0">Infants <small className="text-muted">(Below 2 yrs)</small></p>
-                            </div>
-                            <div className="col-sm-5">
-                              <div className="qty input-group">
-                                <div className="input-group-prepend">
-                                  <Button type="button" className="btn bg-light-4" data-value="decrease" data-target="#trainInfants-travellers" data-toggle="spinner">-</Button>
-                                </div>
-                                <Form.Control type="text" data-ride="spinner" id="trainInfants-travellers" className="qty-spinner form-control" defaultValue={0} readOnly />
-                                <div className="input-group-append">
-                                  <Button type="button" className="btn bg-light-4" data-value="increase" data-target="#trainInfants-travellers" data-toggle="spinner">+</Button>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="form-group mt-3">
-                            <select id="train-class" name="train-class" className="custom-select">
-                              <option value={0}>All Class</option>
-                              <option value={1}>First Class</option>
-                              <option value={2}>Second Class</option>
-                              <option value={3}>Business</option>
-                            </select>
-                          </div>
-                          <Button className="btn btn-primary btn-block submit-done" type="button">Done</Button>
-                        </div>
-                      </div>
-                      <div className="col-md-6 col-lg-6 form-group">
-                        <Button 
-                        className="btn btn-search btn-block" 
-                        type="submit"
-                        >
-                          <i className="fas fa-search" /> 
-                          Search
-                        </Button>
-                      </div>
+                        <FormCheck 
+                          id="train-roundtrip"
+                          name="train-trip"
+                          custom
+                          inline
+                          label={'Round Trip'}
+                          type={'radio'}
+                        />
+                      </Form.Group>
                     </div>
+                    <Form.Row>
+                      <Col md={6} lg={6}>
+                        <Form.Group>
+                          <Form.Control 
+                            type="text" 
+                            className="form-control" 
+                            id="trainFrom" 
+                            required 
+                            placeholder="From" 
+                          />
+                          <span className="icon-inside">
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />
+                          </span>
+                        </Form.Group>
+                      </Col>
+                      
+                      <Col md={6} lg={6}>
+                        <Form.Group>
+                          <Form.Control 
+                            type="text"
+                            id="trainTo" 
+                            required 
+                            placeholder="To" 
+                          />
+                          <span className="icon-inside">
+                            <FontAwesomeIcon icon={faMapMarkerAlt} />
+                          </span>
+                        </Form.Group>
+                      </Col>
+                      <Col md={6} lg={6}>
+                        <Form.Group>
+                          <Form.Control 
+                            type="text"
+                            id="trainsDepart" 
+                            required 
+                            placeholder="Depart Date" 
+                          />
+                          <span className="icon-inside">
+                            <FontAwesomeIcon icon={faCalendarAlt} />
+                          </span>
+                        </Form.Group>
+                      </Col>
+                      <Col md={6} lg={6}>
+                        <Form.Group>
+                          <Form.Control 
+                            type="text"
+                            id="trainsReturn" 
+                            required 
+                            placeholder="Return Date" 
+                          />
+                          <span className="icon-inside">
+                            <FontAwesomeIcon icon={faCalendarAlt} />
+                          </span>
+                        </Form.Group>
+                      </Col>
+                      <Col md={6} lg={6}>
+                        <Form.Group className="travellers-class">
+                          <Form.Control 
+                            id="trainTravellersClass" 
+                            onClick={this.handleClick} 
+                            type="text" 
+                            className="travellers-class-input"
+                            name="train-travellers-class" 
+                            placeholder="Travellers, Class" 
+                            readOnly
+                            required
+                          />
+                          <span className="icon-inside">
+                            <FontAwesomeIcon icon={faCaretDown} />
+                          </span>
+                          <Dropdown 
+                          className="travellers-dropdown"
+                          style={{display: 'none'}}
+                          >
+                            <Row className="align-items-center">
+                              <Col sm={7}>
+                                <p className="mb-sm-0">Adults <small className="text-muted">(12+ yrs)</small></p>
+                              </Col>
+                              <Col sm={5}>
+                                <InputGroup className="qty">
+                                  <InputGroup.Prepend>
+                                    <Button 
+                                      type="button" 
+                                      variant="light" 
+                                      data-value="decrease" 
+                                      data-target="#trainAdult-travellers" 
+                                      data-toggle="spinner"
+                                      size="sm"
+                                    >
+                                      <span>-</span>
+                                    </Button>
+                                  </InputGroup.Prepend>
+                                    <Form.Control 
+                                      type="text" 
+                                      data-ride="spinner" 
+                                      id="trainAdult-travellers" 
+                                      className="qty-spinner" 
+                                      defaultValue={1} 
+                                      readOnly 
+                                    />
+                                  <InputGroup.Append>
+                                    <Button 
+                                    type="button" 
+                                    variant="light" 
+                                    data-value="increase" 
+                                    data-target="#trainAdult-travellers" 
+                                    data-toggle="spinner"
+                                    size="sm"
+                                    >
+                                    <span>+</span>  
+                                    </Button>
+                                  </InputGroup.Append>
+                                </InputGroup>
+                              </Col>
+                            </Row>
+                            <hr className="my-2" />
+                            <Row className="align-items-center">
+                              <Col sm={7}>
+                                <p className="mb-sm-0">Children <small className="text-muted">(2-12 yrs)</small></p>
+                              </Col>
+                              <Col sm={5}>
+                                <InputGroup className="qty">
+                                  <InputGroup.Prepend>
+                                    <Button 
+                                      type="button" 
+                                      variant="light" 
+                                      data-value="decrease" 
+                                      data-target="#trainChildren-travellers" 
+                                      data-toggle="spinner"
+                                      size="sm"
+                                    >
+                                      <span>-</span>
+                                    </Button>
+                                  </InputGroup.Prepend>
+                                  <Form.Control 
+                                    type="text" 
+                                    data-ride="spinner" 
+                                    id="trainChildren-travellers" 
+                                    className="qty-spinner" 
+                                    defaultValue={0} 
+                                    readOnly 
+                                  />
+                                  <InputGroup.Append>
+                                    <Button 
+                                      type="button" 
+                                      variant="light"
+                                      data-value="increase" 
+                                      data-target="#trainChildren-travellers" 
+                                      data-toggle="spinner"
+                                      size="sm"
+                                    >
+                                      <span>+</span>
+                                    </Button>
+                                  </InputGroup.Append>
+                                </InputGroup>
+                              </Col>
+                            </Row>
+                            <hr className="my-2" />
+                            <Row className="align-items-center">
+                              <Col sm={7}>
+                                <p className="mb-sm-0">Infants <small className="text-muted">(Below 2 yrs)</small></p>
+                              </Col>
+                              <Col sm={5}>
+                                <InputGroup className="qty">
+                                  <InputGroup.Prepend>
+                                    <Button 
+                                      type="button" 
+                                      variant="light"
+                                      data-value="decrease" 
+                                      data-target="#trainInfants-travellers" 
+                                      data-toggle="spinner"
+                                    >
+                                      <span>-</span>
+                                    </Button>
+                                  </InputGroup.Prepend>
+                                  <Form.Control 
+                                    type="text" 
+                                    data-ride="spinner" 
+                                    id="trainInfants-travellers" 
+                                    className="qty-spinner" 
+                                    defaultValue={0} 
+                                    readOnly 
+                                  />
+                                  <InputGroup.Append>
+                                    <Button 
+                                    type="button" 
+                                    variant="light" 
+                                    data-value="increase" 
+                                    data-target="#trainInfants-travellers" 
+                                    data-toggle="spinner"
+                                    >
+                                      <span>+</span>
+                                    </Button>
+                                  </InputGroup.Append>
+                                </InputGroup>
+                              </Col>
+                            </Row>
+                            <Form.Group className="mt-3 mb-0">
+                              <Form.Control as="select" 
+                                id="train-class" 
+                                name="train-class"
+                              >
+                                <option value={0}>All Class</option>
+                                <option value={1}>Economic</option>
+                                <option value={2}>Business</option>
+                                <option value={3}>Executive</option>
+                              </Form.Control>
+                              <Button 
+                                className="btn btn-primary btn-block submit-done mt-3 mb-0" 
+                                type="button"
+                              >
+                                Done
+                              </Button>
+                            </Form.Group>
+                          </Dropdown>
+                        </Form.Group>
+                        </Col>
+                        <Col md={6} lg={6}>
+                          <Form.Group>
+                            <Button 
+                              variant="warning"
+                              className="btn-search btn-block" 
+                              type="submit"
+                            >
+                              <i className="fas fa-search" /> 
+                                Search
+                            </Button>
+                          </Form.Group>
+                      </Col>
+                    </Form.Row>
                   </Form>
                 </div>
                 </Tab.Pane>
