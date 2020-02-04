@@ -1,16 +1,13 @@
 import React from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from '../img/logo.svg';
 
-class NavbarTop extends React.Component {
-  
+class NavbarTop extends React.Component {  
   render() {
     return (
-      <Route>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-white">
           <div className="navbar-brand">
-            {/* Logo */}
             <Link to="/">
               <img
                 src={logo}
@@ -20,7 +17,6 @@ class NavbarTop extends React.Component {
                 title="Logo Booking Engine"
               />
             </Link>
-            {/* Logo end */}
           </div>
           <button className="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#menu">
             <span></span><span></span><span></span>
@@ -28,22 +24,22 @@ class NavbarTop extends React.Component {
           <div className="collapse navbar-collapse" id="menu">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item">
-                <Link to="/flights" className="nav-link">
+                <Link to="/avail" className="nav-link">
                   Flight
                 </Link>
               </li>
               {/* <li className="nav-item">
-                <Link to="/trains/results" className="nav-link">
+                <Link to="/avail" className="nav-link">
                   Test Link
                 </Link>
               </li> */}
               <li className="nav-item">
-                <Link to="/hotels" className="nav-link">
+                <Link to="/avail" className="nav-link">
                     Hotel
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/trains" className="nav-link">
+                <Link to="/train" className="nav-link">
                     Train
                 </Link>
               </li>
@@ -165,8 +161,7 @@ class NavbarTop extends React.Component {
           </div>
         </nav>
       </div>
-    </Route>
-    )
+    );
   }
 }
 

@@ -4,7 +4,6 @@ import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import ScrollToTopBtn from "./ScrollToTop";
 
 class Footer extends React.Component {
-  
     render() {
       return (
        <footer id="footer">

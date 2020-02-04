@@ -7,10 +7,9 @@ import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
 import { InputGroup } from 'react-bootstrap'
 import Dropdown from 'react-bootstrap/Dropdown'
-import { FormGroup } from 'react-bootstrap'
 import FormCheck from 'react-bootstrap/FormCheck'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt, faPlane, faCalendarAlt, faCaretDown, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faMapMarkerAlt, faPlane, faCalendarAlt, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 
 class SearchForm extends React.Component {
 
@@ -69,85 +68,60 @@ class SearchForm extends React.Component {
       autoUpdateInput: false,
       }, function(chosen_date) {
       $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
-    });
+      });
     
-    //Flights Dropdown
-    $('#flightTravellersClass').on('click', function() {
+      //Flights Dropdown
+      $('#flightTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
-    
-    $('.qty-spinner, .flight-class').on('change', function() {
-    var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
-    var totalCount = ids.reduce(function (prev, id) {
+      $('.qty-spinner, .flight-class').on('change', function() {
+      var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
+      var totalCount = ids.reduce(function (prev, id) {
       return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      // use for input=radio/checked
-      // var fc = $('input[name="flight-class"]:checked  + label').text();
-      // $('#flightTravellersClass').val(totalCount + ' - ' + fc);
-      // }).trigger('change');
-
       // use for input=option/select
       var fc = $('#flight-class option:selected').text();
       $('#flightTravellersClass').val(totalCount + ' - ' + fc);
       }).trigger('change');
-    });
-    // End Flights
+      });
+      // End Flights
 
-    // Hotels Dropdown
-    $('#hotelsTravellersClass').on('click', function() {
+      // Hotels Dropdown
+      $('#hotelsTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
-    
-    $('.qty-spinner').on('change', function() {
-    var ids = ['adult', 'children'];
-    var totalCount = ids.reduce(function (prev, id) {
+      $('.qty-spinner').on('change', function() {
+      var ids = ['adult', 'children'];
+      var totalCount = ids.reduce(function (prev, id) {
       return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ 'People'; 
-    var idsRoom = ['hotels-rooms'];
-    var totalCountRoom = idsRoom.reduce(function (prev, id) {
+      var idsRoom = ['hotels-rooms'];
+      var totalCountRoom = idsRoom.reduce(function (prev, id) {
       return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
       $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
       }).trigger('change');
-    });
-    // End Hotels
+      });
+      // End Hotels
 
-    // Trains Dropdown
-    $('#trainTravellersClass').on('click', function() {
+      // Trains Dropdown
+      $('#trainTravellersClass').on('click', function() {
       $('.travellers-dropdown').slideToggle('fast');
-    
-    $('.qty-spinner, #train-class').on('change', function() {
+      $('.qty-spinner, #train-class').on('change', function() {
       var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
       var totalCount = ids.reduce(function (prev, id) {
-        return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+      return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
       var fc = $('#train-class option:selected').text();
       $('#trainTravellersClass').val(totalCount + ' - ' + fc);
       }).trigger('change');
-    });
-    // End Trains
+      });
+      // End Trains
 
-    $(document).on('click', function(event) {
-    if (!$(event.target).closest(".travellers-class").length) {
-        $(".travellers-dropdown").hide();
+      $(document).on('click', function(event) {
+      if (!$(event.target).closest(".travellers-class").length) {
+      $(".travellers-dropdown").hide();
       }
       $('.submit-done').on('click', function() {
-          $('.travellers-dropdown').fadeOut(function() {
-              $(this).hide();
-          });
+      $('.travellers-dropdown').fadeOut(function() {
+      $(this).hide();
       });
-    });
-
-    this.$el = $(this.el);
-
-    this.handleClick = this.handleClick;
-    this.$el.on('click', this.handleClick);
-
-    this.handleChange = this.handleChange;
-    this.$el.on('change', this.handleChange);
-
-    this.slideToggle = this.slideToggle;
-    this.$el.slideToggle('fast', this.handleClick);
-
-  }
-
-  componentWillUnmount() {
-    this.$el.off('change', this.handleChange);
-    this.$el.off('click', this.handleClick);
+      });
+      });
   }
 
   render() {
@@ -394,8 +368,6 @@ class SearchForm extends React.Component {
                                   </InputGroup>
                                 </Col>
                               </Row>
-                              <hr className="mt-2" />
-                              {/* <div className="mb-3"> */}
                               <Form.Group className="mt-3 mb-0">
                                 <Form.Control as="select" 
                                   id="flight-class" 
@@ -414,59 +386,6 @@ class SearchForm extends React.Component {
                                   Done
                                 </Button>
                               </Form.Group>
-                                {/* <Form.Group >
-                                  <Form.Check
-                                    className="flight-class"
-                                    id="flightClassEconomic"
-                                    name="flight-class"
-                                    custom
-                                    label="Economic"
-                                    type="radio"
-                                    defaultValue={0} 
-                                    defaultChecked 
-                                    required 
-                                  />
-                                  <Form.Check
-                                    className="flight-class"
-                                    id="flightClassPremium"
-                                    name="flight-class"
-                                    custom
-                                    label="Premium"
-                                    type="radio"
-                                    defaultValue={1} 
-                                    default 
-                                    required 
-                                  />
-                                  <Form.Check   
-                                    className="flight-class"
-                                    id="flightClassBusiness"
-                                    name="flight-class"
-                                    custom
-                                    label="Business"
-                                    type="radio"
-                                    defaultValue={2} 
-                                    default 
-                                    required 
-                                  />
-                                  <Form.Check   
-                                    className="flight-class"
-                                    id="flightClassFirst"
-                                    name="flight-class"
-                                    custom
-                                    label="First Class"
-                                    type="radio"
-                                    defaultValue={3} 
-                                    default 
-                                    required 
-                                  />
-                                </Form.Group> */}
-                              {/* </div> */}
-                              {/* <Button 
-                                className="btn btn-primary btn-block submit-done" 
-                                type="button"
-                              >
-                                Done
-                              </Button> */}
                             </Dropdown>
                           </Form.Group >
                         </Col>
@@ -594,7 +513,7 @@ class SearchForm extends React.Component {
                                   </InputGroup>
                                 </Col>
                               </Row>
-                              <hr className="mt-2 mb-4" />
+                              <hr className="my-2" />
                               <Row className="align-items-center">
                                 <Col sm={7}>
                                   <p className="mb-sm-0">Adults <small className="text-muted">(12+ yrs)</small></p>
@@ -924,9 +843,9 @@ class SearchForm extends React.Component {
                                 name="train-class"
                               >
                                 <option value={0}>All Class</option>
-                                <option value={1}>Economic</option>
+                                <option value={1}>Economy</option>
                                 <option value={2}>Business</option>
-                                <option value={3}>Executive</option>
+                                <option value={3}>Executive/ VIP</option>
                               </Form.Control>
                               <Button 
                                 className="btn btn-primary btn-block submit-done mt-3 mb-0" 

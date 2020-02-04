@@ -1,7 +1,7 @@
 import React from 'react'
 import IonRangeSlider from 'react-ion-slider'
 import Form from 'react-bootstrap/Form'
-import {Accordion, Button, FormControl, InputGroup} from 'react-bootstrap'
+import { Accordion, Button, FormControl } from 'react-bootstrap'
 import { Link } from 'react-router-dom';
 
 class Filter extends React.Component {
