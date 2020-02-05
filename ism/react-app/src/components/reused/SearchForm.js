@@ -1,5 +1,4 @@
-import React from 'react'
-import moment from 'moment'
+import React, {Component} from 'react'
 import { Button, Form, Nav, Tab } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -10,123 +9,162 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import FormCheck from 'react-bootstrap/FormCheck'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt, faPlane, faCalendarAlt, faCaretDown } from '@fortawesome/free-solid-svg-icons'
+import DatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 
 class SearchForm extends React.Component {
+  state = {
+    startDate: new Date(),
+    endDate: ''
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.state = {handleClick: 'close', handleChange:''}
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChange1 = this.handleChange1.bind(this);
+    this.handleChange2 = this.handleChange2.bind(this);
+  }
+
+  handleClick = () => {
+    this.setState({ handleClick: this.state.handleClick === 'close' ? 'open' : 'open' });
+  }
+
+  handleChange = (event) => {
+    this.setState({ value: event.target.value })
+  }
+
+  handleChange1 = startDate => {
+    this.setState({
+      startDate
+    });
+  }
+
+  handleChange2 = endDate => {
+    this.setState({
+      endDate
+    });
+  }
 
   componentDidMount() {
     const $ = window.$;
     
-    // Flight Depart Date
-    $('#flightDepart').daterangepicker({
-      singleDatePicker: true,
-      minDate: moment(),
-      autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#flightDepart').val(chosen_date.format('MM-DD-YYYY'));
-      });
+  //   // Flight Depart Date
+  //   // $('#flightDepart').daterangepicker({
+  //   //     singleDatePicker: true,
+  //   //     minDate: moment(),
+  //   //     autoUpdateInput: false,
+  //   //   }, function(chosen_date) {
+  //   //     $('#flightDepart').val(chosen_date.format('MM-DD-YYYY'));
+  //   //   });
       
-      // Flight Return Date
-      $('#flightReturn').daterangepicker({
-      singleDatePicker: true,
-      minDate: moment(),
-      autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#flightReturn').val(chosen_date.format('MM-DD-YYYY'));
-      });
+  //   //   // Flight Return Date
+  //   //   $('#flightReturn').daterangepicker({
+  //   //     singleDatePicker: true,
+  //   //     minDate: moment(),
+  //   //     autoUpdateInput: false,
+  //   //   }, function(chosen_date) {
+  //   //     $('#flightReturn').val(chosen_date.format('MM-DD-YYYY'));
+  //   //   });
     
-      // Hotels Check In Date
-      $('#hotelsCheckIn').daterangepicker({
-      singleDatePicker: true,
-      minDate: moment(),
-      autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#hotelsCheckIn').val(chosen_date.format('MM-DD-YYYY'));
-      });
+  //     // Hotels Check In Date
+  //     $('#hotelsCheckIn').daterangepicker({
+  //       singleDatePicker: true,
+  //       minDate: moment(),
+  //       autoUpdateInput: false,
+  //     }, function(chosen_date) {
+  //       $('#hotelsCheckIn').val(chosen_date.format('MM-DD-YYYY'));
+  //     });
       
-      // Hotels Check Out Date
-      $('#hotelsCheckOut').daterangepicker({
-      singleDatePicker: true,
-      minDate: moment(),
-      autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#hotelsCheckOut').val(chosen_date.format('MM-DD-YYYY'));
-      });
+  //     // Hotels Check Out Date
+  //     $('#hotelsCheckOut').daterangepicker({
+  //       singleDatePicker: true,
+  //       minDate: moment(),
+  //       autoUpdateInput: false,
+  //     }, function(chosen_date) {
+  //       $('#hotelsCheckOut').val(chosen_date.format('MM-DD-YYYY'));
+  //     });
 
-      // Trains Depart Date
-      $('#trainsDepart').daterangepicker({
-      singleDatePicker: true,
-      minDate: moment(),
-      autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
-      });
+  //     // Trains Depart Date
+  //     $('#trainsDepart').daterangepicker({
+  //       singleDatePicker: true,
+  //       minDate: moment(),
+  //       autoUpdateInput: false,
+  //     }, function(chosen_date) {
+  //       $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
+  //     });
       
-      // Trains Return Date
-      $('#trainsReturn').daterangepicker({
-      singleDatePicker: true,
-      minDate: moment(),
-      autoUpdateInput: false,
-      }, function(chosen_date) {
-      $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
-      });
+  //     // Trains Return Date
+  //     $('#trainsReturn').daterangepicker({
+  //       singleDatePicker: true,
+  //       minDate: moment(),
+  //       autoUpdateInput: false,
+  //     }, function(chosen_date) {
+  //       $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
+  //     });
     
       //Flights Dropdown
       $('#flightTravellersClass').on('click', function() {
-      $('.travellers-dropdown').slideToggle('fast');
-      $('.qty-spinner, .flight-class').on('change', function() {
-      var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
-      var totalCount = ids.reduce(function (prev, id) {
-      return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      // use for input=option/select
-      var fc = $('#flight-class option:selected').text();
-      $('#flightTravellersClass').val(totalCount + ' - ' + fc);
-      }).trigger('change');
-      });
+        $('.travellers-dropdown').slideToggle('fast');
+        $('.qty-spinner, .flight-class').on('change', function() {
+          var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
+          var totalCount = ids.reduce(function (prev, id) {
+            return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+            // use for input=option/select
+            var fc = $('#flight-class option:selected').text();
+            $('#flightTravellersClass').val(totalCount + ' - ' + fc);
+          }).trigger('change');
+        });
       // End Flights
 
-      // Hotels Dropdown
-      $('#hotelsTravellersClass').on('click', function() {
-      $('.travellers-dropdown').slideToggle('fast');
-      $('.qty-spinner').on('change', function() {
-      var ids = ['adult', 'children'];
-      var totalCount = ids.reduce(function (prev, id) {
-      return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ 'People'; 
-      var idsRoom = ['hotels-rooms'];
-      var totalCountRoom = idsRoom.reduce(function (prev, id) {
-      return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
-      $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
-      }).trigger('change');
-      });
-      // End Hotels
+  //     // Hotels Dropdown
+  //     $('#hotelsTravellersClass').on('click', function() {
+  //       $('.travellers-dropdown').slideToggle('fast');
+  //       $('.qty-spinner').on('change', function() {
+  //         var ids = ['adult', 'children'];
+  //         var totalCount = ids.reduce(function (prev, id) {
+  //           return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ 'People';
+  //           var idsRoom = ['hotels-rooms'];
+  //           var totalCountRoom = idsRoom.reduce(function (prev, id) {
+  //             return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
+  //             $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
+  //           }).trigger('change');
+  //         });
+  //     // End Hotels
 
-      // Trains Dropdown
-      $('#trainTravellersClass').on('click', function() {
-      $('.travellers-dropdown').slideToggle('fast');
-      $('.qty-spinner, #train-class').on('change', function() {
-      var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
-      var totalCount = ids.reduce(function (prev, id) {
-      return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-      var fc = $('#train-class option:selected').text();
-      $('#trainTravellersClass').val(totalCount + ' - ' + fc);
-      }).trigger('change');
-      });
-      // End Trains
+  //     // Trains Dropdown
+  //     $('#trainTravellersClass').on('click', function() {
+  //       $('.travellers-dropdown').slideToggle('fast');
+  //       $('.qty-spinner, #train-class').on('change', function() {
+  //         var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
+  //         var totalCount = ids.reduce(function (prev, id) {
+  //           return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+  //           var fc = $('#train-class option:selected').text();
+  //           $('#trainTravellersClass').val(totalCount + ' - ' + fc);
+  //         }).trigger('change');
+  //       });
+  //     // End Trains
 
       $(document).on('click', function(event) {
-      if (!$(event.target).closest(".travellers-class").length) {
-      $(".travellers-dropdown").hide();
-      }
-      $('.submit-done').on('click', function() {
-      $('.travellers-dropdown').fadeOut(function() {
-      $(this).hide();
+        if (!$(event.target).closest(".travellers-class").length) {
+          $(".travellers-dropdown").hide(); 
+        }  
+      
+      $('.submit-done').on('click', function() { 
+        $('.travellers-dropdown').fadeOut(function() { 
+          $(this).hide(); 
+        });
       });
-      });
-      });
+    });
   }
-
+  
   render() {
-    return (
-    <section className="train-section">
+    const { startDate } = this.state;
+    const { endDate } = this.state;
+
+    return (      
+    <section className="train-section"> 
       <Container id="search-form" className="container pb-1">
         <Tab.Container defaultActiveKey="train">
           <Card className="card">             
@@ -224,12 +262,15 @@ class SearchForm extends React.Component {
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control
-                              id="flightDepart" 
-                              className="form-control"
-                              type="text" 
-                              required 
-                              placeholder="Depart Date" 
+                            <Form.Control as={DatePicker} 
+                              selected={startDate} 
+                              onChange={this.handleChange1}
+                              onClick={this.handleClick1}
+                              startDate={startDate}
+                              endDate={endDate}
+                              dateFormat="dd/MM/yyyy"
+                              showMonth 
+                              placeholderText="Depart Date"
                             />
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
@@ -238,12 +279,15 @@ class SearchForm extends React.Component {
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control 
-                              id="flightReturn"
-                              className="form-control"
-                              type="text" 
-                              required 
-                              placeholder="Return Date" 
+                            <Form.Control as={DatePicker} 
+                              selected={endDate} 
+                              onChange={this.handleChange2}
+                              onClick={this.handleClick2} 
+                              startDate={startDate}
+                              endDate={endDate}
+                              dateFormat="dd/MM/yyyy"
+                              showMonth
+                              placeholderText="Return Date"
                             />
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
@@ -879,8 +923,10 @@ class SearchForm extends React.Component {
         </Tab.Container>
       </Container>
     </section>
+    
     )
-  }
+  };
 }
+
 
 export default SearchForm
