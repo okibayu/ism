@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, {useState} from 'react'
 import { Button, Form, Nav, Tab } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
@@ -160,9 +160,7 @@ class SearchForm extends React.Component {
   }
   
   render() {
-    const { startDate } = this.state;
-    const { endDate } = this.state;
-
+    const { startDate, endDate, addDays } = this.state;
     return (      
     <section className="train-section"> 
       <Container id="search-form" className="container pb-1">
@@ -268,9 +266,13 @@ class SearchForm extends React.Component {
                               onClick={this.handleClick1}
                               startDate={startDate}
                               endDate={endDate}
+                              minDate={new Date()}
+                              maxDate={this.setState.endDate}
                               dateFormat="dd/MM/yyyy"
                               showMonth 
+                              selectsStart
                               placeholderText="Depart Date"
+                              showPopperArrow={false}
                             />
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
@@ -285,9 +287,12 @@ class SearchForm extends React.Component {
                               onClick={this.handleClick2} 
                               startDate={startDate}
                               endDate={endDate}
+                              minDate={startDate}
                               dateFormat="dd/MM/yyyy"
                               showMonth
+                              selectsEnd
                               placeholderText="Return Date"
+                              showPopperArrow={false}
                             />
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
