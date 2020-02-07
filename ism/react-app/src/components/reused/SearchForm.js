@@ -109,7 +109,7 @@ class SearchForm extends React.Component {
     const { startDate, endDate, addDays } = this.state;
     return (      
     <section className="train-section"> 
-      <Container id="search-form" className="container pb-1">
+      <Container id="searchForm" className="container pb-1">
         <Tab.Container defaultActiveKey="train">
           <Card className="card">             
             <Card.Header className="justify-content-lg-around-start pt-0 pb-0">
@@ -219,6 +219,8 @@ class SearchForm extends React.Component {
                               selectsStart
                               placeholderText="Depart Date"
                               showPopperArrow={false}
+                              id="flightsDepart"
+                              type="text"
                             />
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
@@ -239,6 +241,8 @@ class SearchForm extends React.Component {
                               selectsEnd
                               placeholderText="Return Date"
                               showPopperArrow={false}
+                              id="flightsReturn"
+                              type="text"
                             />
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
@@ -438,13 +442,9 @@ class SearchForm extends React.Component {
                               selectsStart
                               placeholderText="Check In"
                               showPopperArrow={false}
+                              id="hotelsCheckIn"
+                              type="text"
                             />
-                            {/* <Form.Control 
-                              id="hotelsCheckIn" 
-                              type="text" 
-                              required 
-                              placeholder="Check In" 
-                            /> */}
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
                             </span> 
@@ -464,13 +464,9 @@ class SearchForm extends React.Component {
                               selectsEnd
                               placeholderText="Check Out"
                               showPopperArrow={false}
+                              id="hotelsCheckOut"
+                              type="text"
                             />
-                            {/* <Form.Control 
-                              id="hotelsCheckOut" 
-                              type="text" 
-                              required 
-                              placeholder="Check Out" 
-                            /> */}
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
                             </span> 
@@ -706,13 +702,9 @@ class SearchForm extends React.Component {
                               selectsStart
                               placeholderText="Depart Date"
                               showPopperArrow={false}
+                              id="trainsDepart"
+                              type="text"
                             />
-                            {/* <Form.Control 
-                            type="text"
-                            id="trainsDepart" 
-                            required 
-                            placeholder="Depart Date" 
-                          /> */}
                           <span className="icon-inside">
                             <FontAwesomeIcon icon={faCalendarAlt} />
                           </span>
@@ -732,13 +724,9 @@ class SearchForm extends React.Component {
                               selectsEnd
                               placeholderText="Return Date"
                               showPopperArrow={false}
+                              id="trainsReturn"
+                              type="text"
                             />
-                            {/* <Form.Control 
-                            type="text"
-                            id="trainsReturn" 
-                            required 
-                            placeholder="Return Date" 
-                          /> */}
                           <span className="icon-inside">
                             <FontAwesomeIcon icon={faCalendarAlt} />
                           </span>
