@@ -1,6 +1,6 @@
 **Travel Website for Dummy**
 
-This prototype files has adopted from my project on this [MockupHub](https://github.com/mockuphub) (https://img.icons8.com/material-rounded/2x/github.png)and it's maintained by myself as Freelancer UX Designer & Full Stack Frond-End Developer (newbie in programming) :wink:
+This prototype files has adopted from my project on this [MockupHub](https://github.com/mockuphub)  and it's maintained by myself as Freelancer UX Designer & Full Stack Frond-End Developer (newbie in programming) :wink:
 
 This build with the world's most popular front-end library, the last version of [Bootstrap](https://getbootstrap.com/)  and [ReactJS](https://reactjs.org/) .
 
