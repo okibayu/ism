@@ -50,60 +50,6 @@ class SearchForm extends React.Component {
   componentDidMount() {
     const $ = window.$;
     
-  //   // Flight Depart Date
-  //   // $('#flightDepart').daterangepicker({
-  //   //     singleDatePicker: true,
-  //   //     minDate: moment(),
-  //   //     autoUpdateInput: false,
-  //   //   }, function(chosen_date) {
-  //   //     $('#flightDepart').val(chosen_date.format('MM-DD-YYYY'));
-  //   //   });
-      
-  //   //   // Flight Return Date
-  //   //   $('#flightReturn').daterangepicker({
-  //   //     singleDatePicker: true,
-  //   //     minDate: moment(),
-  //   //     autoUpdateInput: false,
-  //   //   }, function(chosen_date) {
-  //   //     $('#flightReturn').val(chosen_date.format('MM-DD-YYYY'));
-  //   //   });
-    
-  //     // Hotels Check In Date
-  //     $('#hotelsCheckIn').daterangepicker({
-  //       singleDatePicker: true,
-  //       minDate: moment(),
-  //       autoUpdateInput: false,
-  //     }, function(chosen_date) {
-  //       $('#hotelsCheckIn').val(chosen_date.format('MM-DD-YYYY'));
-  //     });
-      
-  //     // Hotels Check Out Date
-  //     $('#hotelsCheckOut').daterangepicker({
-  //       singleDatePicker: true,
-  //       minDate: moment(),
-  //       autoUpdateInput: false,
-  //     }, function(chosen_date) {
-  //       $('#hotelsCheckOut').val(chosen_date.format('MM-DD-YYYY'));
-  //     });
-
-  //     // Trains Depart Date
-  //     $('#trainsDepart').daterangepicker({
-  //       singleDatePicker: true,
-  //       minDate: moment(),
-  //       autoUpdateInput: false,
-  //     }, function(chosen_date) {
-  //       $('#trainsDepart').val(chosen_date.format('MM-DD-YYYY'));
-  //     });
-      
-  //     // Trains Return Date
-  //     $('#trainsReturn').daterangepicker({
-  //       singleDatePicker: true,
-  //       minDate: moment(),
-  //       autoUpdateInput: false,
-  //     }, function(chosen_date) {
-  //       $('#trainsReturn').val(chosen_date.format('MM-DD-YYYY'));
-  //     });
-    
       //Flights Dropdown
       $('#flightTravellersClass').on('click', function() {
         $('.travellers-dropdown').slideToggle('fast');
@@ -118,33 +64,33 @@ class SearchForm extends React.Component {
         });
       // End Flights
 
-  //     // Hotels Dropdown
-  //     $('#hotelsTravellersClass').on('click', function() {
-  //       $('.travellers-dropdown').slideToggle('fast');
-  //       $('.qty-spinner').on('change', function() {
-  //         var ids = ['adult', 'children'];
-  //         var totalCount = ids.reduce(function (prev, id) {
-  //           return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ 'People';
-  //           var idsRoom = ['hotels-rooms'];
-  //           var totalCountRoom = idsRoom.reduce(function (prev, id) {
-  //             return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
-  //             $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
-  //           }).trigger('change');
-  //         });
-  //     // End Hotels
+      // Hotels Dropdown
+      $('#hotelsTravellersClass').on('click', function() {
+        $('.travellers-dropdown').slideToggle('fast');
+        $('.qty-spinner').on('change', function() {
+          var ids = ['adult', 'children'];
+          var totalCount = ids.reduce(function (prev, id) {
+            return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ 'People';
+            var idsRoom = ['hotels-rooms'];
+            var totalCountRoom = idsRoom.reduce(function (prev, id) {
+              return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
+              $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
+            }).trigger('change');
+          });
+      // End Hotels
 
-  //     // Trains Dropdown
-  //     $('#trainTravellersClass').on('click', function() {
-  //       $('.travellers-dropdown').slideToggle('fast');
-  //       $('.qty-spinner, #train-class').on('change', function() {
-  //         var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
-  //         var totalCount = ids.reduce(function (prev, id) {
-  //           return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-  //           var fc = $('#train-class option:selected').text();
-  //           $('#trainTravellersClass').val(totalCount + ' - ' + fc);
-  //         }).trigger('change');
-  //       });
-  //     // End Trains
+      // Trains Dropdown
+      $('#trainTravellersClass').on('click', function() {
+        $('.travellers-dropdown').slideToggle('fast');
+        $('.qty-spinner, #train-class').on('change', function() {
+          var ids = ['trainAdult', 'trainChildren', 'trainInfants'];
+          var totalCount = ids.reduce(function (prev, id) {
+            return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
+            var fc = $('#train-class option:selected').text();
+            $('#trainTravellersClass').val(totalCount + ' - ' + fc);
+          }).trigger('change');
+        });
+      // End Trains
 
       $(document).on('click', function(event) {
         if (!$(event.target).closest(".travellers-class").length) {
@@ -479,12 +425,26 @@ class SearchForm extends React.Component {
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control 
+                          <Form.Control as={DatePicker} 
+                              selected={startDate} 
+                              onChange={this.handleChange1}
+                              onClick={this.handleClick1}
+                              startDate={startDate}
+                              endDate={endDate}
+                              minDate={new Date()}
+                              maxDate={this.setState.endDate}
+                              dateFormat="dd/MM/yyyy"
+                              showMonth 
+                              selectsStart
+                              placeholderText="Check In"
+                              showPopperArrow={false}
+                            />
+                            {/* <Form.Control 
                               id="hotelsCheckIn" 
                               type="text" 
                               required 
                               placeholder="Check In" 
-                            />
+                            /> */}
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
                             </span> 
@@ -492,12 +452,25 @@ class SearchForm extends React.Component {
                         </Col>
                         <Col md={6} lg={3}>
                           <Form.Group>
-                            <Form.Control 
+                          <Form.Control as={DatePicker} 
+                              selected={endDate} 
+                              onChange={this.handleChange2}
+                              onClick={this.handleClick2} 
+                              startDate={startDate}
+                              endDate={endDate}
+                              minDate={startDate}
+                              dateFormat="dd/MM/yyyy"
+                              showMonth
+                              selectsEnd
+                              placeholderText="Check Out"
+                              showPopperArrow={false}
+                            />
+                            {/* <Form.Control 
                               id="hotelsCheckOut" 
                               type="text" 
                               required 
                               placeholder="Check Out" 
-                            />
+                            /> */}
                             <span className="icon-inside">
                               <FontAwesomeIcon icon={faCalendarAlt} />
                             </span> 
@@ -720,12 +693,26 @@ class SearchForm extends React.Component {
                       </Col>
                       <Col md={6} lg={6}>
                         <Form.Group>
-                          <Form.Control 
+                        <Form.Control as={DatePicker} 
+                              selected={startDate} 
+                              onChange={this.handleChange1}
+                              onClick={this.handleClick1}
+                              startDate={startDate}
+                              endDate={endDate}
+                              minDate={new Date()}
+                              maxDate={this.setState.endDate}
+                              dateFormat="dd/MM/yyyy"
+                              showMonth 
+                              selectsStart
+                              placeholderText="Depart Date"
+                              showPopperArrow={false}
+                            />
+                            {/* <Form.Control 
                             type="text"
                             id="trainsDepart" 
                             required 
                             placeholder="Depart Date" 
-                          />
+                          /> */}
                           <span className="icon-inside">
                             <FontAwesomeIcon icon={faCalendarAlt} />
                           </span>
@@ -733,12 +720,25 @@ class SearchForm extends React.Component {
                       </Col>
                       <Col md={6} lg={6}>
                         <Form.Group>
-                          <Form.Control 
+                        <Form.Control as={DatePicker} 
+                              selected={endDate} 
+                              onChange={this.handleChange2}
+                              onClick={this.handleClick2} 
+                              startDate={startDate}
+                              endDate={endDate}
+                              minDate={startDate}
+                              dateFormat="dd/MM/yyyy"
+                              showMonth
+                              selectsEnd
+                              placeholderText="Return Date"
+                              showPopperArrow={false}
+                            />
+                            {/* <Form.Control 
                             type="text"
                             id="trainsReturn" 
                             required 
                             placeholder="Return Date" 
-                          />
+                          /> */}
                           <span className="icon-inside">
                             <FontAwesomeIcon icon={faCalendarAlt} />
                           </span>
