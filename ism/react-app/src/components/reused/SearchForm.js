@@ -49,35 +49,6 @@ class SearchForm extends React.Component {
 
   componentDidMount() {
     const $ = window.$;
-    
-      //Flights Dropdown
-      $('#flightTravellersClass').on('click', function() {
-        $('.travellers-dropdown').slideToggle('fast');
-        $('.qty-spinner, .flight-class').on('change', function() {
-          var ids = ['flightAdult', 'flightChildren', 'flightInfants'];
-          var totalCount = ids.reduce(function (prev, id) {
-            return parseInt($('#' + id + '-travellers').val()) + prev}, 0);
-            // use for input=option/select
-            var fc = $('#flight-class option:selected').text();
-            $('#flightTravellersClass').val(totalCount + ' - ' + fc);
-          }).trigger('change');
-        });
-      // End Flights
-
-      // Hotels Dropdown
-      $('#hotelsTravellersClass').on('click', function() {
-        $('.travellers-dropdown').slideToggle('fast');
-        $('.qty-spinner').on('change', function() {
-          var ids = ['adult', 'children'];
-          var totalCount = ids.reduce(function (prev, id) {
-            return parseInt($('#' + id + '-travellers').val()) + prev}, 0)+ 'People';
-            var idsRoom = ['hotels-rooms'];
-            var totalCountRoom = idsRoom.reduce(function (prev, id) {
-              return parseInt($('#hotels-rooms').val()) + prev}, 0)+ 'Room';
-              $('#hotelsTravellersClass').val(totalCountRoom + ' / ' + totalCount);
-            }).trigger('change');
-          });
-      // End Hotels
 
       // Trains Dropdown
       $('#trainTravellersClass').on('click', function() {
