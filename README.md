@@ -1,4 +1,4 @@
-**Travel Website for Dummy**
+# Travel Website for Dummy
 
 This prototype files has adopted from my project on this [MockupHub](https://github.com/mockuphub)  and it's maintained by myself as Freelancer UX Designer & Full Stack Frond-End Developer (newbie in programming) :wink:
 
@@ -17,7 +17,7 @@ Please fork and testing on your internal environment, i used [NodeJS](https://no
 
 **:wrench: Tools and testing**
  - [Sublime 3](https://www.sublimetext.com/) (A sophisticated text editor for code, markup and prose)
- - [VS Code](https://code.visualstudio.com/) (A source-code editor developed by Microsoft, It includes support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, snippets, and code refactoring)
+ - [VS Code](https://code.visualstudio.com/) (A source-code editor developed by [Microsoft](https://www.microsoft.com), It includes support for debugging, embedded Git control and GitHub, syntax highlighting, intelligent code completion, snippets, and code refactoring)
  - [Github](https://github.com/) (The platform is where developers can create, share, and ship the best code possible)
  - [Github Page](https://pages.github.com/) (Websites for you and your projects, hosted directly from your _GitHub_ repository. Just edit, push, and your changes are live)
  - [Firebase](https://firebase.google.com/) (Tools To Build Mobile Apps, Improve Quality, And Grow Your Business) 
@@ -37,7 +37,10 @@ Please fork and testing on your internal environment, i used [NodeJS](https://no
  - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/) (A lightweight, interpreted, or just-in-time compiled programming language with first-class functions)
  - [jQuery](https://jquery.com/) (A JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax)
 
+**:camera: Images & Icons**
+- [UnSplash](https://unsplash.com/) (Beautiful, free images and photos that you can download and use for any project)
+- [FontOwsome](https://fontowsome.com) (The most popular and easiest to use icon)
 
 ***Happy coding!** ;D*
   
-:bulb: [Oki BAYU](mailto:%20oki.bayu@gmail.com)
+:construction_worker: [Oki BAYU](mailto:%20oki.bayu@gmail.com)
