@@ -1,10 +1,11 @@
-# Travel Website for Dummy
-
+### Travel Website Prototype
+by. [Oki BAYU](mailto:%20oki.bayu@gmail.com)
+***
 This prototype files has adopted from my project on this [MockupHub](https://github.com/mockuphub)  and it's maintained by myself as Freelancer UX Designer & Full Stack Frond-End Developer (newbie in programming) :wink:
 
 This build with the world's most popular front-end library, the last version of [Bootstrap](https://getbootstrap.com/)  and [ReactJS](https://reactjs.org/) .
 
-Please fork and testing on your internal environment, i used [NodeJS](https://nodejs.org/) installed on my computer running on Windows OS. If you have any question please submit an issue here, I hope it can hopefully for you especially for people with newbie experience in creating website with the most popular framework and libraries.
+Please fork and testing on your internal environment, i used [NodeJS](https://nodejs.org/) installed on my computer running on Windows OS. If you have any question please submit an email to me, I hope it can hopefully for you especially for people with newbie experience in creating website with the most popular framework and libraries.
 
 **Software used for this prototype:**
 
@@ -27,8 +28,7 @@ Please fork and testing on your internal environment, i used [NodeJS](https://no
  - ..and [friends](https://curlie.org/) ;)
  
  **:books: Coding Script**
- - [ReactJS](https://reactjs.org/) (A JavaScript library for building user interfaces)  
-:star::star::star::star::star:
+ - [ReactJS](https://reactjs.org/) (A JavaScript library for building user interfaces)
  - [Create React App](https://create-react-app.dev/) (Comfortable environment for learning React , and is the best way to start building a new single-page  application in React)
  - [HTML](https://www.w3schools.com/html/) (The standard markup language for creating Web pages)
  - [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS) (A language that describes the style of an HTML document)
@@ -39,7 +39,7 @@ Please fork and testing on your internal environment, i used [NodeJS](https://no
 
 **:camera: Images & Icons**
 - [UnSplash](https://unsplash.com/) (Beautiful, free images and photos that you can download and use for any project)
-- [FontOwsome](https://fontowsome.com) (The most popular and easiest to use icon)
+- [FontAwesome](https://fontawesome.com/) (The most popular and easiest to use icon)
 
 ***Happy coding!** ;D*
   
