@@ -1,6 +1,4 @@
 ### Travel Website Prototype
-by. [Oki BAYU](mailto:%20oki.bayu@gmail.com)
-***
 This prototype files has adopted from my project on this [MockupHub](https://github.com/mockuphub)  and it's maintained by myself as Freelancer UX Designer & Full Stack Frond-End Developer (newbie in programming) :wink:
 
 This build with the world's most popular front-end library, the last version of [Bootstrap](https://getbootstrap.com/)  and [ReactJS](https://reactjs.org/) .
@@ -42,5 +40,3 @@ Please fork and testing on your internal environment, i used [NodeJS](https://no
 - [FontAwesome](https://fontawesome.com/) (The most popular and easiest to use icon)
 
 ***Happy coding!** ;D*
-  
-:construction_worker: [Oki BAYU](mailto:%20oki.bayu@gmail.com)
